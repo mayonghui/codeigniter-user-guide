@@ -436,7 +436,7 @@
 <div class="custom-index container"></div><div class="section" id="id1">
 <h2><a class="toc-backref" href="#id3">加载辅助函数</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>该辅助函数通过下面的代码加载:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;cookie&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;cookie&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -522,13 +522,13 @@
 </table>
 <p>删除一条 Cookie，只需要传入 Cookie 名即可，也可以设置路径或其他参数
 来删除特定 Cookie。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">delete_cookie</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">delete_cookie</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>这个函数和 <tt class="docutils literal"><span class="pre">set_cookie()</span></tt> 比较类似，只是它并不提供 Cookie 的值和
 过期时间等参数。第一个参数也可以是个数组，包含多个要删除的 Cookie 。
 另外，你也可以像下面这样删除特定条件的 Cookie 。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">delete_cookie</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$domain</span><span class="p">,</span> <span class="nv">$path</span><span class="p">,</span> <span class="nv">$prefix</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">delete_cookie</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$domain</span><span class="p">,</span> <span class="nv">$path</span><span class="p">,</span> <span class="nv">$prefix</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -595,7 +595,7 @@
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

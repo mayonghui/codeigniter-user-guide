@@ -441,12 +441,12 @@
 <div class="section" id="id2">
 <h2>加载辅助函数<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>可以使用下面的方法简单的加载辅助函数:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p><strong>name</strong> 参数为辅助函数的文件名，去掉 .php 文件后缀以及 _helper 部分。</p>
 <p>例如，要加载 <strong>URL 辅助函数</strong> ，它的文件名为 <strong>url_helper.php</strong> ，你可以这样加载它:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>辅助函数可以在你的控制器方法的任何地方加载（甚至可以在你的视图文件中加载，尽管这不是
@@ -460,7 +460,7 @@
 <div class="section" id="id3">
 <h2>加载多个辅助函数<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>如果你需要加载多个辅助函数，你可以使用一个数组，像下面这样:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span>
     <span class="k">array</span><span class="p">(</span><span class="s1">&#39;helper1&#39;</span><span class="p">,</span> <span class="s1">&#39;helper2&#39;</span><span class="p">,</span> <span class="s1">&#39;helper3&#39;</span><span class="p">)</span>
 <span class="p">);</span>
 </pre></div>
@@ -476,7 +476,7 @@ autoload 数组中。</p>
 <h2>使用辅助函数<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>一旦你想要使用的辅助函数被加载，你就可以像使用标准的 PHP 函数一样使用它们。</p>
 <p>例如，要在你的视图文件中使用 <tt class="docutils literal"><span class="pre">anchor()</span></tt> 函数创建一个链接，你可以这样做:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nx">anchor</span><span class="p">(</span><span class="s1">&#39;blog/comments&#39;</span><span class="p">,</span> <span class="s1">&#39;Click Here&#39;</span><span class="p">);</span><span class="cp">?&gt;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nx">anchor</span><span class="p">(</span><span class="s1">&#39;blog/comments&#39;</span><span class="p">,</span> <span class="s1">&#39;Click Here&#39;</span><span class="p">);</span><span class="cp">?&gt;</span>
 </pre></div>
 </div>
 <p>其中，&quot;Click Here&quot; 是链接的名称，&quot;blog/comments&quot; 是你希望链接到
@@ -498,7 +498,7 @@ controller/method 的 URI 。</p>
 </div>
 <p>例如，要扩展原始的 <strong>数组辅助函数</strong> ，首先你要创建一个文件 <strong>application/helpers/MY_array_helper.php</strong> ，
 然后像下面这样添加或重写函数:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// any_in_array() is not in the Array Helper, so it defines a new function</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// any_in_array() is not in the Array Helper, so it defines a new function</span>
 <span class="k">function</span> <span class="nf">any_in_array</span><span class="p">(</span><span class="nv">$needle</span><span class="p">,</span> <span class="nv">$haystack</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="nv">$needle</span> <span class="o">=</span> <span class="nb">is_array</span><span class="p">(</span><span class="nv">$needle</span><span class="p">)</span> <span class="o">?</span> <span class="nv">$needle</span> <span class="o">:</span> <span class="k">array</span><span class="p">(</span><span class="nv">$needle</span><span class="p">);</span>
@@ -526,7 +526,7 @@ controller/method 的 URI 。</p>
 <h3>设置自定义前缀<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <p>用于扩展辅助函数的文件名前缀和扩展类库和核心类是一样的。要自定义这个前缀，你可以打开
 <strong>application/config/config.php</strong> 文件然后找到这项:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;subclass_prefix&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;MY_&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;subclass_prefix&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;MY_&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>请注意所有原始的 CodeIgniter 类库都以 <strong>CI_</strong> 开头，所以请不要使用这个
@@ -598,7 +598,7 @@ controller/method 的 URI 。</p>
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

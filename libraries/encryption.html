@@ -468,11 +468,11 @@
 <h3><a class="toc-backref" href="#id15">初始化类</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>正如 CodeIgniter 中的其他类一样，在你的控制器中使用 <tt class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></tt>
 方法来初始化加密类:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;encryption&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;encryption&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>初始化之后，加密类的对象就可以这样访问:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encryption</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encryption</span>
 </pre></div>
 </div>
 </div>
@@ -508,19 +508,19 @@
 128 位（16 字节）。下面有一个表列出了不同算法支持的密钥长度。</p>
 <p>你所使用的密钥应该越随机越好，它不能是一个普通的文本字符串，经过哈希函数处理过也不行。
 为了生成一个合适的密钥，你应该使用加密类提供的 <tt class="docutils literal"><span class="pre">create_key()</span></tt> 方法:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// $key will be assigned a 16-byte (128-bit) random key</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// $key will be assigned a 16-byte (128-bit) random key</span>
 <span class="nv">$key</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encryption</span><span class="o">-&gt;</span><span class="na">create_key</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>密钥可以保存在 <em>application/config/config.php</em> 配置文件中，或者你也可以设计你自己的存储机制，
 然后加密解密的时候动态的去获取它。</p>
 <p>如果要保存在配置文件 <em>application/config/config.php</em> 中，可以打开该文件，然后设置:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;encryption_key&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;YOUR KEY&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;encryption_key&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;YOUR KEY&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>你会发现 <tt class="docutils literal"><span class="pre">create_key()</span></tt> 方法返回的是二进制数据，没办法复制粘贴，所以你可能还需要使用
 <tt class="docutils literal"><span class="pre">bin2hex()</span></tt> 、 <tt class="docutils literal"><span class="pre">hex2bin()</span></tt> 或 Base64 编码来更好的处理密钥数据。例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// Get a hex-encoded representation of the key:</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// Get a hex-encoded representation of the key:</span>
 <span class="nv">$key</span> <span class="o">=</span> <span class="nb">bin2hex</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encryption</span><span class="o">-&gt;</span><span class="na">create_key</span><span class="p">(</span><span class="mi">16</span><span class="p">));</span>
 
 <span class="c1">// Put the same value in your config with hex2bin(),</span>
@@ -867,7 +867,7 @@ AES-128 算法，以及 <tt class="docutils literal"><span class="pre">$config['
 </tbody>
 </table>
 <p>例如，如果你想将加密算法和模式改为 AES-126 CTR ，可以这样:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encryption</span><span class="o">-&gt;</span><span class="na">initialize</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encryption</span><span class="o">-&gt;</span><span class="na">initialize</span><span class="p">(</span>
     <span class="k">array</span><span class="p">(</span>
         <span class="s1">&#39;cipher&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;aes-256&#39;</span><span class="p">,</span>
         <span class="s1">&#39;mode&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ctr&#39;</span><span class="p">,</span>
@@ -878,7 +878,7 @@ AES-128 算法，以及 <tt class="docutils literal"><span class="pre">$config['
 </div>
 <p>另外，我们也可以设置一个密钥，如前文所说，针对所使用的算法选择一个合适的密钥非常重要。</p>
 <p>我们还可以修改驱动，如果你两种驱动都支持，但是出于某种原因你想使用 MCrypt 来替代 OpenSSL</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// Switch to the MCrypt driver</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// Switch to the MCrypt driver</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encryption</span><span class="o">-&gt;</span><span class="na">initialize</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;driver&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;mcrypt&#39;</span><span class="p">));</span>
 
 <span class="c1">// Switch back to the OpenSSL driver</span>
@@ -890,7 +890,7 @@ AES-128 算法，以及 <tt class="docutils literal"><span class="pre">$config['
 <h3><a class="toc-backref" href="#id24">对数据进行加密与解密</a><a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
 <p>使用已配置好的参数来对数据进行加密和解密是非常简单的，你只要将字符串传给 <tt class="docutils literal"><span class="pre">encrypt()</span></tt>
 和/或 <tt class="docutils literal"><span class="pre">decrypt()</span></tt> 方法即可:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$plain_text</span> <span class="o">=</span> <span class="s1">&#39;This is a plain-text message!&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$plain_text</span> <span class="o">=</span> <span class="s1">&#39;This is a plain-text message!&#39;</span><span class="p">;</span>
 <span class="nv">$ciphertext</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encryption</span><span class="o">-&gt;</span><span class="na">encrypt</span><span class="p">(</span><span class="nv">$plain_text</span><span class="p">);</span>
 
 <span class="c1">// Outputs: This is a plain-text message!</span>
@@ -937,7 +937,7 @@ AES-128 算法，以及 <tt class="docutils literal"><span class="pre">$config['
 <p class="last">通过这种方式，你可以不用在配置文件中配置 <em>encryption_key</em> 就能使用加密类。</p>
 </div>
 <p>你所需要做的就是传一个包含一些参数的关联数组到 <tt class="docutils literal"><span class="pre">encrypt()</span></tt> 或 <tt class="docutils literal"><span class="pre">decrypt()</span></tt> 方法，下面是个例子:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// Assume that we have $ciphertext, $key and $hmac_key</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// Assume that we have $ciphertext, $key and $hmac_key</span>
 <span class="c1">// from on outside source</span>
 
 <span class="nv">$message</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encryption</span><span class="o">-&gt;</span><span class="na">decrypt</span><span class="p">(</span>
@@ -1092,7 +1092,7 @@ is set to FALSE.</p>
 </table>
 <p>初始化加密类的配置，使用不同的驱动，算法，模式 或 密钥。</p>
 <p>例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encryption</span><span class="o">-&gt;</span><span class="na">initialize</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encryption</span><span class="o">-&gt;</span><span class="na">initialize</span><span class="p">(</span>
     <span class="k">array</span><span class="p">(</span><span class="s1">&#39;mode&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;ctr&#39;</span><span class="p">)</span>
 <span class="p">);</span>
 </pre></div>
@@ -1123,7 +1123,7 @@ is set to FALSE.</p>
 </table>
 <p>对输入数据进行加密，并返回密文。</p>
 <p>例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$ciphertext</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encryption</span><span class="o">-&gt;</span><span class="na">encrypt</span><span class="p">(</span><span class="s1">&#39;My secret message&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$ciphertext</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encryption</span><span class="o">-&gt;</span><span class="na">encrypt</span><span class="p">(</span><span class="s1">&#39;My secret message&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>请参考 <a class="reference internal" href="#custom-parameters"><em>使用自定义参数</em></a> 一节了解更多参数信息。</p>
@@ -1152,7 +1152,7 @@ is set to FALSE.</p>
 </table>
 <p>对输入数据进行解密，并返回解密后的文本。</p>
 <p>例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encryption</span><span class="o">-&gt;</span><span class="na">decrypt</span><span class="p">(</span><span class="nv">$ciphertext</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encryption</span><span class="o">-&gt;</span><span class="na">decrypt</span><span class="p">(</span><span class="nv">$ciphertext</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>请参考 <a class="reference internal" href="#custom-parameters"><em>使用自定义参数</em></a> 一节了解更多参数信息。</p>
@@ -1211,7 +1211,7 @@ is set to FALSE.</p>
 <a class="reference external" href="https://tools.ietf.org/rfc/rfc5869.txt">RFC 5869</a> 。</p>
 <p>和 RFC 5869 描述不同的是，这个方法不支持 SHA1 。</p>
 <p>例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$hmac_key</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encryption</span><span class="o">-&gt;</span><span class="na">hkdf</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$hmac_key</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encryption</span><span class="o">-&gt;</span><span class="na">hkdf</span><span class="p">(</span>
     <span class="nv">$key</span><span class="p">,</span>
     <span class="s1">&#39;sha512&#39;</span><span class="p">,</span>
     <span class="k">NULL</span><span class="p">,</span>
@@ -1288,7 +1288,7 @@ is set to FALSE.</p>
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

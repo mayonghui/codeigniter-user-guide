@@ -452,7 +452,7 @@ CodeIgniter 自动调用。尽管如此，在你需要时，你还是可以对�
 <dd><p>启用或禁用解析伪变量（{elapsed_time} 和 {memory_usage}）。</p>
 <p>CodeIgniter 默认会在输出类中解析这些变量。要禁用它，可以在你的控制器中设置
 这个属性为 FALSE 。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">parse_exec_vars</span> <span class="o">=</span> <span class="k">FALSE</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">parse_exec_vars</span> <span class="o">=</span> <span class="k">FALSE</span><span class="p">;</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -478,7 +478,7 @@ CodeIgniter 自动调用。尽管如此，在你需要时，你还是可以对�
 </tbody>
 </table>
 <p>允许你手工设置最终的输出字符串。使用示例:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">set_output</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">set_output</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="admonition important">
@@ -511,7 +511,7 @@ CodeIgniter 自动调用。尽管如此，在你需要时，你还是可以对�
 </tbody>
 </table>
 <p>允许你设置你的页面的 MIME 类型，可以很方便的提供 JSON 数据、JPEG、XML 等等格式。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span>
     <span class="o">-&gt;</span><span class="na">set_content_type</span><span class="p">(</span><span class="s1">&#39;application/json&#39;</span><span class="p">)</span>
     <span class="o">-&gt;</span><span class="na">set_output</span><span class="p">(</span><span class="nb">json_encode</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;bar&#39;</span><span class="p">)));</span>
 
@@ -544,7 +544,7 @@ CodeIgniter 自动调用。尽管如此，在你需要时，你还是可以对�
 </tbody>
 </table>
 <p>获取当前正在使用的 HTTP 头 Content-Type ，不包含字符集部分。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$mime</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">get_content_type</span><span class="p">();</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$mime</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">get_content_type</span><span class="p">();</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -575,7 +575,7 @@ CodeIgniter 自动调用。尽管如此，在你需要时，你还是可以对�
 </table>
 <p>返回请求的 HTTP 头，如果 HTTP 头还没设置，返回 NULL 。
 例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">set_content_type</span><span class="p">(</span><span class="s1">&#39;text/plain&#39;</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">set_content_type</span><span class="p">(</span><span class="s1">&#39;text/plain&#39;</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">);</span>
 <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">get_header</span><span class="p">(</span><span class="s1">&#39;content-type&#39;</span><span class="p">);</span>
 <span class="c1">// Outputs: text/plain; charset=utf-8</span>
 </pre></div>
@@ -604,7 +604,7 @@ CodeIgniter 自动调用。尽管如此，在你需要时，你还是可以对�
 </tbody>
 </table>
 <p>允许你手工获取存储在输出类中的待发送的内容。使用示例:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$string</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">get_output</span><span class="p">();</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$string</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">get_output</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>注意，只有通过 CodeIgniter 输出类的某个方法设置过的数据，例如
@@ -632,7 +632,7 @@ CodeIgniter 自动调用。尽管如此，在你需要时，你还是可以对�
 </tbody>
 </table>
 <p>向输出字符串附加数据。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">append_output</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">append_output</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -659,7 +659,7 @@ CodeIgniter 自动调用。尽管如此，在你需要时，你还是可以对�
 </tbody>
 </table>
 <p>允许你手工设置服务器的 HTTP 头，输出类将在最终显示页面时发送它。例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">set_header</span><span class="p">(</span><span class="s1">&#39;HTTP/1.0 200 OK&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">set_header</span><span class="p">(</span><span class="s1">&#39;HTTP/1.0 200 OK&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">set_header</span><span class="p">(</span><span class="s1">&#39;HTTP/1.1 200 OK&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">set_header</span><span class="p">(</span><span class="s1">&#39;Last-Modified: &#39;</span><span class="o">.</span><span class="nb">gmdate</span><span class="p">(</span><span class="s1">&#39;D, d M Y H:i:s&#39;</span><span class="p">,</span> <span class="nv">$last_update</span><span class="p">)</span><span class="o">.</span><span class="s1">&#39; GMT&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">set_header</span><span class="p">(</span><span class="s1">&#39;Cache-Control: no-store, no-cache, must-revalidate&#39;</span><span class="p">);</span>
@@ -691,7 +691,7 @@ CodeIgniter 自动调用。尽管如此，在你需要时，你还是可以对�
 </tbody>
 </table>
 <p>允许你手工设置服务器的 HTTP 状态码。例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">set_status_header</span><span class="p">(</span><span class="mi">401</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">set_status_header</span><span class="p">(</span><span class="mi">401</span><span class="p">);</span>
 <span class="c1">// Sets the header as:  Unauthorized</span>
 </pre></div>
 </div>
@@ -727,12 +727,12 @@ CodeIgniter 自动调用。尽管如此，在你需要时，你还是可以对�
 基准测试的结果或其他一些数据帮助你调试和优化程序。</p>
 <p>要启用分析器，将下面这行代码放到你的 <a class="reference internal" href="../general/controllers.html"><em>控制器</em></a>
 方法的任何位置:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">enable_profiler</span><span class="p">(</span><span class="k">TRUE</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">enable_profiler</span><span class="p">(</span><span class="k">TRUE</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>当启用它时，将生成一份报告并插入到你的页面的最底部。</p>
 <p>要禁用分析器，你可以这样:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">enable_profiler</span><span class="p">(</span><span class="k">FALSE</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">enable_profiler</span><span class="p">(</span><span class="k">FALSE</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -812,7 +812,7 @@ CodeIgniter 自动调用。尽管如此，在你需要时，你还是可以对�
 除非你在你的代码中使用了 <tt class="docutils literal"><span class="pre">exit()</span></tt> 或 <tt class="docutils literal"><span class="pre">die()</span></tt> 结束了脚本执行。</p>
 </div>
 <p>例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$response</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;status&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;OK&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$response</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;status&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;OK&#39;</span><span class="p">);</span>
 
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span>
     <span class="o">-&gt;</span><span class="na">set_status_header</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
@@ -892,7 +892,7 @@ CodeIgniter 自动调用。尽管如此，在你需要时，你还是可以对�
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

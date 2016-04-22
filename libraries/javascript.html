@@ -471,7 +471,7 @@ CodeIgniter 并不是只能用于 jQuery ，其他脚本库也可以。JQuery �
 <h3><a class="toc-backref" href="#id12">初始化类</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
 <p>要初始化 Javascript 类，你可以在控制器的构造函数中使用 <tt class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></tt>
 函数。目前，唯一可用的库是 jQuery ，可以使用下面的方法加载:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;javascript&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;javascript&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Javascript 类也可以接受参数：</p>
@@ -480,7 +480,7 @@ CodeIgniter 并不是只能用于 jQuery ，其他脚本库也可以。JQuery �
 <li>autoload (bool) <em>default: TRUE</em></li>
 </ul>
 <p>你可以通过一个关联数组覆盖默认的参数:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span>
     <span class="s1">&#39;javascript&#39;</span><span class="p">,</span>
     <span class="k">array</span><span class="p">(</span>
         <span class="s1">&#39;js_library_driver&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;scripto&#39;</span><span class="p">,</span>
@@ -493,7 +493,7 @@ CodeIgniter 并不是只能用于 jQuery ，其他脚本库也可以。JQuery �
 script 标签中，你可以设置 autoload 参数为 FALSE 。这在当你在 CodeIgniter 之外
 加载它时，或者 script 标签已经有了的时候很有用。</p>
 <p>一旦加载完成，jQuery 类对象就可以通过下面的方式使用:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">javascript</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">javascript</span>
 </pre></div>
 </div>
 </div>
@@ -504,7 +504,7 @@ script 标签中，你可以设置 autoload 参数为 FALSE 。这在当你在 C
 <p>作为一个 Javascript 库，源文件必须能被应用程序访问到。</p>
 <p>由于 Javascript 是一种客户端语言，库必须能写入内容到最终的输出中去，
 这通常就是视图。你需要在输出的 <tt class="docutils literal"><span class="pre">&lt;head&gt;</span></tt> 中包含下面的变量。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$library_src</span><span class="p">;</span><span class="cp">?&gt;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$library_src</span><span class="p">;</span><span class="cp">?&gt;</span>
 <span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$script_head</span><span class="p">;</span><span class="cp">?&gt;</span>
 </pre></div>
 </div>
@@ -518,7 +518,7 @@ script 标签中，你可以设置 autoload 参数为 FALSE 。这在当你在 C
 在控制器中使用 <tt class="docutils literal"><span class="pre">set_item()</span></tt> 方法来设置。</p>
 <p>例如，有一个 &quot;加载中&quot; 的图片，或者进度条指示，如果没有它的话，当调用 Ajax 请求时，
 将会显示 &quot;加载中&quot; 这样的文本。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;javascript_location&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://localhost/codeigniter/themes/js/jquery/&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;javascript_location&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://localhost/codeigniter/themes/js/jquery/&#39;</span><span class="p">;</span>
 <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;javascript_ajax_img&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;images/ajax-loader.gif&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -528,23 +528,23 @@ script 标签中，你可以设置 autoload 参数为 FALSE 。这在当你在 C
 <div class="section" id="jquery">
 <h3><a class="toc-backref" href="#id16">jQuery 类</a><a class="headerlink" href="#jquery" title="永久链接至标题">¶</a></h3>
 <p>要在你的控制器构造函数中手工初始化 jQuery 类，使用 <tt class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></tt> 方法:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;javascript/jquery&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;javascript/jquery&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>你可以提供一个可选的参数来决定加载该库时是否将其自动包含到 script 标签中。
 默认情况下会包含，如果不需要，可以像下面这样来加载:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;javascript/jquery&#39;</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;javascript/jquery&#39;</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>加载完成后，jQuery 类对象可以使用下面的代码来访问:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id6">
 <h3><a class="toc-backref" href="#id17">jQuery 事件</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <p>使用下面的语法来设置事件。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">event</span><span class="p">(</span><span class="s1">&#39;element_path&#39;</span><span class="p">,</span> <span class="nx">code_to_run</span><span class="p">());</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">event</span><span class="p">(</span><span class="s1">&#39;element_path&#39;</span><span class="p">,</span> <span class="nx">code_to_run</span><span class="p">());</span>
 </pre></div>
 </div>
 <p>在上面的例子中：</p>
@@ -563,13 +563,13 @@ scroll 或者 unload 中的任何一个事件。</li>
 <h3><a class="toc-backref" href="#id18">特效</a><a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
 <p>jQuery 库支持很多强大的 <a class="reference external" href="http://api.jquery.com/category/effects/">特效</a> ，在使用特效之前，
 必须使用下面的方法加载:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">effect</span><span class="p">([</span><span class="nx">optional</span> <span class="nx">path</span><span class="p">]</span> <span class="nx">plugin</span> <span class="nx">name</span><span class="p">);</span> <span class="c1">// for example $this-&gt;jquery-&gt;effect(&#39;bounce&#39;);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">effect</span><span class="p">([</span><span class="nx">optional</span> <span class="nx">path</span><span class="p">]</span> <span class="nx">plugin</span> <span class="nx">name</span><span class="p">);</span> <span class="c1">// for example $this-&gt;jquery-&gt;effect(&#39;bounce&#39;);</span>
 </pre></div>
 </div>
 <div class="section" id="hide-show">
 <h4><a class="toc-backref" href="#id19">hide() / show()</a><a class="headerlink" href="#hide-show" title="永久链接至标题">¶</a></h4>
 <p>这两个函数会影响你的页面上元素的可见性，hide() 函数用于将元素隐藏，show() 则相反。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">hide</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">optional</span> <span class="nx">speed</span><span class="p">,</span> <span class="nx">optional</span> <span class="nx">extra</span> <span class="nx">information</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">hide</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">optional</span> <span class="nx">speed</span><span class="p">,</span> <span class="nx">optional</span> <span class="nx">extra</span> <span class="nx">information</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">show</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">optional</span> <span class="nx">speed</span><span class="p">,</span> <span class="nx">optional</span> <span class="nx">extra</span> <span class="nx">information</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -582,7 +582,7 @@ scroll 或者 unload 中的任何一个事件。</li>
 <div class="section" id="toggle">
 <h4><a class="toc-backref" href="#id20">toggle()</a><a class="headerlink" href="#toggle" title="永久链接至标题">¶</a></h4>
 <p>toggle() 用于将元素的可见性改成和当前的相反，将可见的元素隐藏，将隐藏的元素可见。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">toggle</span><span class="p">(</span><span class="nx">target</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">toggle</span><span class="p">(</span><span class="nx">target</span><span class="p">);</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -591,7 +591,7 @@ scroll 或者 unload 中的任何一个事件。</li>
 </div>
 <div class="section" id="animate">
 <h4><a class="toc-backref" href="#id21">animate()</a><a class="headerlink" href="#animate" title="永久链接至标题">¶</a></h4>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">animate</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">parameters</span><span class="p">,</span> <span class="nx">optional</span> <span class="nx">speed</span><span class="p">,</span> <span class="nx">optional</span> <span class="nx">extra</span> <span class="nx">information</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">animate</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">parameters</span><span class="p">,</span> <span class="nx">optional</span> <span class="nx">speed</span><span class="p">,</span> <span class="nx">optional</span> <span class="nx">extra</span> <span class="nx">information</span><span class="p">);</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -603,7 +603,7 @@ scroll 或者 unload 中的任何一个事件。</li>
 <p>更完整的说明，参见 <a class="reference external" href="http://api.jquery.com/animate/">http://api.jquery.com/animate/</a></p>
 <p>下面是个在 ID 为 &quot;note&quot; 的一个 div 上使用 animate() 的例子，它使用了 jQuery 库的 click 事件，
 通过 click 事件触发。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$params</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$params</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
 <span class="s1">&#39;height&#39;</span> <span class="o">=&gt;</span> <span class="mi">80</span><span class="p">,</span>
 <span class="s1">&#39;width&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;50%&#39;</span><span class="p">,</span>
 <span class="s1">&#39;marginLeft&#39;</span> <span class="o">=&gt;</span> <span class="mi">125</span>
@@ -615,7 +615,7 @@ scroll 或者 unload 中的任何一个事件。</li>
 <div class="section" id="toggleclass">
 <h4><a class="toc-backref" href="#id22">toggleClass()</a><a class="headerlink" href="#toggleclass" title="永久链接至标题">¶</a></h4>
 <p>该函数用于往目标元素添加或移除一个 CSS 类。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">toggleClass</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">class</span><span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">toggleClass</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">class</span><span class="p">)</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -626,7 +626,7 @@ scroll 或者 unload 中的任何一个事件。</li>
 <div class="section" id="fadein-fadeout">
 <h4><a class="toc-backref" href="#id23">fadeIn() / fadeOut()</a><a class="headerlink" href="#fadein-fadeout" title="永久链接至标题">¶</a></h4>
 <p>这两个特效会使某个元素渐变的隐藏和显示。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">fadeIn</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span>  <span class="nx">optional</span> <span class="nx">speed</span><span class="p">,</span> <span class="nx">optional</span> <span class="nx">extra</span> <span class="nx">information</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">fadeIn</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span>  <span class="nx">optional</span> <span class="nx">speed</span><span class="p">,</span> <span class="nx">optional</span> <span class="nx">extra</span> <span class="nx">information</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">fadeOut</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span>  <span class="nx">optional</span> <span class="nx">speed</span><span class="p">,</span> <span class="nx">optional</span> <span class="nx">extra</span> <span class="nx">information</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -639,7 +639,7 @@ scroll 或者 unload 中的任何一个事件。</li>
 <div class="section" id="slideup-slidedown-slidetoggle">
 <h4><a class="toc-backref" href="#id24">slideUp() / slideDown() / slideToggle()</a><a class="headerlink" href="#slideup-slidedown-slidetoggle" title="永久链接至标题">¶</a></h4>
 <p>这些特效可以让元素滑动。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">slideUp</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span>  <span class="nx">optional</span> <span class="nx">speed</span><span class="p">,</span> <span class="nx">optional</span> <span class="nx">extra</span> <span class="nx">information</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">slideUp</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span>  <span class="nx">optional</span> <span class="nx">speed</span><span class="p">,</span> <span class="nx">optional</span> <span class="nx">extra</span> <span class="nx">information</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">slideDown</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span>  <span class="nx">optional</span> <span class="nx">speed</span><span class="p">,</span> <span class="nx">optional</span> <span class="nx">extra</span> <span class="nx">information</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">slideToggle</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span>  <span class="nx">optional</span> <span class="nx">speed</span><span class="p">,</span> <span class="nx">optional</span> <span class="nx">extra</span> <span class="nx">information</span><span class="p">);</span>
 </pre></div>
@@ -658,7 +658,7 @@ scroll 或者 unload 中的任何一个事件。</li>
 <h4><a class="toc-backref" href="#id26">corner()</a><a class="headerlink" href="#corner" title="永久链接至标题">¶</a></h4>
 <p>用于在页面的某个元素四周添加不同样式的边角。更多详细信息，参考
 <a class="reference external" href="http://malsup.com/jquery/corner/">http://malsup.com/jquery/corner/</a></p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">corner</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">corner_style</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">corner</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">corner_style</span><span class="p">);</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -668,7 +668,7 @@ round、sharp、bevel、bite、dog 等。如果只想设置某个边角的样式
 可以在样式后添加一个空格，然后使用 &quot;tl&quot; （左上），&quot;tr&quot; （右上），
 &quot;bl&quot; （左下），和 &quot;br&quot; （右下）。</li>
 </ul>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">corner</span><span class="p">(</span><span class="s2">&quot;#note&quot;</span><span class="p">,</span> <span class="s2">&quot;cool tl br&quot;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">jquery</span><span class="o">-&gt;</span><span class="na">corner</span><span class="p">(</span><span class="s2">&quot;#note&quot;</span><span class="p">,</span> <span class="s2">&quot;cool tl br&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -747,7 +747,7 @@ round、sharp、bevel、bite、dog 等。如果只想设置某个边角的样式
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

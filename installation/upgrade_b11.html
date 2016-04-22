@@ -464,20 +464,20 @@ your version: language/english/calendar_lang.php</p>
 <h2>Step 5: Edit your config file<a class="headerlink" href="#step-5-edit-your-config-file" title="永久链接至标题">¶</a></h2>
 <p>The original application/config/config.php file has a typo in it Open
 the file and look for the items related to cookies:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$conf</span><span class="p">[</span><span class="s1">&#39;cookie_prefix&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$conf</span><span class="p">[</span><span class="s1">&#39;cookie_prefix&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
 <span class="nv">$conf</span><span class="p">[</span><span class="s1">&#39;cookie_domain&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
 <span class="nv">$conf</span><span class="p">[</span><span class="s1">&#39;cookie_path&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Change the array name from $conf to $config, like this:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;cookie_prefix&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;cookie_prefix&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
 <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;cookie_domain&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
 <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;cookie_path&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Lastly, add the following new item to the config file (and edit the
 option if needed):</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="cm">/*</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm">|------------------------------------------------</span>
 <span class="cm">| URI PROTOCOL</span>
 <span class="cm">|------------------------------------------------</span>
@@ -558,7 +558,7 @@ option if needed):</p>
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

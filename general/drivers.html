@@ -433,20 +433,20 @@
 驱动器父类的类名一致，在该目录下还有一个子目录，命名为 drivers，用于存放
 所有子类的文件。</p>
 <p>要使用一个驱动器，你可以在控制器中使用下面的方法来进行初始化:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">driver</span><span class="p">(</span><span class="s1">&#39;class_name&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">driver</span><span class="p">(</span><span class="s1">&#39;class_name&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>class_name 是你想要调用的驱动器类名，例如，你要加载名为 Some_parent 的驱动器，
 可以这样:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">driver</span><span class="p">(</span><span class="s1">&#39;some_parent&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">driver</span><span class="p">(</span><span class="s1">&#39;some_parent&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>然后就可以像下面这样调用该类的方法:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">some_parent</span><span class="o">-&gt;</span><span class="na">some_method</span><span class="p">();</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">some_parent</span><span class="o">-&gt;</span><span class="na">some_method</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>而对于那些子类，我们不用初始化，可以直接通过父类调用了:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">some_parent</span><span class="o">-&gt;</span><span class="na">child_one</span><span class="o">-&gt;</span><span class="na">some_method</span><span class="p">();</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">some_parent</span><span class="o">-&gt;</span><span class="na">child_one</span><span class="o">-&gt;</span><span class="na">some_method</span><span class="p">();</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">some_parent</span><span class="o">-&gt;</span><span class="na">child_two</span><span class="o">-&gt;</span><span class="na">another_method</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -515,7 +515,7 @@
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

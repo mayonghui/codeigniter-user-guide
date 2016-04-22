@@ -429,7 +429,7 @@
 <p>CodeIgniter 有一个配置文件用来保存数据库连接值（用户名、密码、数据库名等等），这个配置文件位于 <tt class="docutils literal"><span class="pre">application/config/database.php</span></tt> 。
 你也可以放置不同的 <strong>database.php</strong> 文件到特定的环境配置文件夹里来设置 <a class="reference internal" href="../libraries/config.html"><em>特定环境</em></a> 的数据库连接值。</p>
 <p>配置存放在一个多维数组里，原型如下:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;default&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;default&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;dsn&#39;</span>   <span class="o">=&gt;</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
     <span class="s1">&#39;hostname&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
     <span class="s1">&#39;username&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;root&#39;</span><span class="p">,</span>
@@ -452,7 +452,7 @@
 </pre></div>
 </div>
 <p>有些数据库驱动（例如：PDO，PostgreSQL，Oracle，ODBC）可能需要提供完整的 DSN 字符串。在这种情况下，你需要使用 'dsn' 配置参数，就好像使用该驱动的 PHP 原生扩展一样。例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// PDO</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// PDO</span>
 <span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;default&#39;</span><span class="p">][</span><span class="s1">&#39;dsn&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;pgsql:host=localhost;port=5432;dbname=database_name&#39;</span><span class="p">;</span>
 
 <span class="c1">// Oracle</span>
@@ -468,7 +468,7 @@
 <p class="last">如果你提供了一个 DSN 字符串，但是缺少了某些配置（例如：数据库的字符集），如果该配置存在在其他的配置项中，CodeIgniter 将自动在 DSN 上附加上该配置。</p>
 </div>
 <p>当主数据库由于某些原因无法连接时，你还可以配置故障转移（failover）。可以像下面这样为一个连接配置故障转移:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;default&#39;</span><span class="p">][</span><span class="s1">&#39;failover&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;default&#39;</span><span class="p">][</span><span class="s1">&#39;failover&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
         <span class="k">array</span><span class="p">(</span>
             <span class="s1">&#39;hostname&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;localhost1&#39;</span><span class="p">,</span>
             <span class="s1">&#39;username&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
@@ -510,7 +510,7 @@
 </div>
 <p>你可以指定任意多个故障转移。</p>
 <p>我们使用多维数组的原因是为了让你随意的存储多个连接值的设置，例如：如果你有多个环境（开发、生产、测试 等等），你能为每个环境建立独立的连接组，并在组之间进行切换。举个例子，如果要设置一个“test”环境，你可以这样做:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;test&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;test&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;dsn&#39;</span>   <span class="o">=&gt;</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
     <span class="s1">&#39;hostname&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
     <span class="s1">&#39;username&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;root&#39;</span><span class="p">,</span>
@@ -533,7 +533,7 @@
 </pre></div>
 </div>
 <p>然后，设置位于配置文件中的 <tt class="docutils literal"><span class="pre">$active_group</span></tt> 变量，告诉系统要使用“test”组:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$active_group</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$active_group</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -543,7 +543,7 @@
 <div class="section" id="id2">
 <h2>查询构造器<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>可以通过数据库配置文件里的 <tt class="docutils literal"><span class="pre">$query_builder</span></tt> 变量对 <a class="reference internal" href="query_builder.html"><em>查询构造器类</em></a> 进行全局的设定（启用设成 TRUE，禁用设成 FALSE，默认是 TRUE）。如果你不用这个类，那么你可以通过将这个变量值设置成 FALSE 来减少在数据库类初始化时对电脑资源的消耗。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$query_builder</span> <span class="o">=</span> <span class="k">TRUE</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$query_builder</span> <span class="o">=</span> <span class="k">TRUE</span><span class="p">;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -640,7 +640,7 @@
 </tr>
 <tr class="row-even"><td><strong>port</strong></td>
 <td><p class="first">数据库端口号，要使用这个值，你应该添加一行代码到数据库配置数组。</p>
-<div class="last highlight-ci"><div class="highlight"><pre><span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;default&#39;</span><span class="p">][</span><span class="s1">&#39;port&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5432</span><span class="p">;</span>
+<div class="last highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$db</span><span class="p">[</span><span class="s1">&#39;default&#39;</span><span class="p">][</span><span class="s1">&#39;port&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5432</span><span class="p">;</span>
 </pre></div>
 </div>
 </td>
@@ -713,7 +713,7 @@
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

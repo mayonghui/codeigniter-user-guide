@@ -1336,11 +1336,11 @@
 <p>根据配置的 <em>dbprefix</em> 参数，给列名或表名（可能是表别名）添加一个前缀。</p>
 <p>为了处理包含路径的列名，必须要考虑一些逻辑。</p>
 <p>例如下面的查询:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">SELECT</span> <span class="o">*</span> <span class="nx">FROM</span> <span class="nx">hostname</span><span class="o">.</span><span class="nx">database</span><span class="o">.</span><span class="nx">table</span><span class="o">.</span><span class="nx">column</span> <span class="k">AS</span> <span class="nx">c</span> <span class="nx">FROM</span> <span class="nx">hostname</span><span class="o">.</span><span class="nx">database</span><span class="o">.</span><span class="nx">table</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">SELECT</span> <span class="o">*</span> <span class="nx">FROM</span> <span class="nx">hostname</span><span class="o">.</span><span class="nx">database</span><span class="o">.</span><span class="nx">table</span><span class="o">.</span><span class="nx">column</span> <span class="k">AS</span> <span class="nx">c</span> <span class="nx">FROM</span> <span class="nx">hostname</span><span class="o">.</span><span class="nx">database</span><span class="o">.</span><span class="nx">table</span>
 </pre></div>
 </div>
 <p>或者下面这个查询，使用了表别名:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">SELECT</span> <span class="nx">m</span><span class="o">.</span><span class="nx">member_id</span><span class="p">,</span> <span class="nx">m</span><span class="o">.</span><span class="nx">member_name</span> <span class="nx">FROM</span> <span class="nx">members</span> <span class="k">AS</span> <span class="nx">m</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">SELECT</span> <span class="nx">m</span><span class="o">.</span><span class="nx">member_id</span><span class="p">,</span> <span class="nx">m</span><span class="o">.</span><span class="nx">member_name</span> <span class="nx">FROM</span> <span class="nx">members</span> <span class="k">AS</span> <span class="nx">m</span>
 </pre></div>
 </div>
 <p>由于列名可以包含四段（主机、数据库名、表名、字段名）或者有一个表别名的前缀，
@@ -1411,7 +1411,7 @@
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

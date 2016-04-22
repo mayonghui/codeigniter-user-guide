@@ -465,11 +465,11 @@
 </table>
 <p>用于从 URI 中获取指定段。参数 n 为你希望获取的段序号，URI 的段从左到右进行编号。
 例如，如果你的完整 URL 是这样的:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">http</span><span class="o">://</span><span class="nx">example</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">index</span><span class="o">.</span><span class="nx">php</span><span class="o">/</span><span class="nx">news</span><span class="o">/</span><span class="nx">local</span><span class="o">/</span><span class="nx">metro</span><span class="o">/</span><span class="nx">crime_is_up</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">http</span><span class="o">://</span><span class="nx">example</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">index</span><span class="o">.</span><span class="nx">php</span><span class="o">/</span><span class="nx">news</span><span class="o">/</span><span class="nx">local</span><span class="o">/</span><span class="nx">metro</span><span class="o">/</span><span class="nx">crime_is_up</span>
 </pre></div>
 </div>
 <p>那么你的每个分段如下:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">#. news</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">#. news</span>
 <span class="c1">#. local</span>
 <span class="c1">#. metro</span>
 <span class="c1">#. crime_is_up</span>
@@ -477,11 +477,11 @@
 </div>
 <p>第二个参数为可选的，默认为 NULL ，它用于设置当所请求的段不存在时的返回值。
 例如，如下代码在失败时将返回数字 0</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$product_id</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">segment</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$product_id</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">segment</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>它可以避免你写出类似于下面这样的代码:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">segment</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">===</span> <span class="k">FALSE</span><span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">segment</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">===</span> <span class="k">FALSE</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="nv">$product_id</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -541,7 +541,7 @@
 </table>
 <p>该方法和 <tt class="docutils literal"><span class="pre">segment()</span></tt> 类似，只是它会根据第二个参数在返回结果的前面或/和后面添加斜线。
 如果第二个参数未设置，斜线会添加到后面。例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">slash_segment</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">slash_segment</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">slash_segment</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;leading&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">slash_segment</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;both&#39;</span><span class="p">);</span>
 </pre></div>
@@ -601,11 +601,11 @@
 </tbody>
 </table>
 <p>该方法用于将 URI 的段转换为一个包含键值对的关联数组。如下 URI:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">index</span><span class="o">.</span><span class="nx">php</span><span class="o">/</span><span class="nx">user</span><span class="o">/</span><span class="nx">search</span><span class="o">/</span><span class="nx">name</span><span class="o">/</span><span class="nx">joe</span><span class="o">/</span><span class="nx">location</span><span class="o">/</span><span class="nx">UK</span><span class="o">/</span><span class="nx">gender</span><span class="o">/</span><span class="nx">male</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">index</span><span class="o">.</span><span class="nx">php</span><span class="o">/</span><span class="nx">user</span><span class="o">/</span><span class="nx">search</span><span class="o">/</span><span class="nx">name</span><span class="o">/</span><span class="nx">joe</span><span class="o">/</span><span class="nx">location</span><span class="o">/</span><span class="nx">UK</span><span class="o">/</span><span class="nx">gender</span><span class="o">/</span><span class="nx">male</span>
 </pre></div>
 </div>
 <p>使用这个方法你可以将 URI 转为如下的数组原型:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="p">[</span><span class="k">array</span><span class="p">]</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="p">[</span><span class="k">array</span><span class="p">]</span>
 <span class="p">(</span>
     <span class="s1">&#39;name&#39;</span>      <span class="o">=&gt;</span> <span class="s1">&#39;joe&#39;</span>
     <span class="s1">&#39;location&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;UK&#39;</span>
@@ -615,13 +615,13 @@
 </div>
 <p>你可以通过第一个参数设置一个位移，默认值为 3 ，这是因为你的 URI 的前两段通常都是控制器和方法。
 例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$array</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">uri_to_assoc</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$array</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">uri_to_assoc</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
 <span class="k">echo</span> <span class="nv">$array</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">];</span>
 </pre></div>
 </div>
 <p>第二个参数用于设置默认的键名，这样即使 URI 中缺少某个键名，也能保证返回的数组中包含该索引。
 例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$default</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;sort&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$default</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;sort&#39;</span><span class="p">);</span>
 <span class="nv">$array</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">uri_to_assoc</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="nv">$default</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -676,7 +676,7 @@
 </tbody>
 </table>
 <p>根据输入的关联数组生成一个 URI 字符串，数组的键将包含在 URI 的字符串中。例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$array</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;product&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;shoes&#39;</span><span class="p">,</span> <span class="s1">&#39;size&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;red&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$array</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;product&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;shoes&#39;</span><span class="p">,</span> <span class="s1">&#39;size&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;red&#39;</span><span class="p">);</span>
 <span class="nv">$str</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">assoc_to_uri</span><span class="p">(</span><span class="nv">$array</span><span class="p">);</span>
 
 <span class="c1">// Produces: product/shoes/size/large/color/red</span>
@@ -698,11 +698,11 @@
 </tbody>
 </table>
 <p>返回一个相对的 URI 字符串，例如，如果你的完整 URL 为:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">http</span><span class="o">://</span><span class="nx">example</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">index</span><span class="o">.</span><span class="nx">php</span><span class="o">/</span><span class="nx">news</span><span class="o">/</span><span class="nx">local</span><span class="o">/</span><span class="mi">345</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">http</span><span class="o">://</span><span class="nx">example</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">index</span><span class="o">.</span><span class="nx">php</span><span class="o">/</span><span class="nx">news</span><span class="o">/</span><span class="nx">local</span><span class="o">/</span><span class="mi">345</span>
 </pre></div>
 </div>
 <p>该方法返回:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">news</span><span class="o">/</span><span class="nx">local</span><span class="o">/</span><span class="mi">345</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">news</span><span class="o">/</span><span class="nx">local</span><span class="o">/</span><span class="mi">345</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -771,7 +771,7 @@
 </tbody>
 </table>
 <p>返回 URI 所有的段组成的数组。例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$segs</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">segment_array</span><span class="p">();</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$segs</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">segment_array</span><span class="p">();</span>
 
 <span class="k">foreach</span> <span class="p">(</span><span class="nv">$segs</span> <span class="k">as</span> <span class="nv">$segment</span><span class="p">)</span>
 <span class="p">{</span>
@@ -863,7 +863,7 @@
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

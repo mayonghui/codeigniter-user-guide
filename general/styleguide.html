@@ -506,7 +506,7 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 <h2><a class="toc-backref" href="#id32">文件的命名</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>类文件的命名必须以大写字母开头，其他文件（配置文件，视图，一般的脚本文件等）的命名是全小写。</p>
 <p><strong>错误的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">somelibrary</span><span class="o">.</span><span class="nx">php</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">somelibrary</span><span class="o">.</span><span class="nx">php</span>
 <span class="nx">someLibrary</span><span class="o">.</span><span class="nx">php</span>
 <span class="nx">SOMELIBRARY</span><span class="o">.</span><span class="nx">php</span>
 <span class="nx">Some_Library</span><span class="o">.</span><span class="nx">php</span>
@@ -517,7 +517,7 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 </pre></div>
 </div>
 <p><strong>正确的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">Somelibrary</span><span class="o">.</span><span class="nx">php</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">Somelibrary</span><span class="o">.</span><span class="nx">php</span>
 <span class="nx">Some_library</span><span class="o">.</span><span class="nx">php</span>
 
 <span class="nx">applicationconfig</span><span class="o">.</span><span class="nx">php</span>
@@ -531,15 +531,15 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 <h2><a class="toc-backref" href="#id33">类和方法的命名</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>类名必须以大写字母开头，多个单词之间使用下划线分割，不要使用驼峰命名法。</p>
 <p><strong>错误的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">class</span> <span class="nc">superclass</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">superclass</span>
 <span class="k">class</span> <span class="nc">SuperClass</span>
 </pre></div>
 </div>
 <p><strong>正确的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Super_class</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Super_class</span>
 </pre></div>
 </div>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Super_class</span> <span class="p">{</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Super_class</span> <span class="p">{</span>
 
     <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">()</span>
     <span class="p">{</span>
@@ -551,7 +551,7 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 <p>类的方法应该使用全小写，并且应该明确指出该方法的功能，最好包含一个动词。
 避免使用冗长的名称，多个单词之间使用下划线分割。</p>
 <p><strong>错误的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">function</span> <span class="nf">fileproperties</span><span class="p">()</span>       <span class="c1">// not descriptive and needs underscore separator</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="nf">fileproperties</span><span class="p">()</span>       <span class="c1">// not descriptive and needs underscore separator</span>
 <span class="k">function</span> <span class="nf">fileProperties</span><span class="p">()</span>       <span class="c1">// not descriptive and uses CamelCase</span>
 <span class="k">function</span> <span class="nf">getfileproperties</span><span class="p">()</span>        <span class="c1">// Better!  But still missing underscore separator</span>
 <span class="k">function</span> <span class="nf">getFileProperties</span><span class="p">()</span>        <span class="c1">// uses CamelCase</span>
@@ -559,7 +559,7 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 </pre></div>
 </div>
 <p><strong>正确的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">function</span> <span class="nf">get_file_properties</span><span class="p">()</span>  <span class="c1">// descriptive, underscore separator, and all lowercase letters</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="nf">get_file_properties</span><span class="p">()</span>  <span class="c1">// descriptive, underscore separator, and all lowercase letters</span>
 </pre></div>
 </div>
 </div>
@@ -569,7 +569,7 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 并且应该明确指出该变量的用途。非常短的无意义的变量只应该在 for
 循环中作为迭代器使用。</p>
 <p><strong>错误的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$j</span> <span class="o">=</span> <span class="s1">&#39;foo&#39;</span><span class="p">;</span>     <span class="c1">// single letter variables should only be used in for() loops</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$j</span> <span class="o">=</span> <span class="s1">&#39;foo&#39;</span><span class="p">;</span>     <span class="c1">// single letter variables should only be used in for() loops</span>
 <span class="nv">$Str</span>            <span class="c1">// contains uppercase letters</span>
 <span class="nv">$bufferedText</span>       <span class="c1">// uses CamelCasing, and could be shortened without losing semantic meaning</span>
 <span class="nv">$groupid</span>        <span class="c1">// multiple words, needs underscore separator</span>
@@ -577,7 +577,7 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 </pre></div>
 </div>
 <p><strong>正确的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">for</span> <span class="p">(</span><span class="nv">$j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$j</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nv">$j</span><span class="o">++</span><span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="nv">$j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$j</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nv">$j</span><span class="o">++</span><span class="p">)</span>
 <span class="nv">$str</span>
 <span class="nv">$buffer</span>
 <span class="nv">$group_id</span>
@@ -592,7 +592,7 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 注释并没有强制规定的格式，但是我们建议以下的形式。</p>
 <p><a class="reference external" href="http://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_phpDocumentor.howto.pkg.html#basics.docblock">DocBlock</a>
 风格的注释，写在类、方法和属性定义的前面，可以被 IDE 识别:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="sd">/**</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="sd">/**</span>
 <span class="sd"> * Super Class</span>
 <span class="sd"> *</span>
 <span class="sd"> * @package Package Name</span>
@@ -604,7 +604,7 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 <span class="k">class</span> <span class="nc">Super_class</span> <span class="p">{</span>
 </pre></div>
 </div>
-<div class="highlight-ci"><div class="highlight"><pre><span class="sd">/**</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="sd">/**</span>
 <span class="sd"> * Encodes string for use in XML</span>
 <span class="sd"> *</span>
 <span class="sd"> * @param   string  $str    Input string</span>
@@ -613,7 +613,7 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 <span class="k">function</span> <span class="nf">xml_encode</span><span class="p">(</span><span class="nv">$str</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-ci"><div class="highlight"><pre><span class="sd">/**</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="sd">/**</span>
 <span class="sd"> * Data for class manipulation</span>
 <span class="sd"> *</span>
 <span class="sd"> * @var array</span>
@@ -622,7 +622,7 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 </pre></div>
 </div>
 <p>单行注释应该和代码合在一起，大块的注释和代码之间应该留一个空行。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// break up the string by newlines</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// break up the string by newlines</span>
 <span class="nv">$parts</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nv">$str</span><span class="p">);</span>
 
 <span class="c1">// A longer comment that needs to give greater detail on what is</span>
@@ -642,14 +642,14 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 <p>常量遵循和变量一样的命名规则，除了它需要全部大写。<strong>尽量使用 CodeIgniter 已经定义好的常量，
 如：SLASH、LD、RD、PATH_CACHE 等。</strong></p>
 <p><strong>错误的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">myConstant</span>  <span class="c1">// missing underscore separator and not fully uppercase</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">myConstant</span>  <span class="c1">// missing underscore separator and not fully uppercase</span>
 <span class="nx">N</span>       <span class="c1">// no single-letter constants</span>
 <span class="nx">S_C_VER</span>     <span class="c1">// not descriptive</span>
 <span class="nv">$str</span> <span class="o">=</span> <span class="nb">str_replace</span><span class="p">(</span><span class="s1">&#39;{foo}&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="nv">$str</span><span class="p">);</span>   <span class="c1">// should use LD and RD constants</span>
 </pre></div>
 </div>
 <p><strong>正确的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">MY_CONSTANT</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">MY_CONSTANT</span>
 <span class="nx">NEWLINE</span>
 <span class="nx">SUPER_CLASS_VERSION</span>
 <span class="nv">$str</span> <span class="o">=</span> <span class="nb">str_replace</span><span class="p">(</span><span class="nx">LD</span><span class="o">.</span><span class="s1">&#39;foo&#39;</span><span class="o">.</span><span class="nx">RD</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="nv">$str</span><span class="p">);</span>
@@ -660,13 +660,13 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 <h2><a class="toc-backref" href="#id37">TRUE、FALSE 和 NULL</a><a class="headerlink" href="#truefalse-null" title="永久链接至标题">¶</a></h2>
 <p><strong>TRUE</strong> 、 <strong>FALSE</strong> 和 <strong>NULL</strong> 这几个关键字全部使用大写。</p>
 <p><strong>错误的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="nv">$foo</span> <span class="o">==</span> <span class="k">true</span><span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nv">$foo</span> <span class="o">==</span> <span class="k">true</span><span class="p">)</span>
 <span class="nv">$bar</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
 <span class="k">function</span> <span class="nf">foo</span><span class="p">(</span><span class="nv">$bar</span> <span class="o">=</span> <span class="k">null</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><strong>正确的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="nv">$foo</span> <span class="o">==</span> <span class="k">TRUE</span><span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nv">$foo</span> <span class="o">==</span> <span class="k">TRUE</span><span class="p">)</span>
 <span class="nv">$bar</span> <span class="o">=</span> <span class="k">FALSE</span><span class="p">;</span>
 <span class="k">function</span> <span class="nf">foo</span><span class="p">(</span><span class="nv">$bar</span> <span class="o">=</span> <span class="k">NULL</span><span class="p">)</span>
 </pre></div>
@@ -678,14 +678,14 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 使用 <tt class="docutils literal"><span class="pre">&amp;&amp;</span></tt> 操作符比使用 <tt class="docutils literal"><span class="pre">AND</span></tt> 要好一点，但是两者都可以接受。
 另外，在 <tt class="docutils literal"><span class="pre">!</span></tt> 操作符的前后都应该加一个空格。</p>
 <p><strong>错误的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="nv">$foo</span> <span class="o">||</span> <span class="nv">$bar</span><span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nv">$foo</span> <span class="o">||</span> <span class="nv">$bar</span><span class="p">)</span>
 <span class="k">if</span> <span class="p">(</span><span class="nv">$foo</span> <span class="k">AND</span> <span class="nv">$bar</span><span class="p">)</span>  <span class="c1">// okay but not recommended for common syntax highlighting applications</span>
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$foo</span><span class="p">)</span>
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span> <span class="nb">is_array</span><span class="p">(</span><span class="nv">$foo</span><span class="p">))</span>
 </pre></div>
 </div>
 <p><strong>正确的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="nv">$foo</span> <span class="k">OR</span> <span class="nv">$bar</span><span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nv">$foo</span> <span class="k">OR</span> <span class="nv">$bar</span><span class="p">)</span>
 <span class="k">if</span> <span class="p">(</span><span class="nv">$foo</span> <span class="o">&amp;&amp;</span> <span class="nv">$bar</span><span class="p">)</span> <span class="c1">// recommended</span>
 <span class="k">if</span> <span class="p">(</span> <span class="o">!</span> <span class="nv">$foo</span><span class="p">)</span>
 <span class="k">if</span> <span class="p">(</span> <span class="o">!</span> <span class="nb">is_array</span><span class="p">(</span><span class="nv">$foo</span><span class="p">))</span>
@@ -699,17 +699,17 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 一定要使用严格类型比较，确保返回值确实是你想要的，而不是松散类型的其他值。</p>
 <p>在检查你自己的返回值和变量时也要遵循这种严格的方式，必要时使用 <strong>===</strong> 和 <strong>!==</strong> 。</p>
 <p><strong>错误的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// If &#39;foo&#39; is at the beginning of the string, strpos will return a 0,</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// If &#39;foo&#39; is at the beginning of the string, strpos will return a 0,</span>
 <span class="c1">// resulting in this conditional evaluating as TRUE</span>
 <span class="k">if</span> <span class="p">(</span><span class="nb">strpos</span><span class="p">(</span><span class="nv">$str</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="k">FALSE</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><strong>正确的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="nb">strpos</span><span class="p">(</span><span class="nv">$str</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="k">FALSE</span><span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nb">strpos</span><span class="p">(</span><span class="nv">$str</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="k">FALSE</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><strong>错误的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">function</span> <span class="nf">build_string</span><span class="p">(</span><span class="nv">$str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="nf">build_string</span><span class="p">(</span><span class="nv">$str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nv">$str</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="c1">// uh-oh!  What if FALSE or the integer 0 is passed as an argument?</span>
     <span class="p">{</span>
@@ -719,7 +719,7 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 </pre></div>
 </div>
 <p><strong>正确的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">function</span> <span class="nf">build_string</span><span class="p">(</span><span class="nv">$str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="nf">build_string</span><span class="p">(</span><span class="nv">$str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nv">$str</span> <span class="o">===</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
     <span class="p">{</span>
@@ -731,7 +731,7 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 <p>另外关于 <a class="reference external" href="http://php.net/manual/en/language.types.type-juggling.php#language.types.typecasting">类型转换</a> 的信息也将很有用。
 类型转换会对变量产生一点轻微的影响，但可能也是期望的。例如 NULL 和 布尔值 FALSE 会转换为空字符串，
 数字 0 （和其他数字）将会转换为数字字符串，布尔值 TRUE 会变成 &quot;1&quot;:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$str</span> <span class="o">=</span> <span class="p">(</span><span class="nx">string</span><span class="p">)</span> <span class="nv">$str</span><span class="p">;</span> <span class="c1">// cast $str as a string</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$str</span> <span class="o">=</span> <span class="p">(</span><span class="nx">string</span><span class="p">)</span> <span class="nv">$str</span><span class="p">;</span> <span class="c1">// cast $str as a string</span>
 </pre></div>
 </div>
 </div>
@@ -775,7 +775,7 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 <p>使用 Allman 代码缩进风格。除了类的定义之外，其他的所有大括号都应该独占一行，
 并且和它对应的控制语句保持相同的缩进。</p>
 <p><strong>错误的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">function</span> <span class="nf">foo</span><span class="p">(</span><span class="nv">$bar</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="nf">foo</span><span class="p">(</span><span class="nv">$bar</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// ...</span>
 <span class="p">}</span>
 
@@ -806,7 +806,7 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 </pre></div>
 </div>
 <p><strong>正确的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">function</span> <span class="nf">foo</span><span class="p">(</span><span class="nv">$bar</span><span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="nf">foo</span><span class="p">(</span><span class="nv">$bar</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="c1">// ...</span>
 <span class="p">}</span>
@@ -850,33 +850,33 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 唯一的例外是，在那些接受一个括号和参数的 PHP 的控制结构（declare、do-while、elseif、for、
 foreach、if、switch、while）的后面应该加一个空格，这样做可以和函数区分开来，并增加可读性。</p>
 <p><strong>错误的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$arr</span><span class="p">[</span> <span class="nv">$foo</span> <span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;foo&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$arr</span><span class="p">[</span> <span class="nv">$foo</span> <span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;foo&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p><strong>正确的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$arr</span><span class="p">[</span><span class="nv">$foo</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;foo&#39;</span><span class="p">;</span> <span class="c1">// no spaces around array keys</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$arr</span><span class="p">[</span><span class="nv">$foo</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;foo&#39;</span><span class="p">;</span> <span class="c1">// no spaces around array keys</span>
 </pre></div>
 </div>
 <p><strong>错误的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">function</span> <span class="nf">foo</span> <span class="p">(</span> <span class="nv">$bar</span> <span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="nf">foo</span> <span class="p">(</span> <span class="nv">$bar</span> <span class="p">)</span>
 <span class="p">{</span>
 
 <span class="p">}</span>
 </pre></div>
 </div>
 <p><strong>正确的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">function</span> <span class="nf">foo</span><span class="p">(</span><span class="nv">$bar</span><span class="p">)</span> <span class="c1">// no spaces around parenthesis in function declarations</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="nf">foo</span><span class="p">(</span><span class="nv">$bar</span><span class="p">)</span> <span class="c1">// no spaces around parenthesis in function declarations</span>
 <span class="p">{</span>
 
 <span class="p">}</span>
 </pre></div>
 </div>
 <p><strong>错误的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">foreach</span><span class="p">(</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">result</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$row</span> <span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">foreach</span><span class="p">(</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">result</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$row</span> <span class="p">)</span>
 </pre></div>
 </div>
 <p><strong>正确的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">foreach</span> <span class="p">(</span><span class="nv">$query</span><span class="o">-&gt;</span><span class="na">result</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$row</span><span class="p">)</span> <span class="c1">// single space following PHP control structures, but not in interior parenthesis</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">foreach</span> <span class="p">(</span><span class="nv">$query</span><span class="o">-&gt;</span><span class="na">result</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$row</span><span class="p">)</span> <span class="c1">// single space following PHP control structures, but not in interior parenthesis</span>
 </pre></div>
 </div>
 </div>
@@ -884,18 +884,18 @@ foreach、if、switch、while）的后面应该加一个空格，这样做可以
 <h2><a class="toc-backref" href="#id48">本地化文本</a><a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h2>
 <p>CodeIgniter 的类库应该尽可能的使用相应的语言文件。</p>
 <p><strong>错误的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">return</span> <span class="s2">&quot;Invalid Selection&quot;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="s2">&quot;Invalid Selection&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p><strong>正确的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">lang</span><span class="o">-&gt;</span><span class="na">line</span><span class="p">(</span><span class="s1">&#39;invalid_selection&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">lang</span><span class="o">-&gt;</span><span class="na">line</span><span class="p">(</span><span class="s1">&#39;invalid_selection&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id21">
 <h2><a class="toc-backref" href="#id49">私有方法和变量</a><a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
 <p>那些只能在内部访问的方法和变量，例如供共有方法使用的那些工具方法或辅助函数，应该以下划线开头。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">convert_text</span><span class="p">()</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">function</span> <span class="nf">convert_text</span><span class="p">()</span>
 <span class="k">private</span> <span class="k">function</span> <span class="nf">_convert_text</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -907,7 +907,7 @@ foreach、if、switch、while）的后面应该加一个空格，这样做可以
 你应该先使用 <tt class="docutils literal"><span class="pre">isset()</span></tt> 函数判断下。</p>
 <p>确保你的开发环境对所有人都开启了错误报告，PHP 环境的 display_errors 参数也开启了，
 你可以通过下面的代码来检查:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="nb">ini_get</span><span class="p">(</span><span class="s1">&#39;display_errors&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nb">ini_get</span><span class="p">(</span><span class="s1">&#39;display_errors&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">exit</span> <span class="s2">&quot;Enabled&quot;</span><span class="p">;</span>
 <span class="p">}</span>
@@ -915,7 +915,7 @@ foreach、if、switch、while）的后面应该加一个空格，这样做可以
 </div>
 <p>有些服务器上 <em>display_errors</em> 参数可能是禁用的，而且你没有权限修改 php.ini 文件，
 你可以使用下面的方法来启用它:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nb">ini_set</span><span class="p">(</span><span class="s1">&#39;display_errors&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nb">ini_set</span><span class="p">(</span><span class="s1">&#39;display_errors&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -928,13 +928,13 @@ foreach、if、switch、while）的后面应该加一个空格，这样做可以
 <h2><a class="toc-backref" href="#id51">短标记</a><a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h2>
 <p>使用 PHP 的完整标记，防止服务器不支持短标记（ <em>short_open_tag</em> ）参数。</p>
 <p><strong>错误的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;?</span> <span class="k">echo</span> <span class="nv">$foo</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;?</span> <span class="k">echo</span> <span class="nv">$foo</span><span class="p">;</span> <span class="cp">?&gt;</span>
 
 <span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$foo</span><span class="cp">?&gt;</span>
 </pre></div>
 </div>
 <p><strong>正确的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$foo</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$foo</span><span class="p">;</span> <span class="cp">?&gt;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -946,11 +946,11 @@ foreach、if、switch、while）的后面应该加一个空格，这样做可以
 <h2><a class="toc-backref" href="#id52">每行只有一条语句</a><a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h2>
 <p>切记不要在同一行内写多条语句。</p>
 <p><strong>错误的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$foo</span> <span class="o">=</span> <span class="s1">&#39;this&#39;</span><span class="p">;</span> <span class="nv">$bar</span> <span class="o">=</span> <span class="s1">&#39;that&#39;</span><span class="p">;</span> <span class="nv">$bat</span> <span class="o">=</span> <span class="nb">str_replace</span><span class="p">(</span><span class="nv">$foo</span><span class="p">,</span> <span class="nv">$bar</span><span class="p">,</span> <span class="nv">$bag</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$foo</span> <span class="o">=</span> <span class="s1">&#39;this&#39;</span><span class="p">;</span> <span class="nv">$bar</span> <span class="o">=</span> <span class="s1">&#39;that&#39;</span><span class="p">;</span> <span class="nv">$bat</span> <span class="o">=</span> <span class="nb">str_replace</span><span class="p">(</span><span class="nv">$foo</span><span class="p">,</span> <span class="nv">$bar</span><span class="p">,</span> <span class="nv">$bag</span><span class="p">);</span>
 </pre></div>
 </div>
 <p><strong>正确的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$foo</span> <span class="o">=</span> <span class="s1">&#39;this&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$foo</span> <span class="o">=</span> <span class="s1">&#39;this&#39;</span><span class="p">;</span>
 <span class="nv">$bar</span> <span class="o">=</span> <span class="s1">&#39;that&#39;</span><span class="p">;</span>
 <span class="nv">$bat</span> <span class="o">=</span> <span class="nb">str_replace</span><span class="p">(</span><span class="nv">$foo</span><span class="p">,</span> <span class="nv">$bar</span><span class="p">,</span> <span class="nv">$bag</span><span class="p">);</span>
 </pre></div>
@@ -961,13 +961,13 @@ foreach、if、switch、while）的后面应该加一个空格，这样做可以
 <p>字符串使用单引号引起来，当字符串中有变量时使用双引号，并且使用大括号将变量包起来。
 另外，当字符串中有单引号时，也应该使用双引号，这样就不用使用转义符。</p>
 <p><strong>错误的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="s2">&quot;My String&quot;</span>                 <span class="c1">// no variable parsing, so no use for double quotes</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="s2">&quot;My String&quot;</span>                 <span class="c1">// no variable parsing, so no use for double quotes</span>
 <span class="s2">&quot;My string </span><span class="si">$foo</span><span class="s2">&quot;</span>                <span class="c1">// needs braces</span>
 <span class="s1">&#39;SELECT foo FROM bar WHERE baz = \&#39;bag\&#39;&#39;</span>   <span class="c1">// ugly</span>
 </pre></div>
 </div>
 <p><strong>正确的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="s1">&#39;My String&#39;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="s1">&#39;My String&#39;</span>
 <span class="s2">&quot;My string </span><span class="si">{</span><span class="nv">$foo</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="s2">&quot;SELECT foo FROM bar WHERE baz = &#39;bag&#39;&quot;</span>
 </pre></div>
@@ -978,14 +978,14 @@ foreach、if、switch、while）的后面应该加一个空格，这样做可以
 <p>SQL 关键字永远使用大写：SELECT、INSERT、UPDATE、WHERE、AS、JOIN、ON、IN 等。</p>
 <p>考虑到易读性，把长的查询分成多行，最好是每行只有一个从句或子从句。</p>
 <p><strong>错误的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// keywords are lowercase and query is too long for</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// keywords are lowercase and query is too long for</span>
 <span class="c1">// a single line (... indicates continuation of line)</span>
 <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">&quot;select foo, bar, baz, foofoo, foobar as raboof, foobaz from exp_pre_email_addresses</span>
 <span class="s2">...where foo != &#39;oof&#39; and baz != &#39;zab&#39; order by foobaz limit 5, 100&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p><strong>正确的</strong>:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">&quot;SELECT foo, bar, baz, foofoo, foobar AS raboof, foobaz</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">&quot;SELECT foo, bar, baz, foofoo, foobar AS raboof, foobaz</span>
 <span class="s2">                FROM exp_pre_email_addresses</span>
 <span class="s2">                WHERE foo != &#39;oof&#39;</span>
 <span class="s2">                AND baz != &#39;zab&#39;</span>
@@ -998,7 +998,7 @@ foreach、if、switch、while）的后面应该加一个空格，这样做可以
 <h2><a class="toc-backref" href="#id55">缺省的函数参数</a><a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h2>
 <p>适当的时候，提供函数参数的缺省值，这有助于防止因错误的函数调用引起的PHP错误，
 另外提供常见的备选值可以节省几行代码。例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">function</span> <span class="nf">foo</span><span class="p">(</span><span class="nv">$bar</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nv">$baz</span> <span class="o">=</span> <span class="k">FALSE</span><span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="nf">foo</span><span class="p">(</span><span class="nv">$bar</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nv">$baz</span> <span class="o">=</span> <span class="k">FALSE</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1063,7 +1063,7 @@ foreach、if、switch、while）的后面应该加一个空格，这样做可以
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

@@ -462,7 +462,7 @@ Mcrypt 扩展才能运行。</p>
 自己设计的保存机制也行，然后在加解密时动态的取出密钥。</p>
 <p>如果要通过文件 <strong>application/config/config.php</strong> 来保存你的密钥，那么打开
 该文件然后设置:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;encryption_key&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;YOUR KEY&quot;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;encryption_key&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;YOUR KEY&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -478,11 +478,11 @@ Mcrypt 扩展才能运行。</p>
 <h3><a class="toc-backref" href="#id12">初始化类</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>正如 CodeIgniter 中的其他类一样，在你的控制器中使用 <tt class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></tt>
 方法来初始化加密类:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;encrypt&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;encrypt&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>初始化之后，加密类的对象就可以这样访问:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encrypt</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encrypt</span>
 </pre></div>
 </div>
 </div>
@@ -514,13 +514,13 @@ Mcrypt 扩展才能运行。</p>
 </tbody>
 </table>
 <p>执行数据加密，并返回加密后的字符串。例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$msg</span> <span class="o">=</span> <span class="s1">&#39;My secret message&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$msg</span> <span class="o">=</span> <span class="s1">&#39;My secret message&#39;</span><span class="p">;</span>
 
 <span class="nv">$encrypted_string</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encrypt</span><span class="o">-&gt;</span><span class="na">encode</span><span class="p">(</span><span class="nv">$msg</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>如果你不想使用配置文件中的密钥，你也可以将你的密钥通过第二个可选参数传入:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$msg</span> <span class="o">=</span> <span class="s1">&#39;My secret message&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$msg</span> <span class="o">=</span> <span class="s1">&#39;My secret message&#39;</span><span class="p">;</span>
 <span class="nv">$key</span> <span class="o">=</span> <span class="s1">&#39;super-secret-key&#39;</span><span class="p">;</span>
 
 <span class="nv">$encrypted_string</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encrypt</span><span class="o">-&gt;</span><span class="na">encode</span><span class="p">(</span><span class="nv">$msg</span><span class="p">,</span> <span class="nv">$key</span><span class="p">);</span>
@@ -550,13 +550,13 @@ Mcrypt 扩展才能运行。</p>
 </tbody>
 </table>
 <p>解密一个已加密的字符串。例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$encrypted_string</span> <span class="o">=</span> <span class="s1">&#39;APANtByIGI1BpVXZTJgcsAG8GZl8pdwwa84&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$encrypted_string</span> <span class="o">=</span> <span class="s1">&#39;APANtByIGI1BpVXZTJgcsAG8GZl8pdwwa84&#39;</span><span class="p">;</span>
 
 <span class="nv">$plaintext_string</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encrypt</span><span class="o">-&gt;</span><span class="na">decode</span><span class="p">(</span><span class="nv">$encrypted_string</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>如果你不想使用配置文件中的密钥，你也可以将你的密钥通过第二个可选参数传入:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$msg</span> <span class="o">=</span> <span class="s1">&#39;My secret message&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$msg</span> <span class="o">=</span> <span class="s1">&#39;My secret message&#39;</span><span class="p">;</span>
 <span class="nv">$key</span> <span class="o">=</span> <span class="s1">&#39;super-secret-key&#39;</span><span class="p">;</span>
 
 <span class="nv">$encrypted_string</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encrypt</span><span class="o">-&gt;</span><span class="na">decode</span><span class="p">(</span><span class="nv">$msg</span><span class="p">,</span> <span class="nv">$key</span><span class="p">);</span>
@@ -585,12 +585,12 @@ Mcrypt 扩展才能运行。</p>
 </tbody>
 </table>
 <p>设置一个 Mcrypt 加密算法，默认情况下，使用的是 <tt class="docutils literal"><span class="pre">MCRYPT_RIJNDAEL_256</span></tt> ，例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encrypt</span><span class="o">-&gt;</span><span class="na">set_cipher</span><span class="p">(</span><span class="nx">MCRYPT_BLOWFISH</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encrypt</span><span class="o">-&gt;</span><span class="na">set_cipher</span><span class="p">(</span><span class="nx">MCRYPT_BLOWFISH</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>访问 php.net 获取一份 <a class="reference external" href="http://php.net/mcrypt">可用的加密算法清单</a> 。</p>
 <p>如果你想测试下你的服务器是否支持 MCrypt ，你可以:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">echo</span> <span class="nb">extension_loaded</span><span class="p">(</span><span class="s1">&#39;mcrypt&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39;Yup&#39;</span> <span class="o">:</span> <span class="s1">&#39;Nope&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nb">extension_loaded</span><span class="p">(</span><span class="s1">&#39;mcrypt&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39;Yup&#39;</span> <span class="o">:</span> <span class="s1">&#39;Nope&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -616,7 +616,7 @@ Mcrypt 扩展才能运行。</p>
 </tbody>
 </table>
 <p>设置一个 Mcrypt 加密模式，默认情况下，使用的是 <strong>MCRYPT_MODE_CBC</strong> ，例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encrypt</span><span class="o">-&gt;</span><span class="na">set_mode</span><span class="p">(</span><span class="nx">MCRYPT_MODE_CFB</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encrypt</span><span class="o">-&gt;</span><span class="na">set_mode</span><span class="p">(</span><span class="nx">MCRYPT_MODE_CFB</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>访问 php.net 获取一份 <a class="reference external" href="http://php.net/mcrypt">可用的加密模式清单</a> 。</p>
@@ -657,7 +657,7 @@ Mcrypt 扩展才能运行。</p>
 使用老的加密方法来替代新的加密方法，无缝的兼容 CodeIgniter 1.x 加密数据。
 但是作为一个开发者，作出这样的决定还是应该小心谨慎。</p>
 </div>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$new_data</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encrypt</span><span class="o">-&gt;</span><span class="na">encode_from_legacy</span><span class="p">(</span><span class="nv">$old_encrypted_string</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$new_data</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">encrypt</span><span class="o">-&gt;</span><span class="na">encode_from_legacy</span><span class="p">(</span><span class="nv">$old_encrypted_string</span><span class="p">);</span>
 </pre></div>
 </div>
 <table border="1" class="docutils">
@@ -754,7 +754,7 @@ Mcrypt 扩展才能运行。</p>
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

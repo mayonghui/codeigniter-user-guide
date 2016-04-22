@@ -459,7 +459,7 @@
 <div class="section" id="id4">
 <h2>类文件<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>类应该定义成如下原型:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;BASEPATH&#39;</span><span class="p">)</span> <span class="k">OR</span> <span class="k">exit</span><span class="p">(</span><span class="s1">&#39;No direct script access allowed&#39;</span><span class="p">);</span>
 
 <span class="k">class</span> <span class="nc">Someclass</span> <span class="p">{</span>
@@ -478,13 +478,13 @@
 <div class="section" id="id5">
 <h2>使用你的类<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>在你的 <a class="reference internal" href="controllers.html"><em>控制器</em></a> 的任何方法中使用如下代码初始化你的类:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;someclass&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;someclass&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>其中，<em>someclass</em> 为文件名，不包括 .php 文件扩展名。文件名可以写成首字母大写，
 也可以写成全小写，CodeIgniter 都可以识别。</p>
 <p>一旦加载，你就可以使用小写字母名称来访问你的类:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">someclass</span><span class="o">-&gt;</span><span class="na">some_method</span><span class="p">();</span><span class="nx"> </span> <span class="c1">// Object instances will always be lower case</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">someclass</span><span class="o">-&gt;</span><span class="na">some_method</span><span class="p">();</span><span class="nx"> </span> <span class="c1">// Object instances will always be lower case</span>
 </pre></div>
 </div>
 </div>
@@ -492,13 +492,13 @@
 <h2>初始化类时传入参数<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p>在加载类库的时候，你可以通过第二个参数动态的传递一个数组数据，该数组将被传到
 你的类的构造函数中:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$params</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;type&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;red&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$params</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;type&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;red&#39;</span><span class="p">);</span>
 
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;someclass&#39;</span><span class="p">,</span> <span class="nv">$params</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>如果你使用了该功能，你必须在定义类的构造函数时加上参数:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span> <span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;BASEPATH&#39;</span><span class="p">)</span> <span class="k">OR</span> <span class="k">exit</span><span class="p">(</span><span class="s1">&#39;No direct script access allowed&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span> <span class="nb">defined</span><span class="p">(</span><span class="s1">&#39;BASEPATH&#39;</span><span class="p">)</span> <span class="k">OR</span> <span class="k">exit</span><span class="p">(</span><span class="s1">&#39;No direct script access allowed&#39;</span><span class="p">);</span>
 
 <span class="k">class</span> <span class="nc">Someclass</span> <span class="p">{</span>
 
@@ -518,7 +518,7 @@
 <p>在你的类库中使用 <tt class="docutils literal"><span class="pre">get_instance()</span></tt> 函数来访问 CodeIgniter 的原生资源，这个函数返回
 CodeIgniter 超级对象。</p>
 <p>通常情况下，在你的控制器方法中你会使用 <tt class="docutils literal"><span class="pre">$this</span></tt> 来调用所有可用的 CodeIgniter 方法:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;session&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">config</span><span class="o">-&gt;</span><span class="na">item</span><span class="p">(</span><span class="s1">&#39;base_url&#39;</span><span class="p">);</span>
 <span class="c1">// etc.</span>
@@ -527,11 +527,11 @@ CodeIgniter 超级对象。</p>
 <p>但是 <tt class="docutils literal"><span class="pre">$this</span></tt> 只能在你的控制器、模型或视图中直接使用，如果你想在你自己的类中使用
 CodeIgniter 类，你可以像下面这样做：</p>
 <p>首先，将 CodeIgniter 对象赋值给一个变量:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$CI</span> <span class="o">=&amp;</span> <span class="nx">get_instance</span><span class="p">();</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$CI</span> <span class="o">=&amp;</span> <span class="nx">get_instance</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>一旦你把 CodeIgniter 对象赋值给一个变量之后，你就可以使用这个变量来 <em>代替</em> <tt class="docutils literal"><span class="pre">$this</span></tt></p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$CI</span> <span class="o">=&amp;</span> <span class="nx">get_instance</span><span class="p">();</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$CI</span> <span class="o">=&amp;</span> <span class="nx">get_instance</span><span class="p">();</span>
 
 <span class="nv">$CI</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">);</span>
 <span class="nv">$CI</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;session&#39;</span><span class="p">);</span>
@@ -542,14 +542,14 @@ CodeIgniter 类，你可以像下面这样做：</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
 <p>你会看到上面的 <tt class="docutils literal"><span class="pre">get_instance()</span></tt> 函数通过引用来传递:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$CI</span> <span class="o">=&amp;</span> <span class="nx">get_instance</span><span class="p">();</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$CI</span> <span class="o">=&amp;</span> <span class="nx">get_instance</span><span class="p">();</span>
 </pre></div>
 </div>
 <p class="last">这是非常重要的，引用赋值允许你使用原始的 CodeIgniter 对象，而不是创建一个副本。</p>
 </div>
 <p>既然类库是一个类，那么我们最好充分的使用 OOP 原则，所以，为了让类中的所有方法都能使用
 CodeIgniter 超级对象，建议将其赋值给一个属性:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Example_library</span> <span class="p">{</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Example_library</span> <span class="p">{</span>
 
     <span class="k">protected</span> <span class="nv">$CI</span><span class="p">;</span>
 
@@ -582,14 +582,14 @@ CodeIgniter 超级对象，建议将其赋值给一个属性:</p>
 要使用该功能，你必须将你的类库文件和类定义改成和原生的类库完全一样，例如，
 要替换掉原生的 Email 类的话，你要新建一个 <em>application/libraries/Email.php</em> 文件，
 然后定义定义你的类:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">class</span> <span class="nc">CI_Email</span> <span class="p">{</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CI_Email</span> <span class="p">{</span>
 
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>注意大多数原生类都以 CI_ 开头。</p>
 <p>要加载你的类库，和标准的方法一样:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -608,13 +608,13 @@ CodeIgniter 超级对象，建议将其赋值给一个属性:</p>
 </ul>
 <p>例如，要扩展原生的 Email 类你需要新建一个文件命名为 <em>application/libraries/MY_Email.php</em> ，
 然后定义你的类:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">class</span> <span class="nc">MY_Email</span> <span class="k">extends</span> <span class="nx">CI_Email</span> <span class="p">{</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MY_Email</span> <span class="k">extends</span> <span class="nx">CI_Email</span> <span class="p">{</span>
 
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>如果你需要在你的类中使用构造函数，确保你调用了父类的构造函数:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">class</span> <span class="nc">MY_Email</span> <span class="k">extends</span> <span class="nx">CI_Email</span> <span class="p">{</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MY_Email</span> <span class="k">extends</span> <span class="nx">CI_Email</span> <span class="p">{</span>
 
     <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nv">$config</span> <span class="o">=</span> <span class="k">array</span><span class="p">())</span>
     <span class="p">{</span>
@@ -633,12 +633,12 @@ CodeIgniter 超级对象，建议将其赋值给一个属性:</p>
 <h3>加载你的扩展类<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
 <p>要加载你的扩展类，还是使用和通常一样的语法。不用包含前缀。例如，
 要加载上例中你扩展的 Email 类，你可以使用:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>一旦加载，你还是和通常一样使用类变量来访问你扩展的类，以 email 类为例，
 访问它的方法如下:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">some_method</span><span class="p">();</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">some_method</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
@@ -646,7 +646,7 @@ CodeIgniter 超级对象，建议将其赋值给一个属性:</p>
 <h3>设置自定义前缀<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
 <p>要设置你自己的类的前缀，你可以打开 <em>application/config/config.php</em> 文件，
 找到下面这项:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;subclass_prefix&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;MY_&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;subclass_prefix&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;MY_&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>请注意所有原始的 CodeIgniter 类库都以 <strong>CI_</strong> 开头，所以请不要使用这个
@@ -714,7 +714,7 @@ CodeIgniter 超级对象，建议将其赋值给一个属性:</p>
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

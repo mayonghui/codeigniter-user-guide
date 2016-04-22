@@ -436,7 +436,7 @@
 <div class="custom-index container"></div><div class="section" id="id2">
 <h2><a class="toc-backref" href="#id4">加载辅助函数</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>该辅助函数通过下面的代码加载:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;array&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;array&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -468,7 +468,7 @@
 <p>该函数通过索引获取数组中的元素。它会测试索引是否设置并且有值，如果有值，
 函数将返回该值，如果没有值，默认返回 NULL 或返回通过第三个参数设置的默认值。</p>
 <p>示例:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$array</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$array</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;color&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span>
     <span class="s1">&#39;shape&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;round&#39;</span><span class="p">,</span>
     <span class="s1">&#39;size&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;&#39;</span>
@@ -506,7 +506,7 @@
 如果其中某个索引没有值，返回结果中该索引所对应的元素将被置为 NULL ，或者
 通过第三个参数设置的默认值。</p>
 <p>示例:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$array</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$array</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;color&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span>
     <span class="s1">&#39;shape&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;round&#39;</span><span class="p">,</span>
     <span class="s1">&#39;radius&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span>
@@ -517,7 +517,7 @@
 </pre></div>
 </div>
 <p>上面的函数返回的结果如下:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;color&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span>
     <span class="s1">&#39;shape&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;round&#39;</span><span class="p">,</span>
     <span class="s1">&#39;height&#39;</span> <span class="o">=&gt;</span> <span class="k">NULL</span>
@@ -525,11 +525,11 @@
 </pre></div>
 </div>
 <p>你可以通过第三个参数设置任何你想要设置的默认值。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$my_shape</span> <span class="o">=</span> <span class="nx">elements</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="s1">&#39;shape&#39;</span><span class="p">,</span> <span class="s1">&#39;height&#39;</span><span class="p">),</span> <span class="nv">$array</span><span class="p">,</span> <span class="s1">&#39;foobar&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$my_shape</span> <span class="o">=</span> <span class="nx">elements</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;color&#39;</span><span class="p">,</span> <span class="s1">&#39;shape&#39;</span><span class="p">,</span> <span class="s1">&#39;height&#39;</span><span class="p">),</span> <span class="nv">$array</span><span class="p">,</span> <span class="s1">&#39;foobar&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>上面的函数返回的结果如下:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;color&#39;</span>     <span class="o">=&gt;</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span>
     <span class="s1">&#39;shape&#39;</span>     <span class="o">=&gt;</span> <span class="s1">&#39;round&#39;</span><span class="p">,</span>
     <span class="s1">&#39;height&#39;</span>    <span class="o">=&gt;</span> <span class="s1">&#39;foobar&#39;</span>
@@ -538,7 +538,7 @@
 </div>
 <p>当你需要将 <tt class="docutils literal"><span class="pre">$_POST</span></tt> 数组传递到你的模型中时这将很有用，这可以防止用户发送额外的数据
 被写入到你的数据库。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">model</span><span class="p">(</span><span class="s1">&#39;post_model&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">model</span><span class="p">(</span><span class="s1">&#39;post_model&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">post_model</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">(</span>
     <span class="nx">elements</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;content&#39;</span><span class="p">),</span> <span class="nv">$_POST</span><span class="p">)</span>
 <span class="p">);</span>
@@ -569,7 +569,7 @@
 </table>
 <p>传入一个数组，并返回数组中随机的一个元素。</p>
 <p>使用示例:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$quotes</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$quotes</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s2">&quot;I find that the harder I work, the more luck I seem to have. - Thomas Jefferson&quot;</span><span class="p">,</span>
     <span class="s2">&quot;Don&#39;t stay in bed, unless you can make money in bed. - George Burns&quot;</span><span class="p">,</span>
     <span class="s2">&quot;We didn&#39;t lose the game; we just ran out of time. - Vince Lombardi&quot;</span><span class="p">,</span>
@@ -645,7 +645,7 @@
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

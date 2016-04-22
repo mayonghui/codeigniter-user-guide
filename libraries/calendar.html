@@ -448,18 +448,18 @@
 <h3><a class="toc-backref" href="#id11">初始化类</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <p>跟 CodeIgniter 中的其他类一样，可以在你的控制器中使用 <tt class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></tt>
 方法加载日历类:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;calendar&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;calendar&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>一旦加载，日历类就可以像下面这样使用:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">calendar</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">calendar</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id4">
 <h3><a class="toc-backref" href="#id12">显示一个日历</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>这里是一个简单的例子，告诉你如何去显示一个日历:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;calendar&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;calendar&#39;</span><span class="p">);</span>
 <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">calendar</span><span class="o">-&gt;</span><span class="na">generate</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -474,7 +474,7 @@ echo $this-&gt;calendar-&gt;generate(2006, 6);</div></blockquote>
 <h3><a class="toc-backref" href="#id13">传数据到单元格</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>如果需要添加数据到日历的单元格中，就要创建一个关联数组，这个数组中索引是想添加数据的日期，
 数组对应的值是想添加的数据。该数组通过日历生成函数的第三个参数被传入，参考下面这个例子:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;calendar&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;calendar&#39;</span><span class="p">);</span>
 
 <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="mi">3</span>  <span class="o">=&gt;</span> <span class="s1">&#39;http://example.com/news/article/2006/03/&#39;</span><span class="p">,</span>
@@ -497,7 +497,7 @@ echo $this-&gt;calendar-&gt;generate(2006, 6);</div></blockquote>
 <h3><a class="toc-backref" href="#id14">设置显示参数</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <p>有 8 种不同的参数可以让你设置日历的各个方面，你可以通过加载函数的第二个参数来设置参数。
 例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$prefs</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$prefs</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;start_day&#39;</span>    <span class="o">=&gt;</span> <span class="s1">&#39;saturday&#39;</span><span class="p">,</span>
     <span class="s1">&#39;month_type&#39;</span>   <span class="o">=&gt;</span> <span class="s1">&#39;long&#39;</span><span class="p">,</span>
     <span class="s1">&#39;day_type&#39;</span>     <span class="o">=&gt;</span> <span class="s1">&#39;short&#39;</span>
@@ -571,7 +571,7 @@ echo $this-&gt;calendar-&gt;generate(2006, 6);</div></blockquote>
 <div class="section" id="id7">
 <h3><a class="toc-backref" href="#id15">显示下一月/上一月链接</a><a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <p>要让你的日历通过下一月/上一月链接动态的减少/增加，可以仿照下面的例子建立你的日历:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$prefs</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$prefs</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;show_next_prev&#39;</span>  <span class="o">=&gt;</span> <span class="k">TRUE</span><span class="p">,</span>
     <span class="s1">&#39;next_prev_url&#39;</span>   <span class="o">=&gt;</span> <span class="s1">&#39;http://example.com/index.php/calendar/show/&#39;</span>
 <span class="p">);</span>
@@ -592,7 +592,7 @@ echo $this-&gt;calendar-&gt;generate(2006, 6);</div></blockquote>
 <h3><a class="toc-backref" href="#id16">创建一个日历模板</a><a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
 <p>通过创建一个日历模板你能够 100% 的控制你的日历的设计。当使用字符串方式设置模板时，
 日历的每一部分都要被放在一对伪变量中，像下面这样:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$prefs</span><span class="p">[</span><span class="s1">&#39;template&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$prefs</span><span class="p">[</span><span class="s1">&#39;template&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;</span>
 
 <span class="s1">    {table_open}&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;{/table_open}</span>
 
@@ -639,7 +639,7 @@ echo $this-&gt;calendar-&gt;generate(2006, 6);</div></blockquote>
 <p>当使用数组方式设置模板时，你需要传递 <cite>key =&gt; value</cite> 键值对，你可以只设置你想设置的参数，
 其他没有设置的参数会使用日历类的默认值代替。</p>
 <p>例子:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$prefs</span><span class="p">[</span><span class="s1">&#39;template&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$prefs</span><span class="p">[</span><span class="s1">&#39;template&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;table_open&#39;</span>           <span class="o">=&gt;</span> <span class="s1">&#39;&lt;table class=&quot;calendar&quot;&gt;&#39;</span><span class="p">,</span>
     <span class="s1">&#39;cal_cell_start&#39;</span>       <span class="o">=&gt;</span> <span class="s1">&#39;&lt;td class=&quot;day&quot;&gt;&#39;</span><span class="p">,</span>
     <span class="s1">&#39;cal_cell_start_today&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;&lt;td class=&quot;today&quot;&gt;&#39;</span>
@@ -774,11 +774,11 @@ echo $this-&gt;calendar-&gt;generate(2006, 6);</div></blockquote>
 </tbody>
 </table>
 <p>该方法调整日期确保日期有效。例如，如果你将月份设置为 13 ，年份将自动加 1 ，并且月份变为一月:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nb">print_r</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">calendar</span><span class="o">-&gt;</span><span class="na">adjust_date</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">2014</span><span class="p">));</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nb">print_r</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">calendar</span><span class="o">-&gt;</span><span class="na">adjust_date</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">2014</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>输出:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">Array</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">Array</span>
 <span class="p">(</span>
     <span class="p">[</span><span class="nx">month</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="s1">&#39;01&#39;</span>
     <span class="p">[</span><span class="nx">year</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="s1">&#39;2015&#39;</span>
@@ -809,7 +809,7 @@ echo $this-&gt;calendar-&gt;generate(2006, 6);</div></blockquote>
 </tbody>
 </table>
 <p>获取指定月的天数:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">calendar</span><span class="o">-&gt;</span><span class="na">get_total_days</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2012</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">calendar</span><span class="o">-&gt;</span><span class="na">get_total_days</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2012</span><span class="p">);</span>
 <span class="c1">// 29</span>
 </pre></div>
 </div>
@@ -915,7 +915,7 @@ echo $this-&gt;calendar-&gt;generate(2006, 6);</div></blockquote>
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

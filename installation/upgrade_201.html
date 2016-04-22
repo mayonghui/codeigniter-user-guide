@@ -453,11 +453,11 @@ used to be to post to the default controller, but it will now just leave
 an empty action=&quot;&quot; meaning the form will submit to the current URL. If
 submitting to the default controller was the expected behavior it will
 need to be changed from:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">echo</span> <span class="nx">form_open</span><span class="p">();</span> <span class="c1">//&lt;form action=&quot;&quot; method=&quot;post&quot; accept-charset=&quot;utf-8&quot;&gt;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nx">form_open</span><span class="p">();</span> <span class="c1">//&lt;form action=&quot;&quot; method=&quot;post&quot; accept-charset=&quot;utf-8&quot;&gt;</span>
 </pre></div>
 </div>
 <p>to use either a / or base_url():</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">echo</span> <span class="nx">form_open</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">);</span> <span class="c1">//&lt;form action=&quot;http://example.com/index.php/&quot; method=&quot;post&quot; accept-charset=&quot;utf-8&quot;&gt;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nx">form_open</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">);</span> <span class="c1">//&lt;form action=&quot;http://example.com/index.php/&quot; method=&quot;post&quot; accept-charset=&quot;utf-8&quot;&gt;</span>
 <span class="k">echo</span> <span class="nx">form_open</span><span class="p">(</span><span class="nx">base_url</span><span class="p">());</span> <span class="c1">//&lt;form action=&quot;http://example.com/&quot; method=&quot;post&quot; accept-charset=&quot;utf-8&quot;&gt;</span>
 </pre></div>
 </div>
@@ -523,7 +523,7 @@ need to be changed from:</p>
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

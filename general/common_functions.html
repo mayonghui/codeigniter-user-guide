@@ -450,7 +450,7 @@
 </table>
 <p>判断当前运行的 PHP 版本是否高于或等于你提供的版本号。</p>
 <p>例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="nx">is_php</span><span class="p">(</span><span class="s1">&#39;5.3&#39;</span><span class="p">))</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nx">is_php</span><span class="p">(</span><span class="s1">&#39;5.3&#39;</span><span class="p">))</span>
 <span class="p">{</span>
     <span class="nv">$str</span> <span class="o">=</span> <span class="nb">quoted_printable_encode</span><span class="p">(</span><span class="nv">$str</span><span class="p">);</span>
 <span class="p">}</span>
@@ -484,7 +484,7 @@
 <p>这个函数首先尝试写入该文件，以此来判断该文件是不是真的可写。通常只在 <tt class="docutils literal"><span class="pre">is_writable()</span></tt> 函数
 返回的结果不准确的平台下才推荐使用该函数。</p>
 <p>例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="nx">is_really_writable</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">))</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nx">is_really_writable</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">))</span>
 <span class="p">{</span>
     <span class="k">echo</span> <span class="s2">&quot;I could write to this if I wanted to&quot;</span><span class="p">;</span>
 <span class="p">}</span>
@@ -543,7 +543,7 @@
 </tbody>
 </table>
 <p>用于手动设置服务器的 HTTP 状态码，例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">set_status_header</span><span class="p">(</span><span class="mi">401</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">set_status_header</span><span class="p">(</span><span class="mi">401</span><span class="p">);</span>
 <span class="c1">// Sets the header as:  Unauthorized</span>
 </pre></div>
 </div>
@@ -573,7 +573,7 @@
 </table>
 <p>这个函数防止在 ASCII 字符串中插入空字符，例如：Java\0script 。</p>
 <p>举例:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">remove_invisible_characters</span><span class="p">(</span><span class="s1">&#39;Java\\0script&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">remove_invisible_characters</span><span class="p">(</span><span class="s1">&#39;Java\\0script&#39;</span><span class="p">);</span>
 <span class="c1">// Returns: &#39;Javascript&#39;</span>
 </pre></div>
 </div>
@@ -749,7 +749,7 @@ Suhosin ，检查函数有没有被它禁用。</p>
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

@@ -442,11 +442,11 @@
 <h3><a class="toc-backref" href="#id6">初始化该类</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <p>跟 CodeIgniter 中的其他类一样，可以在你的控制器中使用 <tt class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></tt>
 方法加载排版类:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;typography&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;typography&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>一旦加载，排版类就可以像下面这样使用:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">typography</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">typography</span>
 </pre></div>
 </div>
 </div>
@@ -462,7 +462,7 @@
 <dd><p>当排版类和 <a class="reference internal" href="parser.html"><em>模板解析器类</em></a> 同时使用时，经常需要保护大括号中的的单引号和双引号不被转换。
 要保护这个，将 <tt class="docutils literal"><span class="pre">protect_braced_quotes</span></tt> 属性设置为 TRUE 。</p>
 <p>使用示例:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;typography&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;typography&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">typography</span><span class="o">-&gt;</span><span class="na">protect_braced_quotes</span> <span class="o">=</span> <span class="k">TRUE</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -499,7 +499,7 @@
 </ul>
 </div></blockquote>
 <p>使用示例:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$string</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">typography</span><span class="o">-&gt;</span><span class="na">format_characters</span><span class="p">(</span><span class="nv">$string</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$string</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">typography</span><span class="o">-&gt;</span><span class="na">format_characters</span><span class="p">(</span><span class="nv">$string</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -527,7 +527,7 @@
 <p>将换行符转换为 &lt;br /&gt; 标签，忽略 &lt;pre&gt; 标签中的换行符。除了对 &lt;pre&gt;
 标签中的换行处理有所不同之外，这个函数和 PHP 函数 <tt class="docutils literal"><span class="pre">nl2br()</span></tt> 是完全一样的。</p>
 <p>使用示例:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$string</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">typography</span><span class="o">-&gt;</span><span class="na">nl2br_except_pre</span><span class="p">(</span><span class="nv">$string</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$string</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">typography</span><span class="o">-&gt;</span><span class="na">nl2br_except_pre</span><span class="p">(</span><span class="nv">$string</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -596,7 +596,7 @@
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

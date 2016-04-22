@@ -441,7 +441,7 @@ CPU 和数据库读取速度等因素直接影响了网页的加载速度。 依
 <div class="section" id="id3">
 <h2>开启缓存<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>将下面的代码放到任何一个控制器的方法内，你就可以开启缓存了:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">cache</span><span class="p">(</span><span class="nv">$n</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">cache</span><span class="p">(</span><span class="nv">$n</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>其中 <tt class="docutils literal"><span class="pre">$n</span></tt> 是缓存更新的时间（单位分钟）。</p>
@@ -473,7 +473,7 @@ CPU 和数据库读取速度等因素直接影响了网页的加载速度。 依
 <p class="last">删除缓存代码之后并不是立即生效，必须等到缓存过期才会生效。</p>
 </div>
 <p>如果你需要手工删除缓存，你可以使用 <tt class="docutils literal"><span class="pre">delete_cache()</span></tt> 方法:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// Deletes cache for the currently requested URI</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// Deletes cache for the currently requested URI</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">delete_cache</span><span class="p">();</span>
 
 <span class="c1">// Deletes cache for /foo/bar</span>
@@ -542,7 +542,7 @@ CPU 和数据库读取速度等因素直接影响了网页的加载速度。 依
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

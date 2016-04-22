@@ -436,7 +436,7 @@
 <div class="custom-index container"></div><div class="section" id="id1">
 <h2><a class="toc-backref" href="#id3">加载辅助函数</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>该辅助函数通过下面的代码加载:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;xml&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;xml&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -475,13 +475,13 @@
 </div></blockquote>
 <p>如果 &amp; 符号是作为实体编号的一部分，例如： <tt class="docutils literal"><span class="pre">&amp;#123;</span></tt> ，该函数将不予处理。
 举例:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$string</span> <span class="o">=</span> <span class="s1">&#39;&lt;p&gt;Here is a paragraph &amp; an entity (&amp;#123;).&lt;/p&gt;&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$string</span> <span class="o">=</span> <span class="s1">&#39;&lt;p&gt;Here is a paragraph &amp; an entity (&amp;#123;).&lt;/p&gt;&#39;</span><span class="p">;</span>
 <span class="nv">$string</span> <span class="o">=</span> <span class="nx">xml_convert</span><span class="p">(</span><span class="nv">$string</span><span class="p">);</span>
 <span class="k">echo</span> <span class="nv">$string</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>输出结果:</p>
-<div class="highlight-html"><div class="highlight"><pre><span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;</span>Here is a paragraph <span class="ni">&amp;amp;</span> an entity (<span class="ni">&amp;#123;</span>).<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;</span>Here is a paragraph <span class="ni">&amp;amp;</span> an entity (<span class="ni">&amp;#123;</span>).<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -548,7 +548,7 @@
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

@@ -458,7 +458,7 @@
 <h2>CodeIgniter 生成干净的 URL<a class="headerlink" href="#codeigniter-url" title="永久链接至标题">¶</a></h2>
 <p>CodeIgniter 生成的 URL 非常干净，而且对搜索引擎友好。不同于标准的
 “查询字符串” 方法， CodeIgniter 使用了基于段的方法:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">example</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">news</span><span class="o">/</span><span class="nx">article</span><span class="o">/</span><span class="mi">345</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">example</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">news</span><span class="o">/</span><span class="nx">article</span><span class="o">/</span><span class="mi">345</span>
 </pre></div>
 </div>
 <p>注意：默认 URL 中会包含 index.php 文件，但是可以通过更改 .htaccess
@@ -481,15 +481,15 @@
 使用模板。模板引擎的性能无法和原生的 PHP 代码相比，另外使用模板引擎
 还需要学习一种新的语法，而使用原生 PHP 代码只需要你掌握基本的 PHP
 语法即可。看下面的 PHP 代码:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
 <span class="o">&lt;?</span><span class="nx">php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$addressbook</span> <span class="k">as</span> <span class="nv">$name</span><span class="p">)</span><span class="o">:</span><span class="cp">?&gt;</span>
-    <span class="nt">&lt;li&gt;</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$name</span><span class="cp">?&gt;</span><span class="nt">&lt;/li&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$name</span><span class="cp">?&gt;</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="cp">&lt;?php</span> <span class="k">endforeach</span><span class="p">;</span> <span class="cp">?&gt;</span>
-<span class="nt">&lt;/ul&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p>再来看看使用模板引擎的代码（伪代码）:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
 <span class="p">{</span><span class="k">foreach</span> <span class="nx">from</span><span class="o">=</span><span class="nv">$addressbook</span> <span class="nx">item</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">}</span>
     <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="p">{</span><span class="nv">$name</span><span class="p">}</span><span class="o">&lt;/</span><span class="nx">li</span><span class="o">&gt;</span>
 <span class="p">{</span><span class="o">/</span><span class="k">foreach</span><span class="p">}</span>
@@ -572,7 +572,7 @@
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

@@ -444,18 +444,18 @@
 <h3><a class="toc-backref" href="#id6">初始化类</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
 <p>正如 CodeIgniter 中的其他类一样，在你的控制器中使用 <tt class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></tt>
 方法来初始化 Zip 编码类:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;zip&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;zip&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>初始化之后，Zip 编码类的对象就可以这样访问:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id3">
 <h3><a class="toc-backref" href="#id7">使用示例</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <p>下面这个例子演示了如何压缩一个文件，将其保存到服务器上的一个目录下，并下载到你的桌面上。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$name</span> <span class="o">=</span> <span class="s1">&#39;mydata1.txt&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$name</span> <span class="o">=</span> <span class="s1">&#39;mydata1.txt&#39;</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="s1">&#39;A Data String!&#39;</span><span class="p">;</span>
 
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">add_data</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
@@ -479,7 +479,7 @@
 <tt class="descname">$compression_level = 2</tt></dt>
 <dd><p>使用的压缩等级。</p>
 <p>压缩等级的范围为 0 到 9 ，9 为最高等级，0 为禁用压缩:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">compression_level</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">compression_level</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -504,7 +504,7 @@
 </table>
 <p>向 Zip 文档中添加数据，可以添加单个文件，也可以添加多个文件。</p>
 <p>当添加单个文件时，第一个参数为文件名，第二个参数包含文件的内容:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$name</span> <span class="o">=</span> <span class="s1">&#39;mydata1.txt&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$name</span> <span class="o">=</span> <span class="s1">&#39;mydata1.txt&#39;</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="s1">&#39;A Data String!&#39;</span><span class="p">;</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">add_data</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
 
@@ -514,7 +514,7 @@
 </pre></div>
 </div>
 <p>当添加多个文件时，第一个参数为包含 <em>file =&gt; contents</em> 这样的键值对的数组，第二个参数被忽略:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;mydata1.txt&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;A Data String!&#39;</span><span class="p">,</span>
     <span class="s1">&#39;mydata2.txt&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Another Data String!&#39;</span>
 <span class="p">);</span>
@@ -523,7 +523,7 @@
 </pre></div>
 </div>
 <p>如果你想要将你压缩的数据组织到一个子目录下，只需简单的将文件路径包含到文件名中即可:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$name</span> <span class="o">=</span> <span class="s1">&#39;personal/my_bio.txt&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$name</span> <span class="o">=</span> <span class="s1">&#39;personal/my_bio.txt&#39;</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="s1">&#39;I was born in an elevator...&#39;</span><span class="p">;</span>
 
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">add_data</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
@@ -551,7 +551,7 @@
 </table>
 <p>允许你往压缩文档中添加一个目录，通常这个方法是没必要的，因为你完全可以使用 <tt class="docutils literal"><span class="pre">$this-&gt;zip-&gt;add_data()</span></tt>
 方法将你的数据添加到特定的目录下。但是如果你想创建一个空目录，你可以使用它:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">add_dir</span><span class="p">(</span><span class="s1">&#39;myfolder&#39;</span><span class="p">);</span> <span class="c1">// Creates a directory called &quot;myfolder&quot;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">add_dir</span><span class="p">(</span><span class="s1">&#39;myfolder&#39;</span><span class="p">);</span> <span class="c1">// Creates a directory called &quot;myfolder&quot;</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -579,7 +579,7 @@
 </table>
 <p>允许你压缩一个已经存在于你的服务器上的文件。该方法的参数为一个文件路径，Zip
 类会读取该文件的内容并添加到压缩文档中:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$path</span> <span class="o">=</span> <span class="s1">&#39;/path/to/photo.jpg&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$path</span> <span class="o">=</span> <span class="s1">&#39;/path/to/photo.jpg&#39;</span><span class="p">;</span>
 
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">read_file</span><span class="p">(</span><span class="nv">$path</span><span class="p">);</span>
 
@@ -588,7 +588,7 @@
 </pre></div>
 </div>
 <p>如果你希望 Zip 文档中的文件保持它原有的目录结构，将第二个参数设置为布尔值 TRUE 。例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$path</span> <span class="o">=</span> <span class="s1">&#39;/path/to/photo.jpg&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$path</span> <span class="o">=</span> <span class="s1">&#39;/path/to/photo.jpg&#39;</span><span class="p">;</span>
 
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">read_file</span><span class="p">(</span><span class="nv">$path</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
 
@@ -598,7 +598,7 @@
 </div>
 <p>在上面的例子中，photo.jpg 文件将会被放在 <em>path/to/</em> 目录下。</p>
 <p>你也可以为新添加的文件指定一个新的名称（包含文件路径）:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$path</span> <span class="o">=</span> <span class="s1">&#39;/path/to/photo.jpg&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$path</span> <span class="o">=</span> <span class="s1">&#39;/path/to/photo.jpg&#39;</span><span class="p">;</span>
 <span class="nv">$new_path</span> <span class="o">=</span> <span class="s1">&#39;/new/path/some_photo.jpg&#39;</span><span class="p">;</span>
 
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">read_file</span><span class="p">(</span><span class="nv">$path</span><span class="p">,</span> <span class="nv">$new_path</span><span class="p">);</span>
@@ -634,7 +634,7 @@
 <p>允许你压缩一个已经存在于你的服务器上的目录（包括里面的内容）。该方法的参数为目录的路径，Zip
 类会递归的读取它里面的内容并重建成一个 Zip 文档。指定目录下的所有文件以及子目录下的文件都会被压缩。
 例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$path</span> <span class="o">=</span> <span class="s1">&#39;/path/to/your/directory/&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$path</span> <span class="o">=</span> <span class="s1">&#39;/path/to/your/directory/&#39;</span><span class="p">;</span>
 
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">read_dir</span><span class="p">(</span><span class="nv">$path</span><span class="p">);</span>
 
@@ -644,7 +644,7 @@
 </div>
 <p>默认情况下，Zip 文档中会保留第一个参数中指定的目录结构，如果你希望忽略掉这一大串的树形目录结构，
 你可以将第二个参数设置为布尔值 FALSE 。例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$path</span> <span class="o">=</span> <span class="s1">&#39;/path/to/your/directory/&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$path</span> <span class="o">=</span> <span class="s1">&#39;/path/to/your/directory/&#39;</span><span class="p">;</span>
 
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">read_dir</span><span class="p">(</span><span class="nv">$path</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
 </pre></div>
@@ -675,7 +675,7 @@
 </table>
 <p>向你的服务器指定目录下写入一个 Zip 编码文档，该方法的参数为一个有效的目录路径，后加一个文件名，
 确保这个目录是可写的（权限为 755 通常就可以了）。例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">archive</span><span class="p">(</span><span class="s1">&#39;/path/to/folder/myarchive.zip&#39;</span><span class="p">);</span> <span class="c1">// Creates a file named myarchive.zip</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">archive</span><span class="p">(</span><span class="s1">&#39;/path/to/folder/myarchive.zip&#39;</span><span class="p">);</span> <span class="c1">// Creates a file named myarchive.zip</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -698,7 +698,7 @@
 </tbody>
 </table>
 <p>从你的服务器上下载 Zip 文档，你需要指定 Zip 文档的名称。例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">download</span><span class="p">(</span><span class="s1">&#39;latest_stuff.zip&#39;</span><span class="p">);</span> <span class="c1">// File will be named &quot;latest_stuff.zip&quot;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">download</span><span class="p">(</span><span class="s1">&#39;latest_stuff.zip&#39;</span><span class="p">);</span> <span class="c1">// File will be named &quot;latest_stuff.zip&quot;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -723,7 +723,7 @@
 </table>
 <p>返回使用 Zip 编码压缩后的文件数据，通常情况你无需使用该方法，除非你要对压缩后的数据做些特别的操作。
 例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$name</span> <span class="o">=</span> <span class="s1">&#39;my_bio.txt&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$name</span> <span class="o">=</span> <span class="s1">&#39;my_bio.txt&#39;</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="s1">&#39;I was born in an elevator...&#39;</span><span class="p">;</span>
 
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">add_data</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
@@ -746,7 +746,7 @@
 </table>
 <p>Zip 类会缓存压缩后的数据，这样就不用在调用每个方法的时候重新压缩一遍了。但是，如果你需要创建多个 Zip
 文档，每个 Zip 文档有着不同的数据，那么你可以在多次调用之间把缓存清除掉。例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$name</span> <span class="o">=</span> <span class="s1">&#39;my_bio.txt&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$name</span> <span class="o">=</span> <span class="s1">&#39;my_bio.txt&#39;</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="s1">&#39;I was born in an elevator...&#39;</span><span class="p">;</span>
 
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">add_data</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
@@ -826,7 +826,7 @@
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

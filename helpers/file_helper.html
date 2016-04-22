@@ -436,7 +436,7 @@
 <div class="custom-index container"></div><div class="section" id="id2">
 <h2><a class="toc-backref" href="#id4">加载辅助函数</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>该辅助函数通过下面的代码加载:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;file&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;file&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -465,7 +465,7 @@
 </table>
 <p>返回指定文件的内容。</p>
 <p>例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$string</span> <span class="o">=</span> <span class="nx">read_file</span><span class="p">(</span><span class="s1">&#39;./path/to/file.php&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$string</span> <span class="o">=</span> <span class="nx">read_file</span><span class="p">(</span><span class="s1">&#39;./path/to/file.php&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>可以是相对路径或绝对路径，如果失败返回 FALSE 。</p>
@@ -508,7 +508,7 @@
 </table>
 <p>向指定文件中写入数据，如果文件不存在，则创建该文件。</p>
 <p>例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$data</span> <span class="o">=</span> <span class="s1">&#39;Some file data&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$data</span> <span class="o">=</span> <span class="s1">&#39;Some file data&#39;</span><span class="p">;</span>
 <span class="k">if</span> <span class="p">(</span> <span class="o">!</span> <span class="nx">write_file</span><span class="p">(</span><span class="s1">&#39;./path/to/file.php&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">))</span>
 <span class="p">{</span>
     <span class="k">echo</span> <span class="s1">&#39;Unable to write the file&#39;</span><span class="p">;</span>
@@ -520,7 +520,7 @@
 </pre></div>
 </div>
 <p>你还可以通过第三个参数设置写模式:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">write_file</span><span class="p">(</span><span class="s1">&#39;./path/to/file.php&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">,</span> <span class="s1">&#39;r+&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">write_file</span><span class="p">(</span><span class="s1">&#39;./path/to/file.php&#39;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">,</span> <span class="s1">&#39;r+&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>默认的模式的 'wb' ，请阅读 <a class="reference external" href="http://php.net/manual/en/function.fopen.php">PHP 用户指南</a>
@@ -560,12 +560,12 @@
 </table>
 <p>删除指定路径下的所有文件。</p>
 <p>例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">delete_files</span><span class="p">(</span><span class="s1">&#39;./path/to/directory/&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">delete_files</span><span class="p">(</span><span class="s1">&#39;./path/to/directory/&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>如果第二个参数设置为 TRUE ，那么指定路径下的文件夹也一并删除。</p>
 <p>例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">delete_files</span><span class="p">(</span><span class="s1">&#39;./path/to/directory/&#39;</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">delete_files</span><span class="p">(</span><span class="s1">&#39;./path/to/directory/&#39;</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -598,7 +598,7 @@
 <p>获取指定目录下所有文件名组成的数组。如果需要完整路径的文件名，
 可以将第二个参数设置为 TRUE 。</p>
 <p>例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$controllers</span> <span class="o">=</span> <span class="nx">get_filenames</span><span class="p">(</span><span class="nx">APPPATH</span><span class="o">.</span><span class="s1">&#39;controllers/&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$controllers</span> <span class="o">=</span> <span class="nx">get_filenames</span><span class="p">(</span><span class="nx">APPPATH</span><span class="o">.</span><span class="s1">&#39;controllers/&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -627,7 +627,7 @@
 <p>获取指定目录下所有文件信息组成的数组，包括文件名、文件大小、日期 和 权限。
 默认不包含子目录下的文件信息，如有需要，可以设置第二个参数为 FALSE ，这可能会是一个耗时的操作。</p>
 <p>例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$models_info</span> <span class="o">=</span> <span class="nx">get_dir_file_info</span><span class="p">(</span><span class="nx">APPPATH</span><span class="o">.</span><span class="s1">&#39;models/&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$models_info</span> <span class="o">=</span> <span class="nx">get_dir_file_info</span><span class="p">(</span><span class="nx">APPPATH</span><span class="o">.</span><span class="s1">&#39;models/&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -681,7 +681,7 @@
 </table>
 <p>根据 <em>config/mimes.php</em> 文件中的配置将文件扩展名转换为 MIME 类型。
 如果无法判断 MIME 类型或 MIME 配置文件读取失败，则返回 FALSE 。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$file</span> <span class="o">=</span> <span class="s1">&#39;somefile.png&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$file</span> <span class="o">=</span> <span class="s1">&#39;somefile.png&#39;</span><span class="p">;</span>
 <span class="k">echo</span> <span class="nv">$file</span><span class="o">.</span><span class="s1">&#39; is has a mime type of &#39;</span><span class="o">.</span><span class="nx">get_mime_by_extension</span><span class="p">(</span><span class="nv">$file</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -713,7 +713,7 @@
 </tbody>
 </table>
 <p>将文件权限的数字格式（例如 <tt class="docutils literal"><span class="pre">fileperms()</span></tt> 函数的返回值）转换为标准的符号格式。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">echo</span> <span class="nx">symbolic_permissions</span><span class="p">(</span><span class="nb">fileperms</span><span class="p">(</span><span class="s1">&#39;./index.php&#39;</span><span class="p">));</span>  <span class="c1">// -rw-r--r--</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nx">symbolic_permissions</span><span class="p">(</span><span class="nb">fileperms</span><span class="p">(</span><span class="s1">&#39;./index.php&#39;</span><span class="p">));</span>  <span class="c1">// -rw-r--r--</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -739,7 +739,7 @@
 </tbody>
 </table>
 <p>将文件权限的数字格式（例如 <tt class="docutils literal"><span class="pre">fileperms()</span></tt> 函数的返回值）转换为三个字符的八进制表示格式。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">echo</span> <span class="nx">octal_permissions</span><span class="p">(</span><span class="nb">fileperms</span><span class="p">(</span><span class="s1">&#39;./index.php&#39;</span><span class="p">));</span> <span class="c1">// 644</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nx">octal_permissions</span><span class="p">(</span><span class="nb">fileperms</span><span class="p">(</span><span class="s1">&#39;./index.php&#39;</span><span class="p">));</span> <span class="c1">// 644</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -806,7 +806,7 @@
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

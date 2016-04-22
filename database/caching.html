@@ -509,7 +509,7 @@
 <h2>$this-&gt;db-&gt;cache_on() / $this-&gt;db-&gt;cache_off()<a class="headerlink" href="#this-db-cache-on-this-db-cache-off" title="永久链接至标题">¶</a></h2>
 <p>用于手工启用/禁用缓存，当你不想缓存某些查询时，这两个方法会很有用。
 例子:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// Turn caching on</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// Turn caching on</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">cache_on</span><span class="p">();</span>
 <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM mytable&quot;</span><span class="p">);</span>
 
@@ -529,7 +529,7 @@
 <p>缓存系统根据你访问页面的 URI 来将缓存写入到相应的缓存文件中去，例如，
 如果你在访问 example.com/index.php/blog/comments 这个页面，缓存系统
 会将缓存文件保存到 blog+comments 目录下，要删除这些缓存文件，你可以使用:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">cache_delete</span><span class="p">(</span><span class="s1">&#39;blog&#39;</span><span class="p">,</span> <span class="s1">&#39;comments&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">cache_delete</span><span class="p">(</span><span class="s1">&#39;blog&#39;</span><span class="p">,</span> <span class="s1">&#39;comments&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>如果你没提供任何参数，将会清除当前 URI 对应的缓存文件。</p>
@@ -537,7 +537,7 @@
 <div class="section" id="this-db-cache-delete-all">
 <h2>$this-&gt;db-&gt;cache_delete_all()<a class="headerlink" href="#this-db-cache-delete-all" title="永久链接至标题">¶</a></h2>
 <p>清除所有的缓存文件，例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">cache_delete_all</span><span class="p">();</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">cache_delete_all</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
@@ -602,7 +602,7 @@
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

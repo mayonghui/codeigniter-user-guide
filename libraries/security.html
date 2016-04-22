@@ -442,14 +442,14 @@ of code that attempt to hijack cookies or do other malicious things.
 If anything disallowed is encountered it is rendered safe by converting
 the data to character entities.</p>
 <p>使用 XSS 过滤器过滤数据可以使用 <tt class="docutils literal"><span class="pre">xss_clean()</span></tt> 方法:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$data</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">security</span><span class="o">-&gt;</span><span class="na">xss_clean</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$data</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">security</span><span class="o">-&gt;</span><span class="na">xss_clean</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>它还有一个可选的第二个参数 is_image ，允许此函数对图片进行检测以发现那些潜在的
 XSS 攻击, 这对于保证文件上传的安全非常有用。当此参数被设置为 TRUE 时，
 函数的返回值将是一个布尔值，而不是一个修改过的字符串。如果图片是安全的则返回 TRUE ，
 相反, 如果图片中包含有潜在的、可能会被浏览器尝试运行的恶意信息，函数将返回 FALSE 。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">security</span><span class="o">-&gt;</span><span class="na">xss_clean</span><span class="p">(</span><span class="nv">$file</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">)</span> <span class="o">===</span> <span class="k">FALSE</span><span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">security</span><span class="o">-&gt;</span><span class="na">xss_clean</span><span class="p">(</span><span class="nv">$file</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">)</span> <span class="o">===</span> <span class="k">FALSE</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="c1">// file failed the XSS test</span>
 <span class="p">}</span>
@@ -459,13 +459,13 @@ XSS 攻击, 这对于保证文件上传的安全非常有用。当此参数被�
 <div class="section" id="csrf">
 <h2><a class="toc-backref" href="#id4">跨站请求伪造（CSRF）</a><a class="headerlink" href="#csrf" title="永久链接至标题">¶</a></h2>
 <p>打开你的 application/config/config.php 文件，进行如下设置，即可启用 CSRF 保护:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;csrf_protection&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">TRUE</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;csrf_protection&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">TRUE</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>如果你使用 <a class="reference internal" href="../helpers/form_helper.html"><em>表单辅助函数</em></a> ，<tt class="xref py py-func docutils literal"><span class="pre">form_open()</span></tt>
 函数将会自动地在你的表单中插入一个隐藏的 CSRF 字段。如果没有插入这个字段，
 你可以手工调用 <tt class="docutils literal"><span class="pre">get_csrf_token_name()</span></tt> 和 <tt class="docutils literal"><span class="pre">get_csrf_hash()</span></tt> 这两个函数。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$csrf</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$csrf</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">security</span><span class="o">-&gt;</span><span class="na">get_csrf_token_name</span><span class="p">(),</span>
     <span class="s1">&#39;hash&#39;</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">security</span><span class="o">-&gt;</span><span class="na">get_csrf_hash</span><span class="p">()</span>
 <span class="p">);</span>
@@ -479,16 +479,16 @@ XSS 攻击, 这对于保证文件上传的安全非常有用。当此参数被�
 的生命周期内一直有效。默认情况下令牌重新生成提供了更严格的安全机制，但可能会对
 可用性带来一定的影响，因为令牌很可能会变得失效（例如使用浏览器的返回前进按钮、
 使用多窗口或多标签页浏览、异步调用等等）。你可以修改下面这个参数来改变这一点。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;csrf_regenerate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">TRUE</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;csrf_regenerate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">TRUE</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>另外，你可以添加一个 URI 的白名单，跳过 CSRF 保护（例如某个 API 接口希望接受
 原始的 POST 数据），将这些 URI 添加到 'csrf_exclude_uris' 配置参数中:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;csrf_exclude_uris&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;api/person/add&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;csrf_exclude_uris&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;api/person/add&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>URI 中也支持使用正则表达式（不区分大小写）:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;csrf_exclude_uris&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;csrf_exclude_uris&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;api/record/[0-9]+&#39;</span><span class="p">,</span>
     <span class="s1">&#39;api/title/[a-z]+&#39;</span>
 <span class="p">);</span>
@@ -546,11 +546,11 @@ XSS 攻击, 这对于保证文件上传的安全非常有用。当此参数被�
 </tbody>
 </table>
 <p>尝试对文件名进行净化，防止目录遍历尝试以及其他的安全威胁，当文件名作为用户输入的参数时格外有用。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$filename</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">security</span><span class="o">-&gt;</span><span class="na">sanitize_filename</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">input</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(</span><span class="s1">&#39;filename&#39;</span><span class="p">));</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$filename</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">security</span><span class="o">-&gt;</span><span class="na">sanitize_filename</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">input</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(</span><span class="s1">&#39;filename&#39;</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>如果允许用户提交相对路径，例如 <em>file/in/some/approved/folder.txt</em> ，你可以将第二个参数 <tt class="docutils literal"><span class="pre">$relative_path</span></tt> 设置为 TRUE 。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$filename</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">security</span><span class="o">-&gt;</span><span class="na">sanitize_filename</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">input</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(</span><span class="s1">&#39;filename&#39;</span><span class="p">),</span> <span class="k">TRUE</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$filename</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">security</span><span class="o">-&gt;</span><span class="na">sanitize_filename</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">input</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(</span><span class="s1">&#39;filename&#39;</span><span class="p">),</span> <span class="k">TRUE</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -707,7 +707,7 @@ HTML 实体，因为有些浏览器允许这样。</p>
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

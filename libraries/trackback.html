@@ -452,18 +452,18 @@
 <h3><a class="toc-backref" href="#id11">初始化类</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>正如 CodeIgniter 中的其他类一样，在你的控制器中使用 <tt class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></tt>
 方法来初始化引用通告类:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;trackback&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;trackback&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>初始化之后，引用通告类的对象就可以这样访问:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">trackback</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">trackback</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id5">
 <h3><a class="toc-backref" href="#id12">发送引用通告</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>可以在你的控制器的任何方法中使用类似于如下代码来发送引用通告:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;trackback&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;trackback&#39;</span><span class="p">);</span>
 
 <span class="nv">$tb_data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;ping_url&#39;</span>  <span class="o">=&gt;</span> <span class="s1">&#39;http://example.com/trackback/456&#39;</span><span class="p">,</span>
@@ -498,7 +498,7 @@
 <p class="last">引用通告类会自动发送你的博客的前 500 个字符，同时它也会去除所有的 HTML 标签。</p>
 </div>
 <p>发送引用通告的方法会根据成功或失败返回 TRUE 或 FALSE ，如果失败，可以使用下面的代码获取错误信息:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">trackback</span><span class="o">-&gt;</span><span class="na">display_errors</span><span class="p">();</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">trackback</span><span class="o">-&gt;</span><span class="na">display_errors</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
@@ -519,7 +519,7 @@
 必须包含你博客的 ID ，这样当接受到引用通告时你就可以知道是针对哪篇博客的。</p>
 <p>例如，假设你的控制器类叫 Trackback ，接受方法叫 receive ，你的 Ping URL
 将类似于下面这样:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">http</span><span class="o">://</span><span class="nx">example</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">index</span><span class="o">.</span><span class="nx">php</span><span class="o">/</span><span class="nx">trackback</span><span class="o">/</span><span class="nx">receive</span><span class="o">/</span><span class="nx">entry_id</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">http</span><span class="o">://</span><span class="nx">example</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">index</span><span class="o">.</span><span class="nx">php</span><span class="o">/</span><span class="nx">trackback</span><span class="o">/</span><span class="nx">receive</span><span class="o">/</span><span class="nx">entry_id</span>
 </pre></div>
 </div>
 <p>其中，entry_id 代表你每篇博客的 ID 。</p>
@@ -527,7 +527,7 @@
 <div class="section" id="trackback">
 <h3><a class="toc-backref" href="#id15">新建 Trackback 表</a><a class="headerlink" href="#trackback" title="永久链接至标题">¶</a></h3>
 <p>在接受引用通告之前，你必须创建一个数据库表来储存它。下面是表的一个基本原型:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">CREATE</span> <span class="nx">TABLE</span> <span class="nx">trackbacks</span> <span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">CREATE</span> <span class="nx">TABLE</span> <span class="nx">trackbacks</span> <span class="p">(</span>
     <span class="nx">tb_id</span> <span class="nx">int</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="nx">unsigned</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="nx">auto_increment</span><span class="p">,</span>
     <span class="nx">entry_id</span> <span class="nx">int</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="nx">unsigned</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">default</span> <span class="mi">0</span><span class="p">,</span>
     <span class="nx">url</span> <span class="nx">varchar</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
@@ -547,7 +547,7 @@
 <div class="section" id="id7">
 <h3><a class="toc-backref" href="#id16">处理引用通告</a><a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <p>下面是一个如何接受并处理引用通告的例子。下面的代码将放在你的接受引用通告的控制器方法中:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;trackback&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;trackback&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">database</span><span class="p">();</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">segment</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="k">FALSE</span><span class="p">)</span>
@@ -580,11 +580,11 @@
 <div class="section" id="id8">
 <h4><a class="toc-backref" href="#id17">说明</a><a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h4>
 <p>entry_id 将从你的 URL 的第三段获取，这是基于我们之前例子中的 URL:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">http</span><span class="o">://</span><span class="nx">example</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">index</span><span class="o">.</span><span class="nx">php</span><span class="o">/</span><span class="nx">trackback</span><span class="o">/</span><span class="nx">receive</span><span class="o">/</span><span class="nx">entry_id</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">http</span><span class="o">://</span><span class="nx">example</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">index</span><span class="o">.</span><span class="nx">php</span><span class="o">/</span><span class="nx">trackback</span><span class="o">/</span><span class="nx">receive</span><span class="o">/</span><span class="nx">entry_id</span>
 </pre></div>
 </div>
 <p>注意 entry_id 是第三段，你可以这样获取:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">segment</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">uri</span><span class="o">-&gt;</span><span class="na">segment</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>在我们上面的接受引用通告的代码中，如果第三段为空，我们将发送一个错误信息。
@@ -593,12 +593,12 @@
 我们所需的四种信息：url、title、excerpt 和 blog_name 。该方法成功返回 TRUE ，
 失败返回 FALSE 。如果失败，也发送一个错误信息。</p>
 <p>接受到的引用通告数据可以通过下面的方法来获取:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">trackback</span><span class="o">-&gt;</span><span class="na">data</span><span class="p">(</span><span class="s1">&#39;item&#39;</span><span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">trackback</span><span class="o">-&gt;</span><span class="na">data</span><span class="p">(</span><span class="s1">&#39;item&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>其中，item 代表四种信息中的一种：url、title、excerpt 和 blog_name 。</p>
 <p>如果引用通告数据成功接受，你可以使用下面的代码发送一个成功消息:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">trackback</span><span class="o">-&gt;</span><span class="na">send_success</span><span class="p">();</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">trackback</span><span class="o">-&gt;</span><span class="na">send_success</span><span class="p">();</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -1000,7 +1000,7 @@
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

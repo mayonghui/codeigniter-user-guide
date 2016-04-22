@@ -430,7 +430,7 @@
 如果你熟悉 Markdown 或 Textile ，你会很快上手 reStructuredText 。我们的目标是可读性
 以及对用户的友好性，尽管是非常技术性的文档，但读它的永远是人类！</p>
 <p>每一页都应该包含该页的一个目录，就像下面这样。它是通过下面的代码自动创建的：</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="o">..</span> <span class="nx">contents</span><span class="o">::</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="nx">contents</span><span class="o">::</span>
     <span class="o">:</span><span class="nx">local</span><span class="o">:</span>
 
 <span class="o">..</span> <span class="nx">raw</span><span class="o">::</span> <span class="na">html</span>
@@ -452,7 +452,7 @@
 <p>要生成 HTML、ePub、PDF 等等这些格式的文档，你需要先安装 Sphinx 和 Sphinx 的 phpdomain
 扩展，并确保你已经安装了 Python 。然后安装 CI Lexer for Pygments ，它可以正确的高亮
 页面中的代码。</p>
-<div class="highlight-bash"><div class="highlight"><pre>easy_install <span class="s2">&quot;sphinx==1.2.3&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>easy_install <span class="s2">&quot;sphinx==1.2.3&quot;</span>
 easy_install sphinxcontrib-phpdomain
 </pre></div>
 </div>
@@ -464,7 +464,7 @@ easy_install sphinxcontrib-phpdomain
 页面目录以及整个文档的目录。可以使用特定的某些字符作为下划线来表示标题，主标题
 （例如页面标题和小节标题）还需要使用上划线，其他的标题只需要使用下划线即可。
 层次结构如下:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1"># 页面标题（带上划线）</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1"># 页面标题（带上划线）</span>
 <span class="o">*</span> <span class="nx">小节标题（带上划线）</span>
 <span class="o">=</span> <span class="nx">子标题</span>
 <span class="o">-</span> <span class="nx">子子标题</span>
@@ -474,7 +474,7 @@ easy_install sphinxcontrib-phpdomain
 </div>
 <p>使用 <a class="reference download internal" href="../_downloads/ELDocs.tmbundle.zip"><tt class="xref download docutils literal"><span class="pre">TextMate</span> <span class="pre">ELDocs</span> <span class="pre">Bundle</span></tt></a> 可以用下面这些 tab
 快捷键快速创建这些标题:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">title</span><span class="o">-&gt;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">title</span><span class="o">-&gt;</span>
 
     <span class="c1">##########</span>
     <span class="nx">Page</span> <span class="nx">Title</span>
@@ -512,7 +512,7 @@ easy_install sphinxcontrib-phpdomain
 <h2><a class="toc-backref" href="#id6">为方法编写文档</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>当你为其他开发者编写类或方法的文档时，Sphinx 提供了一些指令可以帮你简单快速的完成。
 例如，看下面的 ReST 语法：</p>
-<div class="highlight-rst"><div class="highlight"><pre><span class="p">..</span> <span class="ow">php:class</span><span class="p">::</span> Some_class
+<div class="highlight-rst"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">php:class</span><span class="p">::</span> Some_class
 
 <span class="p">    ..</span> <span class="ow">php:method</span><span class="p">::</span> some_method ( $foo [, $bar [, $bat]])
 
@@ -583,7 +583,7 @@ parameter.</p>
 </tr>
 </tbody>
 </table>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;some_class&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;some_class&#39;</span><span class="p">);</span>
 
 <span class="nv">$bar</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;something&#39;</span>     <span class="o">=&gt;</span> <span class="s1">&#39;Here is this parameter!&#39;</span><span class="p">,</span>
@@ -685,7 +685,7 @@ For real.</p>
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

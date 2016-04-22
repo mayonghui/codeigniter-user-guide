@@ -459,7 +459,7 @@
 <h2><a class="toc-backref" href="#id9">让我们试一试：Hello World！</a><a class="headerlink" href="#hello-world" title="永久链接至标题">¶</a></h2>
 <p>让我们先创建一个简单的控制器，打开你的文本编辑器，新建一个文件并命名为
 Tools.php，然后输入如下的代码:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">class</span> <span class="nc">Tools</span> <span class="k">extends</span> <span class="nx">CI_Controller</span> <span class="p">{</span>
 
     <span class="k">public</span> <span class="k">function</span> <span class="nf">message</span><span class="p">(</span><span class="nv">$to</span> <span class="o">=</span> <span class="s1">&#39;World&#39;</span><span class="p">)</span>
@@ -471,22 +471,22 @@ Tools.php，然后输入如下的代码:</p>
 </div>
 <p>然后将文件保存到 <em>application/controllers/</em> 目录下。</p>
 <p>现在你可以通过类似下面的 URL 来访问它:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">example</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">index</span><span class="o">.</span><span class="nx">php</span><span class="o">/</span><span class="nx">tools</span><span class="o">/</span><span class="nx">message</span><span class="o">/</span><span class="nx">to</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">example</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">index</span><span class="o">.</span><span class="nx">php</span><span class="o">/</span><span class="nx">tools</span><span class="o">/</span><span class="nx">message</span><span class="o">/</span><span class="nx">to</span>
 </pre></div>
 </div>
 <p>或者，我们可以通过 CLI 来访问。在 Mac/Linux 下你可以打开一个终端，在 Windows
 下你可以打开 “运行”，然后输入 &quot;cmd&quot;，进入 CodeIgniter 项目所在的目录。</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd</span> /path/to/project<span class="p">;</span>
-<span class="nv">$ </span>php index.php tools message
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> /path/to/project<span class="p">;</span>
+$ php index.php tools message
 </pre></div>
 </div>
 <p>如果你操作正确，你应该会看到 <em>Hello World!</em> 。</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>php index.php tools message <span class="s2">&quot;John Smith&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ php index.php tools message <span class="s2">&quot;John Smith&quot;</span>
 </pre></div>
 </div>
 <p>这里我们传一个参数给它，这和使用 URL 参数是一样的。&quot;John Smith&quot;
 被作为参数传入并显示出:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">Hello</span> <span class="nx">John</span> <span class="nx">Smith</span><span class="o">!</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">Hello</span> <span class="nx">John</span> <span class="nx">Smith</span><span class="o">!</span>
 </pre></div>
 </div>
 </div>
@@ -556,7 +556,7 @@ Tools.php，然后输入如下的代码:</p>
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

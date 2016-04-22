@@ -455,23 +455,23 @@
 <h3><a class="toc-backref" href="#id13">初始化类</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <p>正如 CodeIgniter 中的其他类一样，在你的控制器中使用 <tt class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></tt>
 方法来初始化单元测试类:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;unit_test&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;unit_test&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>初始化之后，单元测试类的对象就可以这样访问:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id4">
 <h3><a class="toc-backref" href="#id14">运行测试</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>要运行一个测试用例，需要提供一个测试和一个期望结果，像下面这样:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;expected result&#39;</span><span class="p">,</span> <span class="s1">&#39;test name&#39;</span><span class="p">,</span> <span class="s1">&#39;notes&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;expected result&#39;</span><span class="p">,</span> <span class="s1">&#39;test name&#39;</span><span class="p">,</span> <span class="s1">&#39;notes&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>其中，test 是你希望测试的代码的结果，expected result 是期望返回的结果，test name 是可选的，
 你可以为你的测试取一个名字，notes 是可选的，可以填些备注信息。例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$test</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$test</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
 
 <span class="nv">$expected_result</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 
@@ -482,11 +482,11 @@
 </div>
 <p>期望的结果可以是字面量匹配（a literal match），也可以是数据类型匹配（a data type match）。
 下面是字面量匹配的例子:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">(</span><span class="s1">&#39;Foo&#39;</span><span class="p">,</span> <span class="s1">&#39;Foo&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">(</span><span class="s1">&#39;Foo&#39;</span><span class="p">,</span> <span class="s1">&#39;Foo&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>下面是数据类型匹配的例子:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">(</span><span class="s1">&#39;Foo&#39;</span><span class="p">,</span> <span class="s1">&#39;is_string&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">(</span><span class="s1">&#39;Foo&#39;</span><span class="p">,</span> <span class="s1">&#39;is_string&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>注意第二个参数 &quot;is_string&quot; ，这让方法测试返回的结果是否是字符串类型。以下是可用的数据类型的列表：</p>
@@ -509,22 +509,22 @@
 <h3><a class="toc-backref" href="#id15">生成报告</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>你可以在每个测试之后显示出测试的结果，也可以先运行几个测试，然后在最后生成一份测试结果的报告。
 要简单的显示出测试结果，可以直接在 run 方法的前面使用 echo:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">(</span><span class="nv">$test</span><span class="p">,</span> <span class="nv">$expected_result</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">(</span><span class="nv">$test</span><span class="p">,</span> <span class="nv">$expected_result</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>要显示一份所有测试的完整报告，使用如下代码:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">report</span><span class="p">();</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">report</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>这份报告会以 HTML 的表格形式显示出来，如果你喜欢获取原始的数据，可以通过下面的代码得到一个数组:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">result</span><span class="p">();</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">result</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id6">
 <h3><a class="toc-backref" href="#id16">严格模式</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <p>默认情况下，单元测试类在字面量匹配时是松散的类型匹配。看下面这个例子:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">run</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>正在测试的结果是一个数字，期望的结果是一个布尔型。但是，由于 PHP 的松散数据类型，
@@ -533,18 +533,18 @@
 <div>if (1 == TRUE) echo 'This evaluates as true';</div></blockquote>
 <p>如果愿意的话，你可以将单元测试设置为严格模式，它不仅会比较两个数据的值，
 而且还会比较两个数据的数据类型:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="mi">1</span> <span class="o">===</span> <span class="k">TRUE</span><span class="p">)</span> <span class="k">echo</span> <span class="s1">&#39;This evaluates as FALSE&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="mi">1</span> <span class="o">===</span> <span class="k">TRUE</span><span class="p">)</span> <span class="k">echo</span> <span class="s1">&#39;This evaluates as FALSE&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>使用如下代码启用严格模式:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">use_strict</span><span class="p">(</span><span class="k">TRUE</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">use_strict</span><span class="p">(</span><span class="k">TRUE</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id7">
 <h3><a class="toc-backref" href="#id17">启用/禁用单元测试</a><a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <p>如果你希望在你的代码中保留一些测试，只在需要的时候才被执行，可以使用下面的代码禁用单元测试:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">active</span><span class="p">(</span><span class="k">FALSE</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">active</span><span class="p">(</span><span class="k">FALSE</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -564,7 +564,7 @@
 你只想显示出测试名和测试的结果：</p>
 <div class="section" id="id9">
 <h4><a class="toc-backref" href="#id19">自定义显示测试结果</a><a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h4>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">set_test_items</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;test_name&#39;</span><span class="p">,</span> <span class="s1">&#39;result&#39;</span><span class="p">));</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">unit</span><span class="o">-&gt;</span><span class="na">set_test_items</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;test_name&#39;</span><span class="p">,</span> <span class="s1">&#39;result&#39;</span><span class="p">));</span>
 </pre></div>
 </div>
 </div>
@@ -572,7 +572,7 @@
 <h4><a class="toc-backref" href="#id20">创建模板</a><a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h4>
 <p>如果你想让你的测试结果以不同于默认的格式显示出来，你可以设置你自己的模板，
 这里是一个简单的模板例子，注意那些必须的伪变量:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$str</span> <span class="o">=</span> <span class="s1">&#39;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$str</span> <span class="o">=</span> <span class="s1">&#39;</span>
 <span class="s1">&lt;table border=&quot;0&quot; cellpadding=&quot;4&quot; cellspacing=&quot;1&quot;&gt;</span>
 <span class="s1">{rows}</span>
 <span class="s1">    &lt;tr&gt;</span>
@@ -824,7 +824,7 @@
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

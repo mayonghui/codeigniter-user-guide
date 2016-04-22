@@ -465,12 +465,12 @@ changes sooner rather than later.</p>
 <div class="section" id="step-5-remove-apppath-third-party-from-autoload-php">
 <h2>Step 5: Remove APPPATH.'third_party' from autoload.php<a class="headerlink" href="#step-5-remove-apppath-third-party-from-autoload-php" title="永久链接至标题">¶</a></h2>
 <p>Open application/config/autoload.php, and look for the following:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$autoload</span><span class="p">[</span><span class="s1">&#39;packages&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="nx">APPPATH</span><span class="o">.</span><span class="s1">&#39;third_party&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$autoload</span><span class="p">[</span><span class="s1">&#39;packages&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="nx">APPPATH</span><span class="o">.</span><span class="s1">&#39;third_party&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>If you have not chosen to load any additional packages, that line can be
 changed to:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$autoload</span><span class="p">[</span><span class="s1">&#39;packages&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$autoload</span><span class="p">[</span><span class="s1">&#39;packages&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>Which should provide for nominal performance gains if not autoloading
@@ -480,7 +480,7 @@ packages.</p>
 <h2>Update Sessions Database Tables<a class="headerlink" href="#update-sessions-database-tables" title="永久链接至标题">¶</a></h2>
 <p>If you are using database sessions with the CI Session Library, please
 update your ci_sessions database table as follows:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">CREATE</span> <span class="nx">INDEX</span> <span class="nx">last_activity_idx</span> <span class="nx">ON</span> <span class="nx">ci_sessions</span><span class="p">(</span><span class="nx">last_activity</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">CREATE</span> <span class="nx">INDEX</span> <span class="nx">last_activity_idx</span> <span class="nx">ON</span> <span class="nx">ci_sessions</span><span class="p">(</span><span class="nx">last_activity</span><span class="p">);</span>
 <span class="nx">ALTER</span> <span class="nx">TABLE</span> <span class="nx">ci_sessions</span> <span class="nx">MODIFY</span> <span class="nx">user_agent</span> <span class="nx">VARCHAR</span><span class="p">(</span><span class="mi">120</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -546,7 +546,7 @@ update your ci_sessions database table as follows:</p>
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

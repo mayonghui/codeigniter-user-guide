@@ -448,11 +448,11 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 <h3><a class="toc-backref" href="#id6">初始化类</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
 <p>正如 CodeIgniter 中的其他类一样，在你的控制器中使用 <tt class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></tt>
 方法来初始化 FTP 类:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;ftp&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;ftp&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>初始化之后，FTP 类的对象就可以这样访问:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ftp</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ftp</span>
 </pre></div>
 </div>
 </div>
@@ -460,7 +460,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 <h3><a class="toc-backref" href="#id7">使用示例</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <p>在这个例子中，首先建立一个到 FTP 服务器的连接，接着读取一个本地文件然后以 ASCII
 模式上传到服务器上。文件的权限被设置为 755 。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;ftp&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;ftp&#39;</span><span class="p">);</span>
 
 <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;hostname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ftp.example.com&#39;</span><span class="p">;</span>
 <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;your-username&#39;</span><span class="p">;</span>
@@ -475,7 +475,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 </pre></div>
 </div>
 <p>下面的例子从 FTP 服务器上获取文件列表。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;ftp&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;ftp&#39;</span><span class="p">);</span>
 
 <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;hostname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ftp.example.com&#39;</span><span class="p">;</span>
 <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;your-username&#39;</span><span class="p">;</span>
@@ -492,7 +492,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 </pre></div>
 </div>
 <p>下面的例子在 FTP 服务器上创建了一个本地目录的镜像。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;ftp&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;ftp&#39;</span><span class="p">);</span>
 
 <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;hostname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ftp.example.com&#39;</span><span class="p">;</span>
 <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;your-username&#39;</span><span class="p">;</span>
@@ -535,7 +535,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 </table>
 <p>连接并登录到 FTP 服务器，通过向函数传递一个数组来设置连接参数，或者你可以把这些参数保存在一个配置文件中。</p>
 <p>下面例子演示了如何手动设置参数:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;ftp&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;ftp&#39;</span><span class="p">);</span>
 
 <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;hostname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;ftp.example.com&#39;</span><span class="p">;</span>
 <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;your-username&#39;</span><span class="p">;</span>
@@ -675,7 +675,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 </tbody>
 </table>
 <p>允许你重命名一个文件。需要指定原文件的文件路径和名称，以及新的文件路径和名称。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// Renames green.html to blue.html</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// Renames green.html to blue.html</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ftp</span><span class="o">-&gt;</span><span class="na">rename</span><span class="p">(</span><span class="s1">&#39;/public_html/foo/green.html&#39;</span><span class="p">,</span> <span class="s1">&#39;/public_html/foo/blue.html&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -703,7 +703,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 </tbody>
 </table>
 <p>允许你移动一个文件。需要指定原路径和目的路径:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// Moves blog.html from &quot;joe&quot; to &quot;fred&quot;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// Moves blog.html from &quot;joe&quot; to &quot;fred&quot;</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ftp</span><span class="o">-&gt;</span><span class="na">move</span><span class="p">(</span><span class="s1">&#39;/public_html/joe/blog.html&#39;</span><span class="p">,</span> <span class="s1">&#39;/public_html/fred/blog.html&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -734,7 +734,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 </tbody>
 </table>
 <p>用于删除一个文件。需要提供原文件的路径。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ftp</span><span class="o">-&gt;</span><span class="na">delete_file</span><span class="p">(</span><span class="s1">&#39;/public_html/joe/blog.html&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ftp</span><span class="o">-&gt;</span><span class="na">delete_file</span><span class="p">(</span><span class="s1">&#39;/public_html/joe/blog.html&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -766,7 +766,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 它会递归的删除目录下的所有内容，包括子目录和所有文件。请确保你提供的路径是正确的。
 你可以先使用 <tt class="docutils literal"><span class="pre">list_files()</span></tt> 方法来验证下路径是否正确。</p>
 </div>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ftp</span><span class="o">-&gt;</span><span class="na">delete_dir</span><span class="p">(</span><span class="s1">&#39;/public_html/path/to/folder/&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ftp</span><span class="o">-&gt;</span><span class="na">delete_dir</span><span class="p">(</span><span class="s1">&#39;/public_html/path/to/folder/&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -792,7 +792,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 </tbody>
 </table>
 <p>用于获取服务器上某个目录的文件列表，你需要指定目录路径。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$list</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ftp</span><span class="o">-&gt;</span><span class="na">list_files</span><span class="p">(</span><span class="s1">&#39;/public_html/&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$list</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ftp</span><span class="o">-&gt;</span><span class="na">list_files</span><span class="p">(</span><span class="s1">&#39;/public_html/&#39;</span><span class="p">);</span>
 <span class="nb">print_r</span><span class="p">(</span><span class="nv">$list</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -821,7 +821,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 </table>
 <p>递归的读取文本的一个目录和它下面的所有内容（包括子目录），然后通过 FTP 在远程服务器上创建一个镜像。
 无论原文件的路径和目录结构是什么样的，都会在远程服务器上一模一样的重建。你需要指定一个原路径和目的路径:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ftp</span><span class="o">-&gt;</span><span class="na">mirror</span><span class="p">(</span><span class="s1">&#39;/path/to/myfolder/&#39;</span><span class="p">,</span> <span class="s1">&#39;/public_html/myfolder/&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ftp</span><span class="o">-&gt;</span><span class="na">mirror</span><span class="p">(</span><span class="s1">&#39;/path/to/myfolder/&#39;</span><span class="p">,</span> <span class="s1">&#39;/public_html/myfolder/&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -849,7 +849,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 </table>
 <p>用于在服务器上创建一个目录。需要指定目录的路径并以斜线结尾。</p>
 <p>还可以通过第二个参数传递一个 八进制的值 设置权限。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// Creates a folder named &quot;bar&quot;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// Creates a folder named &quot;bar&quot;</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ftp</span><span class="o">-&gt;</span><span class="na">mkdir</span><span class="p">(</span><span class="s1">&#39;/public_html/foo/bar/&#39;</span><span class="p">,</span> <span class="mo">0755</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -877,7 +877,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 </tbody>
 </table>
 <p>用于设置文件权限。需要指定你想修改权限的文件或目录的路径:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// Chmod &quot;bar&quot; to 755</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// Chmod &quot;bar&quot; to 755</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ftp</span><span class="o">-&gt;</span><span class="na">chmod</span><span class="p">(</span><span class="s1">&#39;/public_html/foo/bar/&#39;</span><span class="p">,</span> <span class="mo">0755</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -988,7 +988,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

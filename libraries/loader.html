@@ -449,7 +449,7 @@
 建议将这些应用程序包放置在 application/third_party 目录下。
 下面是一个简单应用程序包的目录结构。</p>
 <p>下面是一个名为 &quot;Foo Bar&quot; 的应用程序包目录的例子。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="o">/</span><span class="nx">application</span><span class="o">/</span><span class="nx">third_party</span><span class="o">/</span><span class="nx">foo_bar</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">/</span><span class="nx">application</span><span class="o">/</span><span class="nx">third_party</span><span class="o">/</span><span class="nx">foo_bar</span>
 
 <span class="nx">config</span><span class="o">/</span>
 <span class="nx">helpers</span><span class="o">/</span>
@@ -469,7 +469,7 @@
 <p>在这种情况下，它可能在包内产生视图命名冲突，并可能导致加载错误的包。
 为了确保不会发生此类问题，在调用 <tt class="docutils literal"><span class="pre">add_package_path()</span></tt> 方法时，
 可以将可选的第二个参数设置为 FALSE 。</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">add_package_path</span><span class="p">(</span><span class="nx">APPPATH</span><span class="o">.</span><span class="s1">&#39;my_app&#39;</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">add_package_path</span><span class="p">(</span><span class="nx">APPPATH</span><span class="o">.</span><span class="s1">&#39;my_app&#39;</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">view</span><span class="p">(</span><span class="s1">&#39;my_app_index&#39;</span><span class="p">);</span> <span class="c1">// Loads</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">view</span><span class="p">(</span><span class="s1">&#39;welcome_message&#39;</span><span class="p">);</span> <span class="c1">// Will not load the default welcome_message b/c the second param to add_package_path is FALSE</span>
 
@@ -517,28 +517,28 @@
 <p class="last">我们有时候说 &quot;类&quot; ，有时候说 &quot;库&quot; ，这两个词不做区分。</p>
 </div>
 <p>例如，如果你想使用 CodeIgniter 发送邮件，第一步就是在控制器中加载 email 类:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>加载完之后，email 类就可以使用 <tt class="docutils literal"><span class="pre">$this-&gt;email</span></tt> 来访问使用了。</p>
 <p>类库文件可以被保存到主 libraries 目录的子目录下面，或者保存到个人的 <em>application/libraries</em>
 目录下。要载入子目录下的文件，只需将路径包含进来就可以了，注意这里说的路径是指相对于
 libraries 目录的路径。 例如，当你有一个文件保存在下面这个位置:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">libraries</span><span class="o">/</span><span class="nx">flavors</span><span class="o">/</span><span class="nx">Chocolate</span><span class="o">.</span><span class="nx">php</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">libraries</span><span class="o">/</span><span class="nx">flavors</span><span class="o">/</span><span class="nx">Chocolate</span><span class="o">.</span><span class="nx">php</span>
 </pre></div>
 </div>
 <p>你应该使用下面的方式来载入它:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;flavors/chocolate&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;flavors/chocolate&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>你可以随心所欲地将文件保存到多层的子目录下。</p>
 <p>另外，你可以同时加载多个类，只需给 library 方法传入一个包含所有要载入的类名的数组即可::</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;table&#39;</span><span class="p">));</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;table&#39;</span><span class="p">));</span>
 </pre></div>
 </div>
 <p><strong>设置选项</strong></p>
 <p>第二个参数是可选的，用于选择性地传递配置参数。一般来说，你可以将参数以数组的形式传递过去:</p>
-<div class="highlight-ci"><div class="highlight"><pre>$config = array (
+<div class="highlight-ci"><div class="highlight"><pre><span></span>$config = array (
     &#39;mailtype&#39; =&gt; &#39;html&#39;,
     &#39;charset&#39;  =&gt; &#39;utf-8,
     &#39;priority&#39; =&gt; &#39;1&#39;
@@ -554,7 +554,7 @@ $this-&gt;load-&gt;library(&#39;email&#39;, $config);
 <p>第三个参数也是可选的，如果为空，类库通常就会被赋值给一个与类库同名的对象。
 例如，如果类库名为 Calendar ，它将会被赋值给一个名为 <tt class="docutils literal"><span class="pre">$this-&gt;calendar</span></tt> 的变量。</p>
 <p>如果你希望使用你的自定义名称，你可以通过第三个参数把它传递过去:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;calendar&#39;</span><span class="p">,</span> <span class="k">NULL</span><span class="p">,</span> <span class="s1">&#39;my_calendar&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;calendar&#39;</span><span class="p">,</span> <span class="k">NULL</span><span class="p">,</span> <span class="s1">&#39;my_calendar&#39;</span><span class="p">);</span>
 
 <span class="c1">// Calendar class is now accessed using:</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">my_calendar</span>
@@ -587,7 +587,7 @@ $this-&gt;load-&gt;library(&#39;email&#39;, $config);
 </table>
 <p>该方法用于加载驱动器类，和 <tt class="docutils literal"><span class="pre">library()</span></tt> 方法非常相似。</p>
 <p>例如，如果你想在 CodeIgniter 中使用会话，第一步就是在控制器中加载 session 驱动器:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">driver</span><span class="p">(</span><span class="s1">&#39;session&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">driver</span><span class="p">(</span><span class="s1">&#39;session&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>加载完之后，session 驱动器就可以使用 <tt class="docutils literal"><span class="pre">$this-&gt;session</span></tt> 来访问使用了。</p>
@@ -595,12 +595,12 @@ $this-&gt;load-&gt;library(&#39;email&#39;, $config);
 目录下。子目录的名称必须和驱动器父类的名称一致，你可以阅读 <a class="reference internal" href="../general/drivers.html"><em>驱动器</em></a>
 了解详细信息。</p>
 <p>另外，你可以同时加载多个驱动器，只需给 driver 方法传入一个包含所有要载入的驱动器名的数组即可::</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">driver</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;session&#39;</span><span class="p">,</span> <span class="s1">&#39;cache&#39;</span><span class="p">));</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">driver</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;session&#39;</span><span class="p">,</span> <span class="s1">&#39;cache&#39;</span><span class="p">));</span>
 </pre></div>
 </div>
 <p><strong>设置选项</strong></p>
 <p>第二个参数是可选的，用于选择性地传递配置参数。一般来说，你可以将参数以数组的形式传递过去:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$config</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$config</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;sess_driver&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;cookie&#39;</span><span class="p">,</span>
     <span class="s1">&#39;sess_encrypt_cookie&#39;</span>  <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
     <span class="s1">&#39;encryption_key&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;mysecretkey&#39;</span>
@@ -615,7 +615,7 @@ $this-&gt;load-&gt;library(&#39;email&#39;, $config);
 <p>第三个参数也是可选的，如果为空，驱动器通常就会被赋值给一个与它同名的对象。
 例如，如果驱动器名为 Session ，它将会被赋值给一个名为 <tt class="docutils literal"><span class="pre">$this-&gt;session</span></tt> 的变量。</p>
 <p>如果你希望使用你的自定义名称，你可以通过第三个参数把它传递过去:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">driver</span><span class="p">(</span><span class="s1">&#39;session&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;my_session&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">driver</span><span class="p">(</span><span class="s1">&#39;session&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;my_session&#39;</span><span class="p">);</span>
 
 <span class="c1">// Session class is now accessed using:</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">my_session</span>
@@ -659,7 +659,7 @@ $this-&gt;load-&gt;library(&#39;email&#39;, $config);
 而不是发送给浏览器。当你希望对数据进行一些特殊处理时，这个参数就非常有用。
 如果你将这个参数设置为 TRUE，方法就会返回数据。这个参数的默认值是 FALSE，
 也就是数据将会被发送给浏览器。如果你希望数据被返回，记得要将它赋值给一个变量:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$string</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">view</span><span class="p">(</span><span class="s1">&#39;myfile&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$string</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">view</span><span class="p">(</span><span class="s1">&#39;myfile&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="k">TRUE</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -771,17 +771,17 @@ $this-&gt;load-&gt;library(&#39;email&#39;, $config);
 </tr>
 </tbody>
 </table>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">model</span><span class="p">(</span><span class="s1">&#39;model_name&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">model</span><span class="p">(</span><span class="s1">&#39;model_name&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>如果你的模型位于子目录下，加载时将路径包含进来即可。例如，
 如果你有一个模型位于 <em>application/models/blog/Queries.php</em> ，
 你可以使用下面的方法来加载:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">model</span><span class="p">(</span><span class="s1">&#39;blog/queries&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">model</span><span class="p">(</span><span class="s1">&#39;blog/queries&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>如果你希望将你的模型赋值给一个不同的变量，你可以在第二个参数中指定:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">model</span><span class="p">(</span><span class="s1">&#39;model_name&#39;</span><span class="p">,</span> <span class="s1">&#39;fubar&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">model</span><span class="p">(</span><span class="s1">&#39;model_name&#39;</span><span class="p">,</span> <span class="s1">&#39;fubar&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">fubar</span><span class="o">-&gt;</span><span class="na">method</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -987,7 +987,7 @@ $this-&gt;load-&gt;library(&#39;email&#39;, $config);
 </div>
 <p>如果类已经被加载，方法返回它在 CodeIgniter 超级对象中被赋值的变量的名称，
 如果没有加载，返回 FALSE:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;form_validation&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;form_validation&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">is_loaded</span><span class="p">(</span><span class="s1">&#39;Form_validation&#39;</span><span class="p">);</span>  <span class="c1">// returns &#39;form_validation&#39;</span>
 
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">is_loaded</span><span class="p">(</span><span class="s1">&#39;Nonexistent_library&#39;</span><span class="p">);</span>  <span class="c1">// returns FALSE</span>
@@ -997,7 +997,7 @@ $this-&gt;load-&gt;library(&#39;email&#39;, $config);
 <p class="first admonition-title">重要</p>
 <p class="last">如果你有类的多个实例（被赋值给多个不同的属性），那么将返回第一个的名称。</p>
 </div>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;form_validation&#39;</span><span class="p">,</span> <span class="nv">$config</span><span class="p">,</span> <span class="s1">&#39;fv&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;form_validation&#39;</span><span class="p">,</span> <span class="nv">$config</span><span class="p">,</span> <span class="s1">&#39;fv&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;form_validation&#39;</span><span class="p">);</span>
 
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">is_loaded</span><span class="p">(</span><span class="s1">&#39;Form_validation&#39;</span><span class="p">);</span>  <span class="c1">// returns &#39;fv&#39;</span>
@@ -1029,7 +1029,7 @@ $this-&gt;load-&gt;library(&#39;email&#39;, $config);
 <p>添加一个包路径，用于告诉加载器类使用给定的路径来加载后续请求的资源。
 例如，&quot;Foo Bar&quot; 应用程序包里有一个名为 Foo_bar.php 的类，在控制器中，
 我们可以按照如下的方法调用:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">add_package_path</span><span class="p">(</span><span class="nx">APPPATH</span><span class="o">.</span><span class="s1">&#39;third_party/foo_bar/&#39;</span><span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">add_package_path</span><span class="p">(</span><span class="nx">APPPATH</span><span class="o">.</span><span class="s1">&#39;third_party/foo_bar/&#39;</span><span class="p">)</span>
     <span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;foo_bar&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -1060,7 +1060,7 @@ $this-&gt;load-&gt;library(&#39;email&#39;, $config);
 要删除最后一次使用的包路径，你可以直接不带参数的调用该方法。</p>
 <p>或者你也可以删除一个特定的包路径，指定与之前使用 <tt class="docutils literal"><span class="pre">add_package_path()</span></tt> 方法时
 所加载的包相同的路径:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">remove_package_path</span><span class="p">(</span><span class="nx">APPPATH</span><span class="o">.</span><span class="s1">&#39;third_party/foo_bar/&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">remove_package_path</span><span class="p">(</span><span class="nx">APPPATH</span><span class="o">.</span><span class="s1">&#39;third_party/foo_bar/&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1152,7 +1152,7 @@ $this-&gt;load-&gt;library(&#39;email&#39;, $config);
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

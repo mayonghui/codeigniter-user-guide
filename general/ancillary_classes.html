@@ -448,7 +448,7 @@
 <p>任何在你的控制器方法中初始化的类都可以简单的通过 <tt class="docutils literal"><span class="pre">get_instance()</span></tt>
 函数来访问 CodeIgniter 资源。这个函数返回一个 CodeIgniter 对象。</p>
 <p>通常来说，调用 CodeIgniter 的方法需要使用 <tt class="docutils literal"><span class="pre">$this</span></tt></p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;session&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">config</span><span class="o">-&gt;</span><span class="na">item</span><span class="p">(</span><span class="s1">&#39;base_url&#39;</span><span class="p">);</span>
 <span class="c1">// etc.</span>
@@ -457,12 +457,12 @@
 <p>但是 <tt class="docutils literal"><span class="pre">$this</span></tt> 只能在你的控制器、模型或视图中使用，如果你想在
 你自己的类中使用 CodeIgniter 类，你可以像下面这样做：</p>
 <p>首先，将 CodeIgniter 对象赋值给一个变量:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$CI</span> <span class="o">=&amp;</span> <span class="nx">get_instance</span><span class="p">();</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$CI</span> <span class="o">=&amp;</span> <span class="nx">get_instance</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>一旦你把 CodeIgniter 对象赋值给一个变量之后，你就可以使用这个变量
 来 <em>代替</em> <tt class="docutils literal"><span class="pre">$this</span></tt></p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$CI</span> <span class="o">=&amp;</span> <span class="nx">get_instance</span><span class="p">();</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$CI</span> <span class="o">=&amp;</span> <span class="nx">get_instance</span><span class="p">();</span>
 
 <span class="nv">$CI</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">);</span>
 <span class="nv">$CI</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;session&#39;</span><span class="p">);</span>
@@ -473,7 +473,7 @@
 <p>如果你在类中使用``get_instance()`` 函数，最好的方法是将它赋值给
 一个属性 ，这样你就不用在每个方法里都调用 <tt class="docutils literal"><span class="pre">get_instance()</span></tt> 了。</p>
 <p>例如:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Example</span> <span class="p">{</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Example</span> <span class="p">{</span>
 
     <span class="k">protected</span> <span class="nv">$CI</span><span class="p">;</span>
 
@@ -562,7 +562,7 @@
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2015, 不列颠哥伦比亚理工学院.
-       最后修改: 2015-10-11.
+       最后修改: 2016-04-22.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>
