@@ -43,7 +43,7 @@ CodeIgniter 生成的 URL 非常干净，而且对搜索引擎友好。不同于
 
 	example.com/news/article/345
 
-.. 注意:: 默认 URL 中会包含 *index.php* 文件，但是可以通过更改 *.htaccess* 文件来去掉它。
+.. note:: 默认 URL 中会包含 *index.php* 文件，但是可以通过更改 *.htaccess* 文件来去掉它。
 
 CodeIgniter 功能强大
 =========================
