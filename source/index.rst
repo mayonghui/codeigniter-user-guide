@@ -117,6 +117,6 @@ CodeIgniter 用户指南
 	general/index
 	libraries/index
 	database/index
-  helpers/index
+	helpers/index
 	tutorial/index
 	general/credits
