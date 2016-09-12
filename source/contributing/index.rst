@@ -9,8 +9,8 @@
 	../DCO
 
 CodeIgniter 是一个社区驱动的项目，它会接受从社区里贡献的文档和代码。
-这些贡献都是通过 GitHub 上 `CodeIgniter 代码仓库 <https://github.com/bcit-ci/CodeIgniter>`_ 
-的 Issues 或者 `Pull Requests <https://help.github.com/articles/using-pull-requests/>`_ 
+这些贡献都是通过 GitHub 上 `CodeIgniter 代码仓库 <https://github.com/bcit-ci/CodeIgniter>`_
+的 Issues 或者 `Pull Requests <https://help.github.com/articles/using-pull-requests/>`_
 的形式来完成的。
 
 Issues 是一种快速提交 bug 的方式，如果你发现了一个 CodeIgniter 的 bug 或文档错误，那么请先
@@ -20,18 +20,30 @@ Issues 是一种快速提交 bug 的方式，如果你发现了一个 CodeIgnite
 - 该 Issue 是否已经被修复了（检查下 delevop 分支的代码，或者已关闭的 Issues）
 - 这个 bug 很明显你一个人就能修复吗？
 
-提交 Issues 是非常有用的，但是更好的做法是发起一个 Pull Request ，具体的做法是先 fork 
+提交 Issues 是非常有用的，但是更好的做法是发起一个 Pull Request ，具体的做法是先 fork
 主仓库的代码，然后将修改的代码提交到你自己的副本中。这需要你会使用版本控制系统 Git 。
 
 *******
 支持
 *******
 
-请注意，GitHub 并不是用来回答一般的技术支持类问题的！
+请注意，GitHub 并不是用来回答一般的技术支持类问题的！If you are having trouble using a feature of CodeIgniter, ask for help on our
+`forums <http://forum.codeigniter.com/>`_ instead.
 
-如果你在使用 CodeIgniter 的某个功能时遇到了问题，请到论坛提问。
+If you are not sure whether you are using something correctly or if you
+have found a bug, again - please ask on the forums first.
 
-如果你不知道自己做的对不对，或者不确定自己找到了一个 bug ，也请先到论坛里提问。
+********
+安全
+********
+
+Did you find a security issue in CodeIgniter?
+
+Please *don't* disclose it publicly, but e-mail us at security@codeigniter.com,
+or report it via our page on `HackerOne <https://hackerone.com/codeigniter>`_.
+
+If you've found a critical vulnerability, we'd be happy to credit you in our
+`ChangeLog <../changelog>`.
 
 ****************************
 提交好问题的技巧
@@ -68,7 +80,7 @@ PHP 代码规范
 ==============
 
 所有的代码都必须符合 :doc:`代码规范指南 <../general/styleguide>`，它其实就是
-`Allman 缩进风格 <http://en.wikipedia.org/wiki/Indent_style#Allman_style>`_  
+`Allman 缩进风格 <https://en.wikipedia.org/wiki/Indent_style#Allman_style>`_
 加上下划线规则以及可读的操作符。遵循代码规则可以让代码的风格保持一致，同时也意味着代的更可读性更好。
 
 文档
@@ -81,8 +93,8 @@ PHP 的文档注释块（PHPDoc blocks）也要修改。
 兼容性
 =============
 
-CodeIgniter 推荐使用 PHP 5.4 或更高的版本，但是同时它也对 PHP 5.2.4 保持兼容，所以所有提交的代码都必须
-满足这一点。如果你用到了 PHP 5.3 （或以上版本）中的函数或新特性，这些代码需要回退到 PHP 5.2.4 版本的。
+CodeIgniter 推荐使用 PHP 5.6 或更高的版本，但是同时它也对 PHP 5.3.7 保持兼容，所以所有提交的代码都必须
+满足这一点。如果你用到了 PHP 5.4 （或以上版本）中的函数或新特性，这些代码需要回退到 PHP 5.3.7 版本的。
 
 分支
 =========
@@ -122,5 +134,5 @@ master 分支总是包含最新的稳定版并保持干净，这样可以在例�
 如果你正在使用 Tower 客户端，在提交窗口中会有一个 "Sign-Off" 复选框，或者你可以将 ``git commit`` 设置成
 ``git commit -s`` 的别名，这样你就不用关心提交中的签名了。
 
-通过这种方式对你的工作进行签名，说明你将遵守 DCO （Developer's Certificate or Origin），:doc:`/DCO` 
+通过这种方式对你的工作进行签名，说明你将遵守 DCO （Developer's Certificate of Origin），:doc:`/DCO`
 申明的当前版本位于这份文档的根目录下。

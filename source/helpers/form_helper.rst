@@ -97,7 +97,7 @@
 				<input type="hidden" name="member_id" value="234" />
 
 
-.. php:function:: form_open_multipart([$action = ''[, $attributes = array()[, $hidden = array()]])
+.. php:function:: form_open_multipart([$action = ''[, $attributes = array()[, $hidden = array()]]])
 
 	:param	string	$action: Form action/target URI string
 	:param	array	$attributes: HTML attributes
@@ -174,7 +174,7 @@
 			<input type="hidden" name="email" value="john@example.com" id="hiddenemail" class="hiddenemail" />
 		*/
 
-.. php:function:: form_input([$data = ''[, $value = ''[, $extra = '']])
+.. php:function:: form_input([$data = ''[, $value = ''[, $extra = '']]])
 
 	:param	array	$data: Field attributes data
 	:param	string	$value: Field value
@@ -384,7 +384,7 @@
 	:param	string	$extra: Anything to append after the closing tag, *as is*
 	:returns:	An HTML fieldset closing tag
 	:rtype:	string
-	
+
 
 	用于生成结束标签 </fieldset> ，使用这个函数唯一的一个好处是，
 	它可以在结束标签的后面加上一些其他的数据。例如：
@@ -428,12 +428,12 @@
 	另外，如果你希望向标签中添加额外的数据如 JavaScript ，也可以传一个字符串给第四个参数::
 
 		$js = 'onClick="some_function()"';
-		echo form_checkbox('newsletter', 'accept', TRUE, $js)
+		echo form_checkbox('newsletter', 'accept', TRUE, $js);
 
 	Or you can pass it as an array::
 
 		$js = array('onClick' => 'some_function();');
-		echo form_checkbox('newsletter', 'accept', TRUE, $js)
+		echo form_checkbox('newsletter', 'accept', TRUE, $js);
 
 .. php:function:: form_radio([$data = ''[, $value = ''[, $checked = FALSE[, $extra = '']]]])
 

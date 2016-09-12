@@ -2,7 +2,7 @@
 Inflector 辅助函数
 ###################
 
-Inflector 辅助函数文件包含了一些帮助你将单词转换为单复数或驼峰格式等等的函数。
+Inflector 辅助函数文件包含了一些帮助你将 **英语** 单词转换为单复数或驼峰格式等等的函数。
 
 .. contents::
   :local:
@@ -36,7 +36,7 @@ Inflector 辅助函数文件包含了一些帮助你将单词转换为单复数�
 .. php:function:: plural($str)
 
 	:param	string	$str: Input string
-	:returns:	A plular word
+	:returns:	A plural word
 	:rtype:	string
 
 	将一个单词的单数形式变为复数形式。例如::

@@ -2,6 +2,190 @@
 变更记录
 ##########
 
+Version 3.1.0
+=============
+
+Release Date: July 26, 2016
+
+-  **Security**
+
+   -  Fixed an SQL injection in the 'odbc' database driver.
+   -  Updated :php:func:`set_realpath()` :doc:`Path Helpr <helpers/path_helper>` function to filter-out ``php://`` wrapper inputs.
+   -  Officially dropped any kind of support for PHP 5.2.x and anything under 5.3.7.
+
+-  General Changes
+
+   -  Updated :doc:`Image Manipulation Library <libraries/image_lib>` to validate *width* and *height* configuration values.
+   -  Updated :doc:`Encryption Library <libraries/encryption>` to always prefer ``random_bytes()`` when it is available.
+   -  Updated :doc:`Session Library <libraries/sessions>` to log 'debug' messages when using fallbacks to *session.save_path* (php.ini) or 'sess_use_database', 'sess_table_name' settings.
+   -  Added a 'LONGTEXT' to 'STRING' alias to :doc:`Database Forge <database/forge>` for the 'cubrid', 'pdo/cubrid' drivers.
+   -  Added 'TINYINT', 'MEDIUMINT', 'INT' and 'BIGINT' aliases to 'NUMBER' to :doc:`Database Forge <database/forge>` for the 'oci8', 'pdo/oci' drivers.
+
+   -  :php:func:`password_hash()` :doc:`compatibility function <general/compatibility_functions>` changes:
+
+      - Changed salt-generation logic to prefer ``random_bytes()`` when it is available.
+      - Changed salt-generation logic to prefer direct access to */dev/urandom* over ``openssl_random_pseudo_bytes()``.
+      - Changed salt-generation logic to error if ``openssl_random_pseudo_bytes()`` sets its ``$crypto_strong`` flag to FALSE.
+
+Bug fixes for 3.1.0
+-------------------
+
+-  Fixed a bug where :doc:`Image Manipulation Library <libraries/image_lib>` didn't escape image source paths passed to ImageMagick as shell arguments.
+-  Fixed a bug (#861) - :doc:`Database Forge <database/forge>` method ``create_table()`` incorrectly accepts field width constraints for MSSQL/SQLSRV integer-type columns.
+-  Fixed a bug (#4562) - :doc:`Cache Library <libraries/caching>` didn't check if ``Memcached::quit()`` is available before calling it.
+-  Fixed a bug (#4563) - :doc:`Input Library <libraries/input>` method ``request_headers()`` ignores ``$xss_clean`` parameter value after first call.
+-  Fixed a bug (#4605) - :doc:`Config Library <libraries/config>` method ``site_url()`` stripped trailing slashes from relative URIs passed to it.
+-  Fixed a bug (#4613) - :doc:`Email Library <libraries/config>` failed to send multiple emails via SMTP due to "already authenticated" errors when keep-alive is enabled.
+-  Fixed a bug (#4633) - :doc:`Form Validation Library <libraries/form_validation>` ignored multiple "callback" rules for empty, non-required fields.
+-  Fixed a bug (#4637) - :doc:`Database <database/index>` method ``error()`` returned ``FALSE`` with the 'oci8' driver if there was no error.
+-  Fixed a bug (#4647) - :doc:`Query Builder <database/query_builder>` method ``count_all_results()`` doesn't take into account ``GROUP BY`` clauses while deciding whether to do a subquery or not.
+-  Fixed a bug where :doc:`Session Library <libraries/sessions>` 'redis' driver didn't properly detect if a connection is properly closed on PHP 5.x.
+-  Fixed a bug (#4583) - :doc:`Email Library <libraries/email>` didn't properly handle inline attachments in HTML emails.
+-  Fixed a bug where :doc:`Database <database/index>` method ``db_select()`` didn't clear metadata cached for the previously used database.
+-  Fixed a bug (#4675) - :doc:`File Helper <helpers/file_helper>` function :php:func:`delete_files()` treated symbolic links as regular directories.
+-  Fixed a bug (#4674) - :doc:`Database <database/index>` driver 'dblib' triggered E_WARNING messages while connecting.
+-  Fixed a bug (#4678) - :doc:`Database Forge <database/forge>` tried to use unsupported ``IF NOT EXISTS`` clause when creating tables on Oracle.
+-  Fixed a bug (#4691) - :doc:`File Uploading Library <libraries/file_uploading>` method ``data()`` returns wrong 'raw_name' when the filename extension is also contained in the raw filename.
+-  Fixed a bug (#4679) - :doc:`Input Library <libraries/input>` method ``ip_address()`` errors with a matching ``$config['proxy_ips']`` IPv6 address.
+-  Fixed a bug (#4695) - :doc:`User Agent Library <libraries/user_agent>` didn't load the *config/user_agents.php* file when there's no ``User-Agent`` HTTP request header.
+-  Fixed a bug (#4713) - :doc:`Query Builder <database/query_builder>` methods ``insert_batch()``, ``update_batch()`` could return wrong affected rows count.
+-  Fixed a bug (#4712) - :doc:`Email Library <libraries/email>` doesn't sent ``RSET`` to SMTP servers after a failure and while using keep-alive.
+-  Fixed a bug (#4724) - :doc:`Common function <general/common_functions>` :php:func:`is_https()` compared the ``X-Forwarded-Proto`` HTTP header case-sensitively.
+-  Fixed a bug (#4725) - :doc:`Common function <general/common_functions>` :php:func:`remove_invisible_characters()` searched case-sensitively for URL-encoded characters.
+
+Version 3.0.6
+=============
+
+Release Date: March 21, 2016
+
+-  General Changes
+
+   -  Added a destructor to :doc:`Cache Library <libraries/caching>` 'memcached' driver to ensure that Memcache(d) connections are properly closed.
+   -  Deprecated :doc:`Form Validation Library <libraries/form_validation>` method ``prep_for_form()``.
+
+Bug fixes for 3.0.6
+-------------------
+
+-  Fixed a bug (#4516) - :doc:`Form Validation Library <libraries/form_validation>` always accepted empty array inputs.
+-  Fixed a bug where :doc:`Session Library <libraries/sessions>` allowed accessing ``$_SESSION`` values as class properties but ``isset()`` didn't work on them.
+-  Fixed a bug where :doc:`Form Validation Library <libraries/form_validation>` modified the ``$_POST`` array when the data being validated was actually provided via ``set_data()``.
+-  Fixed a bug (#4539) - :doc:`Migration Library <libraries/migration>` applied migrations before validating that all migrations within the requested version range are valid.
+-  Fixed a bug (#4539) - :doc:`Migration Library <libraries/migration>` triggered failures for migrations that are out of the requested version range.
+
+Version 3.0.5
+=============
+
+Release Date: March 11, 2016
+
+-  Core
+
+   -  Changed :doc:`Loader Library <libraries/loader>` to allow ``$autoload['drivers']`` assigning with custom property names.
+   -  Changed :doc:`Loader Library <libraries/loader>` to ignore variables prefixed with '_ci_' when loading views.
+
+-  General Changes
+
+   -  Updated the :doc:`Session Library <libraries/sessions>` to produce friendlier error messages on failures with drivers other than 'files'.
+
+-  :doc:`Query Builder <database/query_builder>`
+
+   -  Added a ``$batch_size`` parameter to the ``insert_batch()`` method (defaults to 100).
+   -  Added a ``$batch_size`` parameter to the ``update_batch()`` method (defaults to 100).
+
+Bug fixes for 3.0.5
+-------------------
+
+-  Fixed a bug (#4391) - :doc:`Email Library <libraries/email>` method ``reply_to()`` didn't apply Q-encoding.
+-  Fixed a bug (#4384) - :doc:`Pagination Library <libraries/pagination>` ignored (possible) *cur_page* configuration value.
+-  Fixed a bug (#4395) - :doc:`Query Builder <database/query_builder>` method ``count_all_results()`` still fails if an ``ORDER BY`` condition is used.
+-  Fixed a bug (#4399) - :doc:`Query Builder <database/query_builder>` methods ``insert_batch()``, ``update_batch()`` produced confusing error messages when called with no data and *db_debug* is enabled.
+-  Fixed a bug (#4401) - :doc:`Query Builder <database/query_builder>` breaks ``WHERE`` and ``HAVING`` conditions that use ``IN()`` with strings containing a closing parenthesis.
+-  Fixed a regression in :doc:`Form Helper <helpers/form_helper>` functions :php:func:`set_checkbox()`, :php:func:`set_radio()` where "checked" inputs aren't recognized after a form submit.
+-  Fixed a bug (#4407) - :doc:`Text Helper <helpers/text_helper>` function :php:func:`word_censor()` doesn't work under PHP 7 if there's no custom replacement provided.
+-  Fixed a bug (#4415) - :doc:`Form Validation Library <libraries/form_validation>` rule **valid_url** didn't accept URLs with IPv6 addresses enclosed in square brackets under PHP 5 (upstream bug).
+-  Fixed a bug (#4427) - :doc:`CAPTCHA Helper <helpers/captcha_helper>` triggers an error if the provided character pool is too small.
+-  Fixed a bug (#4430) - :doc:`File Uploading Library <libraries/file_uploading>` option **file_ext_tolower** didn't work.
+-  Fixed a bug (#4431) - :doc:`Query Builder <database/query_builder>` method ``join()`` discarded opening parentheses.
+-  Fixed a bug (#4424) - :doc:`Session Library <libraries/sessions>` triggered a PHP warning when writing a newly created session with the 'redis' driver.
+-  Fixed a bug (#4437) - :doc:`Inflector Helper <helpers/inflector_helper>` function :php:func:`humanize()` didn't escape its ``$separator`` parameter while using it in a regular expression.
+-  Fixed a bug where :doc:`Session Library <libraries/sessions>` didn't properly handle its locks' statuses with the 'memcached' driver.
+-  Fixed a bug where :doc:`Session Library <libraries/sessions>` triggered a PHP warning when writing a newly created session with the 'memcached' driver.
+-  Fixed a bug (#4449) - :doc:`Query Builder <database/query_builder>` method ``join()`` breaks conditions containing ``IS NULL``, ``IS NOT NULL``.
+-  Fixed a bug (#4491) - :doc:`Session Library <libraries/sessions>` didn't clean-up internal variables for emulated locks with the 'redis' driver.
+-  Fixed a bug where :doc:`Session Library <libraries/sessions>` didn't clean-up internal variables for emulated locks with the 'memcached' driver.
+-  Fixed a bug where :doc:`Database <database/index>` transactions didn't work with the 'ibase' driver.
+-  Fixed a bug (#4475) - :doc:`Security Library <libraries/security>` method ``strip_image_tags()`` preserves only the first URL character from non-quoted *src* attributes.
+-  Fixed a bug where :doc:`Profiler Library <general/profiling>` didn't apply ``htmlspecialchars()`` to all displayed inputs.
+-  Fixed a bug (#4277) - :doc:`Cache Library <libraries/caching>` triggered fatal errors if accessing the Memcache(d) and/or Redis driver and they are not available on the system.
+-  Fixed a bug where :doc:`Cache Library <libraries/caching>` method ``is_supported()`` logged an error message when it returns ``FALSE`` for the APC and Wincache drivers.
+
+Version 3.0.4
+=============
+
+Release Date: January 13, 2016
+
+-  General Changes
+
+   -  Updated :doc:`Security Library <libraries/security>` method ``get_random_bytes()`` to use PHP 7's ``random_bytes()`` function when possible.
+   -  Updated :doc:`Encryption Library <libraries/security>` method ``create_key()`` to use PHP 7's ``random_bytes()`` function when possible.
+
+-  :doc:`Database <database/index>`
+
+   -  Added support for ``OFFSET-FETCH`` with Oracle 12c for the 'oci8' and 'pdo/oci' drivers.
+   -  Added support for the new ``MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT`` constant from `PHP 5.6.16 <https://secure.php.net/ChangeLog-5.php#5.6.16>`_ for the 'mysqli' driver.
+
+Bug fixes for 3.0.4
+-------------------
+
+-  Fixed a bug (#4212) - :doc:`Query Builder <database/query_builder>` method ``count_all_results()`` could fail if an ``ORDER BY`` condition is used.
+-  Fixed a bug where :doc:`Form Helper <helpers/form_helper>` functions :php:func:`set_checkbox()`, :php:func:`set_radio()` didn't "uncheck" inputs on a submitted form if the default state is "checked".
+-  Fixed a bug (#4217) - :doc:`Config Library <libraries/config>` method ``base_url()`` didn't use proper formatting for IPv6 when it falls back to ``$_SERVER['SERVER_ADDR']``.
+-  Fixed a bug where :doc:`CAPTCHA Helper <helpers/captcha_helper>` entered an infinite loop while generating a random string.
+-  Fixed a bug (#4223) - :doc:`Database <database/index>` method ``simple_query()`` blindly executes queries without checking if the connection was initialized properly.
+-  Fixed a bug (#4244) - :doc:`Email Library <libraries/email>` could improperly use "unsafe" US-ASCII characters during Quoted-printable encoding.
+-  Fixed a bug (#4245) - :doc:`Database Forge <database/forge>` couldn't properly handle ``SET`` and ``ENUM`` type fields with string values.
+-  Fixed a bug (#4283) - :doc:`String Helper <helpers/string_helper>` function :php:func:`alternator()` couldn't be called without arguments.
+-  Fixed a bug (#4306) - :doc:`Database <database/index>` method ``version()`` didn't work properly with the 'mssql' driver.
+-  Fixed a bug (#4039) - :doc:`Session Library <libraries/sessions>` could generate multiple (redundant) warnings in case of a read failure with the 'files' driver, due to a bug in PHP.
+-  Fixed a bug where :doc:`Session Library <libraries/sessions>` didn't have proper error handling on PHP 5 (due to a PHP bug).
+-  Fixed a bug (#4312) - :doc:`Form Validation Library <libraries/form_validation>` didn't provide error feedback for failed validation on empty requests.
+-  Fixed a bug where :doc:`Database <database/index>` method `version()` returned banner text instead of only the version number with the 'oci8' and 'pdo/oci' drivers.
+-  Fixed a bug (#4331) - :doc:`Database <database/index>` method ``error()`` didn't really work for connection errors with the 'mysqli' driver.
+-  Fixed a bug (#4343) - :doc:`Email Library <libraries/email>` failing with a *"More than one 'from' person"* message when using *sendmail*.
+-  Fixed a bug (#4350) - :doc:`Loader Library <libraries/loader>` method ``model()`` logic directly instantiated the ``CI_Model`` or ``MY_Model`` classes.
+-  Fixed a bug (#4337) - :doc:`Database <database/index>` method ``query()`` didn't return a result set for queries with the ``RETURNING`` statement on PostgreSQL.
+-  Fixed a bug (#4362) - :doc:`Session Library <libraries/sessions>` doesn't properly maintain its state after ID regeneration with the 'redis' and 'memcached' drivers on PHP 7.
+-  Fixed a bug (#4349) - :doc:`Database <database/index>` drivers 'mysql', 'mysqli', 'pdo/mysql' discard other ``sql_mode`` flags when "stricton" is enabled.
+-  Fixed a bug (#4349) - :doc:`Database <database/index>` drivers 'mysql', 'mysqli', 'pdo/mysql' don't turn off ``STRICT_TRANS_TABLES`` on MySQL 5.7+ when "stricton" is disabled.
+-  Fixed a bug (#4374) - :doc:`Session Library <libraries/sessions>` with the 'database' driver could be affected by userspace :doc:`Query Builder <database/query_builder>` conditions.
+
+Version 3.0.3
+=============
+
+Release Date: October 31, 2015
+
+-  **Security**
+
+   -  Fixed an XSS attack vector in :doc:`Security Library <libraries/security>` method ``xss_clean()``.
+   -  Changed :doc:`Config Library <libraries/config>` method ``base_url()`` to fallback to ``$_SERVER['SERVER_ADDR']`` when ``$config['base_url']`` is empty in order to avoid *Host* header injections.
+   -  Changed :doc:`CAPTCHA Helper <helpers/captcha_helper>` to use the operating system's PRNG when possible.
+
+-  :doc:`Database <database/index>`
+
+   -  Optimized :doc:`Database Utility <database/utilities>` method ``csv_from_result()`` for speed with larger result sets.
+   -  Added proper return values to :doc:`Database Transactions <database/transactions>` method ``trans_start()``.
+
+Bug fixes for 3.0.3
+-------------------
+
+-  Fixed a bug (#4170) - :doc:`Database <database/index>` method ``insert_id()`` could return an identity from the wrong scope with the 'sqlsrv' driver.
+-  Fixed a bug (#4179) - :doc:`Session Library <libraries/sessions>` doesn't properly maintain its state after ID regeneration with the 'database' driver on PHP 7.
+-  Fixed a bug (#4173) - :doc:`Database Forge <database/forge>` method ``add_key()`` didn't allow creation of non-PRIMARY composite keys after the "bugfix" for #3968.
+-  Fixed a bug (#4171) - :doc:`Database Transactions <database/transactions>` didn't work with nesting in methods ``trans_begin()``, ``trans_commit()``, ``trans_rollback()``.
+-  Fixed a bug where :doc:`Database Transaction <database/transactions>` methods ``trans_begin()``, ``trans_commit()``, ``trans_rollback()`` ignored failures.
+-  Fixed a bug where all :doc:`Database Transaction <database/transactions>` methods returned TRUE while transactions are actually disabled.
+-  Fixed a bug where :doc:`common function <general/common_functions>` :php:func:`html_escape()` modified keys of its array inputs.
+-  Fixed a bug (#4192) - :doc:`Email Library <libraries/email>` wouldn't always have proper Quoted-printable encoding due to a bug in PHP's own ``mb_mime_encodeheader()`` function.
+
 版本 3.0.2
 =============
 

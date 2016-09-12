@@ -23,7 +23,7 @@ Cookie 辅助函数文件包含了一些帮助你处理 Cookie 的函数。
 
 该辅助函数有下列可用函数：
 
-.. php:function:: set_cookie($name[, $value = ''[, $expire = ''[, $domain = ''[, $path = '/'[, $prefix = ''[, $secure = FALSE[, $httponly = FALSE]]]]]]]])
+.. php:function:: set_cookie($name[, $value = ''[, $expire = ''[, $domain = ''[, $path = '/'[, $prefix = ''[, $secure = FALSE[, $httponly = FALSE]]]]]]])
 
 	:param	mixed	$name: Cookie name *or* associative array of all of the parameters available to this function
 	:param	string	$value: Cookie value
@@ -39,7 +39,7 @@ Cookie 辅助函数文件包含了一些帮助你处理 Cookie 的函数。
 	:doc:`输入类 <../libraries/input>` 获取它的详细用法，另外，它是
 	``CI_Input::set_cookie()`` 函数的别名。
 
-.. php:function:: get_cookie($index[, $xss_clean = NULL]])
+.. php:function:: get_cookie($index[, $xss_clean = NULL])
 
 	:param	string	$index: Cookie name
 	:param	bool	$xss_clean: Whether to apply XSS filtering to the returned value
@@ -52,7 +52,7 @@ Cookie 辅助函数文件包含了一些帮助你处理 Cookie 的函数。
 	*application/config/config.php* 中的 ``$config['cookie_prefix']`` 参数
 	来作为 Cookie 的前缀。
 
-.. php:function:: delete_cookie($name[, $domain = ''[, $path = '/'[, $prefix = '']]]])
+.. php:function:: delete_cookie($name[, $domain = ''[, $path = '/'[, $prefix = '']]])
 
 	:param	string	$name: Cookie name
 	:param	string	$domain: Cookie domain (usually: .yourdomain.com)

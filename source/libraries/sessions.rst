@@ -72,7 +72,7 @@ Session 是如何工作的？
 两个 HTTP 请求可能会同时使用同一个 session 。说的更专业点就是，
 请求是非阻塞的。（requests were non-blocking）
 
-在处理 session 时使用非阻塞的请求同样意味着不安全，因为在一个请求中修改 session 
+在处理 session 时使用非阻塞的请求同样意味着不安全，因为在一个请求中修改 session
 数据（或重新生成 Session ID）会对并发的第二个请求造成影响。这是导致很多问题的根源，
 同时也是为什么 CodeIgniter 3.0 对 Session 类完全重写的原因。
 
@@ -192,7 +192,7 @@ session 数组中的任何信息都可以通过 ``$_SESSION`` 全局变量获取
 		$_SESSION['another_name']
 	);
 
-同时，正如 ``set_userdata()`` 方法可用于向 session 中添加数据，``unset_userdata()`` 
+同时，正如 ``set_userdata()`` 方法可用于向 session 中添加数据，``unset_userdata()``
 方法可用于删除指定键值的数据。例如，如果你想从你的 session 数组中删除 'some_name'::
 
 	$this->session->unset_userdata('some_name');
@@ -269,7 +269,7 @@ CodeIgniter 还支持 "tempdata" ，它指的是一种带有有效时间的 sess
 和 flashdata 一样， tempdata 也是常规的 session 变量，只不过以特殊的方式保存在 '__ci_vars' 键下
 （再次警告：请不要乱动这个值）。
 
-将已有的值标记为 "tempdata" ，只需简单的将要标记的键值和过期时间（单位为秒）传给 
+将已有的值标记为 "tempdata" ，只需简单的将要标记的键值和过期时间（单位为秒）传给
 ``mark_as_temp()`` 方法即可::
 
 	// 'item' will be erased after 300 seconds
@@ -333,7 +333,7 @@ CodeIgniter 还支持 "tempdata" ，它指的是一种带有有效时间的 sess
 销毁 Session
 ====================
 
-要清除当前的 session（例如：退出登录时），你可以简单的使用 PHP 自带的 
+要清除当前的 session（例如：退出登录时），你可以简单的使用 PHP 自带的
 `session_destroy() <http://php.net/session_destroy>`_ 函数或者 ``sess_destroy()`` 方法。
 两种方式效果完全一样::
 
@@ -343,7 +343,7 @@ CodeIgniter 还支持 "tempdata" ，它指的是一种带有有效时间的 sess
 
 	$this->session->sess_destroy();
 
-.. note:: 这必须是同一个请求中关于 session 的最后一次操作，所有的 session 数据（包括 flashdata 
+.. note:: 这必须是同一个请求中关于 session 的最后一次操作，所有的 session 数据（包括 flashdata
 	和 tempdata）都被永久性销毁，销毁之后，关于 session 的方法将不可用。
 
 访问 session 元数据
@@ -376,8 +376,8 @@ Session 参数
                                                                                       如果你希望 session 不过期（直到浏览器关闭），将其设置为 0
 **sess_save_path**           NULL            None                                     指定存储位置，取决于使用的存储 session 的驱动
 **sess_match_ip**            FALSE           TRUE/FALSE (boolean)                     读取 session cookie 时，是否验证用户的 IP 地址
-                                                                                      注意有些 ISP 会动态的修改 IP ，所以如果你想要一个不过期的 session，将其设置为 FALSE 
-**sess_time_to_update**      300             Time in seconds (integer)                该选项用于控制过多久将重新生成一个新 session ID 
+                                                                                      注意有些 ISP 会动态的修改 IP ，所以如果你想要一个不过期的 session，将其设置为 FALSE
+**sess_time_to_update**      300             Time in seconds (integer)                该选项用于控制过多久将重新生成一个新 session ID
                                                                                       设置为 0 将禁用 session ID 的重新生成
 **sess_regenerate_destroy**  FALSE           TRUE/FALSE (boolean)                     当自动重新生成 session ID 时，是否销毁老的 session ID 对应的数据
                                                                                       如果设置为 FALSE ，数据之后将自动被垃圾回收器删除
@@ -414,7 +414,7 @@ Session 驱动
 默认情况下，初始化 session 时将使用 `文件驱动`_ ，因为这是最安全的选择，可以在所有地方按预期工作
 （几乎所有的环境下都有文件系统）。
 
-但是，你也可以通过 **application/config/config.php** 配置文件中的 ``$config['sess_driver']`` 
+但是，你也可以通过 **application/config/config.php** 配置文件中的 ``$config['sess_driver']``
 参数来使用任何其他的驱动。特别提醒的是，每一种驱动都有它自己的注意事项，所以在你选择之前，
 确定你熟悉它们。
 
@@ -432,7 +432,7 @@ Session 驱动
 可以说，文件驱动和 PHP 自带的默认 session 实现非常类似，但是有一个很重要的细节要注意的是，
 实际上它们的代码并不相同，而且有一些局限性（以及优势）。
 
-说的更具体点，它不支持 PHP 的 `session.save_path 参数的 目录分级（directory level）和 mode 格式 
+说的更具体点，它不支持 PHP 的 `session.save_path 参数的 目录分级（directory level）和 mode 格式
 <http://php.net/manual/en/session.configuration.php#ini.session.save-path>`_ ，
 另外为了安全性大多数的参数都被硬编码。只提供了 ``$config['sess_save_path']`` 参数用于设置绝对路径。
 
@@ -456,7 +456,7 @@ Session 驱动
 
 有些人可能会选择使用其他的 session 驱动，他们认为文件存储通常比较慢。其实这并不总是对的。
 
-执行一些简单的测试可能会让你真的相信 SQL 数据库更快一点，但是在 99% 的情况下，这只是当你的 
+执行一些简单的测试可能会让你真的相信 SQL 数据库更快一点，但是在 99% 的情况下，这只是当你的
 session 并发非常少的时候是对的。当 session 的并发数越来越大，服务器的负载越来越高，
 这时就不一样了，文件系统将会胜过几乎所有的关系型数据库。
 
@@ -477,7 +477,7 @@ session 并发非常少的时候是对的。当 session 的并发数越来越大
   - 不能使用持久连接
   - 使用的数据库连接不能启用 *cache_on* 参数
 
-为了使用数据库驱动，你还需要创建一个我们刚刚已经提到的数据表，然后将 ``$config['sess_save_path']`` 
+为了使用数据库驱动，你还需要创建一个我们刚刚已经提到的数据表，然后将 ``$config['sess_save_path']``
 参数设置为表名。例如，如果你想使用 'ci_sessions' 这个表名，你可以这样::
 
 	$config['sess_driver'] = 'database';
@@ -536,7 +536,7 @@ Redis 驱动
 
 Redis 是一种存储引擎，通常用于缓存，并由于他的高性能而流行起来，这可能也正是你使用 Redis 驱动的原因。
 
-缺点是它并不像关系型数据库那样普遍，需要你的系统中安装了 `phpredis <https://github.com/phpredis/phpredis>`_ 
+缺点是它并不像关系型数据库那样普遍，需要你的系统中安装了 `phpredis <https://github.com/phpredis/phpredis>`_
 这个 PHP 扩展，它并不是 PHP 程序自带的。
 可能的情况是，你使用 Redis 驱动的原因是你已经非常熟悉 Redis 了并且你使用它还有其他的目的。
 
@@ -684,7 +684,7 @@ Memcached 驱动和 Redis 驱动非常相似，除了它的可用性可能要好
 		:rtype:	mixed
 
 		从 ``$_SESSION`` 数组中获取指定的项。如果没有指定参数，返回所有 "userdata" 的数组。
-	
+
 		.. note:: 这是个遗留方法，只是为了和老的应用程序向前兼容而保留。
 			你可以直接使用 ``$_SESSION`` 替代它。
 
@@ -752,7 +752,7 @@ Memcached 驱动和 Redis 驱动非常相似，除了它的可用性可能要好
 
 		获取 ``$_SESSION`` 数组中所有标记为 "flashdata" 的一个列表。
 
-	.. php:method:: umark_flash($key)
+	.. php:method:: unmark_flash($key)
 
 		:param	mixed	$key: Key to be un-marked as flashdata, or an array of multiple keys
 		:rtype:	void
@@ -767,7 +767,7 @@ Memcached 驱动和 Redis 驱动非常相似，除了它的可用性可能要好
 
 		从 ``$_SESSION`` 数组中获取某个标记为 "flashdata" 的指定项。
 		如果没有指定参数，返回所有 "flashdata" 的数组。
-	
+
 		.. note:: 这是个遗留方法，只是为了和老的应用程序向前兼容而保留。
 			你可以直接使用 ``$_SESSION`` 替代它。
 
@@ -808,7 +808,7 @@ Memcached 驱动和 Redis 驱动非常相似，除了它的可用性可能要好
 
 		获取 ``$_SESSION`` 数组中所有标记为 "tempdata" 的一个列表。
 
-	.. php:method:: umark_temp($key)
+	.. php:method:: unmark_temp($key)
 
 		:param	mixed	$key: Key to be un-marked as tempdata, or an array of multiple keys
 		:rtype:	void
@@ -866,7 +866,7 @@ Memcached 驱动和 Redis 驱动非常相似，除了它的可用性可能要好
 		:returns:	The requested session data item, or NULL if it doesn't exist
 		:rtype:	mixed
 
-		魔术方法，根据你的喜好，使用 ``$this->session->item`` 这种方式来替代 
+		魔术方法，根据你的喜好，使用 ``$this->session->item`` 这种方式来替代
 		``$_SESSION['item']`` 。
 
 		如果你访问 ``$this->session->session_id`` 它也会调用 ``session_id()`` 方法来返回 session ID 。

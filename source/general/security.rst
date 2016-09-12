@@ -5,6 +5,9 @@
 这篇文章将介绍一些基本的关于 Web 安全的 "最佳实践" ，并详细说明了 CodeIgniter
 内部的安全特性。
 
+.. note:: If you came here looking for a security contact, please refer to
+	our `Contribution Guide <../contributing/index>`.
+
 URI 安全
 ============
 
@@ -23,7 +26,7 @@ URI 中只允许包含一些字符：
 Register_globals
 ================
 
-在系统初始化期间，如果发现任何 ``$_GET``、``$_POST``、``$_REQUEST`` 和 ``$_COOKIE`` 
+在系统初始化期间，如果发现任何 ``$_GET``、``$_POST``、``$_REQUEST`` 和 ``$_COOKIE``
 数组中的键值变成了全局变量，则删除该变量。
 
 这个过程和设置 *register_globals = off* 效果是一样的。
@@ -77,7 +80,7 @@ CSRF（Cross-Site Request Forgery，跨站请求伪造）是攻击者骗取受�
 在不知情的情况下提交请求的攻击方式。
 
 CodeIgniter 提供了对 CSRF 的保护，会在每个非 GET HTTP 请求时自动触发，
-当然前提是你要使用某种方式来创建表单，这在 :doc:`安全类 <../libraries/security>` 
+当然前提是你要使用某种方式来创建表单，这在 :doc:`安全类 <../libraries/security>`
 文档中有进一步的解释。
 
 密码处理
@@ -108,7 +111,7 @@ CodeIgniter 提供了对 CSRF 的保护，会在每个非 GET HTTP 请求时自�
 
    另外，绝不要自己发明算法。
 
-   只使用强密码哈希算法，例如 BCrypt ，在 PHP 自己的 `密码哈希 <http://php.net/password>`_ 
+   只使用强密码哈希算法，例如 BCrypt ，在 PHP 自己的 `密码哈希 <http://php.net/password>`_
    函数中也是使用它。
 
    即使你的 PHP 版本不是 5.5+ ，也请使用它们，CodeIgniter 为你提供了这些算法，只要你的 PHP

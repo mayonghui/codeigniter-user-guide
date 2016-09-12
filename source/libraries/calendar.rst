@@ -19,7 +19,7 @@
 初始化类
 ======================
 
-跟 CodeIgniter 中的其他类一样，可以在你的控制器中使用 ``$this->load->library()`` 
+跟 CodeIgniter 中的其他类一样，可以在你的控制器中使用 ``$this->load->library()``
 方法加载日历类::
 
 	$this->load->library('calendar');
@@ -53,10 +53,10 @@
 	$this->load->library('calendar');
 
 	$data = array(
-		3  => 'http://example.com/news/article/2006/03/',
-		7  => 'http://example.com/news/article/2006/07/',
-		13 => 'http://example.com/news/article/2006/13/',
-		26 => 'http://example.com/news/article/2006/26/'
+		3  => 'http://example.com/news/article/2006/06/03/',
+		7  => 'http://example.com/news/article/2006/06/07/',
+		13 => 'http://example.com/news/article/2006/06/13/',
+		26 => 'http://example.com/news/article/2006/06/26/'
 	);
 
 	echo $this->calendar->generate(2006, 6, $data);
@@ -178,9 +178,9 @@
 		'cal_cell_start'       => '<td class="day">',
 		'cal_cell_start_today' => '<td class="today">'
 	);
-    
+
 	$this->load->library('calendar', $prefs);
-    
+
 	echo $this->calendar->generate();
 
 ***************

@@ -43,8 +43,7 @@ CodeIgniter 生成的 URL 非常干净，而且对搜索引擎友好。不同于
 
 	example.com/news/article/345
 
-注意：默认 URL 中会包含 index.php 文件，但是可以通过更改 .htaccess 
-文件来去掉它。
+.. 注意:: 默认 URL 中会包含 *index.php* 文件，但是可以通过更改 *.htaccess* 文件来去掉它。
 
 CodeIgniter 功能强大
 =========================
@@ -64,7 +63,7 @@ CodeIgniter 不需要模板引擎
 
 尽管 CodeIgniter 自带了一个非常简单的可选的模板解析器，但并不强制你
 使用模板。模板引擎的性能无法和原生的 PHP 代码相比，另外使用模板引擎
-还需要学习一种新的语法，而使用原生 PHP 代码只需要你掌握基本的 PHP 
+还需要学习一种新的语法，而使用原生 PHP 代码只需要你掌握基本的 PHP
 语法即可。看下面的 PHP 代码::
 
 	<ul>

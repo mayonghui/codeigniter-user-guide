@@ -327,18 +327,18 @@ Email 参数
 		:param	string	$filename: Existing attachment filename
 		:returns:	Attachment Content-ID or FALSE if not found
 		:rtype:	string
- 
+
 		设置并返回一个附件的 Content-ID ，可以让你将附件（图片）内联显示到 HTML 正文中去。
 		第一个参数必须是一个已经添加到附件中的文件名。
 		::
- 
+
 			$filename = '/img/photo1.jpg';
 			$this->email->attach($filename);
 			foreach ($list as $address)
 			{
 				$this->email->to($address);
 				$cid = $this->email->attachment_cid($filename);
-				$this->email->message('<img src='cid:". $cid ."' alt="photo1" />');
+				$this->email->message('<img src="cid:'. $cid .'" alt="photo1" />');
 				$this->email->send();
 			}
 

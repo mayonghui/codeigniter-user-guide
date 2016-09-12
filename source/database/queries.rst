@@ -75,7 +75,7 @@ TRUE 或 FALSE 来表示操作是否成功。
 .. important:: 尽管查询构造器会尽力保护好你输入的表名和字段名，但值得注意的是，
 	它并不是被设计来处理任意用户输入的，所以，请不要传未处理的数据给它。
 
-这个函数也可以为你的表名添加一个前缀，如果你在数据库配置文件中定义了 ``dbprefix`` 
+这个函数也可以为你的表名添加一个前缀，如果你在数据库配置文件中定义了 ``dbprefix``
 参数，通过将这个函数的第二个参数设置为 TRUE 来启用前缀::
 
 	$this->db->protect_identifiers('table_name', TRUE);
@@ -105,9 +105,15 @@ CodeIgniter 有三个方法来帮你做到这一点：
 
 ::
 
-        $search = '20% raise'; 
+        $search = '20% raise';
         $sql = "SELECT id FROM table WHERE column LIKE '%" .
-            $this->db->escape_like_str($search)."%'";
+            $this->db->escape_like_str($search)."%' ESCAPE '!'";
+
+.. important:: The ``escape_like_str()`` method uses '!' (exclamation mark)
+	to escape special characters for *LIKE* conditions. Because this
+	method escapes partial strings that you would wrap in quotes
+	yourself, it cannot automatically add the ``ESCAPE '!'``
+	condition for you, and so you'll have to manually do that.
 
 
 **************
@@ -147,4 +153,3 @@ CodeIgniter 有三个方法来帮你做到这一点：
 	{
 		$error = $this->db->error(); // Has keys 'code' and 'message'
 	}
-

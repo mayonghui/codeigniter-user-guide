@@ -2,7 +2,7 @@
 加载静态内容
 ############
 
-**Note:** 这篇教程假设你已经下载好 CodeIgniter ，并将其 :doc:`安装 <../installation/index>` 
+**Note:** 这篇教程假设你已经下载好 CodeIgniter ，并将其 :doc:`安装 <../installation/index>`
 到你的开发环境。
 
 你要做的第一件事情是新建一个 **控制器** 来处理静态页面，控制器就是一个简单的类，
@@ -20,14 +20,14 @@
 
 在正式环境下 URL 的格式可能会更复杂，但是现在，我们只需要关心这些就够了。
 
-新建一个文件 application/controllers/Pages.php ，然后添加如下代码。
+新建一个文件 *application/controllers/Pages.php* ，然后添加如下代码。
 
 ::
 
-	<?php 
-	class Pages extends CI_Controller { 
+	<?php
+	class Pages extends CI_Controller {
 
-		public function view($page = 'home') 
+		public function view($page = 'home')
 		{
 	    }
 	}
@@ -36,7 +36,7 @@
 ``Pages`` 类继承自 ``CI_Controller`` 类，这意味着它可以访问 ``CI_Controller``
 类（ *system/core/Controller.php* ）中定义的方法和变量。
 
-控制器将会成为你的 Web 应用程序中的处理请求的核心，在关于 CodeIgniter 
+控制器将会成为你的 Web 应用程序中的处理请求的核心，在关于 CodeIgniter
 的技术讨论中，这有时候被称作 **超级对象** 。和其他的 PHP 类一样，可以在
 你的控制器中使用 ``$this`` 来访问它，通过 ``$this`` 你就可以加载类库、
 视图、以及针对框架的一般性操作。
@@ -81,7 +81,7 @@
 
 	public function view($page = 'home')
 	{
-	    if ( ! file_exists(APPPATH.'/views/pages/'.$page.'.php'))
+	  if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
 		{
 			// Whoops, we don't have a page for that!
 			show_404();

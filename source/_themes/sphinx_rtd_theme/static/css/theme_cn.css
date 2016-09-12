@@ -21,7 +21,8 @@
 
 #nav_inner {
 	background-color: transparent;
-	font-family: "\5FAE\8F6F\96C5\9ED1","Microsoft Yahei", Lucida Grande,Verdana,Geneva,sans-serif;
+	/*font-family: "\5FAE\8F6F\96C5\9ED1","Microsoft Yahei", Lucida Grande,Verdana,Geneva,sans-serif;*/
+	font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, WenQuanYi Micro Hei, Microsoft Yahei, Lucida Grande,Verdana,Geneva,sans-serif;
 	font-size: 12px;
 	margin: 0;
 	padding: 8px 12px 0 20px;
@@ -57,7 +58,7 @@ div#pulldown-menu {
 	color: #ffffff;
 	text-decoration: none;
 	font-size: 14px;
-	font-family: "Roboto Slab","ff-tisa-web-pro","\5FAE\8F6F\96C5\9ED1","Microsoft Yahei","Georgia",Arial,sans-serif;
+	font-family: "Roboto Slab","ff-tisa-web-pro",-apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, WenQuanYi Micro Hei, Microsoft Yahei, sans-serif;
 	font-weight: 700;
 	line-height: 2em;
 }
@@ -67,10 +68,24 @@ div#pulldown-menu {
 	font-size: 12px;
 	line-height: 1.5em;
 	font-weight: 300;
-	font-family: "\5FAE\8F6F\96C5\9ED1","Microsoft Yahei",Lucida Grande,Verdana,Geneva,sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, WenQuanYi Micro Hei, Microsoft Yahei, Lucida Grande,Verdana,Geneva,sans-serif;
 	color: #aaaaaa;
 }
 
+/*hide pulldown menu on mobile devices*/
+@media (max-width: 768px) { /*tablet size defined by theme*/
+	#closeMe {
+		display: none;
+	}
+
+	#pulldown {
+		display: none;
+	}
+
+	#openToc {
+		display: none;
+	}
+}
 
 .rst-footer-buttons .fa-arrow-circle-left {
     margin-right: 5px;

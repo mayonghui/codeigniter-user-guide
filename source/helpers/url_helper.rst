@@ -39,7 +39,7 @@ URL 辅助函数文件包含了一些帮助你处理 URL 的函数。
 
 		echo site_url('news/local/123');
 
-	上例将返回类似于：*http://example.com/index.php/news/local/123*	
+	上例将返回类似于：*http://example.com/index.php/news/local/123*
 
 	下面是使用数组的例子::
 
@@ -122,7 +122,7 @@ URL 辅助函数文件包含了一些帮助你处理 URL 的函数。
 
 	根据你提供的 URL 生成一个标准的 HTML 链接。
 
-	第一个参数可以包含任何你想添加到 URL 上的段，和上面的 :php:func:`site_url()` 函数一样，URL 
+	第一个参数可以包含任何你想添加到 URL 上的段，和上面的 :php:func:`site_url()` 函数一样，URL
 	的段可以是字符串或数组。
 
 	.. note:: 如果你创建的链接是指向你自己的应用程序，那么不用包含根 URL （http&#58;//...）。
@@ -243,7 +243,7 @@ URL 辅助函数文件包含了一些帮助你处理 URL 的函数。
 
 	:param	string	$str: Input string
 	:param	string	$separator: Word separator
-	:param	string	$lowercase: Whether to transform the output string to lower-case
+	:param	bool	$lowercase: Whether to transform the output string to lower-case
 	:returns:	URL-formatted string
 	:rtype:	string
 
@@ -304,7 +304,7 @@ URL 辅助函数文件包含了一些帮助你处理 URL 的函数。
 	默认的状态码为 302 ，该参数只适用于 **location** 重定向方法，对于 *refresh* 方法无效。例如::
 
 		if ($logged_in == FALSE)
-		{      
+		{
 			redirect('/login/form/');
 		}
 
@@ -313,7 +313,7 @@ URL 辅助函数文件包含了一些帮助你处理 URL 的函数。
 
 	.. note:: 为了让该函数有效，它必须在任何内容输出到浏览器之前被调用。因为输出内容会使用服务器 HTTP 头。
 
-	.. note:: 为了更好的控制服务器头，你应该使用 `输出类 </libraries/output>` 的 ``set_header()`` 方法。
+	.. note:: 为了更好的控制服务器头，你应该使用 :doc:`输出类 </libraries/output>` 的 ``set_header()`` 方法。
 
 	.. note:: 使用 IIS 的用户要注意，如果你隐藏了 `Server` 这个 HTTP 头， *auto* 方法将无法检测到 IIS 。
 		在这种情况下，推荐你使用 **refresh** 方法。

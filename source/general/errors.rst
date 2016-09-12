@@ -39,7 +39,7 @@ CodeIgniter 可以通过下面介绍的方法来在你的应用程序中生成�
 	可选参数 ``$status_code`` 将决定发送什么 HTTP 状态码。
 	如果 ``$status_code`` 小于 100，HTTP 状态码将被置为 500 ，
 	退出状态码将被置为 ``$status_code + EXIT__AUTO_MIN`` 。
-	如果它的值大于 ``EXIT__AUTO_MAX`` 或者如果 ``$status_code`` 
+	如果它的值大于 ``EXIT__AUTO_MAX`` 或者如果 ``$status_code``
 	大于等于 100 ，退出状态码将被置为 ``EXIT_ERROR`` 。
 	详情可查看 *application/config/constants.php* 文件。
 
@@ -64,11 +64,10 @@ CodeIgniter 可以通过下面介绍的方法来在你的应用程序中生成�
 	默认 CodeIgniter 会自动将 ``show_404()`` 函数调用记录到错误日志中。
 	将第二个参数设置为 FALSE 将跳过记录日志。
 
-.. php:function:: log_message($level, $message, $php_error = FALSE)
+.. php:function:: log_message($level, $message)
 
 	:param	string	$level: Log level: 'error', 'debug' or 'info'
 	:param	string	$message: Message to log
-	:param	bool	$php_error: Whether we're logging a native PHP error message
 	:rtype:	void
 
 	该函数用于向你的日志文件中写入信息，第一个参数你必须提供

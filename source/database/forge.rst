@@ -78,10 +78,11 @@
 
 另外，还可以使用下面的键值对：
 
--  unsigned/true : 在字段定义中生成 "UNSIGNED" 
+-  unsigned/true : 在字段定义中生成 "UNSIGNED"
 -  default/value : 在字段定义中生成一个默认值
 -  null/true : 在字段定义中生成 "NULL" ，如果没有这个，字段默认为 "NOT NULL"
 -  auto_increment/true : 在字段定义中生成自增标识，注意数据类型必须支持这个，例如整型
+-  unique/true : to generate a unique key for the field definition.
 
 ::
 
@@ -95,6 +96,7 @@
 		'blog_title' => array(
 			'type' => 'VARCHAR',
 			'constraint' => '100',
+      'unique' => TRUE,
 		),
 		'blog_author' => array(
 			'type' =>'VARCHAR',
@@ -152,14 +154,14 @@
 
 	$this->dbforge->add_key('blog_id', TRUE);
 	// gives PRIMARY KEY `blog_id` (`blog_id`)
-	
+
 	$this->dbforge->add_key('blog_id', TRUE);
 	$this->dbforge->add_key('site_id', TRUE);
 	// gives PRIMARY KEY `blog_id_site_id` (`blog_id`, `site_id`)
-	
+
 	$this->dbforge->add_key('blog_name');
 	// gives KEY `blog_name` (`blog_name`)
-	
+
 	$this->dbforge->add_key(array('blog_name', 'blog_label'));
 	// gives KEY `blog_name_blog_label` (`blog_name`, `blog_label`)
 
@@ -230,7 +232,7 @@
 	$fields = array(
 		'preferences' => array('type' => 'TEXT')
 	);
-	$this->dbforge->add_column('table_name', $fields); 
+	$this->dbforge->add_column('table_name', $fields);
 	// Executes: ALTER TABLE table_name ADD preferences TEXT
 
 如果你使用 MySQL 或 CUBIRD ，你可以使用 AFTER 和 FIRST 语句来为新添加的列指定位置。
@@ -300,7 +302,7 @@
 		:param	array	$field: Field definition to add
 		:returns:	CI_DB_forge instance (method chaining)
 		:rtype:	CI_DB_forge
-                
+
                 	添加字段到集合，用于创建一个表。用法参见 `添加字段`_ 。
 
 	.. php:method:: add_key($key[, $primary = FALSE])

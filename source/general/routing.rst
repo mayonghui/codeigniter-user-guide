@@ -7,7 +7,7 @@ URL 中的每一段通常遵循下面的规则::
 
 	example.com/class/function/id/
 
-但是有时候，你可能想改变这种映射关系，调用一个不同的类和方法，而不是 
+但是有时候，你可能想改变这种映射关系，调用一个不同的类和方法，而不是
 URL 中对应的那样。
 
 例如，假设你希望你的 URL 变成下面这样::
@@ -98,8 +98,7 @@ URL 的第一段是 "product" ，第二段是数字时，将重定向到 "catalo
 上例中，一个类似于 products/shirts/123 这样的 URL 将会重定向到 "shirts"
 控制器的 "id_123" 方法。
 
-使用正则表达式，你还可以匹配含有反斜线字符（'/'）的段，它通常来说是
-多个段之间的分隔符。
+With regular expressions, you can also catch multiple segments at once.
 
 例如，当一个用户访问你的 Web 应用中的某个受密码保护的页面时，如果他没有
 登陆，会先跳转到登陆页面，你希望在他们在成功登陆后重定向回刚才那个页面，
@@ -107,8 +106,11 @@ URL 的第一段是 "product" ，第二段是数字时，将重定向到 "catalo
 
 	$route['login/(.+)'] = 'auth/login/$1';
 
-如果你还不知道正则表达式，可以访问 `regular-expressions.info <http://www.regular-expressions.info/>`
-开始学习一下。
+.. note:: In the above example, if the ``$1`` placeholder contains a
+	slash, it will still be split into multiple parameters when
+	passed to ``Auth::login()``.
+
+如果你还不知道正则表达式，可以访问 `regular-expressions.info <http://www.regular-expressions.info/>`_ 开始学习一下。
 
 .. note:: 你也可以在你的路由规则中混用通配符和正则表达式。
 
@@ -128,7 +130,7 @@ URL 的第一段是 "product" ，第二段是数字时，将重定向到 "catalo
 
 还可以在你的路由规则中使用 HTTP 动词（请求方法），当你在创建 RESTful 应用时特别有用。
 你可以使用标准的 HTTP 动词（GET、PUT、POST、DELETE、PATCH），也可以使用自定义的动词
-（例如：PURGE），不区分大小写。你需要做的就是在路由数组后面再加一个键，键名为 HTTP 
+（例如：PURGE），不区分大小写。你需要做的就是在路由数组后面再加一个键，键名为 HTTP
 动词。例如::
 
 	$route['products']['put'] = 'product/insert';

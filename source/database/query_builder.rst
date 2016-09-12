@@ -243,7 +243,7 @@ outer 和 right outer 。
 		$this->db->where($where);
 
 
-``$this->db->where()`` 方法有一个可选的第三个参数，如果设置为 FALSE，CodeIgniter 
+``$this->db->where()`` 方法有一个可选的第三个参数，如果设置为 FALSE，CodeIgniter
 将不保护你的表名和字段名。
 
 ::
@@ -640,7 +640,7 @@ outer 和 right outer 。
 
 该方法用于执行一条 REPLACE 语句，REPLACE 语句根据表的**主键**和**唯一索引**
 来执行，类似于标准的 DELETE + INSERT 。
-使用这个方法，你不用再手工去实现 ``select()``，``update()``，``delete()`` 
+使用这个方法，你不用再手工去实现 ``select()``，``update()``，``delete()``
 以及 ``insert()`` 这些方法的不同组合，为你节约大量时间。
 
 例如::
@@ -932,7 +932,7 @@ DELETE 而不是 INSERT。
 	//Generates:  SELECT `field2` FROM (`tablename`)
 
 
-.. note:: 支持缓存的语句有: select, from, join, where, like, group_by, having, order_by, set
+.. note:: 支持缓存的语句有: select, from, join, where, like, group_by, having, order_by
 
 
 ***********************
@@ -941,8 +941,8 @@ DELETE 而不是 INSERT。
 
 **$this->db->reset_query()**
 
-该方法无需执行就能重置查询构造器中的查询，$this->db->get() 和 $this->db->insert() 
-方法也可以用于重置查询，但是必须要先执行它。和这两个方法一样，使用`查询构造器缓存`_ 
+该方法无需执行就能重置查询构造器中的查询，$this->db->get() 和 $this->db->insert()
+方法也可以用于重置查询，但是必须要先执行它。和这两个方法一样，使用`查询构造器缓存`_
 缓存下来的查询不会被重置。
 
 当你在使用查询构造器生成 SQL 语句（如：``$this->db->get_compiled_select()``），
@@ -1344,15 +1344,20 @@ Class Reference
 
 		Compiles and executes an INSERT statement.
 
-	.. php:method:: insert_batch([$table = ''[, $set = NULL[, $escape = NULL]]])
+	.. php:method:: insert_batch($table[, $set = NULL[, $escape = NULL[, $batch_size = 100]]])
 
 		:param	string	$table: Table name
 		:param	array	$set: Data to insert
 		:param	bool	$escape: Whether to escape values and identifiers
+		:param	int	$batch_size: Count of rows to insert at once
 		:returns:	Number of rows inserted or FALSE on failure
 		:rtype:	mixed
 
-		Compiles and executes batch INSERT statements.
+		Compiles and executes batch ``INSERT`` statements.
+
+		.. note:: When more than ``$batch_size`` rows are provided, multiple
+			``INSERT`` queries will be executed, each trying to insert
+			up to ``$batch_size`` rows.
 
 	.. php:method:: set_insert_batch($key[, $value = ''[, $escape = NULL]])
 
@@ -1375,15 +1380,20 @@ Class Reference
 
 		Compiles and executes an UPDATE statement.
 
-	.. php:method:: update_batch([$table = ''[, $set = NULL[, $value = NULL]]])
+	.. php:method:: update_batch($table[, $set = NULL[, $value = NULL[, $batch_size = 100]]])
 
 		:param	string	$table: Table name
 		:param	array	$set: Field name, or an associative array of field/value pairs
 		:param	string	$value: Field value, if $set is a single field
+		:param	int	$batch_size: Count of conditions to group in a single query
 		:returns:	Number of rows updated or FALSE on failure
 		:rtype:	mixed
 
-		Compiles and executes batch UPDATE statements.
+		Compiles and executes batch ``UPDATE`` statements.
+
+		.. note:: When more than ``$batch_size`` field/value pairs are provided,
+			multiple queries will be executed, each handling up to
+			``$batch_size`` field/value pairs.
 
 	.. php:method:: set_update_batch($key[, $value = ''[, $escape = NULL]])
 

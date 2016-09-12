@@ -76,7 +76,7 @@
 
 		数据库版本。
 
-	.. php:method:: query($sql[, $binds = FALSE[, $return_object = NULL]]])
+	.. php:method:: query($sql[, $binds = FALSE[, $return_object = NULL]])
 
 		:param	string	$sql: The SQL statement to execute
 		:param	array	$binds: An array of binding data
@@ -90,8 +90,8 @@
 
 		有以下几种可能的返回值：
 
-		   - 如果是写类型的查询，执行成功返回 TRUE 
-		   - 执行失败返回 FALSE 
+		   - 如果是写类型的查询，执行成功返回 TRUE
+		   - 执行失败返回 FALSE
 		   - 如果是读类型的查询，执行成功返回 ``CI_DB_result`` 对象
 
 		.. note: 如果 'db_debug' 设置为 TRUE ，那么查询失败时将显示一个错误页面，
@@ -105,6 +105,16 @@
 
 		``query()`` 方法的简化版，当你只需要简单的执行一个查询，并不关心查询的结果时，
 		可以使用该方法。
+
+	.. php:method:: affected_rows()
+
+		:returns:	Number of rows affected
+		:rtype:	int
+
+		Returns the number of rows *changed* by the last executed query.
+
+		Useful for checking how much rows were created, updated or deleted
+		during the last executed query.
 
 	.. php:method:: trans_strict([$mode = TRUE])
 
@@ -126,13 +136,15 @@
 	.. php:method:: trans_start([$test_mode = FALSE])
 
 		:param	bool	$test_mode: Test mode flag
-		:rtype:	void
+		:returns:	TRUE on success, FALSE on failure
+		:rtype:	bool
 
 		开启一个事务。
 
 	.. php:method:: trans_complete()
 
-		:rtype:	void
+		:returns:	TRUE on success, FALSE on failure
+		:rtype:	bool
 
 		结束事务。
 
@@ -145,7 +157,7 @@
 
 	.. php:method:: compile_binds($sql, $binds)
 
-		:param	string	$sql: The SQL statement 
+		:param	string	$sql: The SQL statement
 		:param	array	$binds: An array of binding data
 		:returns:	The updated SQL statement
 		:rtype:	string
@@ -154,7 +166,7 @@
 
 	.. php:method:: is_write_type($sql)
 
-		:param	string	$sql: The SQL statement 
+		:param	string	$sql: The SQL statement
 		:returns:	TRUE if the SQL statement is of "write type", FALSE if not
 		:rtype:	bool
 
@@ -209,8 +221,15 @@
 
 		转义 LIKE 字符串。
 
-		和 ``escape_str()`` 方法类似，但同时也对 LIKE 语句中的 ``%`` 和 ``_`` 
+		和 ``escape_str()`` 方法类似，但同时也对 LIKE 语句中的 ``%`` 和 ``_``
 		通配符进行转义。
+
+		.. important:: The ``escape_like_str()`` method uses '!' (exclamation mark)
+			to escape special characters for *LIKE* conditions. Because this
+			method escapes partial strings that you would wrap in quotes
+			yourself, it cannot automatically add the ``ESCAPE '!'``
+			condition for you, and so you'll have to manually do that.
+
 
 	.. php:method:: primary($table)
 

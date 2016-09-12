@@ -27,7 +27,7 @@ CodeIgniter 的图像处理类可以使你完成以下的操作：
 初始化类
 **********************
 
-跟 CodeIgniter 中的其他类一样，可以在你的控制器中使用 ``$this->load->library()`` 
+跟 CodeIgniter 中的其他类一样，可以在你的控制器中使用 ``$this->load->library()``
 方法加载图像处理类::
 
 	$this->load->library('image_lib');
@@ -50,15 +50,15 @@ CodeIgniter 的图像处理类可以使你完成以下的操作：
 	$config['width']	 = 75;
 	$config['height']	= 50;
 
-	$this->load->library('image_lib', $config); 
+	$this->load->library('image_lib', $config);
 
 	$this->image_lib->resize();
 
 以上代码告诉 image_resize 函数去查找位于 source_image 目录下的名为 mypic.jpg
-的图片，然后运用 GD2 图像库创建一个 75 X 50 像素的缩略图。 当 maintain_ratio 
+的图片，然后运用 GD2 图像库创建一个 75 X 50 像素的缩略图。 当 maintain_ratio
 选项设为 TRUE 时，生成的缩略图将保持图像的纵横比例，同时尽可能的在宽度和
 高度上接近所设定的 width 和 height 。
-缩略图将被命名为类似 mypic_thumb.jpg 的形式。
+缩略图将被命名为类似 *mypic_thumb.jpg* 的形式，并保存在 *source_image* 的同级目录中。
 
 .. note:: 为了让图像类能进行所有操作，包含图片的文件夹必须开启可写权限。
 
@@ -151,7 +151,7 @@ CodeIgniter 的图像处理类可以使你完成以下的操作：
 在配置文件中设置参数
 ====================================
 
-如果你不喜欢使用上面的方法来设置参数，你可以将参数保存到配置文件中。你只需简单的创建一个文件 
+如果你不喜欢使用上面的方法来设置参数，你可以将参数保存到配置文件中。你只需简单的创建一个文件
 image_lib.php 并将 $config 数组放到该文件中，然后保存文件到 **config/image_lib.php** ，这些参数将会自动被使用。
 如果你在配置文件中设置参数，那么你就不需要使用 ``$this->image_lib->initialize()`` 方法了。
 
@@ -190,7 +190,7 @@ image_lib.php 并将 $config 数组放到该文件中，然后保存文件到 **
 	$config['wm_hor_alignment'] = 'center';
 	$config['wm_padding'] = '20';
 
-	$this->image_lib->initialize($config); 
+	$this->image_lib->initialize($config);
 
 	$this->image_lib->watermark();
 
@@ -345,7 +345,7 @@ Overlay 参数
 			$config['x_axis'] = 100;
 			$config['y_axis'] = 60;
 
-			$this->image_lib->initialize($config); 
+			$this->image_lib->initialize($config);
 
 			if ( ! $this->image_lib->crop())
 			{
@@ -381,7 +381,7 @@ Overlay 参数
 			$config['source_image']	= '/path/to/image/mypic.jpg';
 			$config['rotation_angle'] = 'hor';
 
-			$this->image_lib->initialize($config); 
+			$this->image_lib->initialize($config);
 
 			if ( ! $this->image_lib->rotate())
 			{
@@ -415,4 +415,4 @@ Overlay 参数
 		返回所有检测到的错误信息。
 		::
 
-			echo $this->image_lib->diplay_errors();
+			echo $this->image_lib->display_errors();

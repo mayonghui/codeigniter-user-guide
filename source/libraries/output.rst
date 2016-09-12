@@ -46,7 +46,7 @@ CodeIgniter 自动调用。尽管如此，在你需要时，你还是可以对�
 			$this->output->set_output($data);
 
 		.. important:: 如果你手工设置输出，这必须放在方法的最后一步。例如，
-			如果你正在某个控制器的方法中构造页面，将 set_output 
+			如果你正在某个控制器的方法中构造页面，将 set_output
 			这句代码放在方法的最后。
 
 	.. php:method:: set_content_type($mime_type[, $charset = NULL])
@@ -67,7 +67,7 @@ CodeIgniter 自动调用。尽管如此，在你需要时，你还是可以对�
 				->set_content_type('jpeg') // You could also use ".jpeg" which will have the full stop removed before looking in config/mimes.php
 				->set_output(file_get_contents('files/something.jpg'));
 
-		.. important:: 确保你传入到这个方法的 MIME 类型在 *application/config/mimes.php* 
+		.. important:: 确保你传入到这个方法的 MIME 类型在 *application/config/mimes.php*
 			文件中能找到，要不然方法不起任何作用。
 
 		你也可以通过第二个参数设置文档的字符集。
@@ -112,7 +112,7 @@ CodeIgniter 自动调用。尽管如此，在你需要时，你还是可以对�
 
 			$string = $this->output->get_output();
 
-		注意，只有通过 CodeIgniter 输出类的某个方法设置过的数据，例如 
+		注意，只有通过 CodeIgniter 输出类的某个方法设置过的数据，例如
 		``$this->load->view()`` 方法，才可以使用该方法获取到。
 
 	.. php:method:: append_output($output)
@@ -168,7 +168,7 @@ CodeIgniter 自动调用。尽管如此，在你需要时，你还是可以对�
 		允许你启用或禁用 :doc:`程序分析器 <../general/profiling>` ，它可以在你的页面底部显示
 		基准测试的结果或其他一些数据帮助你调试和优化程序。
 
-		要启用分析器，将下面这行代码放到你的 :doc:`控制器 <../general/controllers>` 
+		要启用分析器，将下面这行代码放到你的 :doc:`控制器 <../general/controllers>`
 		方法的任何位置::
 
 			$this->output->enable_profiler(TRUE);
@@ -190,7 +190,7 @@ CodeIgniter 自动调用。尽管如此，在你需要时，你还是可以对�
 
 	.. php:method:: cache($time)
 
-		:param	int	$time: Cache expiration time in seconds
+		:param	int	$time: Cache expiration time in minutes
 		:returns:	CI_Output instance (method chaining)
 		:rtype:	CI_Output
 
@@ -208,7 +208,7 @@ CodeIgniter 自动调用。尽管如此，在你需要时，你还是可以对�
 
 		.. note:: 这个方法会在脚本执行的最后自动被调用，你无需手工调用它。
 			除非你在你的代码中使用了 ``exit()`` 或 ``die()`` 结束了脚本执行。
-		
+
 		例如::
 
 			$response = array('status' => 'OK');

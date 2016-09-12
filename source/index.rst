@@ -116,7 +116,7 @@ CodeIgniter 用户指南
 	installation/index
 	general/index
 	libraries/index
-	helpers/index
 	database/index
+  helpers/index
 	tutorial/index
 	general/credits

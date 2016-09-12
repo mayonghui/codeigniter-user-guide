@@ -2,8 +2,9 @@
 数据库配置
 ######################
 
-CodeIgniter 有一个配置文件用来保存数据库连接值（用户名、密码、数据库名等等），这个配置文件位于 ``application/config/database.php`` 。
-你也可以放置不同的 **database.php** 文件到特定的环境配置文件夹里来设置 :doc:`特定环境 <../libraries/config>` 的数据库连接值。
+CodeIgniter 有一个配置文件用来保存数据库配置（用户名、密码、数据库名等等），这个配置文件位于 application/config/database.php。
+You can also set database connection values for specific :doc:`environments <../libraries/config>` by placing **database.php**
+in the respective environment config folder.
 
 配置存放在一个多维数组里，原型如下::
 
@@ -163,7 +164,7 @@ CodeIgniter 有一个配置文件用来保存数据库连接值（用户名、�
                         - 'ssl_verify' - TRUE/FALSE; Whether to verify the server certificate or not ('mysqli' only)
 
 **compress**            TRUE/FALSE (boolean) - 是否使用客户端压缩协议（只用于MySQL）
-**stricton**            TRUE/FALSE (boolean) - 是否强制使用 "Strict Mode" 连接, 
+**stricton**            TRUE/FALSE (boolean) - 是否强制使用 "Strict Mode" 连接,
                         在开发程序时，使用 strict SQL 是一个好习惯。
 **port**                数据库端口号，要使用这个值，你应该添加一行代码到数据库配置数组。
                         ::

@@ -414,17 +414,17 @@ CodeIgniter 为此提供了几个辅助函数，你最常用到的一个是::
 
 要调用一个回调函数只需把函数名加一个 "callback\_" **前缀**并放在验证规则里。
 如果你需要在你的回调函数中调用一个额外的参数，你只需要在回调函数后面用[]把参数
-（这个参数只能是字符串类型）括起来，例如："callback_foo**[bar]**" ，
+（这个参数只能是字符串类型）括起来，例如：``callback_foo[bar]`` ，
 其中 bar 将成为你的回调函数中的第二个参数。
 
-.. note:: 你也可以对传给你的表单数据进行处理并返回，如果你的回调函数返回了除布尔型的 
+.. note:: 你也可以对传给你的表单数据进行处理并返回，如果你的回调函数返回了除布尔型的
 	TRUE 或 FALSE 之外的任何值，它将被认为是你新处理过的表单数据。
 
 使用任何可调用的方法作为验证规则
 ================================
 
 如果回调的规则对你来说还不够好（例如，它们被限制只能定义在控制器中），
-别失望，还有一种方法来创建自定义的规则：任何 ``is_callable()`` 函数返回 
+别失望，还有一种方法来创建自定义的规则：任何 ``is_callable()`` 函数返回
 TRUE 的东西都可以作为规则。
 
 看下面的例子::
@@ -488,7 +488,7 @@ TRUE 的东西都可以作为规则。
 
 所有原生的错误信息都位于下面的语言文件中： **language/english/form_validation_lang.php**
 
-To set your own global custom message for a rule, you can either 
+To set your own global custom message for a rule, you can either
 extend/override the language file by creating your own in
 **application/language/english/form_validation_lang.php** (read more
 about this in the :doc:`Language Class <language>` documentation),
@@ -676,7 +676,7 @@ another array of your choice.
 ======================
 
 为了将你的多个规则组织成规则集，你需要将它们放置到子数组中。
-请参考下面的例子，在此例中我们设置了两组规则集，我们分别命名为 
+请参考下面的例子，在此例中我们设置了两组规则集，我们分别命名为
 "signup" 和 "email" ，你可以根据自己的需求任意命名::
 
 	$config = array(
@@ -793,7 +793,7 @@ another array of your choice.
 		)
 	);
 
-当一组规则的名称和控制器类/方法名称完全一样时，它会在该控制器类/方法中自动被 
+当一组规则的名称和控制器类/方法名称完全一样时，它会在该控制器类/方法中自动被
 ``run()`` 方法调用。
 
 .. _using-arrays-as-field-names:
@@ -860,7 +860,7 @@ another array of your choice.
 ========================= ========== ============================================================================================= =======================
 规则                      参数        描述                                                                                          例子
 ========================= ========== ============================================================================================= =======================
-**required**              No         如果表单元素为空，返回 FALSE 
+**required**              No         如果表单元素为空，返回 FALSE
 **matches**               Yes        如果表单元素值与参数中对应的表单字段的值不相等，返回 FALSE                                     matches[form_item]
 **regex_match**           Yes        如果表单元素不匹配正则表达式，返回 FALSE                                                       regex_match[/regex/]
 **differs**               Yes        如果表单元素值与参数中对应的表单字段的值相等，返回 FALSE                                       differs[form_item]
@@ -909,7 +909,7 @@ another array of your choice.
 ==================== ========= =======================================================================================================
 名称                 参数      描述
 ==================== ========= =======================================================================================================
-**prep_for_form**    No        将特殊字符的转换，以便可以在表单域中显示 HTML 数据，而不会破坏它
+**prep_for_form**    No        DEPRECATED: 将特殊字符的转换，以便可以在表单域中显示 HTML 数据，而不会破坏它
 **prep_url**         No        当 URL 丢失 "http://" 时，添加 "http://"
 **strip_image_tags** No        移除 HTML 中的 image 标签，只保留 URL
 **encode_php_tags**  No        将 PHP 标签转成实体
