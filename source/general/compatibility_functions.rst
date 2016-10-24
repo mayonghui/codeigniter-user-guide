@@ -57,7 +57,7 @@ CodeIgniter 提供了一系列兼容性函数可以让你使用，它们只有�
 
 	更多信息，请参考 `PHP 手册中的 password_hash() 函数 <http://php.net/password_hash>`_
 
-	.. note:: 除非提供了你自己的有效盐值，该函数会依赖于一个可用的 CSPRNG 源（密码学安全的伪随机数生成器），
+	.. note:: 除非提供了你自己的有效的 Salt，该函数会依赖于一个可用的 CSPRNG 源（密码学安全的伪随机数生成器），
 		下面列表中的每一个都可以满足这点：
 		- ``mcrypt_create_iv()`` with ``MCRYPT_DEV_URANDOM``
 		- ``openssl_random_pseudo_bytes()``
