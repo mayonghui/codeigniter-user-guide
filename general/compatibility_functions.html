@@ -526,7 +526,7 @@
 <p>更多信息，请参考 <a class="reference external" href="http://php.net/password_hash">PHP 手册中的 password_hash() 函数</a></p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">除非提供了你自己的有效盐值，该函数会依赖于一个可用的 CSPRNG 源（密码学安全的伪随机数生成器），
+<p class="last">除非提供了你自己的有效的 Salt，该函数会依赖于一个可用的 CSPRNG 源（密码学安全的伪随机数生成器），
 下面列表中的每一个都可以满足这点：
 - <code class="docutils literal"><span class="pre">mcrypt_create_iv()</span></code> with <code class="docutils literal"><span class="pre">MCRYPT_DEV_URANDOM</span></code>
 - <code class="docutils literal"><span class="pre">openssl_random_pseudo_bytes()</span></code>
