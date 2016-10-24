@@ -29,6 +29,9 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
+        <link rel="index" title="索引"
+              href="../genindex.html"/>
+        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.0.0 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="常规主题" href="index.html"/>
         <link rel="next" title="PHP 开发规范" href="styleguide.html"/>
@@ -517,8 +520,7 @@ XSS 过滤器在 <a class="reference internal" href="../libraries/security.html"
 <p>另外，绝不要自己发明算法。</p>
 <p>只使用强密码哈希算法，例如 BCrypt ，在 PHP 自己的 <a class="reference external" href="http://php.net/password">密码哈希</a>
 函数中也是使用它。</p>
-<p>即使你的 PHP 版本不是 5.5+ ，也请使用它们，CodeIgniter 为你提供了这些算法，只要你的 PHP
-版本是 5.3.7 以上都可以使用。（如果不满足这点要求，那么请升级你的 PHP）</p>
+<p>即使你的 PHP 版本不是 5.5+ ，也请使用它们，CodeIgniter 为你提供了这些算法。</p>
 <p>如果你连升级 PHP 也无法做到，那么使用 <cite>hash_pbkdf() &lt;http://php.net/hash_pbkdf2&gt;</cite> 吧，
 为实现兼容性我们提供了这个函数。</p>
 </li>
@@ -618,7 +620,7 @@ XSS 过滤器在 <a class="reference internal" href="../libraries/security.html"
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2016, 不列颠哥伦比亚理工学院.
-       最后修改: 2016-09-13.
+       最后修改: 2016-10-24.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>
@@ -649,7 +651,7 @@ XSS 过滤器在 <a class="reference internal" href="../libraries/security.html"
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.0',
+            VERSION:'3.1.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

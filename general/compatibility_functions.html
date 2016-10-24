@@ -29,6 +29,9 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
+        <link rel="index" title="索引"
+              href="../genindex.html"/>
+        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.0.0 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="常规主题" href="index.html"/>
         <link rel="next" title="URI 路由" href="routing.html"/>
@@ -793,58 +796,6 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="array_replace">
-<code class="descname">array_replace</code><span class="sig-paren">(</span><em>array $array1</em><span class="optional">[</span>, <em>...</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#array_replace" title="永久链接至目标">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
-<li><strong>$array1</strong> (<em>array</em>) -- Array in which to replace elements</li>
-<li><strong>...</strong> (<em>array</em>) -- Array (or multiple ones) from which to extract elements</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body"><p class="first">Modified array</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last">array</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>更多信息，请参考 <a class="reference external" href="http://php.net/array_replace">PHP 手册中的 array_replace() 函数</a></p>
-</dd></dl>
-
-<dl class="function">
-<dt id="array_replace_recursive">
-<code class="descname">array_replace_recursive</code><span class="sig-paren">(</span><em>array $array1</em><span class="optional">[</span>, <em>...</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#array_replace_recursive" title="永久链接至目标">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
-<li><strong>$array1</strong> (<em>array</em>) -- Array in which to replace elements</li>
-<li><strong>...</strong> (<em>array</em>) -- Array (or multiple ones) from which to extract elements</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body"><p class="first">Modified array</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last">array</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>更多信息，请参考 <a class="reference external" href="http://php.net/array_replace_recursive">PHP 手册中的 array_replace_recursive() 函数</a></p>
-<div class="admonition important">
-<p class="first admonition-title">重要</p>
-<p class="last">只有 PHP 原生的函数才可以检测到无穷递归，如果你使用的是 PHP 5.3+ ，使用时要担心引用！</p>
-</div>
-</dd></dl>
-
-<dl class="function">
 <dt id="hex2bin">
 <code class="descname">hex2bin</code><span class="sig-paren">(</span><em>$data</em><span class="sig-paren">)</span><a class="headerlink" href="#hex2bin" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
@@ -865,29 +816,6 @@
 </tbody>
 </table>
 <p>更多信息，请参考 <a class="reference external" href="http://php.net/hex2bin">PHP 手册中的 hex2bin() 函数</a></p>
-</dd></dl>
-
-<dl class="function">
-<dt id="quoted_printable_encode">
-<code class="descname">quoted_printable_encode</code><span class="sig-paren">(</span><em>$str</em><span class="sig-paren">)</span><a class="headerlink" href="#quoted_printable_encode" title="永久链接至目标">¶</a></dt>
-<dd><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
-<li><strong>$str</strong> (<em>string</em>) -- Input string</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">返回:</th><td class="field-body"><p class="first">8bit-encoded string</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">返回类型:</th><td class="field-body"><p class="first last">string</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>更多信息，请参考 <a class="reference external" href="http://php.net/quoted_printable_encode">PHP 手册中的 quoted_printable_encode() 函数</a></p>
 </dd></dl>
 
 </div>
@@ -953,7 +881,7 @@
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2016, 不列颠哥伦比亚理工学院.
-       最后修改: 2016-09-13.
+       最后修改: 2016-10-24.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>
@@ -984,7 +912,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.0',
+            VERSION:'3.1.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

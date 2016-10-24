@@ -29,6 +29,9 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
+        <link rel="index" title="索引"
+              href="../genindex.html"/>
+        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.0.0 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="类库参考" href="index.html"/>
         <link rel="next" title="Zip 编码类" href="zip.html"/>
@@ -894,6 +897,11 @@ XML-RPC 客户端可以使用该方法发送用户名和密码到服务器，在
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">xmlrpc</span><span class="o">-&gt;</span><span class="na">timeout</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
 </pre></div>
 </div>
+<dl class="docutils">
+<dt>This timeout period will be used both for an initial connection to</dt>
+<dd>the remote server, as well as for getting a response from it.
+Make sure you set the timeout before calling <code class="docutils literal"><span class="pre">send_request()</span></code>.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -1090,7 +1098,7 @@ XML-RPC 客户端可以使用该方法发送用户名和密码到服务器，在
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2016, 不列颠哥伦比亚理工学院.
-       最后修改: 2016-09-13.
+       最后修改: 2016-10-24.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>
@@ -1121,7 +1129,7 @@ XML-RPC 客户端可以使用该方法发送用户名和密码到服务器，在
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.0',
+            VERSION:'3.1.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false
