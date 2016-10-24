@@ -117,8 +117,7 @@ With regular expressions, you can also catch multiple segments at once.
 回调函数
 =========
 
-如果你正在使用的 PHP 版本高于或等于 5.3 ，你还可以在路由规则中使用回调函数来处理逆向引用。
-例如::
+你可以在路由规则中使用回调函数来处理逆向引用。例如::
 
 	$route['products/([a-zA-Z]+)/edit/(\d+)'] = function ($product_type, $id)
 	{

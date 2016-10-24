@@ -114,8 +114,7 @@ CodeIgniter 提供了对 CSRF 的保护，会在每个非 GET HTTP 请求时自�
    只使用强密码哈希算法，例如 BCrypt ，在 PHP 自己的 `密码哈希 <http://php.net/password>`_
    函数中也是使用它。
 
-   即使你的 PHP 版本不是 5.5+ ，也请使用它们，CodeIgniter 为你提供了这些算法，只要你的 PHP
-   版本是 5.3.7 以上都可以使用。（如果不满足这点要求，那么请升级你的 PHP）
+   即使你的 PHP 版本不是 5.5+ ，也请使用它们，CodeIgniter 为你提供了这些算法。
 
    如果你连升级 PHP 也无法做到，那么使用 `hash_pbkdf() <http://php.net/hash_pbkdf2>` 吧，
    为实现兼容性我们提供了这个函数。

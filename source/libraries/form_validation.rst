@@ -439,8 +439,7 @@ TRUE 的东西都可以作为规则。
 
 上面的代码将使用 ``Users_model`` 模型的 ``valid_username()`` 方法来作为验证规则。
 
-当然，这只是个例子，规则不只限于使用模型的方法，你可以使用任何对象和方法
-来接受域值作为第一个参数。如果你使用 PHP 5.3+ ，还可以使用匿名方法::
+当然，这只是个例子，规则不只限于使用模型的方法，你可以使用任何对象和方法来接受域值作为第一个参数。你也可以使用匿名函数::
 
 	$this->form_validation->set_rules(
 		'username', 'Username',
@@ -465,7 +464,7 @@ TRUE 的东西都可以作为规则。
 		)
 	);
 
-下面是使用匿名方法（PHP 5.3+）的版本::
+下面是使用匿名函数的版本::
 
 	$this->form_validation->set_rules(
 		'username', 'Username',
@@ -926,11 +925,12 @@ another array of your choice.
 
 .. php:class:: CI_Form_validation
 
-	.. php:method:: set_rules($field[, $label = ''[, $rules = '']])
+	.. php:method:: set_rules($field[, $label = ''[, $rules = ''[, $errors = array()]]])
 
 		:param	string	$field: Field name
 		:param	string	$label: Field label
 		:param	mixed	$rules: Validation rules, as a string list separated by a pipe "|", or as an array or rules
+		:param	array	$errors: A list of custom error messages
 		:returns:	CI_Form_validation instance (method chaining)
 		:rtype:	CI_Form_validation
 

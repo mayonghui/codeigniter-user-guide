@@ -44,8 +44,7 @@ Tools.php，然后输入如下的代码::
 
 	example.com/index.php/tools/message/to
 
-或者，我们可以通过 CLI 来访问。在 Mac/Linux 下你可以打开一个终端，在 Windows
-下你可以打开 “运行”，然后输入 "cmd"，进入 CodeIgniter 项目所在的目录。
+或者，我们可以通过 CLI 来访问。在 Mac/Linux 下你可以打开一个终端，在 Windows 下你可以打开 “运行”，然后输入 "cmd"，进入 CodeIgniter 项目所在的目录。
 
 .. code-block:: bash
 
@@ -58,7 +57,7 @@ Tools.php，然后输入如下的代码::
 
 	$ php index.php tools message "John Smith"
 
-这里我们传一个参数给它，这和使用 URL 参数是一样的。"John Smith" 
+这里我们传一个参数给它，这和使用 URL 参数是一样的。"John Smith"
 被作为参数传入并显示出::
 
 	Hello John Smith!
@@ -67,4 +66,4 @@ Tools.php，然后输入如下的代码::
 ============
 
 简单来说，这就是你需要知道的关于如何在命令行中使用控制器的所有事情了。
-记住，这只是一个普通的控制器，所以路由和 _remap 也照样工作。
+记住，这只是一个普通的控制器，所以路由和 ``_remap`` 也照样工作。

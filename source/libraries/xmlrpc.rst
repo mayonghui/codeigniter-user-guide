@@ -34,7 +34,7 @@ CodeIgniter 的 XML-RPC  类允许你向另一个服务器发送请求，
 初始化类
 ======================
 
-跟 CodeIgniter 中的其他类一样，可以在你的控制器中使用 ``$this->load->library()`` 
+跟 CodeIgniter 中的其他类一样，可以在你的控制器中使用 ``$this->load->library()``
 方法加载 XML-RPC 类和 XML-RPC 服务器类。
 
 加载 XML-RPC 类如下::
@@ -116,7 +116,7 @@ XML-RPC 请求就是你发送给 XML-RPC 服务器的数据，请求中的每一
 		array('Doe', 'string'),
 		array(FALSE, 'boolean'),
 		array(12345, 'int')
-	); 
+	);
 	$this->xmlrpc->request($request);
 
 下面的 `数据类型 <#datatypes>`_ 一节列出了所有支持的数据类型。
@@ -150,8 +150,8 @@ XML-RPC 服务器类，然后设置一个映射数组，用于将请求转发到
 CodeIgniter 超级对象时，它将是必须的。
 
 换句话说，如果 XML-RPC 客户端发送一个请求到 new\_post 方法，
-你的服务器会加载 My\_blog 类并调用 new\_entry 函数。如果这个请求是到 
-``update_post`` 方法的，那么你的服务器会加载 My\_blog 类并调用 
+你的服务器会加载 My\_blog 类并调用 new\_entry 函数。如果这个请求是到
+``update_post`` 方法的，那么你的服务器会加载 My\_blog 类并调用
 ``update_entry`` 方法。
 
 上面例子中的函数名是任意的。你可以决定这些函数在你的服务器上叫什么名字，
@@ -356,7 +356,7 @@ XML-RPC 客户端可以使用该方法发送用户名和密码到服务器，在
 你应该能看到你发送到服务端的信息，以及服务器返回的响应信息。
 
 在客户端，你发送了一条消息（"How's is going?"）到服务端，
-随着一个请求发送到 "Greetings" 方法。服务端收到这个请求并映射到 
+随着一个请求发送到 "Greetings" 方法。服务端收到这个请求并映射到
 "process" 函数，然后返回响应信息。
 
 在请求参数中使用关联数组
@@ -442,6 +442,10 @@ XML-RPC 客户端可以使用该方法发送用户名和密码到服务器，在
 		设置一个超时时间（单位为秒），超过该时间，请求将被取消::
 
 			$this->xmlrpc->timeout(6);
+
+		This timeout period will be used both for an initial connection to
+                the remote server, as well as for getting a response from it.
+                Make sure you set the timeout before calling ``send_request()``.
 
 	.. php:method:: method($function)
 

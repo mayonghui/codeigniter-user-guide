@@ -2,6 +2,48 @@
 变更记录
 ##########
 
+Version 3.1.1
+=============
+
+Release Date: Oct 22, 2016
+
+-  **Security**
+
+   -  Fixed a flaw in :doc:`Security Library <libraries/security>` method ``entity_decode()`` (used by ``xss_clean()``) that affects HTML 5 entities when using PHP 5.3.
+
+-  General Changes
+
+   -  Added ``E_PARSE`` to the list of error levels detected by the shutdown handler.
+   -  Updated :doc:`Inflector Helper <helpers/inflector_helper>` :php:func:`is_countable()` with more words.
+   -  Updated :doc:`common function <general/common_functions>` :php:func:`set_status_header()` with new status codes from IETF RFCs
+      `2817 <https://tools.ietf.org/html/rfc2817>`_ (426)
+      and `6585 <https://tools.ietf.org/html/rfc6585>`_ (428, 429, 431, 511).
+
+Bug fixes for 3.1.1
+-------------------
+
+-  Fixed a bug (#4732) - :doc:`Session Library <libraries/sessions>` triggered errors while writing data for a newly-created sessions with the 'memcached' driver.
+-  Fixed a regression (#4736) - :doc:`Image Manipulation Library <libraries/image_lib>` processing via ImageMagick didn't work.
+-  Fixed a bug (#4737) - :doc:`Query Builder <database/query_builder>` didn't add an ``OFFSET`` when ``LIMIT`` is zero or unused.
+-  Fixed a regression (#4739) - :doc:`Email Library <libraries/email>` doesn't properly separate attachment bodies from headers.
+-  Fixed a bug (#4754) - :doc:`Unit Testing Library <libraries/unit_testing>` method ``result()`` didn't translate ``res_datatype``.
+-  Fixed a bug (#4759) - :doc:`Form Validation <libraries/form_validation>`, :doc:`Trackback <libraries/trackback>` and `XML-RPC <libraries/xmlrpc>` libraries treated URI schemes in a case-sensitive manner.
+-  Fixed a bug (#4762) - :doc:`Cache Library <libraries/caching>` 'file' driver method ``get_metadata()`` checked TTL time against ``mtime`` instead of the cache item's creation time.
+-  Fixed a bug where :doc:`File Uploading Library <libraries/file_uploading>` generated error messages on PHP 7.1.
+-  Fixed a bug (#4780) - :doc:`compatibility function <general/compatibility_functions>` ``hex2bin()`` didn't reject inputs of type "resource".
+-  Fixed a bug (#4787) - :doc:`Form Validation Library <libraries/form_validation>` method ``valid_email()`` triggered ``E_WARNING`` when input emails have empty domain names.
+-  Fixed a bug (#4805) - :doc:`Database <database/index>` driver 'mysqli' didn't use the ``MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT`` flag properly.
+-  Fixed a bug (#4808) - :doc:`Database <database/index>` method ``is_write_type()`` only looked at the first line of a queries using ``RETURNING`` with the 'postgre', 'pdo/pgsql', 'odbc' and 'pdo/odbc' drivers.
+-  Fixed a bug where :doc:`Query Builder <database/query_builder>` method ``insert_batch()`` tried to execute an unsupported SQL query with the 'ibase' and 'pdo/firebird' drivers.
+-  Fixed a bug (#4809) - :doc:`Database <database/index>` driver 'pdo/mysql' didn't turn off ``AUTOCOMMIT`` when starting a transaction.
+-  Fixed a bug (#4822) - :doc:`CAPTCHA Helper <helpers/captcha_helper>` didn't clear expired PNG images.
+-  Fixed a bug (#4823) - :doc:`Session Library <libraries/sessions>` 'files' driver could enter an infinite loop if ``mbstring.func_override`` is enabled.
+-  Fixed a bug (#4851) - :doc:`Database Forge <database/forge>` didn't quote schema names passed to its ``create_database()`` method.
+-  Fixed a bug (#4863) - :doc:`HTML Table Library <libraries/table>` method ``set_caption()`` was missing method chaining support.
+-  Fixed a bug (#4843) - :doc:`XML-RPC Library <libraries/xmlrpc>` client class didn't set a read/write socket timeout.
+-  Fixed a bug (#4865) - uncaught exceptions didn't set the HTTP Response status code to 500 unless ``display_errors`` was turned On.
+-  Fixed a bug (#4830) - :doc:`Session Library <libraries/sessions>` didn't take into account the new session INI settings in PHP 7.1.
+
 Version 3.1.0
 =============
 
@@ -10,7 +52,7 @@ Release Date: July 26, 2016
 -  **Security**
 
    -  Fixed an SQL injection in the 'odbc' database driver.
-   -  Updated :php:func:`set_realpath()` :doc:`Path Helpr <helpers/path_helper>` function to filter-out ``php://`` wrapper inputs.
+   -  Updated :php:func:`set_realpath()` :doc:`Path Helper <helpers/path_helper>` function to filter-out ``php://`` wrapper inputs.
    -  Officially dropped any kind of support for PHP 5.2.x and anything under 5.3.7.
 
 -  General Changes

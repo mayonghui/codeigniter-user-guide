@@ -41,14 +41,13 @@ CodeIgniter 的钩子特性提供了一种方法来修改框架的内部运作�
 -  **filename** 包含你的类或函数的文件名。
 -  **filepath** 包含你的脚本文件的目录名。
    注意：
-   你的脚本必须放在 *application/* 目录里面，所以 filepath 是相对 *application/* 
+   你的脚本必须放在 *application/* 目录里面，所以 filepath 是相对 *application/*
    目录的路径，举例来说，如果你的脚本位于 *application/hooks/* ，那么 filepath
    可以简单的设置为 'hooks' ，如果你的脚本位于 *application/hooks/utilities/* ，
    那么 filepath 可以设置为 'hooks/utilities' ，路径后面不用加斜线。
 -  **params** 你希望传递给你脚本的任何参数，可选。
 
-如果你使用 PHP 5.3 以上的版本，你也可以使用 lambda表达式（匿名函数或闭包）作为钩子，
-这样语法更简单::
+你也可以使用 lambda 表达式/匿名函数(或闭包)作为钩子，这样写起来更简单::
 
 	$hook['post_controller'] = function()
 	{

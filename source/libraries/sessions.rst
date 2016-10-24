@@ -492,7 +492,7 @@ session 并发非常少的时候是对的。当 session 的并发数越来越大
 对于 MySQL::
 
 	CREATE TABLE IF NOT EXISTS `ci_sessions` (
-		`id` varchar(40) NOT NULL,
+		`id` varchar(128) NOT NULL,
 		`ip_address` varchar(45) NOT NULL,
 		`timestamp` int(10) unsigned DEFAULT 0 NOT NULL,
 		`data` blob NOT NULL,
@@ -502,7 +502,7 @@ session 并发非常少的时候是对的。当 session 的并发数越来越大
 对于 PostgreSQL::
 
 	CREATE TABLE "ci_sessions" (
-		"id" varchar(40) NOT NULL,
+		"id" varchar(128) NOT NULL,
 		"ip_address" varchar(45) NOT NULL,
 		"timestamp" bigint DEFAULT 0 NOT NULL,
 		"data" text DEFAULT '' NOT NULL

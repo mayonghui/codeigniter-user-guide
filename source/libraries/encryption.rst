@@ -8,7 +8,7 @@
 加密类提供了双向数据加密的方式，为了实现密码学意义上的安全，它使用了一些并非在所有系统上都可用的 PHP 的扩展，
 要使用这个类，你的系统上必须安装了下面的扩展：
 
-- `OpenSSL <http://php.net/openssl>`_ （以及 PHP 5.3.3）
+- `OpenSSL <http://php.net/openssl>`_
 - `MCrypt <http://php.net/mcrypt>`_ （要支持 `MCRYPT_DEV_URANDOM`）
 
 只要有一点不满足，我们就无法为你提供足够高的安全性。
@@ -51,7 +51,7 @@
 而在加密的过程和认证的过程中使用相同的密钥可不是个好的做法。
 
 正因为此，程序会从你的配置的 *encryption_key* 参数中派生出两个密钥来：
-一个用于加密，另一个用于认证。这其实是通过一种叫做 `HKDF <http://en.wikipedia.org/wiki/HKDF>`_ 
+一个用于加密，另一个用于认证。这其实是通过一种叫做 `HKDF <http://en.wikipedia.org/wiki/HKDF>`_
 （HMAC-based Key Derivation Function）的技术实现的。
 
 设置 encryption_key 参数
@@ -233,7 +233,7 @@ AES-128 算法，以及 ``$config['encryption_key']`` 参数。
 driver   'mcrypt', 'openssl'
 cipher   算法名称（参见 :ref:`ciphers-and-modes`）
 mode     加密模式（参见 :ref:`encryption-modes`）
-key      加密密钥 
+key      加密密钥
 ======== ===============================================
 
 例如，如果你想将加密算法和模式改为 AES-126 CTR ，可以这样::
@@ -259,7 +259,7 @@ key      加密密钥
 对数据进行加密与解密
 ==============================
 
-使用已配置好的参数来对数据进行加密和解密是非常简单的，你只要将字符串传给 ``encrypt()`` 
+使用已配置好的参数来对数据进行加密和解密是非常简单的，你只要将字符串传给 ``encrypt()``
 和/或 ``decrypt()`` 方法即可::
 
 	$plain_text = 'This is a plain-text message!';

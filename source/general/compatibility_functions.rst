@@ -199,26 +199,6 @@ CodeIgniter 提供了一系列兼容性函数可以让你使用，它们只有�
 
 	更多信息，请参考 `PHP 手册中的 array_column() 函数 <http://php.net/array_column>`_
 
-.. php:function:: array_replace(array $array1[, ...])
-
-	:param	array	$array1: Array in which to replace elements
-	:param	array	...: Array (or multiple ones) from which to extract elements
-	:returns:	Modified array
-	:rtype:	array
-
-	更多信息，请参考 `PHP 手册中的 array_replace() 函数 <http://php.net/array_replace>`_
-
-.. php:function:: array_replace_recursive(array $array1[, ...])
-
-	:param	array	$array1: Array in which to replace elements
-	:param	array	...: Array (or multiple ones) from which to extract elements
-	:returns:	Modified array
-	:rtype:	array
-
-	更多信息，请参考 `PHP 手册中的 array_replace_recursive() 函数 <http://php.net/array_replace_recursive>`_
-
-	.. important:: 只有 PHP 原生的函数才可以检测到无穷递归，如果你使用的是 PHP 5.3+ ，使用时要担心引用！
-
 .. php:function:: hex2bin($data)
 
 	:param	array	$data: Hexadecimal representation of data
@@ -226,11 +206,3 @@ CodeIgniter 提供了一系列兼容性函数可以让你使用，它们只有�
 	:rtype:	string
 
 	更多信息，请参考 `PHP 手册中的 hex2bin() 函数 <http://php.net/hex2bin>`_
-
-.. php:function:: quoted_printable_encode($str)
-
-	:param	string	$str: Input string
-	:returns:	8bit-encoded string
-	:rtype:	string
-
-	更多信息，请参考 `PHP 手册中的 quoted_printable_encode() 函数 <http://php.net/quoted_printable_encode>`_
