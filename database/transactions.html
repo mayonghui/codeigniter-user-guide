@@ -483,9 +483,8 @@ $this-&gt;db-&gt;trans_complete() 两个方法，像下面这样:</p>
 </div>
 </div>
 <div class="section" id="id4">
-<h2>启用事务<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<p>当执行 $this-&gt;db-&gt;trans_start() 方法时，事务将自动启用，如果
-你要禁用事务，可以使用 $this-&gt;db-&gt;trans_off() 方法来实现:</p>
+<h2>禁用事务<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>如果你要禁用事务，可以使用 <code class="docutils literal"><span class="pre">$this-&gt;db-&gt;trans_off()</span></code> 方法来实现:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">trans_off</span><span class="p">();</span>
 
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">trans_start</span><span class="p">();</span>
@@ -493,7 +492,7 @@ $this-&gt;db-&gt;trans_complete() 两个方法，像下面这样:</p>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">trans_complete</span><span class="p">();</span>
 </pre></div>
 </div>
-<p>当事务被禁用时，你的查询会自动提交，就跟没有使用事务一样。</p>
+<p>当事务被禁用时，你的查询会自动提交，就跟没有使用事务一样， <code class="docutils literal"><span class="pre">trans_start()</span></code> 和 <code class="docutils literal"><span class="pre">trans_complete()</span></code> 等方法调用也将被忽略。</p>
 </div>
 <div class="section" id="test-mode">
 <h2>测试模式（Test Mode）<a class="headerlink" href="#test-mode" title="永久链接至标题">¶</a></h2>
@@ -592,7 +591,7 @@ $this-&gt;db-&gt;trans_complete() 两个方法，像下面这样:</p>
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2016, 不列颠哥伦比亚理工学院.
-       最后修改: 2016-10-24.
+       最后修改: 2016-10-31.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>
@@ -623,7 +622,7 @@ $this-&gt;db-&gt;trans_complete() 两个方法，像下面这样:</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.1',
+            VERSION:'3.1.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

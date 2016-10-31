@@ -423,9 +423,32 @@
             
   <div class="section" id="id1">
 <h1>变更记录<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<div class="section" id="version-3-1-1">
-<h2>Version 3.1.1<a class="headerlink" href="#version-3-1-1" title="永久链接至标题">¶</a></h2>
-<p>Release Date: Oct 22, 2016</p>
+<div class="section" id="id2">
+<h2>版本 3.1.2<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>发布日期：2016.10.28</p>
+<ul class="simple">
+<li><strong>Security</strong><ul>
+<li>Fixed a number of new vulnerabilities in <a class="reference internal" href="libraries/security.html"><span class="doc">Security Library</span></a> method <code class="docutils literal"><span class="pre">xss_clean()</span></code>.</li>
+</ul>
+</li>
+<li>General Changes<ul>
+<li>Allowed PHP 4-style constructors (<code class="docutils literal"><span class="pre">Mathching_name::Matching_name()</span></code> methods) to be used as routes, if there's a <code class="docutils literal"><span class="pre">__construct()</span></code> to override them.</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="bug-fixes-for-3-1-2">
+<h3>Bug fixes for 3.1.2<a class="headerlink" href="#bug-fixes-for-3-1-2" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>Fixed a regression (#4874) - <a class="reference internal" href="libraries/sessions.html"><span class="doc">Session Library</span></a> didn't take into account <code class="docutils literal"><span class="pre">session.hash_bits_per_character</span></code> when validating session IDs.</li>
+<li>Fixed a bug (#4871) - <a class="reference internal" href="database/query_builder.html"><span class="doc">Query Builder</span></a> method <code class="docutils literal"><span class="pre">update_batch()</span></code> didn't properly handle identifier escaping.</li>
+<li>Fixed a bug (#4884) - <a class="reference internal" href="database/query_builder.html"><span class="doc">Query Builder</span></a> didn't properly parse field names ending in 'is' when used inside WHERE and HAVING statements.</li>
+<li>Fixed a bug where <code class="docutils literal"><span class="pre">CI_Log</span></code>, <code class="docutils literal"><span class="pre">CI_Output</span></code>, <code class="docutils literal"><span class="pre">CI_Email</span></code> and <code class="docutils literal"><span class="pre">CI_Zip</span></code> didn't handle strings in a byte-safe manner when <code class="docutils literal"><span class="pre">mbstring.func_override</span></code> is enabled.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>版本 3.1.1<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>发布日期：2016.10.22</p>
 <ul class="simple">
 <li><strong>Security</strong><ul>
 <li>Fixed a flaw in <a class="reference internal" href="libraries/security.html"><span class="doc">Security Library</span></a> method <code class="docutils literal"><span class="pre">entity_decode()</span></code> (used by <code class="docutils literal"><span class="pre">xss_clean()</span></code>) that affects HTML 5 entities when using PHP 5.3.</li>
@@ -448,7 +471,7 @@ and <a class="reference external" href="https://tools.ietf.org/html/rfc6585">658
 <li>Fixed a bug (#4737) - <a class="reference internal" href="database/query_builder.html"><span class="doc">Query Builder</span></a> didn't add an <code class="docutils literal"><span class="pre">OFFSET</span></code> when <code class="docutils literal"><span class="pre">LIMIT</span></code> is zero or unused.</li>
 <li>Fixed a regression (#4739) - <a class="reference internal" href="libraries/email.html"><span class="doc">Email Library</span></a> doesn't properly separate attachment bodies from headers.</li>
 <li>Fixed a bug (#4754) - <a class="reference internal" href="libraries/unit_testing.html"><span class="doc">Unit Testing Library</span></a> method <code class="docutils literal"><span class="pre">result()</span></code> didn't translate <code class="docutils literal"><span class="pre">res_datatype</span></code>.</li>
-<li>Fixed a bug (#4759) - <a class="reference internal" href="libraries/form_validation.html"><span class="doc">Form Validation</span></a>, <a class="reference internal" href="libraries/trackback.html"><span class="doc">Trackback</span></a> and <cite>XML-RPC &lt;libraries/xmlrpc&gt;</cite> libraries treated URI schemes in a case-sensitive manner.</li>
+<li>Fixed a bug (#4759) - <a class="reference internal" href="libraries/form_validation.html"><span class="doc">Form Validation</span></a>, <a class="reference internal" href="libraries/trackback.html"><span class="doc">Trackback</span></a> and <a class="reference internal" href="libraries/xmlrpc.html"><span class="doc">XML-RPC</span></a> libraries treated URI schemes in a case-sensitive manner.</li>
 <li>Fixed a bug (#4762) - <a class="reference internal" href="libraries/caching.html"><span class="doc">Cache Library</span></a> 'file' driver method <code class="docutils literal"><span class="pre">get_metadata()</span></code> checked TTL time against <code class="docutils literal"><span class="pre">mtime</span></code> instead of the cache item's creation time.</li>
 <li>Fixed a bug where <a class="reference internal" href="libraries/file_uploading.html"><span class="doc">File Uploading Library</span></a> generated error messages on PHP 7.1.</li>
 <li>Fixed a bug (#4780) - <a class="reference internal" href="general/compatibility_functions.html"><span class="doc">compatibility function</span></a> <code class="docutils literal"><span class="pre">hex2bin()</span></code> didn't reject inputs of type &quot;resource&quot;.</li>
@@ -661,8 +684,8 @@ and <a class="reference external" href="https://tools.ietf.org/html/rfc6585">658
 </ul>
 </div>
 </div>
-<div class="section" id="id4">
-<h2>版本 3.0.2<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id6">
+<h2>版本 3.0.2<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p>发布日期: 2015年10月8日</p>
 <ul class="simple">
 <li><strong>Security</strong><ul>
@@ -701,8 +724,8 @@ and <a class="reference external" href="https://tools.ietf.org/html/rfc6585">658
 </ul>
 </div>
 </div>
-<div class="section" id="id5">
-<h2>版本 3.0.1<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id7">
+<h2>版本 3.0.1<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>发布日期: 2015年8月7日</p>
 <ul class="simple">
 <li>Core<ul>
@@ -781,8 +804,8 @@ and <a class="reference external" href="https://tools.ietf.org/html/rfc6585">658
 </ul>
 </div>
 </div>
-<div class="section" id="id6">
-<h2>版本 3.0.0<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id8">
+<h2>版本 3.0.0<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <p>发布日期: 2015年3月30日</p>
 <ul class="simple">
 <li>License<ul>
@@ -3951,7 +3974,7 @@ and fixed various typos.</li>
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2016, 不列颠哥伦比亚理工学院.
-       最后修改: 2016-10-24.
+       最后修改: 2016-10-31.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>
@@ -3982,7 +4005,7 @@ and fixed various typos.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'3.1.1',
+            VERSION:'3.1.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>网页缓存 &mdash; CodeIgniter 3.0.0 中文手册|用户手册|用户指南|中文文档</title>
+  <title>Upgrading from 3.1.1 to 3.1.2 &mdash; CodeIgniter 3.0.0 中文手册|用户手册|用户指南|中文文档</title>
   
 
   
@@ -33,9 +33,9 @@
               href="../genindex.html"/>
         <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.0.0 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
-        <link rel="up" title="常规主题" href="index.html"/>
-        <link rel="next" title="程序分析" href="profiling.html"/>
-        <link rel="prev" title="错误处理" href="errors.html"/> 
+        <link rel="up" title="从老版本升级" href="upgrading.html"/>
+        <link rel="next" title="Upgrading from 3.1.0 to 3.1.1" href="upgrade_311.html"/>
+        <link rel="prev" title="从老版本升级" href="upgrading.html"/> 
 
   
   <script src="../_static/js/modernizr.2.6.2.min.js"></script>
@@ -51,14 +51,14 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../installation/downloads.html">下载 CodeIgniter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">安装说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../installation/upgrading.html">从老版本升级</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../installation/troubleshooting.html">疑难解答</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">安装说明</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="downloads.html">下载 CodeIgniter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html">安装说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="upgrading.html">从老版本升级</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">疑难解答</a></li>
 </ul>
 </li>
 </ul>
@@ -89,34 +89,34 @@
 </ul>
 </li>
 </ul>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">常规主题</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="urls.html">CodeIgniter URL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="controllers.html">控制器</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reserved_names.html">保留名称</a></li>
-<li class="toctree-l2"><a class="reference internal" href="views.html">视图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="models.html">模型</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helpers.html">辅助函数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="libraries.html">使用 CodeIgniter 类库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="creating_libraries.html">创建类库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drivers.html">使用 CodeIgniter 驱动器</a></li>
-<li class="toctree-l2"><a class="reference internal" href="creating_drivers.html">创建驱动器</a></li>
-<li class="toctree-l2"><a class="reference internal" href="core_classes.html">创建核心系统类</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ancillary_classes.html">创建附属类</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hooks.html">钩子 - 扩展框架核心</a></li>
-<li class="toctree-l2"><a class="reference internal" href="autoloader.html">自动加载资源</a></li>
-<li class="toctree-l2"><a class="reference internal" href="common_functions.html">公共函数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compatibility_functions.html">兼容性函数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routing.html">URI 路由</a></li>
-<li class="toctree-l2"><a class="reference internal" href="errors.html">错误处理</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">网页缓存</a></li>
-<li class="toctree-l2"><a class="reference internal" href="profiling.html">程序分析</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cli.html">以 CLI 方式运行</a></li>
-<li class="toctree-l2"><a class="reference internal" href="managing_apps.html">管理你的应用程序</a></li>
-<li class="toctree-l2"><a class="reference internal" href="environments.html">处理多环境</a></li>
-<li class="toctree-l2"><a class="reference internal" href="alternative_php.html">在视图文件中使用 PHP 替代语法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="security.html">安全</a></li>
-<li class="toctree-l2"><a class="reference internal" href="styleguide.html">PHP 开发规范</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/index.html">常规主题</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../general/urls.html">CodeIgniter URL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/controllers.html">控制器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/reserved_names.html">保留名称</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/views.html">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/models.html">模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/helpers.html">辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/libraries.html">使用 CodeIgniter 类库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/creating_libraries.html">创建类库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/drivers.html">使用 CodeIgniter 驱动器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/creating_drivers.html">创建驱动器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/core_classes.html">创建核心系统类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/ancillary_classes.html">创建附属类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/hooks.html">钩子 - 扩展框架核心</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/autoloader.html">自动加载资源</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/common_functions.html">公共函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/compatibility_functions.html">兼容性函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/routing.html">URI 路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/errors.html">错误处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/caching.html">网页缓存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/profiling.html">程序分析</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/cli.html">以 CLI 方式运行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/managing_apps.html">管理你的应用程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/environments.html">处理多环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/alternative_php.html">在视图文件中使用 PHP 替代语法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/security.html">安全</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/styleguide.html">PHP 开发规范</a></li>
 </ul>
 </li>
 </ul>
@@ -235,14 +235,14 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../installation/downloads.html">下载 CodeIgniter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">安装说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../installation/upgrading.html">从老版本升级</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../installation/troubleshooting.html">疑难解答</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">安装说明</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="downloads.html">下载 CodeIgniter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html">安装说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="upgrading.html">从老版本升级</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">疑难解答</a></li>
 </ul>
 </li>
 </ul>
@@ -273,34 +273,34 @@
 </ul>
 </li>
 </ul>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">常规主题</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="urls.html">CodeIgniter URL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="controllers.html">控制器</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reserved_names.html">保留名称</a></li>
-<li class="toctree-l2"><a class="reference internal" href="views.html">视图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="models.html">模型</a></li>
-<li class="toctree-l2"><a class="reference internal" href="helpers.html">辅助函数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="libraries.html">使用 CodeIgniter 类库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="creating_libraries.html">创建类库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="drivers.html">使用 CodeIgniter 驱动器</a></li>
-<li class="toctree-l2"><a class="reference internal" href="creating_drivers.html">创建驱动器</a></li>
-<li class="toctree-l2"><a class="reference internal" href="core_classes.html">创建核心系统类</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ancillary_classes.html">创建附属类</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hooks.html">钩子 - 扩展框架核心</a></li>
-<li class="toctree-l2"><a class="reference internal" href="autoloader.html">自动加载资源</a></li>
-<li class="toctree-l2"><a class="reference internal" href="common_functions.html">公共函数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compatibility_functions.html">兼容性函数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routing.html">URI 路由</a></li>
-<li class="toctree-l2"><a class="reference internal" href="errors.html">错误处理</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">网页缓存</a></li>
-<li class="toctree-l2"><a class="reference internal" href="profiling.html">程序分析</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cli.html">以 CLI 方式运行</a></li>
-<li class="toctree-l2"><a class="reference internal" href="managing_apps.html">管理你的应用程序</a></li>
-<li class="toctree-l2"><a class="reference internal" href="environments.html">处理多环境</a></li>
-<li class="toctree-l2"><a class="reference internal" href="alternative_php.html">在视图文件中使用 PHP 替代语法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="security.html">安全</a></li>
-<li class="toctree-l2"><a class="reference internal" href="styleguide.html">PHP 开发规范</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/index.html">常规主题</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../general/urls.html">CodeIgniter URL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/controllers.html">控制器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/reserved_names.html">保留名称</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/views.html">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/models.html">模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/helpers.html">辅助函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/libraries.html">使用 CodeIgniter 类库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/creating_libraries.html">创建类库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/drivers.html">使用 CodeIgniter 驱动器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/creating_drivers.html">创建驱动器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/core_classes.html">创建核心系统类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/ancillary_classes.html">创建附属类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/hooks.html">钩子 - 扩展框架核心</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/autoloader.html">自动加载资源</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/common_functions.html">公共函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/compatibility_functions.html">兼容性函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/routing.html">URI 路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/errors.html">错误处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/caching.html">网页缓存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/profiling.html">程序分析</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/cli.html">以 CLI 方式运行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/managing_apps.html">管理你的应用程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/environments.html">处理多环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/alternative_php.html">在视图文件中使用 PHP 替代语法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/security.html">安全</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/styleguide.html">PHP 开发规范</a></li>
 </ul>
 </li>
 </ul>
@@ -408,9 +408,11 @@
     <li><a href="/" target="_blank">CodeIgniter 中国</a> &raquo; </li>
     <li><a href="../index.html">文档首页</a> &raquo; </li>
     
-    <li><a href="index.html">常规主题</a> &raquo; </li>
+    <li><a href="index.html">安装说明</a> &raquo; </li>
     
-    <li>网页缓存</li>
+    <li><a href="upgrading.html">从老版本升级</a> &raquo; </li>
+    
+    <li>Upgrading from 3.1.1 to 3.1.2</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -424,60 +426,41 @@
 </div>
           <div role="main" class="document">
             
-  <div class="section" id="id1">
-<h1>网页缓存<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>CodeIgniter 可以让你通过缓存页面来达到更好的性能。</p>
-<p>尽管 CodeIgniter 已经相当高效了，但是网页中的动态内容、主机的内存
-CPU 和数据库读取速度等因素直接影响了网页的加载速度。 依靠网页缓存，
-你的网页可以达到近乎静态网页的加载速度，因为程序的输出结果
-已经保存下来了。</p>
-<div class="section" id="id2">
-<h2>缓存是如何工作的？<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>可以针对到每个独立的页面进行缓存，并且你可以设置每个页面缓存的更新时间。
-当页面第一次加载时，缓存将被写入到 application/cache 目录下的文件中去。
-之后请求这个页面时，就可以直接从缓存文件中读取内容并输出到用户的浏览器。
-如果缓存过期，会在输出之前被删除并重新刷新。</p>
-</div>
-<div class="section" id="id3">
-<h2>开启缓存<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p>将下面的代码放到任何一个控制器的方法内，你就可以开启缓存了:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">cache</span><span class="p">(</span><span class="nv">$n</span><span class="p">);</span>
-</pre></div>
-</div>
-<p>其中 <code class="docutils literal"><span class="pre">$n</span></code> 是缓存更新的时间（单位分钟）。</p>
-<p>上面的代码可以放在方法的任何位置，它出现的顺序对缓存没有影响，
-所以你可以把它放到任何你认为合理的地方。一旦该代码被放在方法内，
-你的页面就开始被缓存了。</p>
-<div class="admonition important">
-<p class="first admonition-title">重要</p>
-<p class="last">由于 CodeIgniter 存储缓存的方式，只有通过 <a class="reference internal" href="views.html"><span class="doc">view</span></a>
-输出的页面才能缓存。</p>
-</div>
-<div class="admonition important">
-<p class="first admonition-title">重要</p>
-<p class="last">如果你修改了可能影响页面输出的配置，你需要手工删除掉
-你的缓存文件。</p>
-</div>
+  <div class="section" id="upgrading-from-3-1-1-to-3-1-2">
+<h1>Upgrading from 3.1.1 to 3.1.2<a class="headerlink" href="#upgrading-from-3-1-1-to-3-1-2" title="永久链接至标题">¶</a></h1>
+<p>Before performing an update you should take your site offline by
+replacing the index.php file with a static one.</p>
+<div class="section" id="step-1-update-your-codeigniter-files">
+<h2>Step 1: Update your CodeIgniter files<a class="headerlink" href="#step-1-update-your-codeigniter-files" title="永久链接至标题">¶</a></h2>
+<p>Replace all files and directories in your <em>system/</em> directory.</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">在写入缓存文件之前，你需要把 <em>application/cache/</em> 目录的权限
-设置为可写。</p>
+<p class="last">If you have any custom developed files in these directories,
+please make copies of them first.</p>
 </div>
 </div>
-<div class="section" id="id4">
-<h2>删除缓存<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<p>如果你不再需要缓存某个页面，你可以删除掉该页面上的缓存代码，
-这样它在过期之后就不会刷新了。</p>
+<div class="section" id="step-2-update-your-ci-sessions-database-table">
+<h2>Step 2: Update your &quot;ci_sessions&quot; database table<a class="headerlink" href="#step-2-update-your-ci-sessions-database-table" title="永久链接至标题">¶</a></h2>
+<p>If you're using the <a class="reference internal" href="../libraries/sessions.html"><span class="doc">Session Library</span></a> with the
+'database' driver, you may have to <code class="docutils literal"><span class="pre">ALTER</span></code> your sessions table for your
+sessions to continue to work.</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">删除缓存代码之后并不是立即生效，必须等到缓存过期才会生效。</p>
+<p class="last">The table in question is not necessarily named &quot;ci_sessions&quot;.
+It is what you've set as your <code class="docutils literal"><span class="pre">$config['sess_save_path']</span></code>.</p>
 </div>
-<p>如果你需要手工删除缓存，你可以使用 <code class="docutils literal"><span class="pre">delete_cache()</span></code> 方法:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// Deletes cache for the currently requested URI</span>
-<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">delete_cache</span><span class="p">();</span>
+<p>This will only affect you if you've changed your <code class="docutils literal"><span class="pre">session.hash_function</span></code>
+<em>php.ini</em> setting to something like 'sha512'. Or if you've been running
+an older CodeIgniter version on PHP 7.1+.</p>
+<p>It is recommended that you do this anyway, just to avoid potential issues
+in the future if you do change your configuration.</p>
+<p>Just execute the one of the following SQL queries, depending on your
+database:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// MySQL:</span>
+<span class="nx">ALTER</span> <span class="nx">TABLE</span> <span class="nx">ci_sessions</span> <span class="nx">CHANGE</span> <span class="nx">id</span> <span class="nx">id</span> <span class="nx">varchar</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">;</span>
 
-<span class="c1">// Deletes cache for /foo/bar</span>
-<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">delete_cache</span><span class="p">(</span><span class="s1">&#39;/foo/bar&#39;</span><span class="p">);</span>
+<span class="c1">// PostgreSQL</span>
+<span class="nx">ALTER</span> <span class="nx">TABLE</span> <span class="nx">ci_sessions</span> <span class="nx">ALTER</span> <span class="nx">COLUMN</span> <span class="nx">id</span> <span class="nx">SET</span> <span class="nx">DATA</span> <span class="nx">TYPE</span> <span class="nx">varchar</span><span class="p">(</span><span class="mi">128</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -489,10 +472,10 @@ CPU 和数据库读取速度等因素直接影响了网页的加载速度。 依
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="profiling.html" class="btn btn-neutral float-right" title="程序分析">下一个主题 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="upgrade_311.html" class="btn btn-neutral float-right" title="Upgrading from 3.1.0 to 3.1.1">下一个主题 <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="errors.html" class="btn btn-neutral" title="错误处理"><span class="fa fa-arrow-circle-left"></span> 上一个主题</a>
+        <a href="upgrading.html" class="btn btn-neutral" title="从老版本升级"><span class="fa fa-arrow-circle-left"></span> 上一个主题</a>
       
     </div>
   
@@ -501,11 +484,11 @@ CPU 和数据库读取速度等因素直接影响了网页的加载速度。 依
   <div id="notes">
   
   <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="userguide3/general/caching" data-title="网页缓存" data-url="http://codeigniter.org.cn/user_guide/general/caching.html"></div>
+    <div class="ds-thread" data-thread-key="userguide3/installation/upgrade_312" data-title="Upgrading from 3.1.1 to 3.1.2" data-url="http://codeigniter.org.cn/user_guide/installation/upgrade_312.html"></div>
   <!-- 多说评论框 end -->
   
 
-  <div class="ds-share flat" data-thread-key="userguide3/general/caching" data-title="网页缓存 &mdash; CodeIgniter 3.0.0 中文手册|用户手册|用户指南|中文文档" data-url="http://codeigniter.org.cn/user_guide/general/caching.html" data-images="" data-content="">
+  <div class="ds-share flat" data-thread-key="userguide3/installation/upgrade_312" data-title="Upgrading from 3.1.1 to 3.1.2 &mdash; CodeIgniter 3.0.0 中文手册|用户手册|用户指南|中文文档" data-url="http://codeigniter.org.cn/user_guide/installation/upgrade_312.html" data-images="" data-content="">
     <div class="ds-share-inline">
       <ul  class="ds-share-icons-16">
 
