@@ -2,10 +2,31 @@
 变更记录
 ##########
 
-Version 3.1.1
+版本 3.1.2
 =============
 
-Release Date: Oct 22, 2016
+发布日期：2016.10.28
+
+-  **Security**
+
+   -  Fixed a number of new vulnerabilities in :doc:`Security Library <libraries/security>` method ``xss_clean()``.
+
+-  General Changes
+
+   -  Allowed PHP 4-style constructors (``Mathching_name::Matching_name()`` methods) to be used as routes, if there's a ``__construct()`` to override them.
+
+Bug fixes for 3.1.2
+-------------------
+
+-  Fixed a regression (#4874) - :doc:`Session Library <libraries/sessions>` didn't take into account ``session.hash_bits_per_character`` when validating session IDs.
+-  Fixed a bug (#4871) - :doc:`Query Builder <database/query_builder>` method ``update_batch()`` didn't properly handle identifier escaping.
+-  Fixed a bug (#4884) - :doc:`Query Builder <database/query_builder>` didn't properly parse field names ending in 'is' when used inside WHERE and HAVING statements.
+-  Fixed a bug where ``CI_Log``, ``CI_Output``, ``CI_Email`` and ``CI_Zip`` didn't handle strings in a byte-safe manner when ``mbstring.func_override`` is enabled.
+
+版本 3.1.1
+=============
+
+发布日期：2016.10.22
 
 -  **Security**
 
@@ -27,7 +48,7 @@ Bug fixes for 3.1.1
 -  Fixed a bug (#4737) - :doc:`Query Builder <database/query_builder>` didn't add an ``OFFSET`` when ``LIMIT`` is zero or unused.
 -  Fixed a regression (#4739) - :doc:`Email Library <libraries/email>` doesn't properly separate attachment bodies from headers.
 -  Fixed a bug (#4754) - :doc:`Unit Testing Library <libraries/unit_testing>` method ``result()`` didn't translate ``res_datatype``.
--  Fixed a bug (#4759) - :doc:`Form Validation <libraries/form_validation>`, :doc:`Trackback <libraries/trackback>` and `XML-RPC <libraries/xmlrpc>` libraries treated URI schemes in a case-sensitive manner.
+-  Fixed a bug (#4759) - :doc:`Form Validation <libraries/form_validation>`, :doc:`Trackback <libraries/trackback>` and :doc:`XML-RPC <libraries/xmlrpc>` libraries treated URI schemes in a case-sensitive manner.
 -  Fixed a bug (#4762) - :doc:`Cache Library <libraries/caching>` 'file' driver method ``get_metadata()`` checked TTL time against ``mtime`` instead of the cache item's creation time.
 -  Fixed a bug where :doc:`File Uploading Library <libraries/file_uploading>` generated error messages on PHP 7.1.
 -  Fixed a bug (#4780) - :doc:`compatibility function <general/compatibility_functions>` ``hex2bin()`` didn't reject inputs of type "resource".

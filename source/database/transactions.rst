@@ -58,25 +58,24 @@ CodeIgniter 默认使用严格模式运行所有的事务，在严格模式下�
 	$this->db->query('AN SQL QUERY...');
 	$this->db->query('ANOTHER QUERY...');
 	$this->db->trans_complete();
-	
+
 	if ($this->db->trans_status() === FALSE)
 	{
 		// generate an error... or use the log_message() function to log your error
 	}
 
-启用事务
+禁用事务
 =====================
 
-当执行 $this->db->trans_start() 方法时，事务将自动启用，如果
-你要禁用事务，可以使用 $this->db->trans_off() 方法来实现::
+如果你要禁用事务，可以使用 ``$this->db->trans_off()`` 方法来实现::
 
 	$this->db->trans_off();
-	
+
 	$this->db->trans_start();
 	$this->db->query('AN SQL QUERY...');
 	$this->db->trans_complete();
 
-当事务被禁用时，你的查询会自动提交，就跟没有使用事务一样。
+当事务被禁用时，你的查询会自动提交，就跟没有使用事务一样， ``trans_start()`` 和 ``trans_complete()`` 等方法调用也将被忽略。
 
 测试模式（Test Mode）
 ======================
@@ -95,11 +94,11 @@ CodeIgniter 默认使用严格模式运行所有的事务，在严格模式下�
 如果你想手工运行事务，可以像下面这样做::
 
 	$this->db->trans_begin();
-	
+
 	$this->db->query('AN SQL QUERY...');
 	$this->db->query('ANOTHER QUERY...');
 	$this->db->query('AND YET ANOTHER QUERY...');
-	
+
 	if ($this->db->trans_status() === FALSE)
 	{
 		$this->db->trans_rollback();
