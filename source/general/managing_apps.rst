@@ -20,7 +20,7 @@
 
 你可以将你的应用程序目录移动到除 Web 根目录之外的其他位置，
 移到之后你需要打开 index.php 文件将 ``$application_folder``
-变量改成新的位置（使用**绝对路径**）::
+变量改成新的位置（使用 **绝对路径** ）::
 
 	$application_folder = '/path/to/your/application';
 
