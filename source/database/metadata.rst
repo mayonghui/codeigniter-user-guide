@@ -16,7 +16,7 @@
 该方法返回一个包含你当前连接的数据库的所有表名称的数组。例如::
 
 	$tables = $this->db->list_tables();
-	
+
 	foreach ($tables as $table)
 	{
 		echo $table;
@@ -50,10 +50,10 @@
 
 该方法返回一个包含字段名称的数组。有两种不同的调用方式：
 
-1. 将表名陈作为参数传入 $this->db->list_fields()::
+1. 将表名称作为参数传入 $this->db->list_fields()::
 
 	$fields = $this->db->list_fields('table_name');
-	
+
 	foreach ($fields as $field)
 	{
 		echo $field;
@@ -62,7 +62,7 @@
 2. 你可以从任何查询结果对象上调用该方法，获取查询返回的所有字段::
 
 	$query = $this->db->query('SELECT * FROM some_table');
-	
+
 	foreach ($query->list_fields() as $field)
 	{
 		echo $field;
@@ -101,7 +101,7 @@
 使用示例::
 
 	$fields = $this->db->field_data('table_name');
-	
+
 	foreach ($fields as $field)
 	{
 		echo $field->name;
