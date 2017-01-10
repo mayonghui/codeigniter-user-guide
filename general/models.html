@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>模型 &mdash; CodeIgniter 3.1.2 中文手册|用户手册|用户指南|中文文档</title>
+  <title>模型 &mdash; CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档</title>
   
 
   
@@ -32,7 +32,7 @@
         <link rel="index" title="索引"
               href="../genindex.html"/>
         <link rel="search" title="搜索" href="../search.html"/>
-    <link rel="top" title="CodeIgniter 3.1.2 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="常规主题" href="index.html"/>
         <link rel="next" title="辅助函数" href="helpers.html"/>
         <link rel="prev" title="视图" href="views.html"/> 
@@ -451,12 +451,6 @@
     <span class="k">public</span> <span class="nv">$content</span><span class="p">;</span>
     <span class="k">public</span> <span class="nv">$date</span><span class="p">;</span>
 
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">()</span>
-    <span class="p">{</span>
-        <span class="c1">// Call the CI_Model constructor</span>
-        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">();</span>
-    <span class="p">}</span>
-
     <span class="k">public</span> <span class="k">function</span> <span class="nf">get_last_ten_entries</span><span class="p">()</span>
     <span class="p">{</span>
         <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;entries&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
@@ -503,6 +497,7 @@
     <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">()</span>
     <span class="p">{</span>
         <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">();</span>
+        <span class="c1">// Your own constructor code</span>
     <span class="p">}</span>
 
 <span class="p">}</span>
@@ -516,6 +511,7 @@
     <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">()</span>
     <span class="p">{</span>
         <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">();</span>
+        <span class="c1">// Your own constructor code</span>
     <span class="p">}</span>
 
 <span class="p">}</span>
@@ -625,7 +621,7 @@
   <!-- 多说评论框 end -->
   
 
-  <div class="ds-share flat" data-thread-key="userguide3/general/models" data-title="模型 &mdash; CodeIgniter 3.1.2 中文手册|用户手册|用户指南|中文文档" data-url="http://codeigniter.org.cn/user_guide/general/models.html" data-images="" data-content="">
+  <div class="ds-share flat" data-thread-key="userguide3/general/models" data-title="模型 &mdash; CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" data-url="http://codeigniter.org.cn/user_guide/general/models.html" data-images="" data-content="">
     <div class="ds-share-inline">
       <ul  class="ds-share-icons-16">
 
@@ -661,8 +657,8 @@
 
   <div role="contentinfo">
     <p>
-        &copy; 版权所有 2014 - 2016, 不列颠哥伦比亚理工学院.
-       最后修改: 2016-12-22.
+        &copy; 版权所有 2014 - 2017, 不列颠哥伦比亚理工学院.
+       最后修改: 2017-01-10.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>
@@ -693,7 +689,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.2',
+            VERSION:'3.1.3',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false
