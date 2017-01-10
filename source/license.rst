@@ -2,7 +2,7 @@
 The MIT License (MIT)
 #####################
 
-Copyright (c) 2014 - 2016, British Columbia Institute of Technology
+Copyright (c) 2014 - 2017, British Columbia Institute of Technology
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -28,7 +28,7 @@ THE SOFTWARE.
 
 MIT 开源许可协议
 
-版权所有 (c) 2014 - 2015, 不列颠哥伦比亚理工学院
+版权所有 (c) 2014 - 2017, 不列颠哥伦比亚理工学院
 
 特此向任何得到本软件副本或相关文档的人授权：被授权人有权使用、复制、修改、
 合并、出版、发布、散布、再授权和/或贩售软件及软件的副本，及授予被供应人

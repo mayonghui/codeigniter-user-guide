@@ -74,7 +74,7 @@
 		echo standard_date($format, $time);
 
 	.. note:: 该函数已经废弃，请使用原生的 ``date()`` 函数和
-		`时间格式化常量 <http://php.net/manual/en/class.datetime.php#datetime.constants.types>`_
+		`时间格式化常量 <https://secure.php.net/manual/en/class.datetime.php#datetime.constants.types>`_
 		替代::
 
 			echo date(DATE_RFC822, time());
@@ -199,6 +199,9 @@
 		$bad_date = '9-11-2001';
 		// Should Produce: 2001-09-11
 		$better_date = nice_date($bad_date, 'Y-m-d');
+
+	.. note:: This function is DEPRECATED. Use PHP's native `DateTime class
+		<https://secure.php.net/datetime>`_ instead.
 
 .. php:function:: timespan([$seconds = 1[, $time = ''[, $units = '']]])
 

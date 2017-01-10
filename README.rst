@@ -33,7 +33,7 @@ http://python.org/download/releases/2.7.2/
 
 1. 安装 `easy_install <http://peak.telecommunity.com/DevCenter/EasyInstall#installing-easy-install>`_
 2. ``easy_install "sphinx==1.2.3"``
-3. ``easy_install sphinxcontrib-phpdomain``
+3. ``easy_install "sphinxcontrib-phpdomain==0.1.3.post1"``
 4. 安装 CI Lexer，它可以高亮文档中的 PHP, HTML, CSS, 和 JavaScript 代码 (参见 *cilexer/README*)
 5. 返回代码库根目录
 6. ``make html``

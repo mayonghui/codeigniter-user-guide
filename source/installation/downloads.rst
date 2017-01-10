@@ -2,7 +2,8 @@
 下载 CodeIgniter
 #######################
 
--  `CodeIgniter v3.1.2 (当前版本) <https://codeload.github.com/bcit-ci/CodeIgniter/zip/3.1.2>`_
+-  `CodeIgniter v3.1.3 (当前版本) <https://codeload.github.com/bcit-ci/CodeIgniter/zip/3.1.3>`_
+-  `CodeIgniter v3.1.2 <https://codeload.github.com/bcit-ci/CodeIgniter/zip/3.1.2>`_
 -  `CodeIgniter v3.1.1 <https://codeload.github.com/bcit-ci/CodeIgniter/zip/3.1.1>`_
 -  `CodeIgniter v3.1.0 <https://codeload.github.com/bcit-ci/CodeIgniter/zip/3.1.0>`_
 -  `CodeIgniter v3.0.6 <https://codeload.github.com/bcit-ci/CodeIgniter/zip/3.0.6>`_

@@ -15,7 +15,7 @@ CodeIgniter 使用 Sphinx 来生成多种不同格式的文档，并采用 reStr
 
 	.. raw:: html
 
-  	<div class="custom-index container"></div>
+	<div class="custom-index container"></div>
 
 .. contents::
   :local:
@@ -38,7 +38,7 @@ CodeIgniter 使用 Sphinx 来生成多种不同格式的文档，并采用 reStr
 .. code-block:: bash
 
 	easy_install "sphinx==1.2.3"
-	easy_install sphinxcontrib-phpdomain
+	easy_install "sphinxcontrib-phpdomain==0.1.3.post1"
 
 然后按照 :samp:`cilexer` 目录下的 README 文件的提示，来安装 CI Lexer 。
 
@@ -58,7 +58,7 @@ CodeIgniter 使用 Sphinx 来生成多种不同格式的文档，并采用 reStr
 	^ 子子子标题
 	" 子子子子标题 (!)
 
-使用 :download:`TextMate ELDocs Bundle <./ELDocs.tmbundle.zip>` 可以用下面这些 tab 
+使用 :download:`TextMate ELDocs Bundle <./ELDocs.tmbundle.zip>` 可以用下面这些 tab
 快捷键快速创建这些标题::
 
 	title->
