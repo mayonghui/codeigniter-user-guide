@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="类库参考" href="index.html"/>
         <link rel="next" title="数据库参考" href="../database/index.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -151,7 +150,7 @@
 <li class="toctree-l2"><a class="reference internal" href="uri.html">URI 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user_agent.html">用户代理类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="xmlrpc.html">XML-RPC 与 XML-RPC 服务器类</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Zip 编码类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Zip 编码类</a></li>
 </ul>
 </li>
 </ul>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -335,7 +336,7 @@
 <li class="toctree-l2"><a class="reference internal" href="uri.html">URI 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user_agent.html">用户代理类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="xmlrpc.html">XML-RPC 与 XML-RPC 服务器类</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Zip 编码类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Zip 编码类</a></li>
 </ul>
 </li>
 </ul>
@@ -442,7 +443,7 @@
 <h2><a class="toc-backref" href="#id5">使用 Zip 编码类</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id2">
 <h3><a class="toc-backref" href="#id6">初始化类</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
-<p>正如 CodeIgniter 中的其他类一样，在你的控制器中使用 <code class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></code>
+<p>正如 CodeIgniter 中的其他类一样，在你的控制器中使用 <tt class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></tt>
 方法来初始化 Zip 编码类:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;zip&#39;</span><span class="p">);</span>
 </pre></div>
@@ -473,10 +474,10 @@
 <h2><a class="toc-backref" href="#id8">类参考</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="CI_Zip">
-<em class="property">class </em><code class="descname">CI_Zip</code><a class="headerlink" href="#CI_Zip" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><tt class="descname">CI_Zip</tt><a class="headerlink" href="#CI_Zip" title="永久链接至目标">¶</a></dt>
 <dd><dl class="attribute">
 <dt>
-<code class="descname">$compression_level = 2</code></dt>
+<tt class="descname">$compression_level = 2</tt></dt>
 <dd><p>使用的压缩等级。</p>
 <p>压缩等级的范围为 0 到 9 ，9 为最高等级，0 为禁用压缩:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">compression_level</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -486,7 +487,7 @@
 
 <dl class="method">
 <dt id="CI_Zip::add_data">
-<code class="descname">add_data</code><span class="sig-paren">(</span><em>$filepath</em><span class="optional">[</span>, <em>$data = NULL</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Zip::add_data" title="永久链接至目标">¶</a></dt>
+<tt class="descname">add_data</tt><big>(</big><em>$filepath</em><span class="optional">[</span>, <em>$data = NULL</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Zip::add_data" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -534,7 +535,7 @@
 
 <dl class="method">
 <dt id="CI_Zip::add_dir">
-<code class="descname">add_dir</code><span class="sig-paren">(</span><em>$directory</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Zip::add_dir" title="永久链接至目标">¶</a></dt>
+<tt class="descname">add_dir</tt><big>(</big><em>$directory</em><big>)</big><a class="headerlink" href="#CI_Zip::add_dir" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -549,7 +550,7 @@
 </tr>
 </tbody>
 </table>
-<p>允许你往压缩文档中添加一个目录，通常这个方法是没必要的，因为你完全可以使用 <code class="docutils literal"><span class="pre">$this-&gt;zip-&gt;add_data()</span></code>
+<p>允许你往压缩文档中添加一个目录，通常这个方法是没必要的，因为你完全可以使用 <tt class="docutils literal"><span class="pre">$this-&gt;zip-&gt;add_data()</span></tt>
 方法将你的数据添加到特定的目录下。但是如果你想创建一个空目录，你可以使用它:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">zip</span><span class="o">-&gt;</span><span class="na">add_dir</span><span class="p">(</span><span class="s1">&#39;myfolder&#39;</span><span class="p">);</span> <span class="c1">// Creates a directory called &quot;myfolder&quot;</span>
 </pre></div>
@@ -558,7 +559,7 @@
 
 <dl class="method">
 <dt id="CI_Zip::read_file">
-<code class="descname">read_file</code><span class="sig-paren">(</span><em>$path</em><span class="optional">[</span>, <em>$archive_filepath = FALSE</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Zip::read_file" title="永久链接至目标">¶</a></dt>
+<tt class="descname">read_file</tt><big>(</big><em>$path</em><span class="optional">[</span>, <em>$archive_filepath = FALSE</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Zip::read_file" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -611,7 +612,7 @@
 
 <dl class="method">
 <dt id="CI_Zip::read_dir">
-<code class="descname">read_dir</code><span class="sig-paren">(</span><em>$path</em><span class="optional">[</span>, <em>$preserve_filepath = TRUE</em><span class="optional">[</span>, <em>$root_path = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Zip::read_dir" title="永久链接至目标">¶</a></dt>
+<tt class="descname">read_dir</tt><big>(</big><em>$path</em><span class="optional">[</span>, <em>$preserve_filepath = TRUE</em><span class="optional">[</span>, <em>$root_path = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Zip::read_dir" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -655,7 +656,7 @@
 
 <dl class="method">
 <dt id="CI_Zip::archive">
-<code class="descname">archive</code><span class="sig-paren">(</span><em>$filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Zip::archive" title="永久链接至目标">¶</a></dt>
+<tt class="descname">archive</tt><big>(</big><em>$filepath</em><big>)</big><a class="headerlink" href="#CI_Zip::archive" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -682,7 +683,7 @@
 
 <dl class="method">
 <dt id="CI_Zip::download">
-<code class="descname">download</code><span class="sig-paren">(</span><em>$filename = 'backup.zip'</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Zip::download" title="永久链接至目标">¶</a></dt>
+<tt class="descname">download</tt><big>(</big><em>$filename = 'backup.zip'</em><big>)</big><a class="headerlink" href="#CI_Zip::download" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -710,7 +711,7 @@
 
 <dl class="method">
 <dt id="CI_Zip::get_zip">
-<code class="descname">get_zip</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Zip::get_zip" title="永久链接至目标">¶</a></dt>
+<tt class="descname">get_zip</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_Zip::get_zip" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -735,7 +736,7 @@
 
 <dl class="method">
 <dt id="CI_Zip::clear_data">
-<code class="descname">clear_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Zip::clear_data" title="永久链接至目标">¶</a></dt>
+<tt class="descname">clear_data</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_Zip::clear_data" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="类库参考" href="index.html"/>
         <link rel="next" title="表单验证类" href="form_validation.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -130,7 +129,7 @@
 <li class="toctree-l2"><a class="reference internal" href="email.html">Email 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="encrypt.html">加密类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="encryption.html">加密类（新版）</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">文件上传类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">文件上传类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="form_validation.html">表单验证类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ftp.html">FTP 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="image_lib.html">图像处理类</a></li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -314,7 +315,7 @@
 <li class="toctree-l2"><a class="reference internal" href="email.html">Email 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="encrypt.html">加密类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="encryption.html">加密类（新版）</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">文件上传类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">文件上传类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="form_validation.html">表单验证类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ftp.html">FTP 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="image_lib.html">图像处理类</a></li>
@@ -575,7 +576,7 @@
 <h2><a class="toc-backref" href="#id20">参考指南</a><a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id9">
 <h3><a class="toc-backref" href="#id21">初始化文件上传类</a><a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
-<p>正如 CodeIgniter 中的其他类一样，在你的控制器中使用 <code class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></code>
+<p>正如 CodeIgniter 中的其他类一样，在你的控制器中使用 <tt class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></tt>
 方法来初始化文件上传类:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;upload&#39;</span><span class="p">);</span>
 </pre></div>
@@ -719,17 +720,17 @@
 <h3><a class="toc-backref" href="#id24">在配置文件中设置参数</a><a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
 <p>如果你不喜欢使用上面的方法来设置参数，你可以将参数保存到配置文件中。你只需简单的创建一个文件
 upload.php 并将 $config 数组放到该文件中，然后保存文件到 <strong>config/upload.php</strong> ，这些参数将会自动被使用。
-如果你在配置文件中设置参数，那么你就不需要使用 <code class="docutils literal"><span class="pre">$this-&gt;upload-&gt;initialize()</span></code> 方法了。</p>
+如果你在配置文件中设置参数，那么你就不需要使用 <tt class="docutils literal"><span class="pre">$this-&gt;upload-&gt;initialize()</span></tt> 方法了。</p>
 </div>
 </div>
 <div class="section" id="id13">
 <h2><a class="toc-backref" href="#id25">类参考</a><a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="CI_Upload">
-<em class="property">class </em><code class="descname">CI_Upload</code><a class="headerlink" href="#CI_Upload" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><tt class="descname">CI_Upload</tt><a class="headerlink" href="#CI_Upload" title="永久链接至目标">¶</a></dt>
 <dd><dl class="method">
 <dt id="CI_Upload::initialize">
-<code class="descname">initialize</code><span class="sig-paren">(</span><span class="optional">[</span><em>array $config = array()</em><span class="optional">[</span>, <em>$reset = TRUE</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Upload::initialize" title="永久链接至目标">¶</a></dt>
+<tt class="descname">initialize</tt><big>(</big><span class="optional">[</span><em>array $config = array()</em><span class="optional">[</span>, <em>$reset = TRUE</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Upload::initialize" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -752,7 +753,7 @@ upload.php 并将 $config 数组放到该文件中，然后保存文件到 <stro
 
 <dl class="method">
 <dt id="CI_Upload::do_upload">
-<code class="descname">do_upload</code><span class="sig-paren">(</span><span class="optional">[</span><em>$field = 'userfile'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Upload::do_upload" title="永久链接至目标">¶</a></dt>
+<tt class="descname">do_upload</tt><big>(</big><span class="optional">[</span><em>$field = 'userfile'</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Upload::do_upload" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -778,7 +779,7 @@ upload.php 并将 $config 数组放到该文件中，然后保存文件到 <stro
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nx">form</span> <span class="nx">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span> <span class="nx">action</span><span class="o">=</span><span class="s2">&quot;some_action&quot;</span> <span class="nx">enctype</span><span class="o">=</span><span class="s2">&quot;multipart/form-data&quot;</span> <span class="o">/&gt;</span>
 </pre></div>
 </div>
-<p>如果你想设置你自己的字段，可以将字段名传给 <code class="docutils literal"><span class="pre">do_upload()</span></code> 方法:</p>
+<p>如果你想设置你自己的字段，可以将字段名传给 <tt class="docutils literal"><span class="pre">do_upload()</span></tt> 方法:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$field_name</span> <span class="o">=</span> <span class="s2">&quot;some_field_name&quot;</span><span class="p">;</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">upload</span><span class="o">-&gt;</span><span class="na">do_upload</span><span class="p">(</span><span class="nv">$field_name</span><span class="p">);</span>
 </pre></div>
@@ -787,7 +788,7 @@ upload.php 并将 $config 数组放到该文件中，然后保存文件到 <stro
 
 <dl class="method">
 <dt id="CI_Upload::display_errors">
-<code class="descname">display_errors</code><span class="sig-paren">(</span><span class="optional">[</span><em>$open = '&lt;p&gt;'</em><span class="optional">[</span>, <em>$close = '&lt;/p&gt;'</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Upload::display_errors" title="永久链接至目标">¶</a></dt>
+<tt class="descname">display_errors</tt><big>(</big><span class="optional">[</span><em>$open = '&lt;p&gt;'</em><span class="optional">[</span>, <em>$close = '&lt;/p&gt;'</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Upload::display_errors" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -806,7 +807,7 @@ upload.php 并将 $config 数组放到该文件中，然后保存文件到 <stro
 </tr>
 </tbody>
 </table>
-<p>如果 <code class="docutils literal"><span class="pre">do_upload()</span></code> 方法返回 FALSE ，可以使用该方法来获取错误信息。
+<p>如果 <tt class="docutils literal"><span class="pre">do_upload()</span></tt> 方法返回 FALSE ，可以使用该方法来获取错误信息。
 该方法返回所有的错误信息，而不是是直接显示出来。</p>
 <p><strong>格式化错误信息</strong></p>
 <blockquote>
@@ -819,7 +820,7 @@ upload.php 并将 $config 数组放到该文件中，然后保存文件到 <stro
 
 <dl class="method">
 <dt id="CI_Upload::data">
-<code class="descname">data</code><span class="sig-paren">(</span><span class="optional">[</span><em>$index = NULL</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Upload::data" title="永久链接至目标">¶</a></dt>
+<tt class="descname">data</tt><big>(</big><span class="optional">[</span><em>$index = NULL</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Upload::data" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

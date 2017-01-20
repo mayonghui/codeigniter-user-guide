@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="常规主题" href="index.html"/>
         <link rel="next" title="自动加载资源" href="autoloader.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -103,7 +102,7 @@
 <li class="toctree-l2"><a class="reference internal" href="creating_drivers.html">创建驱动器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="core_classes.html">创建核心系统类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ancillary_classes.html">创建附属类</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">钩子 - 扩展框架核心</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">钩子 - 扩展框架核心</a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoloader.html">自动加载资源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="common_functions.html">公共函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compatibility_functions.html">兼容性函数</a></li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -287,7 +288,7 @@
 <li class="toctree-l2"><a class="reference internal" href="creating_drivers.html">创建驱动器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="core_classes.html">创建核心系统类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ancillary_classes.html">创建附属类</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">钩子 - 扩展框架核心</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">钩子 - 扩展框架核心</a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoloader.html">自动加载资源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="common_functions.html">公共函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compatibility_functions.html">兼容性函数</a></li>
@@ -428,7 +429,7 @@
 <h1>钩子 - 扩展框架核心<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>CodeIgniter 的钩子特性提供了一种方法来修改框架的内部运作流程，而无需修改
 核心文件。CodeIgniter 的运行遵循着一个特定的流程，你可以参考这个页面的
-<a class="reference internal" href="../overview/appflow.html"><span class="doc">应用程序流程图</span></a> 。但是，有些时候你可能希望在
+<a class="reference internal" href="../overview/appflow.html"><em>应用程序流程图</em></a> 。但是，有些时候你可能希望在
 执行流程中的某些阶段添加一些动作，例如在控制器加载之前或之后执行一段脚本，
 或者在其他的某些位置触发你的脚本。</p>
 <div class="section" id="id2">
@@ -516,12 +517,12 @@
 <li><strong>post_controller</strong>
 在你的控制器完全运行结束时执行。</li>
 <li><strong>display_override</strong>
-覆盖 <code class="docutils literal"><span class="pre">_display()</span></code> 方法，该方法用于在系统执行结束时向浏览器发送最终的页面结果。
-这可以让你有自己的显示页面的方法。注意你可能需要使用 <code class="docutils literal"><span class="pre">$this-&gt;CI</span> <span class="pre">=&amp;</span> <span class="pre">get_instance()</span></code>
-方法来获取 CI 超级对象，以及使用 <code class="docutils literal"><span class="pre">$this-&gt;CI-&gt;output-&gt;get_output()</span></code> 方法来
+覆盖 <tt class="docutils literal"><span class="pre">_display()</span></tt> 方法，该方法用于在系统执行结束时向浏览器发送最终的页面结果。
+这可以让你有自己的显示页面的方法。注意你可能需要使用 <tt class="docutils literal"><span class="pre">$this-&gt;CI</span> <span class="pre">=&amp;</span> <span class="pre">get_instance()</span></tt>
+方法来获取 CI 超级对象，以及使用 <tt class="docutils literal"><span class="pre">$this-&gt;CI-&gt;output-&gt;get_output()</span></tt> 方法来
 获取最终的显示数据。</li>
 <li><strong>cache_override</strong>
-使用你自己的方法来替代 <a class="reference internal" href="../libraries/output.html"><span class="doc">输出类</span></a> 中的 <code class="docutils literal"><span class="pre">_display_cache()</span></code>
+使用你自己的方法来替代 <a class="reference internal" href="../libraries/output.html"><em>输出类</em></a> 中的 <tt class="docutils literal"><span class="pre">_display_cache()</span></tt>
 方法，这让你有自己的缓存显示机制。</li>
 <li><strong>post_system</strong>
 在最终的页面发送到浏览器之后、在系统的最后期被调用。</li>

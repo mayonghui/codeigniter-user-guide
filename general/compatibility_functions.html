@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="常规主题" href="index.html"/>
         <link rel="next" title="URI 路由" href="routing.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -106,7 +105,7 @@
 <li class="toctree-l2"><a class="reference internal" href="hooks.html">钩子 - 扩展框架核心</a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoloader.html">自动加载资源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="common_functions.html">公共函数</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">兼容性函数</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">兼容性函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routing.html">URI 路由</a></li>
 <li class="toctree-l2"><a class="reference internal" href="errors.html">错误处理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching.html">网页缓存</a></li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -290,7 +291,7 @@
 <li class="toctree-l2"><a class="reference internal" href="hooks.html">钩子 - 扩展框架核心</a></li>
 <li class="toctree-l2"><a class="reference internal" href="autoloader.html">自动加载资源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="common_functions.html">公共函数</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">兼容性函数</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">兼容性函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routing.html">URI 路由</a></li>
 <li class="toctree-l2"><a class="reference internal" href="errors.html">错误处理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching.html">网页缓存</a></li>
@@ -432,7 +433,7 @@
 这些函数还是有用的。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">和 <a class="reference internal" href="common_functions.html"><span class="doc">公共函数</span></a> 一样，兼容性函数也一直可以访问，只要满足了他们的依赖条件。</p>
+<p class="last">和 <a class="reference internal" href="common_functions.html"><em>公共函数</em></a> 一样，兼容性函数也一直可以访问，只要满足了他们的依赖条件。</p>
 </div>
 <div class="contents local topic" id="contents">
 <ul class="simple">
@@ -467,21 +468,21 @@
 <h3><a class="toc-backref" href="#id18">依赖性</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li>PHP 5.3.7</li>
-<li><code class="docutils literal"><span class="pre">crypt()</span></code> 函数需支持 <code class="docutils literal"><span class="pre">CRYPT_BLOWFISH</span></code></li>
+<li><tt class="docutils literal"><span class="pre">crypt()</span></tt> 函数需支持 <tt class="docutils literal"><span class="pre">CRYPT_BLOWFISH</span></tt></li>
 </ul>
 </div>
 <div class="section" id="id5">
 <h3><a class="toc-backref" href="#id19">常量</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">PASSWORD_BCRYPT</span></code></li>
-<li><code class="docutils literal"><span class="pre">PASSWORD_DEFAULT</span></code></li>
+<li><tt class="docutils literal"><span class="pre">PASSWORD_BCRYPT</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">PASSWORD_DEFAULT</span></tt></li>
 </ul>
 </div>
 <div class="section" id="id6">
 <h3><a class="toc-backref" href="#id20">函数参考</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <dl class="function">
 <dt id="password_get_info">
-<code class="descname">password_get_info</code><span class="sig-paren">(</span><em>$hash</em><span class="sig-paren">)</span><a class="headerlink" href="#password_get_info" title="永久链接至目标">¶</a></dt>
+<tt class="descname">password_get_info</tt><big>(</big><em>$hash</em><big>)</big><a class="headerlink" href="#password_get_info" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -504,7 +505,7 @@
 
 <dl class="function">
 <dt id="password_hash">
-<code class="descname">password_hash</code><span class="sig-paren">(</span><em>$password</em>, <em>$algo</em><span class="optional">[</span>, <em>$options = array()</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#password_hash" title="永久链接至目标">¶</a></dt>
+<tt class="descname">password_hash</tt><big>(</big><em>$password</em>, <em>$algo</em><span class="optional">[</span>, <em>$options = array()</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#password_hash" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -529,8 +530,8 @@
 <p class="first admonition-title">注解</p>
 <p class="last">除非提供了你自己的有效的 Salt，该函数会依赖于一个可用的 CSPRNG 源（密码学安全的伪随机数生成器），
 下面列表中的每一个都可以满足这点：
-- <code class="docutils literal"><span class="pre">mcrypt_create_iv()</span></code> with <code class="docutils literal"><span class="pre">MCRYPT_DEV_URANDOM</span></code>
-- <code class="docutils literal"><span class="pre">openssl_random_pseudo_bytes()</span></code>
+- <tt class="docutils literal"><span class="pre">mcrypt_create_iv()</span></tt> with <tt class="docutils literal"><span class="pre">MCRYPT_DEV_URANDOM</span></tt>
+- <tt class="docutils literal"><span class="pre">openssl_random_pseudo_bytes()</span></tt>
 - /dev/arandom
 - /dev/urandom</p>
 </div>
@@ -538,7 +539,7 @@
 
 <dl class="function">
 <dt id="password_needs_rehash">
-<code class="descname">password_needs_rehash</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#password_needs_rehash" title="永久链接至目标">¶</a></dt>
+<tt class="descname">password_needs_rehash</tt><big>(</big><big>)</big><a class="headerlink" href="#password_needs_rehash" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -563,7 +564,7 @@
 
 <dl class="function">
 <dt id="password_verify">
-<code class="descname">password_verify</code><span class="sig-paren">(</span><em>$password</em>, <em>$hash</em><span class="sig-paren">)</span><a class="headerlink" href="#password_verify" title="永久链接至目标">¶</a></dt>
+<tt class="descname">password_verify</tt><big>(</big><em>$password</em>, <em>$hash</em><big>)</big><a class="headerlink" href="#password_verify" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -589,7 +590,7 @@
 </div>
 <div class="section" id="id7">
 <h2><a class="toc-backref" href="#id21">哈希（信息摘要）</a><a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
-<p>兼容性函数移植了 <code class="docutils literal"><span class="pre">hash_equals()</span></code> 和 <code class="docutils literal"><span class="pre">hash_pbkdf2()</span></code> 的实现，
+<p>兼容性函数移植了 <tt class="docutils literal"><span class="pre">hash_equals()</span></tt> 和 <tt class="docutils literal"><span class="pre">hash_pbkdf2()</span></tt> 的实现，
 这两函数分别在 PHP 5.6 和 PHP 5.5 以后的版本中才有。</p>
 <div class="section" id="id8">
 <h3><a class="toc-backref" href="#id22">依赖性</a><a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
@@ -601,7 +602,7 @@
 <h3><a class="toc-backref" href="#id23">函数参考</a><a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
 <dl class="function">
 <dt id="hash_equals">
-<code class="descname">hash_equals</code><span class="sig-paren">(</span><em>$known_string</em>, <em>$user_string</em><span class="sig-paren">)</span><a class="headerlink" href="#hash_equals" title="永久链接至目标">¶</a></dt>
+<tt class="descname">hash_equals</tt><big>(</big><em>$known_string</em>, <em>$user_string</em><big>)</big><a class="headerlink" href="#hash_equals" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -625,7 +626,7 @@
 
 <dl class="function">
 <dt id="hash_pbkdf2">
-<code class="descname">hash_pbkdf2</code><span class="sig-paren">(</span><em>$algo</em>, <em>$password</em>, <em>$salt</em>, <em>$iterations</em><span class="optional">[</span>, <em>$length = 0</em><span class="optional">[</span>, <em>$raw_output = FALSE</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#hash_pbkdf2" title="永久链接至目标">¶</a></dt>
+<tt class="descname">hash_pbkdf2</tt><big>(</big><em>$algo</em>, <em>$password</em>, <em>$salt</em>, <em>$iterations</em><span class="optional">[</span>, <em>$length = 0</em><span class="optional">[</span>, <em>$raw_output = FALSE</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#hash_pbkdf2" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -659,7 +660,7 @@
 由于可选的解决方法有限，所以只有几个函数是可用的。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">如果没有指定字符集参数，默认使用 <code class="docutils literal"><span class="pre">$config['charset']</span></code> 配置。</p>
+<p class="last">如果没有指定字符集参数，默认使用 <tt class="docutils literal"><span class="pre">$config['charset']</span></tt> 配置。</p>
 </div>
 <div class="section" id="id12">
 <h3><a class="toc-backref" href="#id25">依赖性</a><a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
@@ -677,14 +678,14 @@
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">如果你需要判断是否支持真正的多字节字符串扩展，可以使用 <code class="docutils literal"><span class="pre">MB_ENABLED</span></code> 常量。</p>
+<p class="last">如果你需要判断是否支持真正的多字节字符串扩展，可以使用 <tt class="docutils literal"><span class="pre">MB_ENABLED</span></tt> 常量。</p>
 </div>
 </div>
 <div class="section" id="id13">
 <h3><a class="toc-backref" href="#id26">函数参考</a><a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
 <dl class="function">
 <dt id="mb_strlen">
-<code class="descname">mb_strlen</code><span class="sig-paren">(</span><em>$str</em><span class="optional">[</span>, <em>$encoding = NULL</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#mb_strlen" title="永久链接至目标">¶</a></dt>
+<tt class="descname">mb_strlen</tt><big>(</big><em>$str</em><span class="optional">[</span>, <em>$encoding = NULL</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#mb_strlen" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -708,7 +709,7 @@
 
 <dl class="function">
 <dt id="mb_strpos">
-<code class="descname">mb_strpos</code><span class="sig-paren">(</span><em>$haystack</em>, <em>$needle</em><span class="optional">[</span>, <em>$offset = 0</em><span class="optional">[</span>, <em>$encoding = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#mb_strpos" title="永久链接至目标">¶</a></dt>
+<tt class="descname">mb_strpos</tt><big>(</big><em>$haystack</em>, <em>$needle</em><span class="optional">[</span>, <em>$offset = 0</em><span class="optional">[</span>, <em>$encoding = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#mb_strpos" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -734,7 +735,7 @@
 
 <dl class="function">
 <dt id="mb_substr">
-<code class="descname">mb_substr</code><span class="sig-paren">(</span><em>$str</em>, <em>$start</em><span class="optional">[</span>, <em>$length = NULL</em><span class="optional">[</span>, <em>$encoding = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#mb_substr" title="永久链接至目标">¶</a></dt>
+<tt class="descname">mb_substr</tt><big>(</big><em>$str</em>, <em>$start</em><span class="optional">[</span>, <em>$length = NULL</em><span class="optional">[</span>, <em>$encoding = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#mb_substr" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -773,7 +774,7 @@
 <h3><a class="toc-backref" href="#id29">函数参考</a><a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
 <dl class="function">
 <dt id="array_column">
-<code class="descname">array_column</code><span class="sig-paren">(</span><em>array $array</em>, <em>$column_key</em><span class="optional">[</span>, <em>$index_key = NULL</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#array_column" title="永久链接至目标">¶</a></dt>
+<tt class="descname">array_column</tt><big>(</big><em>array $array</em>, <em>$column_key</em><span class="optional">[</span>, <em>$index_key = NULL</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#array_column" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -798,7 +799,7 @@
 
 <dl class="function">
 <dt id="hex2bin">
-<code class="descname">hex2bin</code><span class="sig-paren">(</span><em>$data</em><span class="sig-paren">)</span><a class="headerlink" href="#hex2bin" title="永久链接至目标">¶</a></dt>
+<tt class="descname">hex2bin</tt><big>(</big><em>$data</em><big>)</big><a class="headerlink" href="#hex2bin" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

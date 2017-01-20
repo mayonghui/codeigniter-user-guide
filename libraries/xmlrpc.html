@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="类库参考" href="index.html"/>
         <link rel="next" title="Zip 编码类" href="zip.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -150,7 +149,7 @@
 <li class="toctree-l2"><a class="reference internal" href="unit_testing.html">单元测试类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="uri.html">URI 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user_agent.html">用户代理类</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">XML-RPC 与 XML-RPC 服务器类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">XML-RPC 与 XML-RPC 服务器类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="zip.html">Zip 编码类</a></li>
 </ul>
 </li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -334,7 +335,7 @@
 <li class="toctree-l2"><a class="reference internal" href="unit_testing.html">单元测试类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="uri.html">URI 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user_agent.html">用户代理类</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">XML-RPC 与 XML-RPC 服务器类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">XML-RPC 与 XML-RPC 服务器类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="zip.html">Zip 编码类</a></li>
 </ul>
 </li>
@@ -473,7 +474,7 @@
 <h2><a class="toc-backref" href="#id23">使用 XML-RPC 类</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id3">
 <h3><a class="toc-backref" href="#id24">初始化类</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
-<p>跟 CodeIgniter 中的其他类一样，可以在你的控制器中使用 <code class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></code>
+<p>跟 CodeIgniter 中的其他类一样，可以在你的控制器中使用 <tt class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></tt>
 方法加载 XML-RPC 类和 XML-RPC 服务器类。</p>
 <p>加载 XML-RPC 类如下:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;xmlrpc&#39;</span><span class="p">);</span>
@@ -581,13 +582,13 @@ XML-RPC 服务器类，然后设置一个映射数组，用于将请求转发到
 CodeIgniter 超级对象时，它将是必须的。</p>
 <p>换句话说，如果 XML-RPC 客户端发送一个请求到 new_post 方法，
 你的服务器会加载 My_blog 类并调用 new_entry 函数。如果这个请求是到
-<code class="docutils literal"><span class="pre">update_post</span></code> 方法的，那么你的服务器会加载 My_blog 类并调用
-<code class="docutils literal"><span class="pre">update_entry</span></code> 方法。</p>
+<tt class="docutils literal"><span class="pre">update_post</span></tt> 方法的，那么你的服务器会加载 My_blog 类并调用
+<tt class="docutils literal"><span class="pre">update_entry</span></tt> 方法。</p>
 <p>上面例子中的函数名是任意的。你可以决定这些函数在你的服务器上叫什么名字，
 如果你使用的是标准的 API，比如 Blogger 或者 MetaWeblog 的 API，
 你必须使用标准的函数名。</p>
 <p>这里还有两个附加的配置项，可以在服务器类初始化时配置使用。debug 设为 TRUE 以便调试，
-<code class="docutils literal"><span class="pre">xss_clean</span></code> 可被设置为 FALSE 以避免数据被安全类库的 <code class="docutils literal"><span class="pre">xss_clean</span></code> 函数过滤。</p>
+<tt class="docutils literal"><span class="pre">xss_clean</span></tt> 可被设置为 FALSE 以避免数据被安全类库的 <tt class="docutils literal"><span class="pre">xss_clean</span></tt> 函数过滤。</p>
 </div>
 <div class="section" id="id9">
 <h3><a class="toc-backref" href="#id29">处理服务器请求</a><a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
@@ -643,9 +644,9 @@ XML-RPC 客户端可以使用该方法发送用户名和密码到服务器，在
 </div>
 <div class="section" id="id10">
 <h4><a class="toc-backref" href="#id30">注意</a><a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h4>
-<p><code class="docutils literal"><span class="pre">output_parameters()</span></code> 函数获取一个由客户端发送的请求参数数组。
+<p><tt class="docutils literal"><span class="pre">output_parameters()</span></tt> 函数获取一个由客户端发送的请求参数数组。
 上面的例子中输出参数将会是用户名和密码。</p>
-<p>如果客户端发送的用户名和密码无效的话，将使用 <code class="docutils literal"><span class="pre">send_error_message()</span></code> 函数返回错误信息。</p>
+<p>如果客户端发送的用户名和密码无效的话，将使用 <tt class="docutils literal"><span class="pre">send_error_message()</span></tt> 函数返回错误信息。</p>
 <p>如果操作成功，客户端会收到包含用户信息的响应数组。</p>
 </div>
 </div>
@@ -724,7 +725,7 @@ XML-RPC 客户端可以使用该方法发送用户名和密码到服务器，在
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
 <p class="last">上面的代码中我们使用了一个 URL 辅助函数，更多关于辅助函数的信息，
-你可以阅读 <a class="reference internal" href="../general/helpers.html"><span class="doc">这里</span></a> 。</p>
+你可以阅读 <a class="reference internal" href="../general/helpers.html"><em>这里</em></a> 。</p>
 </div>
 </div>
 <div class="section" id="id16">
@@ -826,10 +827,10 @@ XML-RPC 客户端可以使用该方法发送用户名和密码到服务器，在
 <h2><a class="toc-backref" href="#id39">类参考</a><a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="CI_Xmlrpc">
-<em class="property">class </em><code class="descname">CI_Xmlrpc</code><a class="headerlink" href="#CI_Xmlrpc" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><tt class="descname">CI_Xmlrpc</tt><a class="headerlink" href="#CI_Xmlrpc" title="永久链接至目标">¶</a></dt>
 <dd><dl class="method">
 <dt id="CI_Xmlrpc::initialize">
-<code class="descname">initialize</code><span class="sig-paren">(</span><span class="optional">[</span><em>$config = array()</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Xmlrpc::initialize" title="永久链接至目标">¶</a></dt>
+<tt class="descname">initialize</tt><big>(</big><span class="optional">[</span><em>$config = array()</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Xmlrpc::initialize" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -849,7 +850,7 @@ XML-RPC 客户端可以使用该方法发送用户名和密码到服务器，在
 
 <dl class="method">
 <dt id="CI_Xmlrpc::server">
-<code class="descname">server</code><span class="sig-paren">(</span><em>$url</em><span class="optional">[</span>, <em>$port = 80</em><span class="optional">[</span>, <em>$proxy = FALSE</em><span class="optional">[</span>, <em>$proxy_port = 8080</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Xmlrpc::server" title="永久链接至目标">¶</a></dt>
+<tt class="descname">server</tt><big>(</big><em>$url</em><span class="optional">[</span>, <em>$port = 80</em><span class="optional">[</span>, <em>$proxy = FALSE</em><span class="optional">[</span>, <em>$proxy_port = 8080</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Xmlrpc::server" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -879,7 +880,7 @@ XML-RPC 客户端可以使用该方法发送用户名和密码到服务器，在
 
 <dl class="method">
 <dt id="CI_Xmlrpc::timeout">
-<code class="descname">timeout</code><span class="sig-paren">(</span><em>$seconds = 5</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Xmlrpc::timeout" title="永久链接至目标">¶</a></dt>
+<tt class="descname">timeout</tt><big>(</big><em>$seconds = 5</em><big>)</big><a class="headerlink" href="#CI_Xmlrpc::timeout" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -901,13 +902,13 @@ XML-RPC 客户端可以使用该方法发送用户名和密码到服务器，在
 <dl class="docutils">
 <dt>This timeout period will be used both for an initial connection to</dt>
 <dd>the remote server, as well as for getting a response from it.
-Make sure you set the timeout before calling <code class="docutils literal"><span class="pre">send_request()</span></code>.</dd>
+Make sure you set the timeout before calling <tt class="docutils literal"><span class="pre">send_request()</span></tt>.</dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_Xmlrpc::method">
-<code class="descname">method</code><span class="sig-paren">(</span><em>$function</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Xmlrpc::method" title="永久链接至目标">¶</a></dt>
+<tt class="descname">method</tt><big>(</big><em>$function</em><big>)</big><a class="headerlink" href="#CI_Xmlrpc::method" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -931,7 +932,7 @@ Make sure you set the timeout before calling <code class="docutils literal"><spa
 
 <dl class="method">
 <dt id="CI_Xmlrpc::request">
-<code class="descname">request</code><span class="sig-paren">(</span><em>$incoming</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Xmlrpc::request" title="永久链接至目标">¶</a></dt>
+<tt class="descname">request</tt><big>(</big><em>$incoming</em><big>)</big><a class="headerlink" href="#CI_Xmlrpc::request" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -955,7 +956,7 @@ Make sure you set the timeout before calling <code class="docutils literal"><spa
 
 <dl class="method">
 <dt id="CI_Xmlrpc::send_request">
-<code class="descname">send_request</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Xmlrpc::send_request" title="永久链接至目标">¶</a></dt>
+<tt class="descname">send_request</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_Xmlrpc::send_request" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -971,7 +972,7 @@ Make sure you set the timeout before calling <code class="docutils literal"><spa
 
 <dl class="method">
 <dt id="CI_Xmlrpc::display_error">
-<code class="descname">display_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Xmlrpc::display_error" title="永久链接至目标">¶</a></dt>
+<tt class="descname">display_error</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_Xmlrpc::display_error" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -990,7 +991,7 @@ Make sure you set the timeout before calling <code class="docutils literal"><spa
 
 <dl class="method">
 <dt id="CI_Xmlrpc::display_response">
-<code class="descname">display_response</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Xmlrpc::display_response" title="永久链接至目标">¶</a></dt>
+<tt class="descname">display_response</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_Xmlrpc::display_response" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1009,7 +1010,7 @@ Make sure you set the timeout before calling <code class="docutils literal"><spa
 
 <dl class="method">
 <dt id="CI_Xmlrpc::send_error_message">
-<code class="descname">send_error_message</code><span class="sig-paren">(</span><em>$number</em>, <em>$message</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Xmlrpc::send_error_message" title="永久链接至目标">¶</a></dt>
+<tt class="descname">send_error_message</tt><big>(</big><em>$number</em>, <em>$message</em><big>)</big><a class="headerlink" href="#CI_Xmlrpc::send_error_message" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

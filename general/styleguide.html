@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="常规主题" href="index.html"/>
         <link rel="next" title="类库参考" href="../libraries/index.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -116,7 +115,7 @@
 <li class="toctree-l2"><a class="reference internal" href="environments.html">处理多环境</a></li>
 <li class="toctree-l2"><a class="reference internal" href="alternative_php.html">在视图文件中使用 PHP 替代语法</a></li>
 <li class="toctree-l2"><a class="reference internal" href="security.html">安全</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">PHP 开发规范</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">PHP 开发规范</a></li>
 </ul>
 </li>
 </ul>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -300,7 +301,7 @@
 <li class="toctree-l2"><a class="reference internal" href="environments.html">处理多环境</a></li>
 <li class="toctree-l2"><a class="reference internal" href="alternative_php.html">在视图文件中使用 PHP 替代语法</a></li>
 <li class="toctree-l2"><a class="reference internal" href="security.html">安全</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">PHP 开发规范</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">PHP 开发规范</a></li>
 </ul>
 </li>
 </ul>
@@ -674,9 +675,9 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 </div>
 <div class="section" id="id9">
 <h2><a class="toc-backref" href="#id38">逻辑操作符</a><a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
-<p>不要使用 <code class="docutils literal"><span class="pre">||</span></code> 操作符，它在一些设备上看不清（可能看起来像是数字 11），
-使用 <code class="docutils literal"><span class="pre">&amp;&amp;</span></code> 操作符比使用 <code class="docutils literal"><span class="pre">AND</span></code> 要好一点，但是两者都可以接受。
-另外，在 <code class="docutils literal"><span class="pre">!</span></code> 操作符的前后都应该加一个空格。</p>
+<p>不要使用 <tt class="docutils literal"><span class="pre">||</span></tt> 操作符，它在一些设备上看不清（可能看起来像是数字 11），
+使用 <tt class="docutils literal"><span class="pre">&amp;&amp;</span></tt> 操作符比使用 <tt class="docutils literal"><span class="pre">AND</span></tt> 要好一点，但是两者都可以接受。
+另外，在 <tt class="docutils literal"><span class="pre">!</span></tt> 操作符的前后都应该加一个空格。</p>
 <p><strong>错误的</strong>:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nv">$foo</span> <span class="o">||</span> <span class="nv">$bar</span><span class="p">)</span>
 <span class="k">if</span> <span class="p">(</span><span class="nv">$foo</span> <span class="k">AND</span> <span class="nv">$bar</span><span class="p">)</span>  <span class="c1">// okay but not recommended for common syntax highlighting applications</span>
@@ -738,7 +739,7 @@ UTF-8 编码格式的文件不需要指定字节序。而且 BOM 会在 PHP 的�
 <div class="section" id="id12">
 <h2><a class="toc-backref" href="#id40">调试代码</a><a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
 <p>不要在你的提交中包含调试代码，就算是注释掉了也不行。
-像 <code class="docutils literal"><span class="pre">var_dump()</span></code> 、 <code class="docutils literal"><span class="pre">print_r()</span></code> 、 <code class="docutils literal"><span class="pre">die()</span></code> 和 <code class="docutils literal"><span class="pre">exit()</span></code> 这样的函数，都不应该包含在你的代码里，
+像 <tt class="docutils literal"><span class="pre">var_dump()</span></tt> 、 <tt class="docutils literal"><span class="pre">print_r()</span></tt> 、 <tt class="docutils literal"><span class="pre">die()</span></tt> 和 <tt class="docutils literal"><span class="pre">exit()</span></tt> 这样的函数，都不应该包含在你的代码里，
 除非它们用于除调试之外的其他特殊用途。</p>
 </div>
 <div class="section" id="id13">
@@ -903,8 +904,8 @@ foreach、if、switch、while）的后面应该加一个空格，这样做可以
 <div class="section" id="id22">
 <h2><a class="toc-backref" href="#id50">PHP 错误</a><a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h2>
 <p>运行代码时不应该出现任何错误信息，并不是把警告和提示信息关掉来满足这一点。
-例如，绝不要直接访问一个你没设置过的变量（例如，<code class="docutils literal"><span class="pre">$_POST</span></code> 数组），
-你应该先使用 <code class="docutils literal"><span class="pre">isset()</span></code> 函数判断下。</p>
+例如，绝不要直接访问一个你没设置过的变量（例如，<tt class="docutils literal"><span class="pre">$_POST</span></tt> 数组），
+你应该先使用 <tt class="docutils literal"><span class="pre">isset()</span></tt> 函数判断下。</p>
 <p>确保你的开发环境对所有人都开启了错误报告，PHP 环境的 display_errors 参数也开启了，
 你可以通过下面的代码来检查:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nb">ini_get</span><span class="p">(</span><span class="s1">&#39;display_errors&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
@@ -920,7 +921,7 @@ foreach、if、switch、while）的后面应该加一个空格，这样做可以
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">使用 <code class="docutils literal"><span class="pre">ini_set()</span></code> 函数在运行时设置 <a class="reference external" href="http://php.net/manual/en/errorfunc.configuration.php#ini.display-errors">display_errors</a>
+<p class="last">使用 <tt class="docutils literal"><span class="pre">ini_set()</span></tt> 函数在运行时设置 <a class="reference external" href="http://php.net/manual/en/errorfunc.configuration.php#ini.display-errors">display_errors</a>
 参数和通过 php.ini 配置文件来设置是不一样的，换句话说，当出现致命错误（fatal errors）时，这种方法没用。</p>
 </div>
 </div>

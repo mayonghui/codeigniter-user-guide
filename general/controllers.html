@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="常规主题" href="index.html"/>
         <link rel="next" title="保留名称" href="reserved_names.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -92,7 +91,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">常规主题</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="urls.html">CodeIgniter URL</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">控制器</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">控制器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reserved_names.html">保留名称</a></li>
 <li class="toctree-l2"><a class="reference internal" href="views.html">视图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="models.html">模型</a></li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -276,7 +277,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">常规主题</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="urls.html">CodeIgniter URL</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">控制器</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">控制器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reserved_names.html">保留名称</a></li>
 <li class="toctree-l2"><a class="reference internal" href="views.html">视图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="models.html">模型</a></li>
@@ -505,7 +506,7 @@
 </div>
 <div class="section" id="id4">
 <h2><a class="toc-backref" href="#id16">方法</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<p>上例中，方法名为 <code class="docutils literal"><span class="pre">index()</span></code> 。&quot;index&quot; 方法总是在 URI 的 <strong>第二段</strong> 为空时被调用。
+<p>上例中，方法名为 <tt class="docutils literal"><span class="pre">index()</span></tt> 。&quot;index&quot; 方法总是在 URI 的 <strong>第二段</strong> 为空时被调用。
 另一种显示 &quot;Hello World&quot; 消息的方法是:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">example</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">index</span><span class="o">.</span><span class="nx">php</span><span class="o">/</span><span class="nx">blog</span><span class="o">/</span><span class="nx">index</span><span class="o">/</span>
 </pre></div>
@@ -554,7 +555,7 @@
 </div>
 <div class="admonition important">
 <p class="first admonition-title">重要</p>
-<p class="last">如果你使用了 <a class="reference internal" href="routing.html"><span class="doc">URI 路由</span></a> ，传递到你的方法的参数将是路由后的参数。</p>
+<p class="last">如果你使用了 <a class="reference internal" href="routing.html"><em>URI 路由</em></a> ，传递到你的方法的参数将是路由后的参数。</p>
 </div>
 </div>
 <div class="section" id="id5">
@@ -566,11 +567,11 @@
 </div>
 <p>其中，“Blog”是你想加载的控制器类名，如果你现在通过不带任何参数的 index.php 访问你的站点，你将看到你的“Hello World”消息。</p>
 <p>For more information, please refer to the &quot;Reserved Routes&quot; section of the
-<a class="reference internal" href="routing.html"><span class="doc">URI 路由</span></a> documentation.</p>
+<a class="reference internal" href="routing.html"><em>URI 路由</em></a> documentation.</p>
 </div>
 <div class="section" id="id6">
 <h2><a class="toc-backref" href="#id19">重映射方法</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
-<p>正如上文所说，URI 的第二段通常决定控制器的哪个方法被调用。CodeIgniter 允许你使用 <code class="docutils literal"><span class="pre">_remap()</span></code> 方法来重写该规则:</p>
+<p>正如上文所说，URI 的第二段通常决定控制器的哪个方法被调用。CodeIgniter 允许你使用 <tt class="docutils literal"><span class="pre">_remap()</span></tt> 方法来重写该规则:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">function</span> <span class="nf">_remap</span><span class="p">()</span>
 <span class="p">{</span>
     <span class="c1">// Some code here...</span>
@@ -582,7 +583,7 @@
 <p class="last">如果你的控制包含一个 _remap() 方法，那么无论 URI 中包含什么参数时都会调用该方法。
 它允许你定义你自己的路由规则，重写默认的使用 URI 中的分段来决定调用哪个方法这种行为。</p>
 </div>
-<p>被重写的方法（通常是 URI 的第二段）将被作为参数传递到 <code class="docutils literal"><span class="pre">_remap()</span></code> 方法:</p>
+<p>被重写的方法（通常是 URI 的第二段）将被作为参数传递到 <tt class="docutils literal"><span class="pre">_remap()</span></tt> 方法:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">function</span> <span class="nf">_remap</span><span class="p">(</span><span class="nv">$method</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nv">$method</span> <span class="o">===</span> <span class="s1">&#39;some_method&#39;</span><span class="p">)</span>
@@ -596,7 +597,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>方法名之后的所有其他段将作为 <code class="docutils literal"><span class="pre">_remap()</span></code> 方法的第二个参数，它是可选的。这个参数可以使用 PHP 的
+<p>方法名之后的所有其他段将作为 <tt class="docutils literal"><span class="pre">_remap()</span></tt> 方法的第二个参数，它是可选的。这个参数可以使用 PHP 的
 <a class="reference external" href="http://php.net/call_user_func_array">call_user_func_array()</a> 函数来模拟 CodeIgniter 的默认行为。</p>
 <p>例如:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">function</span> <span class="nf">_remap</span><span class="p">(</span><span class="nv">$method</span><span class="p">,</span> <span class="nv">$params</span> <span class="o">=</span> <span class="k">array</span><span class="p">())</span>
@@ -614,12 +615,12 @@
 <div class="section" id="id7">
 <h2><a class="toc-backref" href="#id20">处理输出</a><a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>CodeIgniter 有一个输出类，它可以自动的将最终数据发送到你的浏览器。
-更多信息可以阅读 <a class="reference internal" href="views.html"><span class="doc">视图</span></a> 和 <a class="reference internal" href="../libraries/output.html"><span class="doc">输出类</span></a> 页面。但是，有时候，
+更多信息可以阅读 <a class="reference internal" href="views.html"><em>视图</em></a> 和 <a class="reference internal" href="../libraries/output.html"><em>输出类</em></a> 页面。但是，有时候，
 你可能希望对最终的数据进行某种方式的后处理，然后你自己手工发送到浏览器。CodeIgniter
-允许你向你的控制器中添加一个 <code class="docutils literal"><span class="pre">_output()</span></code> 方法，该方法可以接受最终的输出数据。</p>
+允许你向你的控制器中添加一个 <tt class="docutils literal"><span class="pre">_output()</span></tt> 方法，该方法可以接受最终的输出数据。</p>
 <div class="admonition important">
 <p class="first admonition-title">重要</p>
-<p class="last">如果你的控制器含有一个 <code class="docutils literal"><span class="pre">_output()</span></code> 方法，输出类将会调用该方法来显示数据，
+<p class="last">如果你的控制器含有一个 <tt class="docutils literal"><span class="pre">_output()</span></tt> 方法，输出类将会调用该方法来显示数据，
 而不是直接显示数据。该方法的第一个参数包含了最终输出的数据。</p>
 </div>
 <p>这里是个例子:</p>
@@ -631,18 +632,18 @@
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p>请注意，当数据传到 <code class="docutils literal"><span class="pre">_output()</span></code> 方法时，数据已经是最终状态。这时基准测试和计算内存占用都已经完成，
-缓存文件也已经写到文件（如果你开启缓存的话），HTTP 头也已经发送（如果用到了该 <a class="reference internal" href="../libraries/output.html"><span class="doc">特性</span></a>）。
-为了使你的控制器能正确处理缓存，<code class="docutils literal"><span class="pre">_output()</span></code> 可以这样写:</p>
+<p>请注意，当数据传到 <tt class="docutils literal"><span class="pre">_output()</span></tt> 方法时，数据已经是最终状态。这时基准测试和计算内存占用都已经完成，
+缓存文件也已经写到文件（如果你开启缓存的话），HTTP 头也已经发送（如果用到了该 <a class="reference internal" href="../libraries/output.html"><em>特性</em></a>）。
+为了使你的控制器能正确处理缓存，<tt class="docutils literal"><span class="pre">_output()</span></tt> 可以这样写:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">cache_expiration</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">_write_cache</span><span class="p">(</span><span class="nv">$output</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p class="last">如果你在使用 <code class="docutils literal"><span class="pre">_output()</span></code> 时，希望获取页面执行时间和内存占用情况，结果可能会不准确，
+<p class="last">如果你在使用 <tt class="docutils literal"><span class="pre">_output()</span></tt> 时，希望获取页面执行时间和内存占用情况，结果可能会不准确，
 因为并没有统计你后加的处理代码。另一个可选的方法是在所有最终输出 <em>之前</em> 来进行处理，
-请参阅 <a class="reference internal" href="../libraries/output.html"><span class="doc">输出类</span></a> 。</p>
+请参阅 <a class="reference internal" href="../libraries/output.html"><em>输出类</em></a> 。</p>
 </div>
 </div>
 <div class="section" id="id8">
@@ -683,7 +684,7 @@
 called if the URL contains <em>only</em> the sub-directory. Simply put a controller
 in there that matches the name of your 'default_controller' as specified in
 your <em>application/config/routes.php</em> file.</p>
-<p>你也可以使用 CodeIgniter 的 <a class="reference internal" href="routing.html"><span class="doc">URI 路由</span></a> 功能来重定向 URI 。</p>
+<p>你也可以使用 CodeIgniter 的 <a class="reference internal" href="routing.html"><em>URI 路由</em></a> 功能来重定向 URI 。</p>
 </div>
 <div class="section" id="id10">
 <h2><a class="toc-backref" href="#id23">构造函数</a><a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
@@ -710,11 +711,11 @@ your <em>application/config/routes.php</em> file.</p>
 <div class="section" id="id11">
 <h2><a class="toc-backref" href="#id24">保留方法名</a><a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
 <p>因为你的控制器将继承主程序的控制器，在新建方法时你必须要小心不要使用和父类一样的方法名，
-要不然你的方法将覆盖它们，参见 <a class="reference internal" href="reserved_names.html"><span class="doc">保留名称</span></a> 。</p>
+要不然你的方法将覆盖它们，参见 <a class="reference internal" href="reserved_names.html"><em>保留名称</em></a> 。</p>
 <div class="admonition important">
 <p class="first admonition-title">重要</p>
 <p class="last">另外，你也绝对不要新建一个和类名称一样的方法。如果你这样做了，而且你的控制器
-又没有一个 <code class="docutils literal"><span class="pre">__construct()</span></code> 构造函数，那么这个和类名同名的方法 <code class="docutils literal"><span class="pre">Index::index()</span></code>
+又没有一个 <tt class="docutils literal"><span class="pre">__construct()</span></tt> 构造函数，那么这个和类名同名的方法 <tt class="docutils literal"><span class="pre">Index::index()</span></tt>
 将会作为类的构造函数被执行！这个是 PHP4 的向前兼容的一个特性。</p>
 </div>
 </div>

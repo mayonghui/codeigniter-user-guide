@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="从老版本升级" href="upgrading.html"/>
         <link rel="next" title="Upgrading from 3.1.0 to 3.1.1" href="upgrade_311.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">安装说明</a><ul class="current">
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">安装说明</a><ul class="current">
@@ -441,15 +442,15 @@ please make copies of them first.</p>
 </div>
 <div class="section" id="step-2-update-your-ci-sessions-database-table">
 <h2>Step 2: Update your &quot;ci_sessions&quot; database table<a class="headerlink" href="#step-2-update-your-ci-sessions-database-table" title="永久链接至标题">¶</a></h2>
-<p>If you're using the <a class="reference internal" href="../libraries/sessions.html"><span class="doc">Session Library</span></a> with the
-'database' driver, you may have to <code class="docutils literal"><span class="pre">ALTER</span></code> your sessions table for your
+<p>If you're using the <a class="reference internal" href="../libraries/sessions.html"><em>Session Library</em></a> with the
+'database' driver, you may have to <tt class="docutils literal"><span class="pre">ALTER</span></tt> your sessions table for your
 sessions to continue to work.</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
 <p class="last">The table in question is not necessarily named &quot;ci_sessions&quot;.
-It is what you've set as your <code class="docutils literal"><span class="pre">$config['sess_save_path']</span></code>.</p>
+It is what you've set as your <tt class="docutils literal"><span class="pre">$config['sess_save_path']</span></tt>.</p>
 </div>
-<p>This will only affect you if you've changed your <code class="docutils literal"><span class="pre">session.hash_function</span></code>
+<p>This will only affect you if you've changed your <tt class="docutils literal"><span class="pre">session.hash_function</span></tt>
 <em>php.ini</em> setting to something like 'sha512'. Or if you've been running
 an older CodeIgniter version on PHP 7.1+.</p>
 <p>It is recommended that you do this anyway, just to avoid potential issues

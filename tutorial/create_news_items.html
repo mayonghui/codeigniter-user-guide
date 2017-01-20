@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="教程 - 内容提要" href="index.html"/>
         <link rel="next" title="结束语" href="conclusion.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -77,7 +76,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">教程 - 内容提要</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="static_pages.html">加载静态内容</a></li>
 <li class="toctree-l2"><a class="reference internal" href="news_section.html">读取新闻条目</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">创建新闻条目</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">创建新闻条目</a></li>
 <li class="toctree-l2"><a class="reference internal" href="conclusion.html">结束语</a></li>
 </ul>
 </li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -261,7 +262,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">教程 - 内容提要</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="static_pages.html">加载静态内容</a></li>
 <li class="toctree-l2"><a class="reference internal" href="news_section.html">读取新闻条目</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">创建新闻条目</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">创建新闻条目</a></li>
 <li class="toctree-l2"><a class="reference internal" href="conclusion.html">结束语</a></li>
 </ul>
 </li>
@@ -451,12 +452,12 @@
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p>这里有两个地方你可能还不熟悉：<code class="docutils literal"><span class="pre">form_open()</span></code> 函数 以及 <code class="docutils literal"><span class="pre">validation_errors()</span></code> 函数。</p>
-<p>第一个函数是由 <a class="reference internal" href="../helpers/form_helper.html"><span class="doc">表单辅助函数</span></a> 提供的，用于生成 form
-元素，并添加一些额外的功能，如添加一个隐藏的 <a class="reference internal" href="../libraries/security.html"><span class="doc">CSRF 保护字段</span></a> ,
+<p>这里有两个地方你可能还不熟悉：<tt class="docutils literal"><span class="pre">form_open()</span></tt> 函数 以及 <tt class="docutils literal"><span class="pre">validation_errors()</span></tt> 函数。</p>
+<p>第一个函数是由 <a class="reference internal" href="../helpers/form_helper.html"><em>表单辅助函数</em></a> 提供的，用于生成 form
+元素，并添加一些额外的功能，如添加一个隐藏的 <a class="reference internal" href="../libraries/security.html"><em>CSRF 保护字段</em></a> ,
 第二个函数用于显示表单验证的错误信息。</p>
 <p>回到你的 News 控制器，你将要在这里做两件事：检查表单是否被提交，以及提交的数据是否能通过验证规则。
-你可以使用 <a class="reference internal" href="../libraries/form_validation.html"><span class="doc">表单验证类</span></a> 来做到这一点。</p>
+你可以使用 <a class="reference internal" href="../libraries/form_validation.html"><em>表单验证类</em></a> 来做到这一点。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">function</span> <span class="nf">create</span><span class="p">()</span>
 <span class="p">{</span>
     <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;form&#39;</span><span class="p">);</span>
@@ -483,9 +484,9 @@
 </pre></div>
 </div>
 <p>上面的代码添加了不少功能，前几行代码加载了 表单辅助函数 和 表单验证类。然后，设置了表单验证规则，
-<code class="docutils literal"><span class="pre">set_rules()</span></code> 方法有三个参数：表单中字段的名称，错误信息中使用的名称，以及验证规则。在这个例子中，
+<tt class="docutils literal"><span class="pre">set_rules()</span></tt> 方法有三个参数：表单中字段的名称，错误信息中使用的名称，以及验证规则。在这个例子中，
 规则为 title 和 text 字段是必填的。</p>
-<p>CodeIgniter 有一个强大的表单验证类，像上面示例中那样。你可以在 <a class="reference internal" href="../libraries/form_validation.html"><span class="doc">这里</span></a>
+<p>CodeIgniter 有一个强大的表单验证类，像上面示例中那样。你可以在 <a class="reference internal" href="../libraries/form_validation.html"><em>这里</em></a>
 阅读更多。</p>
 <p>接下来，你可以看到一个判断条件检查表单验证是否成功通过，如果没有通过，将显示出表单，
 如果通过了验证，则会调用模型。然后，加载视图显示出成功信息。新建一个视图文件
@@ -512,13 +513,13 @@
 </pre></div>
 </div>
 <p>新加的这个方法用于向数据库插入数据，第三行有一个新方法 url_title() ，
-这个方法由 <a class="reference internal" href="../helpers/url_helper.html"><span class="doc">URL 辅助函数</span></a> 提供，用于将字符串
+这个方法由 <a class="reference internal" href="../helpers/url_helper.html"><em>URL 辅助函数</em></a> 提供，用于将字符串
 中的所有空格替换成连接符（-），并将所有字符转换为小写。
 这样其实就生成了一个 slug ，可以很好的用于创建 URI 。</p>
-<p>然后我们继续准备将要被插入到数据库中的记录，我们将其赋值给 <code class="docutils literal"><span class="pre">$data</span></code> 数组，
+<p>然后我们继续准备将要被插入到数据库中的记录，我们将其赋值给 <tt class="docutils literal"><span class="pre">$data</span></tt> 数组，
 数组中的每一项都对应之前创建的数据库表中的一列，这里你应该看到又出现了一个新方法，
-来自 <a class="reference internal" href="../libraries/input.html"><span class="doc">输入类</span></a> 的 <code class="docutils literal"><span class="pre">post()</span></code> 方法，这个方法可以对数据进行过滤，
-防止其他人的恶意攻击。输入类默认已经加载了。最后，将 <code class="docutils literal"><span class="pre">$data</span></code> 数组插入到我们的数据库中。</p>
+来自 <a class="reference internal" href="../libraries/input.html"><em>输入类</em></a> 的 <tt class="docutils literal"><span class="pre">post()</span></tt> 方法，这个方法可以对数据进行过滤，
+防止其他人的恶意攻击。输入类默认已经加载了。最后，将 <tt class="docutils literal"><span class="pre">$data</span></tt> 数组插入到我们的数据库中。</p>
 </div>
 <div class="section" id="id4">
 <h2>路由<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>

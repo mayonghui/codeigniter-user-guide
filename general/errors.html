@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="常规主题" href="index.html"/>
         <link rel="next" title="网页缓存" href="caching.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -108,7 +107,7 @@
 <li class="toctree-l2"><a class="reference internal" href="common_functions.html">公共函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compatibility_functions.html">兼容性函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routing.html">URI 路由</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">错误处理</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">错误处理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching.html">网页缓存</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profiling.html">程序分析</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cli.html">以 CLI 方式运行</a></li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -292,7 +293,7 @@
 <li class="toctree-l2"><a class="reference internal" href="common_functions.html">公共函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compatibility_functions.html">兼容性函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routing.html">URI 路由</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">错误处理</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">错误处理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching.html">网页缓存</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profiling.html">程序分析</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cli.html">以 CLI 方式运行</a></li>
@@ -437,7 +438,7 @@
 </div>
 <p>和 CodeIgniter 中的大多数系统不同，错误函数是一个可以在整个应用程序中
 使用的简单接口，这让你在使用该函数时不用担心类或方法的作用域的问题。</p>
-<p>当任何一处核心代码调用 <code class="docutils literal"><span class="pre">exit()</span></code> 时，CodeIgniter 会返回一个状态码。
+<p>当任何一处核心代码调用 <tt class="docutils literal"><span class="pre">exit()</span></tt> 时，CodeIgniter 会返回一个状态码。
 这个状态码和 HTTP 状态码不同，是用来通知其他程序 PHP 脚本是否成功运行的，
 如果运行不成功，又是什么原因导致了脚本退出。状态码的值被定义在
 <em>application/config/constants.php</em> 文件中。状态码在 CLI 形式下非常有用，
@@ -445,7 +446,7 @@
 <p>下面的函数用于生成错误信息：</p>
 <dl class="function">
 <dt id="show_error">
-<code class="descname">show_error</code><span class="sig-paren">(</span><em>$message</em>, <em>$status_code</em>, <em>$heading = 'An Error Was Encountered'</em><span class="sig-paren">)</span><a class="headerlink" href="#show_error" title="永久链接至目标">¶</a></dt>
+<tt class="descname">show_error</tt><big>(</big><em>$message</em>, <em>$status_code</em>, <em>$heading = 'An Error Was Encountered'</em><big>)</big><a class="headerlink" href="#show_error" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -469,17 +470,17 @@
 <p>或:</p>
 <blockquote>
 <div>application/views/errors/cli/error_general.php</div></blockquote>
-<p>可选参数 <code class="docutils literal"><span class="pre">$status_code</span></code> 将决定发送什么 HTTP 状态码。
-如果 <code class="docutils literal"><span class="pre">$status_code</span></code> 小于 100，HTTP 状态码将被置为 500 ，
-退出状态码将被置为 <code class="docutils literal"><span class="pre">$status_code</span> <span class="pre">+</span> <span class="pre">EXIT__AUTO_MIN</span></code> 。
-如果它的值大于 <code class="docutils literal"><span class="pre">EXIT__AUTO_MAX</span></code> 或者如果 <code class="docutils literal"><span class="pre">$status_code</span></code>
-大于等于 100 ，退出状态码将被置为 <code class="docutils literal"><span class="pre">EXIT_ERROR</span></code> 。
+<p>可选参数 <tt class="docutils literal"><span class="pre">$status_code</span></tt> 将决定发送什么 HTTP 状态码。
+如果 <tt class="docutils literal"><span class="pre">$status_code</span></tt> 小于 100，HTTP 状态码将被置为 500 ，
+退出状态码将被置为 <tt class="docutils literal"><span class="pre">$status_code</span> <span class="pre">+</span> <span class="pre">EXIT__AUTO_MIN</span></tt> 。
+如果它的值大于 <tt class="docutils literal"><span class="pre">EXIT__AUTO_MAX</span></tt> 或者如果 <tt class="docutils literal"><span class="pre">$status_code</span></tt>
+大于等于 100 ，退出状态码将被置为 <tt class="docutils literal"><span class="pre">EXIT_ERROR</span></tt> 。
 详情可查看 <em>application/config/constants.php</em> 文件。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="show_404">
-<code class="descname">show_404</code><span class="sig-paren">(</span><em>$page = ''</em>, <em>$log_error = TRUE</em><span class="sig-paren">)</span><a class="headerlink" href="#show_404" title="永久链接至目标">¶</a></dt>
+<tt class="descname">show_404</tt><big>(</big><em>$page = ''</em>, <em>$log_error = TRUE</em><big>)</big><a class="headerlink" href="#show_404" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -503,15 +504,15 @@
 <blockquote>
 <div>application/views/errors/cli/error_404.php</div></blockquote>
 <p>传递给该函数的字符串代表的是找不到的文件路径。退出状态码
-将设置为 <code class="docutils literal"><span class="pre">EXIT_UNKNOWN_FILE</span></code> 。
+将设置为 <tt class="docutils literal"><span class="pre">EXIT_UNKNOWN_FILE</span></tt> 。
 注意如果找不到控制器 CodeIgniter 将自动显示 404 错误信息。</p>
-<p>默认 CodeIgniter 会自动将 <code class="docutils literal"><span class="pre">show_404()</span></code> 函数调用记录到错误日志中。
+<p>默认 CodeIgniter 会自动将 <tt class="docutils literal"><span class="pre">show_404()</span></tt> 函数调用记录到错误日志中。
 将第二个参数设置为 FALSE 将跳过记录日志。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="log_message">
-<code class="descname">log_message</code><span class="sig-paren">(</span><em>$level</em>, <em>$message</em><span class="sig-paren">)</span><a class="headerlink" href="#log_message" title="永久链接至目标">¶</a></dt>
+<tt class="descname">log_message</tt><big>(</big><em>$level</em>, <em>$message</em><big>)</big><a class="headerlink" href="#log_message" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="类库参考" href="index.html"/>
         <link rel="next" title="输出类" href="output.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -138,7 +137,7 @@
 <li class="toctree-l2"><a class="reference internal" href="javascript.html">Javascript 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="language.html">语言类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loader.html">加载器类</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">迁移类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">迁移类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="output.html">输出类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pagination.html">分页类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parser.html">模板解析类</a></li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -322,7 +323,7 @@
 <li class="toctree-l2"><a class="reference internal" href="javascript.html">Javascript 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="language.html">语言类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loader.html">加载器类</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">迁移类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">迁移类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="output.html">输出类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pagination.html">分页类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parser.html">模板解析类</a></li>
@@ -431,7 +432,7 @@
 而且当你将应用程序部署到生产环境时，你还需要记得对数据库已经做了哪些修改，
 需要执行哪些 SQL 。</p>
 <p>在 CodeIgniter 中，<strong>migration</strong> 表记录了当前已经执行了哪些迁移，所以
-你需要做的就是，修改你的应用程序文件然后调用 <code class="docutils literal"><span class="pre">$this-&gt;migration-&gt;current()</span></code>
+你需要做的就是，修改你的应用程序文件然后调用 <tt class="docutils literal"><span class="pre">$this-&gt;migration-&gt;current()</span></tt>
 方法迁移到当前版本，当前版本可以在 <strong>application/config/migration.php</strong>
 文件中进行设置。</p>
 <div class="contents local topic" id="contents">
@@ -453,7 +454,7 @@
 <strong>20121031100537</strong>），这种方式可以避免在团队环境下以序列命名可能造成的冲突，而且也是
 CodeIgniter 3.0 之后版本中推荐的命名方式。</li>
 </ul>
-<p>可以在 <em>application/config/migration.php</em> 文件中的 <code class="docutils literal"><span class="pre">$config['migration_type']</span></code> 参数设置命名规则。</p>
+<p>可以在 <em>application/config/migration.php</em> 文件中的 <tt class="docutils literal"><span class="pre">$config['migration_type']</span></tt> 参数设置命名规则。</p>
 <p>无论你选择了哪种规则，将这个数字格式作为迁移文件的前缀，并在后面添加一个下划线，
 再加上一个描述性的名字。如下所示：</p>
 <ul class="simple">
@@ -500,7 +501,7 @@ CodeIgniter 3.0 之后版本中推荐的命名方式。</li>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>然后在 <strong>application/config/migration.php</strong> 文件中设置：<code class="docutils literal"><span class="pre">$config['migration_version']</span> <span class="pre">=</span> <span class="pre">20121031100537;</span></code></p>
+<p>然后在 <strong>application/config/migration.php</strong> 文件中设置：<tt class="docutils literal"><span class="pre">$config['migration_version']</span> <span class="pre">=</span> <span class="pre">20121031100537;</span></tt></p>
 </div>
 <div class="section" id="id4">
 <h2><a class="toc-backref" href="#id9">使用范例</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
@@ -579,10 +580,10 @@ CodeIgniter 3.0 之后版本中推荐的命名方式。</li>
 <h2><a class="toc-backref" href="#id11">类参考</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="CI_Migration">
-<em class="property">class </em><code class="descname">CI_Migration</code><a class="headerlink" href="#CI_Migration" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><tt class="descname">CI_Migration</tt><a class="headerlink" href="#CI_Migration" title="永久链接至目标">¶</a></dt>
 <dd><dl class="method">
 <dt id="CI_Migration::current">
-<code class="descname">current</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Migration::current" title="永久链接至目标">¶</a></dt>
+<tt class="descname">current</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_Migration::current" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -593,12 +594,12 @@ CodeIgniter 3.0 之后版本中推荐的命名方式。</li>
 </tr>
 </tbody>
 </table>
-<p>迁移至当前版本。（当前版本通过 <em>application/config/migration.php</em> 文件的 <code class="docutils literal"><span class="pre">$config['migration_version']</span></code> 参数设置）</p>
+<p>迁移至当前版本。（当前版本通过 <em>application/config/migration.php</em> 文件的 <tt class="docutils literal"><span class="pre">$config['migration_version']</span></tt> 参数设置）</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_Migration::error_string">
-<code class="descname">error_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Migration::error_string" title="永久链接至目标">¶</a></dt>
+<tt class="descname">error_string</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_Migration::error_string" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -614,7 +615,7 @@ CodeIgniter 3.0 之后版本中推荐的命名方式。</li>
 
 <dl class="method">
 <dt id="CI_Migration::find_migrations">
-<code class="descname">find_migrations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Migration::find_migrations" title="永久链接至目标">¶</a></dt>
+<tt class="descname">find_migrations</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_Migration::find_migrations" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -630,7 +631,7 @@ CodeIgniter 3.0 之后版本中推荐的命名方式。</li>
 
 <dl class="method">
 <dt id="CI_Migration::latest">
-<code class="descname">latest</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Migration::latest" title="永久链接至目标">¶</a></dt>
+<tt class="descname">latest</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_Migration::latest" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -641,12 +642,12 @@ CodeIgniter 3.0 之后版本中推荐的命名方式。</li>
 </tr>
 </tbody>
 </table>
-<p>这个方法和 <code class="docutils literal"><span class="pre">current()</span></code> 类似，但是它并不是迁移到 <code class="docutils literal"><span class="pre">$config['migration_version']</span></code> 参数所对应的版本，而是迁移到迁移文件中的最新版本。</p>
+<p>这个方法和 <tt class="docutils literal"><span class="pre">current()</span></tt> 类似，但是它并不是迁移到 <tt class="docutils literal"><span class="pre">$config['migration_version']</span></tt> 参数所对应的版本，而是迁移到迁移文件中的最新版本。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_Migration::version">
-<code class="descname">version</code><span class="sig-paren">(</span><em>$target_version</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Migration::version" title="永久链接至目标">¶</a></dt>
+<tt class="descname">version</tt><big>(</big><em>$target_version</em><big>)</big><a class="headerlink" href="#CI_Migration::version" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -664,7 +665,7 @@ CodeIgniter 3.0 之后版本中推荐的命名方式。</li>
 </tr>
 </tbody>
 </table>
-<p>迁移到特定版本（回退或升级都可以），这个方法和 <code class="docutils literal"><span class="pre">current()</span></code> 类似，但是忽略 <code class="docutils literal"><span class="pre">$config['migration_version']</span></code> 参数，而是迁移到用户指定版本。</p>
+<p>迁移到特定版本（回退或升级都可以），这个方法和 <tt class="docutils literal"><span class="pre">current()</span></tt> 类似，但是忽略 <tt class="docutils literal"><span class="pre">$config['migration_version']</span></tt> 参数，而是迁移到用户指定版本。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">migration</span><span class="o">-&gt;</span><span class="na">version</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
 </pre></div>
 </div>

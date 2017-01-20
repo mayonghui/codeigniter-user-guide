@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="辅助函数参考" href="index.html"/>
         <link rel="next" title="XML 辅助函数" href="xml_helper.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -195,7 +194,7 @@
 <li class="toctree-l2"><a class="reference internal" href="string_helper.html">字符串辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="text_helper.html">文本辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typography_helper.html">排版辅助函数</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">URL 辅助函数</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">URL 辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="xml_helper.html">XML 辅助函数</a></li>
 </ul>
 </li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -379,7 +380,7 @@
 <li class="toctree-l2"><a class="reference internal" href="string_helper.html">字符串辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="text_helper.html">文本辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typography_helper.html">排版辅助函数</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">URL 辅助函数</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">URL 辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="xml_helper.html">XML 辅助函数</a></li>
 </ul>
 </li>
@@ -445,7 +446,7 @@
 <p>该辅助函数有下列可用函数：</p>
 <dl class="function">
 <dt id="site_url">
-<code class="descname">site_url</code><span class="sig-paren">(</span><span class="optional">[</span><em>$uri = ''</em><span class="optional">[</span>, <em>$protocol = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#site_url" title="永久链接至目标">¶</a></dt>
+<tt class="descname">site_url</tt><big>(</big><span class="optional">[</span><em>$uri = ''</em><span class="optional">[</span>, <em>$protocol = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#site_url" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -477,12 +478,12 @@
 <span class="k">echo</span> <span class="nx">site_url</span><span class="p">(</span><span class="nv">$segments</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>该函数是 <code class="docutils literal"><span class="pre">CI_Config::site_url()</span></code> 的别名，更多信息请查阅 <a class="reference internal" href="../libraries/config.html"><span class="doc">配置类</span></a> 文档。</p>
+<p>该函数是 <tt class="docutils literal"><span class="pre">CI_Config::site_url()</span></tt> 的别名，更多信息请查阅 <a class="reference internal" href="../libraries/config.html"><em>配置类</em></a> 文档。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="base_url">
-<code class="descname">base_url</code><span class="sig-paren">(</span><em>$uri = ''</em>, <em>$protocol = NULL</em><span class="sig-paren">)</span><a class="headerlink" href="#base_url" title="永久链接至目标">¶</a></dt>
+<tt class="descname">base_url</tt><big>(</big><em>$uri = ''</em>, <em>$protocol = NULL</em><big>)</big><a class="headerlink" href="#base_url" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -505,23 +506,23 @@
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nx">base_url</span><span class="p">();</span>
 </pre></div>
 </div>
-<p>该函数和 <a class="reference internal" href="#site_url" title="site_url"><code class="xref php php-func docutils literal"><span class="pre">site_url()</span></code></a> 函数相同，只是不会在 URL 的后面加上 <em>index_page</em> 或 <em>url_suffix</em> 。</p>
-<p>另外，和 <a class="reference internal" href="#site_url" title="site_url"><code class="xref php php-func docutils literal"><span class="pre">site_url()</span></code></a> 一样的是，你也可以使用字符串或数组格式的 URI 段。下面是字符串的例子:</p>
+<p>该函数和 <a class="reference internal" href="#site_url" title="site_url"><tt class="xref php php-func docutils literal"><span class="pre">site_url()</span></tt></a> 函数相同，只是不会在 URL 的后面加上 <em>index_page</em> 或 <em>url_suffix</em> 。</p>
+<p>另外，和 <a class="reference internal" href="#site_url" title="site_url"><tt class="xref php php-func docutils literal"><span class="pre">site_url()</span></tt></a> 一样的是，你也可以使用字符串或数组格式的 URI 段。下面是字符串的例子:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nx">base_url</span><span class="p">(</span><span class="s2">&quot;blog/post/123&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>上例将返回类似于：<em>http://example.com/blog/post/123</em></p>
-<p>跟 <a class="reference internal" href="#site_url" title="site_url"><code class="xref php php-func docutils literal"><span class="pre">site_url()</span></code></a> 函数不一样的是，你可以指定一个文件路径（例如图片或样式文件），这将很有用，例如:</p>
+<p>跟 <a class="reference internal" href="#site_url" title="site_url"><tt class="xref php php-func docutils literal"><span class="pre">site_url()</span></tt></a> 函数不一样的是，你可以指定一个文件路径（例如图片或样式文件），这将很有用，例如:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nx">base_url</span><span class="p">(</span><span class="s2">&quot;images/icons/edit.png&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>将返回类似于：<em>http://example.com/images/icons/edit.png</em></p>
-<p>该函数是 <code class="docutils literal"><span class="pre">CI_Config::base_url()</span></code> 的别名，更多信息请查阅 <a class="reference internal" href="../libraries/config.html"><span class="doc">配置类</span></a> 文档。</p>
+<p>该函数是 <tt class="docutils literal"><span class="pre">CI_Config::base_url()</span></tt> 的别名，更多信息请查阅 <a class="reference internal" href="../libraries/config.html"><em>配置类</em></a> 文档。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="current_url">
-<code class="descname">current_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#current_url" title="永久链接至目标">¶</a></dt>
+<tt class="descname">current_url</tt><big>(</big><big>)</big><a class="headerlink" href="#current_url" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -543,7 +544,7 @@
 
 <dl class="function">
 <dt id="uri_string">
-<code class="descname">uri_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#uri_string" title="永久链接至目标">¶</a></dt>
+<tt class="descname">uri_string</tt><big>(</big><big>)</big><a class="headerlink" href="#uri_string" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -562,12 +563,12 @@
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">blog</span><span class="o">/</span><span class="nx">comments</span><span class="o">/</span><span class="mi">123</span>
 </pre></div>
 </div>
-<p>该函数是 <code class="docutils literal"><span class="pre">CI_Config::uri_string()</span></code> 的别名，更多信息请查阅 <a class="reference internal" href="../libraries/config.html"><span class="doc">配置类</span></a> 文档。</p>
+<p>该函数是 <tt class="docutils literal"><span class="pre">CI_Config::uri_string()</span></tt> 的别名，更多信息请查阅 <a class="reference internal" href="../libraries/config.html"><em>配置类</em></a> 文档。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="index_page">
-<code class="descname">index_page</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#index_page" title="永久链接至目标">¶</a></dt>
+<tt class="descname">index_page</tt><big>(</big><big>)</big><a class="headerlink" href="#index_page" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -586,7 +587,7 @@
 
 <dl class="function">
 <dt id="anchor">
-<code class="descname">anchor</code><span class="sig-paren">(</span><em>$uri = ''</em>, <em>$title = ''</em>, <em>$attributes = ''</em><span class="sig-paren">)</span><a class="headerlink" href="#anchor" title="永久链接至目标">¶</a></dt>
+<tt class="descname">anchor</tt><big>(</big><em>$uri = ''</em>, <em>$title = ''</em>, <em>$attributes = ''</em><big>)</big><a class="headerlink" href="#anchor" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -607,7 +608,7 @@
 </tbody>
 </table>
 <p>根据你提供的 URL 生成一个标准的 HTML 链接。</p>
-<p>第一个参数可以包含任何你想添加到 URL 上的段，和上面的 <a class="reference internal" href="#site_url" title="site_url"><code class="xref php php-func docutils literal"><span class="pre">site_url()</span></code></a> 函数一样，URL
+<p>第一个参数可以包含任何你想添加到 URL 上的段，和上面的 <a class="reference internal" href="#site_url" title="site_url"><tt class="xref php php-func docutils literal"><span class="pre">site_url()</span></tt></a> 函数一样，URL
 的段可以是字符串或数组。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
@@ -631,7 +632,7 @@
 
 <dl class="function">
 <dt id="anchor_popup">
-<code class="descname">anchor_popup</code><span class="sig-paren">(</span><em>$uri = ''</em>, <em>$title = ''</em>, <em>$attributes = FALSE</em><span class="sig-paren">)</span><a class="headerlink" href="#anchor_popup" title="永久链接至目标">¶</a></dt>
+<tt class="descname">anchor_popup</tt><big>(</big><em>$uri = ''</em>, <em>$title = ''</em>, <em>$attributes = FALSE</em><big>)</big><a class="headerlink" href="#anchor_popup" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -651,7 +652,7 @@
 </tr>
 </tbody>
 </table>
-<p>和 <a class="reference internal" href="#anchor" title="anchor"><code class="xref php php-func docutils literal"><span class="pre">anchor()</span></code></a> 函数非常类似，只是它生成的 URL 将会在新窗口被打开。你可以通过第三个参数指定
+<p>和 <a class="reference internal" href="#anchor" title="anchor"><tt class="xref php php-func docutils literal"><span class="pre">anchor()</span></tt></a> 函数非常类似，只是它生成的 URL 将会在新窗口被打开。你可以通过第三个参数指定
 JavaScript 的窗口属性，以此来控制窗口将如何被打开。如果没有设置第三个参数，将会使用你的浏览器设置打开
 一个新窗口。</p>
 <p>这里是属性的例子:</p>
@@ -690,7 +691,7 @@ JavaScript 的窗口属性，以此来控制窗口将如何被打开。如果没
 
 <dl class="function">
 <dt id="mailto">
-<code class="descname">mailto</code><span class="sig-paren">(</span><em>$email</em>, <em>$title = ''</em>, <em>$attributes = ''</em><span class="sig-paren">)</span><a class="headerlink" href="#mailto" title="永久链接至目标">¶</a></dt>
+<tt class="descname">mailto</tt><big>(</big><em>$email</em>, <em>$title = ''</em>, <em>$attributes = ''</em><big>)</big><a class="headerlink" href="#mailto" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -714,7 +715,7 @@ JavaScript 的窗口属性，以此来控制窗口将如何被打开。如果没
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nx">mailto</span><span class="p">(</span><span class="s1">&#39;me@my-site.com&#39;</span><span class="p">,</span> <span class="s1">&#39;Click Here to Contact Me&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>和上面的 <a class="reference internal" href="#anchor" title="anchor"><code class="xref php php-func docutils literal"><span class="pre">anchor()</span></code></a> 函数一样，你可以通过第三个参数设置属性:</p>
+<p>和上面的 <a class="reference internal" href="#anchor" title="anchor"><tt class="xref php php-func docutils literal"><span class="pre">anchor()</span></tt></a> 函数一样，你可以通过第三个参数设置属性:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$attributes</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Mail me&#39;</span><span class="p">);</span>
 <span class="k">echo</span> <span class="nx">mailto</span><span class="p">(</span><span class="s1">&#39;me@my-site.com&#39;</span><span class="p">,</span> <span class="s1">&#39;Contact Me&#39;</span><span class="p">,</span> <span class="nv">$attributes</span><span class="p">);</span>
 </pre></div>
@@ -723,7 +724,7 @@ JavaScript 的窗口属性，以此来控制窗口将如何被打开。如果没
 
 <dl class="function">
 <dt id="safe_mailto">
-<code class="descname">safe_mailto</code><span class="sig-paren">(</span><em>$email</em>, <em>$title = ''</em>, <em>$attributes = ''</em><span class="sig-paren">)</span><a class="headerlink" href="#safe_mailto" title="永久链接至目标">¶</a></dt>
+<tt class="descname">safe_mailto</tt><big>(</big><em>$email</em>, <em>$title = ''</em>, <em>$attributes = ''</em><big>)</big><a class="headerlink" href="#safe_mailto" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -743,13 +744,13 @@ JavaScript 的窗口属性，以此来控制窗口将如何被打开。如果没
 </tr>
 </tbody>
 </table>
-<p>和 <a class="reference internal" href="#mailto" title="mailto"><code class="xref php php-func docutils literal"><span class="pre">mailto()</span></code></a> 函数一样，但是它的 <em>mailto</em> 标签使用了一个混淆的写法，
+<p>和 <a class="reference internal" href="#mailto" title="mailto"><tt class="xref php php-func docutils literal"><span class="pre">mailto()</span></tt></a> 函数一样，但是它的 <em>mailto</em> 标签使用了一个混淆的写法，
 可以防止你的 e-mail 地址被垃圾邮件机器人爬到。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="auto_link">
-<code class="descname">auto_link</code><span class="sig-paren">(</span><em>$str</em>, <em>$type = 'both'</em>, <em>$popup = FALSE</em><span class="sig-paren">)</span><a class="headerlink" href="#auto_link" title="永久链接至目标">¶</a></dt>
+<tt class="descname">auto_link</tt><big>(</big><em>$str</em>, <em>$type = 'both'</em>, <em>$popup = FALSE</em><big>)</big><a class="headerlink" href="#auto_link" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -774,7 +775,7 @@ JavaScript 的窗口属性，以此来控制窗口将如何被打开。如果没
 </pre></div>
 </div>
 <p>第二个参数用于决定是转换 URL 还是 e-mail 地址，默认情况不指定该参数，两者都会被转换。
-E-mail 地址的链接是使用上面介绍的 <a class="reference internal" href="#safe_mailto" title="safe_mailto"><code class="xref php php-func docutils literal"><span class="pre">safe_mailto()</span></code></a> 函数生成的。</p>
+E-mail 地址的链接是使用上面介绍的 <a class="reference internal" href="#safe_mailto" title="safe_mailto"><tt class="xref php php-func docutils literal"><span class="pre">safe_mailto()</span></tt></a> 函数生成的。</p>
 <p>只转换 URL</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$string</span> <span class="o">=</span> <span class="nx">auto_link</span><span class="p">(</span><span class="nv">$string</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">);</span>
 </pre></div>
@@ -791,7 +792,7 @@ E-mail 地址的链接是使用上面介绍的 <a class="reference internal" hre
 
 <dl class="function">
 <dt id="url_title">
-<code class="descname">url_title</code><span class="sig-paren">(</span><em>$str</em>, <em>$separator = '-'</em>, <em>$lowercase = FALSE</em><span class="sig-paren">)</span><a class="headerlink" href="#url_title" title="永久链接至目标">¶</a></dt>
+<tt class="descname">url_title</tt><big>(</big><em>$str</em>, <em>$separator = '-'</em>, <em>$lowercase = FALSE</em><big>)</big><a class="headerlink" href="#url_title" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -840,7 +841,7 @@ E-mail 地址的链接是使用上面介绍的 <a class="reference internal" hre
 
 <dl class="function">
 <dt id="prep_url">
-<code class="descname">prep_url</code><span class="sig-paren">(</span><em>$str = ''</em><span class="sig-paren">)</span><a class="headerlink" href="#prep_url" title="永久链接至目标">¶</a></dt>
+<tt class="descname">prep_url</tt><big>(</big><em>$str = ''</em><big>)</big><a class="headerlink" href="#prep_url" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -867,7 +868,7 @@ E-mail 地址的链接是使用上面介绍的 <a class="reference internal" hre
 
 <dl class="function">
 <dt id="redirect">
-<code class="descname">redirect</code><span class="sig-paren">(</span><em>$uri = ''</em>, <em>$method = 'auto'</em>, <em>$code = NULL</em><span class="sig-paren">)</span><a class="headerlink" href="#redirect" title="永久链接至目标">¶</a></dt>
+<tt class="descname">redirect</tt><big>(</big><em>$uri = ''</em>, <em>$method = 'auto'</em>, <em>$code = NULL</em><big>)</big><a class="headerlink" href="#redirect" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -906,7 +907,7 @@ location 方法速度快，但是在 ISS 服务器上不可靠。默认值为 <s
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">为了更好的控制服务器头，你应该使用 <a class="reference internal" href="../libraries/output.html"><span class="doc">输出类</span></a> 的 <code class="docutils literal"><span class="pre">set_header()</span></code> 方法。</p>
+<p class="last">为了更好的控制服务器头，你应该使用 <a class="reference internal" href="../libraries/output.html"><em>输出类</em></a> 的 <tt class="docutils literal"><span class="pre">set_header()</span></tt> 方法。</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>

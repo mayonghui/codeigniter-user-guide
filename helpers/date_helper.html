@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="辅助函数参考" href="index.html"/>
         <link rel="next" title="目录辅助函数" href="directory_helper.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -179,7 +178,7 @@
 <li class="toctree-l2"><a class="reference internal" href="array_helper.html">数组辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="captcha_helper.html">验证码辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cookie_helper.html">Cookie 辅助函数</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">日期辅助函数</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">日期辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="directory_helper.html">目录辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download_helper.html">下载辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email_helper.html">邮件辅助函数</a></li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -363,7 +364,7 @@
 <li class="toctree-l2"><a class="reference internal" href="array_helper.html">数组辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="captcha_helper.html">验证码辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cookie_helper.html">Cookie 辅助函数</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">日期辅助函数</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">日期辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="directory_helper.html">目录辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="download_helper.html">下载辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email_helper.html">邮件辅助函数</a></li>
@@ -446,7 +447,7 @@
 <p>该辅助函数有下列可用函数：</p>
 <dl class="function">
 <dt id="now">
-<code class="descname">now</code><span class="sig-paren">(</span><span class="optional">[</span><em>$timezone = NULL</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#now" title="永久链接至目标">¶</a></dt>
+<tt class="descname">now</tt><big>(</big><span class="optional">[</span><em>$timezone = NULL</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#now" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -466,16 +467,16 @@
 </table>
 <p>根据服务器的本地时间，以及一个 PHP 支持的时区参数或配置文件中的 &quot;基准时间&quot; 参数返回当前时间的 UNIX 时间戳，
 如果你不打算设置 &quot;基准时间&quot; （如果你的站点允许用户设置他们自己的时区，你通常需要设置这个），
-该函数就和 PHP 的 <code class="docutils literal"><span class="pre">time()</span></code> 函数没什么区别。</p>
+该函数就和 PHP 的 <tt class="docutils literal"><span class="pre">time()</span></tt> 函数没什么区别。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nx">now</span><span class="p">(</span><span class="s1">&#39;Australia/Victoria&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>如果没有指定时区，该函数将使用 <strong>time_reference</strong> 参数调用 <code class="docutils literal"><span class="pre">time()</span></code> 函数。</p>
+<p>如果没有指定时区，该函数将使用 <strong>time_reference</strong> 参数调用 <tt class="docutils literal"><span class="pre">time()</span></tt> 函数。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="mdate">
-<code class="descname">mdate</code><span class="sig-paren">(</span><span class="optional">[</span><em>$datestr = ''</em><span class="optional">[</span>, <em>$time = ''</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#mdate" title="永久链接至目标">¶</a></dt>
+<tt class="descname">mdate</tt><big>(</big><span class="optional">[</span><em>$datestr = ''</em><span class="optional">[</span>, <em>$time = ''</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#mdate" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -496,7 +497,7 @@
 </table>
 <p>该函数和 PHP 的 <a class="reference external" href="http://php.net/manual/en/function.date.php">date()</a> 函数一样，
 但是它支持 MySQL 风格的日期格式，在代码之前使用百分号，例如：<cite>%Y %m %d</cite></p>
-<p>使用这个函数的好处是你不用关心去转义那些不是日期代码的字符，如果使用 <code class="docutils literal"><span class="pre">date()</span></code> 函数时，你就要这么做。</p>
+<p>使用这个函数的好处是你不用关心去转义那些不是日期代码的字符，如果使用 <tt class="docutils literal"><span class="pre">date()</span></tt> 函数时，你就要这么做。</p>
 <p>例如:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$datestring</span> <span class="o">=</span> <span class="s1">&#39;Year: %Y Month: %m Day: %d - %h:%i %a&#39;</span><span class="p">;</span>
 <span class="nv">$time</span> <span class="o">=</span> <span class="nb">time</span><span class="p">();</span>
@@ -508,7 +509,7 @@
 
 <dl class="function">
 <dt id="standard_date">
-<code class="descname">standard_date</code><span class="sig-paren">(</span><span class="optional">[</span><em>$fmt = 'DATE_RFC822'</em><span class="optional">[</span>, <em>$time = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#standard_date" title="永久链接至目标">¶</a></dt>
+<tt class="descname">standard_date</tt><big>(</big><span class="optional">[</span><em>$fmt = 'DATE_RFC822'</em><span class="optional">[</span>, <em>$time = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#standard_date" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -536,7 +537,7 @@
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p>该函数已经废弃，请使用原生的 <code class="docutils literal"><span class="pre">date()</span></code> 函数和
+<p>该函数已经废弃，请使用原生的 <tt class="docutils literal"><span class="pre">date()</span></tt> 函数和
 <a class="reference external" href="https://secure.php.net/manual/en/class.datetime.php#datetime.constants.types">时间格式化常量</a>
 替代:</p>
 <div class="last highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nb">date</span><span class="p">(</span><span class="nx">DATE_RFC822</span><span class="p">,</span> <span class="nb">time</span><span class="p">());</span>
@@ -603,7 +604,7 @@
 
 <dl class="function">
 <dt id="local_to_gmt">
-<code class="descname">local_to_gmt</code><span class="sig-paren">(</span><span class="optional">[</span><em>$time = ''</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#local_to_gmt" title="永久链接至目标">¶</a></dt>
+<tt class="descname">local_to_gmt</tt><big>(</big><span class="optional">[</span><em>$time = ''</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#local_to_gmt" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -630,7 +631,7 @@
 
 <dl class="function">
 <dt id="gmt_to_local">
-<code class="descname">gmt_to_local</code><span class="sig-paren">(</span><span class="optional">[</span><em>$time = ''</em><span class="optional">[</span>, <em>$timezone = 'UTC'</em><span class="optional">[</span>, <em>$dst = FALSE</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#gmt_to_local" title="永久链接至目标">¶</a></dt>
+<tt class="descname">gmt_to_local</tt><big>(</big><span class="optional">[</span><em>$time = ''</em><span class="optional">[</span>, <em>$timezone = 'UTC'</em><span class="optional">[</span>, <em>$dst = FALSE</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#gmt_to_local" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -666,7 +667,7 @@
 
 <dl class="function">
 <dt id="mysql_to_unix">
-<code class="descname">mysql_to_unix</code><span class="sig-paren">(</span><span class="optional">[</span><em>$time = ''</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#mysql_to_unix" title="永久链接至目标">¶</a></dt>
+<tt class="descname">mysql_to_unix</tt><big>(</big><span class="optional">[</span><em>$time = ''</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#mysql_to_unix" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -693,7 +694,7 @@
 
 <dl class="function">
 <dt id="unix_to_human">
-<code class="descname">unix_to_human</code><span class="sig-paren">(</span><span class="optional">[</span><em>$time = ''</em><span class="optional">[</span>, <em>$seconds = FALSE</em><span class="optional">[</span>, <em>$fmt = 'us'</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#unix_to_human" title="永久链接至目标">¶</a></dt>
+<tt class="descname">unix_to_human</tt><big>(</big><span class="optional">[</span><em>$time = ''</em><span class="optional">[</span>, <em>$seconds = FALSE</em><span class="optional">[</span>, <em>$fmt = 'us'</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#unix_to_human" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -731,7 +732,7 @@
 
 <dl class="function">
 <dt id="human_to_unix">
-<code class="descname">human_to_unix</code><span class="sig-paren">(</span><span class="optional">[</span><em>$datestr = ''</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#human_to_unix" title="永久链接至目标">¶</a></dt>
+<tt class="descname">human_to_unix</tt><big>(</big><span class="optional">[</span><em>$datestr = ''</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#human_to_unix" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -749,7 +750,7 @@
 </tr>
 </tbody>
 </table>
-<p>该函数和 <a class="reference internal" href="#unix_to_human" title="unix_to_human"><code class="xref php php-func docutils literal"><span class="pre">unix_to_human()</span></code></a> 函数相反，将一个方便人类阅读的时间格式转换为 UNIX 时间戳。
+<p>该函数和 <a class="reference internal" href="#unix_to_human" title="unix_to_human"><tt class="xref php php-func docutils literal"><span class="pre">unix_to_human()</span></tt></a> 函数相反，将一个方便人类阅读的时间格式转换为 UNIX 时间戳。
 这在当你需要在一个表单字段中显示日期时很有用。如果输入的时间不同于上面的格式，函数返回 FALSE 。</p>
 <p>例如:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$now</span> <span class="o">=</span> <span class="nb">time</span><span class="p">();</span>
@@ -761,14 +762,14 @@
 
 <dl class="function">
 <dt id="nice_date">
-<code class="descname">nice_date</code><span class="sig-paren">(</span><span class="optional">[</span><em>$bad_date = ''</em><span class="optional">[</span>, <em>$format = FALSE</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#nice_date" title="永久链接至目标">¶</a></dt>
+<tt class="descname">nice_date</tt><big>(</big><span class="optional">[</span><em>$bad_date = ''</em><span class="optional">[</span>, <em>$format = FALSE</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#nice_date" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">参数:</th><td class="field-body"><ul class="first simple">
 <li><strong>$bad_date</strong> (<em>int</em>) -- The terribly formatted date-like string</li>
-<li><strong>$format</strong> (<em>string</em>) -- Date format to return (same as PHP's <code class="docutils literal"><span class="pre">date()</span></code> function)</li>
+<li><strong>$format</strong> (<em>string</em>) -- Date format to return (same as PHP's <tt class="docutils literal"><span class="pre">date()</span></tt> function)</li>
 </ul>
 </td>
 </tr>
@@ -781,7 +782,7 @@
 </tbody>
 </table>
 <p>该函数解析一个没有格式化过的数字格式的日期，并将其转换为格式化的日期。它也能解析格式化好的日期。</p>
-<p>默认该函数将返回 UNIX 时间戳，你也可以提供一个格式化字符串给第二个参数（和 PHP 的 <code class="docutils literal"><span class="pre">date()</span></code> 函数一样）。</p>
+<p>默认该函数将返回 UNIX 时间戳，你也可以提供一个格式化字符串给第二个参数（和 PHP 的 <tt class="docutils literal"><span class="pre">date()</span></tt> 函数一样）。</p>
 <p>例如:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$bad_date</span> <span class="o">=</span> <span class="s1">&#39;199605&#39;</span><span class="p">;</span>
 <span class="c1">// Should Produce: 1996-05-01</span>
@@ -800,7 +801,7 @@
 
 <dl class="function">
 <dt id="timespan">
-<code class="descname">timespan</code><span class="sig-paren">(</span><span class="optional">[</span><em>$seconds = 1</em><span class="optional">[</span>, <em>$time = ''</em><span class="optional">[</span>, <em>$units = ''</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#timespan" title="永久链接至目标">¶</a></dt>
+<tt class="descname">timespan</tt><big>(</big><span class="optional">[</span><em>$seconds = 1</em><span class="optional">[</span>, <em>$time = ''</em><span class="optional">[</span>, <em>$units = ''</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#timespan" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -843,7 +844,7 @@
 
 <dl class="function">
 <dt id="days_in_month">
-<code class="descname">days_in_month</code><span class="sig-paren">(</span><span class="optional">[</span><em>$month = 0</em><span class="optional">[</span>, <em>$year = ''</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#days_in_month" title="永久链接至目标">¶</a></dt>
+<tt class="descname">days_in_month</tt><big>(</big><span class="optional">[</span><em>$month = 0</em><span class="optional">[</span>, <em>$year = ''</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#days_in_month" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -870,13 +871,13 @@
 <p>如果第二个参数为空，将使用今年。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">该函数其实是原生的 <code class="docutils literal"><span class="pre">cal_days_in_month()</span></code> 函数的别名，如果它可用的话。</p>
+<p class="last">该函数其实是原生的 <tt class="docutils literal"><span class="pre">cal_days_in_month()</span></tt> 函数的别名，如果它可用的话。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="date_range">
-<code class="descname">date_range</code><span class="sig-paren">(</span><span class="optional">[</span><em>$unix_start = ''</em><span class="optional">[</span>, <em>$mixed = ''</em><span class="optional">[</span>, <em>$is_unix = TRUE</em><span class="optional">[</span>, <em>$format = 'Y-m-d'</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#date_range" title="永久链接至目标">¶</a></dt>
+<tt class="descname">date_range</tt><big>(</big><span class="optional">[</span><em>$unix_start = ''</em><span class="optional">[</span>, <em>$mixed = ''</em><span class="optional">[</span>, <em>$is_unix = TRUE</em><span class="optional">[</span>, <em>$format = 'Y-m-d'</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#date_range" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -885,7 +886,7 @@
 <li><strong>$unix_start</strong> (<em>int</em>) -- UNIX timestamp of the range start date</li>
 <li><strong>$mixed</strong> (<em>int</em>) -- UNIX timestamp of the range end date or interval in days</li>
 <li><strong>$is_unix</strong> (<em>bool</em>) -- set to FALSE if $mixed is not a timestamp</li>
-<li><strong>$format</strong> (<em>string</em>) -- Output date format, same as in <code class="docutils literal"><span class="pre">date()</span></code></li>
+<li><strong>$format</strong> (<em>string</em>) -- Output date format, same as in <tt class="docutils literal"><span class="pre">date()</span></tt></li>
 </ul>
 </td>
 </tr>
@@ -911,7 +912,7 @@
 
 <dl class="function">
 <dt id="timezones">
-<code class="descname">timezones</code><span class="sig-paren">(</span><span class="optional">[</span><em>$tz = ''</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#timezones" title="永久链接至目标">¶</a></dt>
+<tt class="descname">timezones</tt><big>(</big><span class="optional">[</span><em>$tz = ''</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#timezones" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -934,12 +935,12 @@
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nx">timezones</span><span class="p">(</span><span class="s1">&#39;UM5&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>这个函数和 <a class="reference internal" href="#timezone_menu" title="timezone_menu"><code class="xref php php-func docutils literal"><span class="pre">timezone_menu()</span></code></a> 函数一起使用时很有用。</p>
+<p>这个函数和 <a class="reference internal" href="#timezone_menu" title="timezone_menu"><tt class="xref php php-func docutils literal"><span class="pre">timezone_menu()</span></tt></a> 函数一起使用时很有用。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="timezone_menu">
-<code class="descname">timezone_menu</code><span class="sig-paren">(</span><span class="optional">[</span><em>$default = 'UTC'</em><span class="optional">[</span>, <em>$class = ''</em><span class="optional">[</span>, <em>$name = 'timezones'</em><span class="optional">[</span>, <em>$attributes = ''</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#timezone_menu" title="永久链接至目标">¶</a></dt>
+<tt class="descname">timezone_menu</tt><big>(</big><span class="optional">[</span><em>$default = 'UTC'</em><span class="optional">[</span>, <em>$class = ''</em><span class="optional">[</span>, <em>$name = 'timezones'</em><span class="optional">[</span>, <em>$attributes = ''</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#timezone_menu" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

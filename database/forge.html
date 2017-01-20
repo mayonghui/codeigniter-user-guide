@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="数据库参考" href="index.html"/>
         <link rel="next" title="数据库工具类" href="utilities.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -168,7 +167,7 @@
 <li class="toctree-l2"><a class="reference internal" href="metadata.html">获取元数据</a></li>
 <li class="toctree-l2"><a class="reference internal" href="call_function.html">自定义函数调用</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching.html">查询缓存</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">使用 Database Forge 维护数据库</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">使用 Database Forge 维护数据库</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utilities.html">数据库工具类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="db_driver_reference.html">数据库驱动器参考</a></li>
 </ul>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -352,7 +353,7 @@
 <li class="toctree-l2"><a class="reference internal" href="metadata.html">获取元数据</a></li>
 <li class="toctree-l2"><a class="reference internal" href="call_function.html">自定义函数调用</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching.html">查询缓存</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">使用 Database Forge 维护数据库</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">使用 Database Forge 维护数据库</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utilities.html">数据库工具类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="db_driver_reference.html">数据库驱动器参考</a></li>
 </ul>
@@ -467,12 +468,12 @@
 </pre></div>
 </div>
 <p>上例中，我们通过第一个参数传递了一个自定义的数据库对象，第二个参数表示方法将返回 dbforge 对象，
-而不是直接赋值给 <code class="docutils literal"><span class="pre">$this-&gt;dbforge</span></code> 。</p>
+而不是直接赋值给 <tt class="docutils literal"><span class="pre">$this-&gt;dbforge</span></tt> 。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
 <p class="last">两个参数都可以独立使用，如果你只想传第二个参数，可以将第一个参数置空。</p>
 </div>
-<p>一旦初始化结束，你就可以使用 <code class="docutils literal"><span class="pre">$this-&gt;dbforge</span></code> 对象来访问它的方法:</p>
+<p>一旦初始化结束，你就可以使用 <tt class="docutils literal"><span class="pre">$this-&gt;dbforge</span></tt> 对象来访问它的方法:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">dbforge</span><span class="o">-&gt;</span><span class="na">some_method</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -544,8 +545,8 @@
 <span class="p">);</span>
 </pre></div>
 </div>
-<p>字段定义好了之后，就可以在调用 <code class="docutils literal"><span class="pre">create_table()</span></code> 方法的后面使用
-<code class="docutils literal"><span class="pre">$this-&gt;dbforge-&gt;add_field($fields);</span></code> 方法来添加字段了。</p>
+<p>字段定义好了之后，就可以在调用 <tt class="docutils literal"><span class="pre">create_table()</span></tt> 方法的后面使用
+<tt class="docutils literal"><span class="pre">$this-&gt;dbforge-&gt;add_field($fields);</span></tt> 方法来添加字段了。</p>
 <p><strong>$this-&gt;dbforge-&gt;add_field()</strong></p>
 <p>添加字段方法的参数就是上面介绍的数组。</p>
 <div class="section" id="id6">
@@ -556,7 +557,7 @@
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">Passing raw strings as fields cannot be followed by <code class="docutils literal"><span class="pre">add_key()</span></code> calls on those fields.</p>
+<p class="last">Passing raw strings as fields cannot be followed by <tt class="docutils literal"><span class="pre">add_key()</span></tt> calls on those fields.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
@@ -604,7 +605,7 @@
 <span class="c1">// gives CREATE TABLE IF NOT EXISTS table_name</span>
 </pre></div>
 </div>
-<p>你还可以指定表的属性，例如 MySQL 的 <code class="docutils literal"><span class="pre">ENGINE</span></code></p>
+<p>你还可以指定表的属性，例如 MySQL 的 <tt class="docutils literal"><span class="pre">ENGINE</span></tt></p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$attributes</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;ENGINE&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;InnoDB&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">dbforge</span><span class="o">-&gt;</span><span class="na">create_table</span><span class="p">(</span><span class="s1">&#39;table_name&#39;</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">,</span> <span class="nv">$attributes</span><span class="p">);</span>
 <span class="c1">// produces: CREATE TABLE `table_name` (...) ENGINE = InnoDB DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci</span>
@@ -612,7 +613,7 @@
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">除非你指定了 <code class="docutils literal"><span class="pre">CHARACTER</span> <span class="pre">SET</span></code> 或 <code class="docutils literal"><span class="pre">COLLATE</span></code> 属性，<code class="docutils literal"><span class="pre">create_table()</span></code> 方法
+<p class="last">除非你指定了 <tt class="docutils literal"><span class="pre">CHARACTER</span> <span class="pre">SET</span></tt> 或 <tt class="docutils literal"><span class="pre">COLLATE</span></tt> 属性，<tt class="docutils literal"><span class="pre">create_table()</span></tt> 方法
 默认会使用配置文件中 <em>char_set</em> 和 <em>dbcollat</em> 的值（仅针对 MySQL）。</p>
 </div>
 </div>
@@ -641,7 +642,7 @@
 <div class="section" id="id12">
 <h3><a class="toc-backref" href="#id26">给表添加列</a><a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
 <p><strong>$this-&gt;dbforge-&gt;add_column()</strong></p>
-<p><code class="docutils literal"><span class="pre">add_column()</span></code> 方法用于对现有数据表进行修改，它的参数和上面介绍的
+<p><tt class="docutils literal"><span class="pre">add_column()</span></tt> 方法用于对现有数据表进行修改，它的参数和上面介绍的
 字段数组一样。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$fields</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;preferences&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;type&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;TEXT&#39;</span><span class="p">)</span>
@@ -675,7 +676,7 @@
 <div class="section" id="id14">
 <h3><a class="toc-backref" href="#id28">修改表中的某个列</a><a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
 <p><strong>$this-&gt;dbforge-&gt;modify_column()</strong></p>
-<p>该方法的用法和 <code class="docutils literal"><span class="pre">add_column()</span></code> 一样，只是它用于对现有的列进行修改，而不是添加新列。
+<p>该方法的用法和 <tt class="docutils literal"><span class="pre">add_column()</span></tt> 一样，只是它用于对现有的列进行修改，而不是添加新列。
 如果要修改列的名称，你可以在列的定义数组中添加一个 &quot;name&quot; 索引。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$fields</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;old_name&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
@@ -693,10 +694,10 @@
 <h2><a class="toc-backref" href="#id29">类参考</a><a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="CI_DB_forge">
-<em class="property">class </em><code class="descname">CI_DB_forge</code><a class="headerlink" href="#CI_DB_forge" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><tt class="descname">CI_DB_forge</tt><a class="headerlink" href="#CI_DB_forge" title="永久链接至目标">¶</a></dt>
 <dd><dl class="method">
 <dt id="CI_DB_forge::add_column">
-<code class="descname">add_column</code><span class="sig-paren">(</span><em>$table</em><span class="optional">[</span>, <em>$field = array()</em><span class="optional">[</span>, <em>$_after = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_forge::add_column" title="永久链接至目标">¶</a></dt>
+<tt class="descname">add_column</tt><big>(</big><em>$table</em><span class="optional">[</span>, <em>$field = array()</em><span class="optional">[</span>, <em>$_after = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_forge::add_column" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -721,7 +722,7 @@
 
 <dl class="method">
 <dt id="CI_DB_forge::add_field">
-<code class="descname">add_field</code><span class="sig-paren">(</span><em>$field</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_forge::add_field" title="永久链接至目标">¶</a></dt>
+<tt class="descname">add_field</tt><big>(</big><em>$field</em><big>)</big><a class="headerlink" href="#CI_DB_forge::add_field" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -745,7 +746,7 @@
 
 <dl class="method">
 <dt id="CI_DB_forge::add_key">
-<code class="descname">add_key</code><span class="sig-paren">(</span><em>$key</em><span class="optional">[</span>, <em>$primary = FALSE</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_forge::add_key" title="永久链接至目标">¶</a></dt>
+<tt class="descname">add_key</tt><big>(</big><em>$key</em><span class="optional">[</span>, <em>$primary = FALSE</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_forge::add_key" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -769,7 +770,7 @@
 
 <dl class="method">
 <dt id="CI_DB_forge::create_database">
-<code class="descname">create_database</code><span class="sig-paren">(</span><em>$db_name</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_forge::create_database" title="永久链接至目标">¶</a></dt>
+<tt class="descname">create_database</tt><big>(</big><em>$db_name</em><big>)</big><a class="headerlink" href="#CI_DB_forge::create_database" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -792,7 +793,7 @@
 
 <dl class="method">
 <dt id="CI_DB_forge::create_table">
-<code class="descname">create_table</code><span class="sig-paren">(</span><em>$table</em><span class="optional">[</span>, <em>$if_not_exists = FALSE</em><span class="optional">[</span>, <em>array $attributes = array()</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_forge::create_table" title="永久链接至目标">¶</a></dt>
+<tt class="descname">create_table</tt><big>(</big><em>$table</em><span class="optional">[</span>, <em>$if_not_exists = FALSE</em><span class="optional">[</span>, <em>array $attributes = array()</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_forge::create_table" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -817,7 +818,7 @@
 
 <dl class="method">
 <dt id="CI_DB_forge::drop_column">
-<code class="descname">drop_column</code><span class="sig-paren">(</span><em>$table</em>, <em>$column_name</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_forge::drop_column" title="永久链接至目标">¶</a></dt>
+<tt class="descname">drop_column</tt><big>(</big><em>$table</em>, <em>$column_name</em><big>)</big><a class="headerlink" href="#CI_DB_forge::drop_column" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -841,7 +842,7 @@
 
 <dl class="method">
 <dt id="CI_DB_forge::drop_database">
-<code class="descname">drop_database</code><span class="sig-paren">(</span><em>$db_name</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_forge::drop_database" title="永久链接至目标">¶</a></dt>
+<tt class="descname">drop_database</tt><big>(</big><em>$db_name</em><big>)</big><a class="headerlink" href="#CI_DB_forge::drop_database" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -864,7 +865,7 @@
 
 <dl class="method">
 <dt id="CI_DB_forge::drop_table">
-<code class="descname">drop_table</code><span class="sig-paren">(</span><em>$table_name</em><span class="optional">[</span>, <em>$if_exists = FALSE</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_forge::drop_table" title="永久链接至目标">¶</a></dt>
+<tt class="descname">drop_table</tt><big>(</big><em>$table_name</em><span class="optional">[</span>, <em>$if_exists = FALSE</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_forge::drop_table" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -888,7 +889,7 @@
 
 <dl class="method">
 <dt id="CI_DB_forge::modify_column">
-<code class="descname">modify_column</code><span class="sig-paren">(</span><em>$table</em>, <em>$field</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_forge::modify_column" title="永久链接至目标">¶</a></dt>
+<tt class="descname">modify_column</tt><big>(</big><em>$table</em>, <em>$field</em><big>)</big><a class="headerlink" href="#CI_DB_forge::modify_column" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -912,7 +913,7 @@
 
 <dl class="method">
 <dt id="CI_DB_forge::rename_table">
-<code class="descname">rename_table</code><span class="sig-paren">(</span><em>$table_name</em>, <em>$new_table_name</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_forge::rename_table" title="永久链接至目标">¶</a></dt>
+<tt class="descname">rename_table</tt><big>(</big><em>$table_name</em>, <em>$new_table_name</em><big>)</big><a class="headerlink" href="#CI_DB_forge::rename_table" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

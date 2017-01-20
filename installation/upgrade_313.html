@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="从老版本升级" href="upgrading.html"/>
         <link rel="next" title="Upgrading from 3.1.1 to 3.1.2" href="upgrade_312.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">安装说明</a><ul class="current">
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">安装说明</a><ul class="current">
@@ -441,13 +442,13 @@ please make copies of them first.</p>
 </div>
 <div class="section" id="step-2-remove-usage-of-nice-date-helper-deprecation">
 <h2>Step 2: Remove usage of nice_date() helper (deprecation)<a class="headerlink" href="#step-2-remove-usage-of-nice-date-helper-deprecation" title="永久链接至标题">¶</a></h2>
-<p>The <a class="reference internal" href="../helpers/date_helper.html"><span class="doc">Date Helper</span></a> function <code class="docutils literal"><span class="pre">nice_date()</span></code> is
+<p>The <a class="reference internal" href="../helpers/date_helper.html"><em>Date Helper</em></a> function <tt class="docutils literal"><span class="pre">nice_date()</span></tt> is
 no longer useful since the introduction of PHP's <a class="reference external" href="https://secure.php.net/datetime">DateTime classes</a></p>
 <p>You can replace it with the following:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">DateTime</span><span class="o">::</span><span class="na">createFromFormat</span><span class="p">(</span><span class="nv">$input_format</span><span class="p">,</span> <span class="nv">$input_date</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">format</span><span class="p">(</span><span class="nv">$desired_output_format</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>Thus, <code class="docutils literal"><span class="pre">nice_date()</span></code> is now deprecated and scheduled for removal in
+<p>Thus, <tt class="docutils literal"><span class="pre">nice_date()</span></tt> is now deprecated and scheduled for removal in
 CodeIgniter 3.2+.</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
@@ -457,10 +458,10 @@ to remove its usage sooner rather than later.</p>
 </div>
 <div class="section" id="step-3-remove-usage-of-config-standardize-newlines">
 <h2>Step 3: Remove usage of $config['standardize_newlines']<a class="headerlink" href="#step-3-remove-usage-of-config-standardize-newlines" title="永久链接至标题">¶</a></h2>
-<p>The <a class="reference internal" href="../libraries/input.html"><span class="doc">Input Library</span></a> would optionally replace
-occurences of <cite>rn</cite>, <cite>r</cite>, <cite>n</cite> in input data with whatever the <code class="docutils literal"><span class="pre">PHP_EOL</span></code>
-value is on your system - if you've set <code class="docutils literal"><span class="pre">$config['standardize_newlines']</span></code>
-to <code class="docutils literal"><span class="pre">TRUE</span></code> in your <em>application/config/config.php</em>.</p>
+<p>The <a class="reference internal" href="../libraries/input.html"><em>Input Library</em></a> would optionally replace
+occurences of <cite>rn</cite>, <cite>r</cite>, <cite>n</cite> in input data with whatever the <tt class="docutils literal"><span class="pre">PHP_EOL</span></tt>
+value is on your system - if you've set <tt class="docutils literal"><span class="pre">$config['standardize_newlines']</span></tt>
+to <tt class="docutils literal"><span class="pre">TRUE</span></tt> in your <em>application/config/config.php</em>.</p>
 <p>This functionality is now deprecated and scheduled for removal in
 CodeIgniter 3.2.+.</p>
 <div class="admonition note">

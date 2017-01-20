@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="辅助函数参考" href="index.html"/>
         <link rel="next" title="字符串辅助函数" href="string_helper.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -191,7 +190,7 @@
 <li class="toctree-l2"><a class="reference internal" href="number_helper.html">数字辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="path_helper.html">路径辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="security_helper.html">安全辅助函数</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">表情辅助函数</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">表情辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="string_helper.html">字符串辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="text_helper.html">文本辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typography_helper.html">排版辅助函数</a></li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -375,7 +376,7 @@
 <li class="toctree-l2"><a class="reference internal" href="number_helper.html">数字辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="path_helper.html">路径辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="security_helper.html">安全辅助函数</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">表情辅助函数</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">表情辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="string_helper.html">字符串辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="text_helper.html">文本辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typography_helper.html">排版辅助函数</a></li>
@@ -472,9 +473,9 @@
 <p>在 <strong>application/controllers/</strong> 目录下，创建一个文件 Smileys.php 然后输入下面的代码。</p>
 <div class="admonition important">
 <p class="first admonition-title">重要</p>
-<p class="last">修改下面的 <a class="reference internal" href="#get_clickable_smileys" title="get_clickable_smileys"><code class="xref php php-func docutils literal"><span class="pre">get_clickable_smileys()</span></code></a> 函数的 URL 参数，让其指向你的表情目录。</p>
+<p class="last">修改下面的 <a class="reference internal" href="#get_clickable_smileys" title="get_clickable_smileys"><tt class="xref php php-func docutils literal"><span class="pre">get_clickable_smileys()</span></tt></a> 函数的 URL 参数，让其指向你的表情目录。</p>
 </div>
-<p>你会发现我们除了使用到了表情库，还使用到了 <a class="reference internal" href="../libraries/table.html"><span class="doc">表格类</span></a>:</p>
+<p>你会发现我们除了使用到了表情库，还使用到了 <a class="reference internal" href="../libraries/table.html"><em>表格类</em></a>:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
 
 <span class="k">class</span> <span class="nc">Smileys</span> <span class="k">extends</span> <span class="nx">CI_Controller</span> <span class="p">{</span>
@@ -529,7 +530,7 @@
 <h2><a class="toc-backref" href="#id14">可用函数</a><a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <dl class="function">
 <dt id="get_clickable_smileys">
-<code class="descname">get_clickable_smileys</code><span class="sig-paren">(</span><em>$image_url</em><span class="optional">[</span>, <em>$alias = ''</em><span class="optional">[</span>, <em>$smileys = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#get_clickable_smileys" title="永久链接至目标">¶</a></dt>
+<tt class="descname">get_clickable_smileys</tt><big>(</big><em>$image_url</em><span class="optional">[</span>, <em>$alias = ''</em><span class="optional">[</span>, <em>$smileys = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#get_clickable_smileys" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -558,7 +559,7 @@
 
 <dl class="function">
 <dt id="smiley_js">
-<code class="descname">smiley_js</code><span class="sig-paren">(</span><span class="optional">[</span><em>$alias = ''</em><span class="optional">[</span>, <em>$field_id = ''</em><span class="optional">[</span>, <em>$inline = TRUE</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#smiley_js" title="永久链接至目标">¶</a></dt>
+<tt class="descname">smiley_js</tt><big>(</big><span class="optional">[</span><em>$alias = ''</em><span class="optional">[</span>, <em>$field_id = ''</em><span class="optional">[</span>, <em>$inline = TRUE</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#smiley_js" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -589,7 +590,7 @@
 
 <dl class="function">
 <dt id="parse_smileys">
-<code class="descname">parse_smileys</code><span class="sig-paren">(</span><span class="optional">[</span><em>$str = ''</em><span class="optional">[</span>, <em>$image_url = ''</em><span class="optional">[</span>, <em>$smileys = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#parse_smileys" title="永久链接至目标">¶</a></dt>
+<tt class="descname">parse_smileys</tt><big>(</big><span class="optional">[</span><em>$str = ''</em><span class="optional">[</span>, <em>$image_url = ''</em><span class="optional">[</span>, <em>$smileys = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#parse_smileys" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

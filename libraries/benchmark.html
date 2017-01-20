@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="类库参考" href="index.html"/>
         <link rel="next" title="缓存驱动器" href="caching.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -122,7 +121,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">类库参考</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">基准测试类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">基准测试类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching.html">缓存驱动器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calendar.html">日历类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cart.html">购物车类</a></li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -306,7 +307,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">类库参考</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">基准测试类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">基准测试类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching.html">缓存驱动器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calendar.html">日历类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cart.html">购物车类</a></li>
@@ -446,8 +447,8 @@
 </div>
 <div class="custom-index container"></div><div class="section" id="id2">
 <h2><a class="toc-backref" href="#id7">使用基准测试类</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>基准测试类可以在你的 <a class="reference internal" href="../general/controllers.html"><span class="doc">控制器</span></a>、<a class="reference internal" href="../general/views.html"><span class="doc">视图</span></a>
-以及 <a class="reference internal" href="../general/models.html"><span class="doc">模型</span></a> 中使用。</p>
+<p>基准测试类可以在你的 <a class="reference internal" href="../general/controllers.html"><em>控制器</em></a>、<a class="reference internal" href="../general/views.html"><em>视图</em></a>
+以及 <a class="reference internal" href="../general/models.html"><em>模型</em></a> 中使用。</p>
 <p>使用流程如下：</p>
 <ol class="arabic simple">
 <li>标记一个起始点</li>
@@ -487,7 +488,7 @@
 </div>
 <div class="section" id="id3">
 <h3><a class="toc-backref" href="#id8">在 性能分析器 中使用基准测试点</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
-<p>如果你希望你的基准测试数据显示在 <a class="reference internal" href="../general/profiling.html"><span class="doc">性能分析器</span></a> 中，
+<p>如果你希望你的基准测试数据显示在 <a class="reference internal" href="../general/profiling.html"><em>性能分析器</em></a> 中，
 那么你的标记点就需要成对出现，而且标记点名称需要以 _start 和 _end 结束，
 每一对的标记点名称应该一致。例如:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">benchmark</span><span class="o">-&gt;</span><span class="na">mark</span><span class="p">(</span><span class="s1">&#39;my_mark_start&#39;</span><span class="p">);</span>
@@ -503,7 +504,7 @@
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">benchmark</span><span class="o">-&gt;</span><span class="na">mark</span><span class="p">(</span><span class="s1">&#39;another_mark_end&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>阅读 <a class="reference internal" href="../general/profiling.html"><span class="doc">性能分析器</span></a> 页面了解更多信息。</p>
+<p>阅读 <a class="reference internal" href="../general/profiling.html"><em>性能分析器</em></a> 页面了解更多信息。</p>
 </div>
 <div class="section" id="id4">
 <h3><a class="toc-backref" href="#id9">显示总执行时间</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
@@ -545,10 +546,10 @@
 <h2><a class="toc-backref" href="#id11">类参考</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="CI_Benchmark">
-<em class="property">class </em><code class="descname">CI_Benchmark</code><a class="headerlink" href="#CI_Benchmark" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><tt class="descname">CI_Benchmark</tt><a class="headerlink" href="#CI_Benchmark" title="永久链接至目标">¶</a></dt>
 <dd><dl class="method">
 <dt id="CI_Benchmark::mark">
-<code class="descname">mark</code><span class="sig-paren">(</span><em>$name</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Benchmark::mark" title="永久链接至目标">¶</a></dt>
+<tt class="descname">mark</tt><big>(</big><em>$name</em><big>)</big><a class="headerlink" href="#CI_Benchmark::mark" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -568,7 +569,7 @@
 
 <dl class="method">
 <dt id="CI_Benchmark::elapsed_time">
-<code class="descname">elapsed_time</code><span class="sig-paren">(</span><span class="optional">[</span><em>$point1 = ''</em><span class="optional">[</span>, <em>$point2 = ''</em><span class="optional">[</span>, <em>$decimals = 4</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Benchmark::elapsed_time" title="永久链接至目标">¶</a></dt>
+<tt class="descname">elapsed_time</tt><big>(</big><span class="optional">[</span><em>$point1 = ''</em><span class="optional">[</span>, <em>$point2 = ''</em><span class="optional">[</span>, <em>$decimals = 4</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Benchmark::elapsed_time" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -589,13 +590,13 @@
 </tbody>
 </table>
 <p>计算并返回两个标记点之间的时间差。</p>
-<p>如果第一个参数为空，方法将返回 <code class="docutils literal"><span class="pre">{elapsed_time}</span></code> 伪变量。这用于在视图中
+<p>如果第一个参数为空，方法将返回 <tt class="docutils literal"><span class="pre">{elapsed_time}</span></tt> 伪变量。这用于在视图中
 显示整个系统的执行时间，输出类将在最终输出时使用真实的总执行时间替换掉这个伪变量。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_Benchmark::memory_usage">
-<code class="descname">memory_usage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Benchmark::memory_usage" title="永久链接至目标">¶</a></dt>
+<tt class="descname">memory_usage</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_Benchmark::memory_usage" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -606,8 +607,8 @@
 </tr>
 </tbody>
 </table>
-<p>只是简单的返回 <code class="docutils literal"><span class="pre">{memory_usage}</span></code> 伪变量。</p>
-<p>该方法可以在视图的任意位置使用，直到最终输出页面时 <a class="reference internal" href="output.html"><span class="doc">输出类</span></a>
+<p>只是简单的返回 <tt class="docutils literal"><span class="pre">{memory_usage}</span></tt> 伪变量。</p>
+<p>该方法可以在视图的任意位置使用，直到最终输出页面时 <a class="reference internal" href="output.html"><em>输出类</em></a>
 才会将真实的值替换掉这个伪变量。</p>
 </dd></dl>
 

@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="常规主题" href="index.html"/>
         <link rel="next" title="错误处理" href="errors.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -107,7 +106,7 @@
 <li class="toctree-l2"><a class="reference internal" href="autoloader.html">自动加载资源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="common_functions.html">公共函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compatibility_functions.html">兼容性函数</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">URI 路由</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">URI 路由</a></li>
 <li class="toctree-l2"><a class="reference internal" href="errors.html">错误处理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching.html">网页缓存</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profiling.html">程序分析</a></li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -291,7 +292,7 @@
 <li class="toctree-l2"><a class="reference internal" href="autoloader.html">自动加载资源</a></li>
 <li class="toctree-l2"><a class="reference internal" href="common_functions.html">公共函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compatibility_functions.html">兼容性函数</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">URI 路由</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">URI 路由</a></li>
 <li class="toctree-l2"><a class="reference internal" href="errors.html">错误处理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching.html">网页缓存</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profiling.html">程序分析</a></li>
@@ -445,7 +446,7 @@ URL 中对应的那样。</p>
 <div class="section" id="id1">
 <h2>设置你自己的路由规则<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>路由规则定义在 <em>application/config/routes.php</em> 文件中，在这个文件中你会
-发现一个名为 <code class="docutils literal"><span class="pre">$route</span></code> 的数组，利用它你可以设置你自己的路由规则。
+发现一个名为 <tt class="docutils literal"><span class="pre">$route</span></tt> 的数组，利用它你可以设置你自己的路由规则。
 在路由规则中你可以使用通配符或正则表达式。</p>
 </div>
 <div class="section" id="id2">
@@ -525,9 +526,9 @@ URL 中对应的那样。</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">In the above example, if the <code class="docutils literal"><span class="pre">$1</span></code> placeholder contains a
+<p class="last">In the above example, if the <tt class="docutils literal"><span class="pre">$1</span></tt> placeholder contains a
 slash, it will still be split into multiple parameters when
-passed to <code class="docutils literal"><span class="pre">Auth::login()</span></code>.</p>
+passed to <tt class="docutils literal"><span class="pre">Auth::login()</span></tt>.</p>
 </div>
 <p>如果你还不知道正则表达式，可以访问 <a class="reference external" href="http://www.regular-expressions.info/">regular-expressions.info</a> 开始学习一下。</p>
 <div class="admonition note">
@@ -554,12 +555,12 @@ passed to <code class="docutils literal"><span class="pre">Auth::login()</span><
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$route</span><span class="p">[</span><span class="s1">&#39;products&#39;</span><span class="p">][</span><span class="s1">&#39;put&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;product/insert&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>上例中，当发送 PUT 请求到 &quot;products&quot; 这个 URI 时，将会调用 <code class="docutils literal"><span class="pre">Product::insert()</span></code> 方法。</p>
+<p>上例中，当发送 PUT 请求到 &quot;products&quot; 这个 URI 时，将会调用 <tt class="docutils literal"><span class="pre">Product::insert()</span></tt> 方法。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$route</span><span class="p">[</span><span class="s1">&#39;products/(:num)&#39;</span><span class="p">][</span><span class="s1">&#39;DELETE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;product/delete/$1&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>当发送 DELETE 请求到第一段为 &quot;products&quot; ，第二段为数字这个 URL时，将会调用
-<code class="docutils literal"><span class="pre">Product::delete()</span></code> 方法，并将数字作为第一个参数。</p>
+<tt class="docutils literal"><span class="pre">Product::delete()</span></tt> 方法，并将数字作为第一个参数。</p>
 <p>当然，使用 HTTP 动词是可选的。</p>
 </div>
 <div class="section" id="id6">
@@ -570,9 +571,9 @@ passed to <code class="docutils literal"><span class="pre">Auth::login()</span><
 </div>
 <p>This route points to the action that should be executed if the URI contains
 no data, which will be the case when people load your root URL.
-The setting accepts a <strong>controller/method</strong> value and <code class="docutils literal"><span class="pre">index()</span></code> would be
+The setting accepts a <strong>controller/method</strong> value and <tt class="docutils literal"><span class="pre">index()</span></tt> would be
 the default method if you don't specify one. In the above example, it is
-<code class="docutils literal"><span class="pre">Welcome::index()</span></code> that would be called.</p>
+<tt class="docutils literal"><span class="pre">Welcome::index()</span></tt> that would be called.</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
 <p class="last">You can NOT use a directory as a part of this setting!</p>
@@ -582,7 +583,7 @@ will appear by default.</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$route</span><span class="p">[</span><span class="s1">&#39;404_override&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>这个路由表示当用户请求了一个不存在的页面时该加载哪个控制器，它将会覆盖默认的 404 错误页面。Same per-directory rules as with 'default_controller' apply here as well. <code class="docutils literal"><span class="pre">show_404()</span></code> 函数不会受影响，它还是会继续加载 <em>application/views/errors/</em> 目录下的默认的 <em>error_404.php</em> 文件。</p>
+<p>这个路由表示当用户请求了一个不存在的页面时该加载哪个控制器，它将会覆盖默认的 404 错误页面。Same per-directory rules as with 'default_controller' apply here as well. <tt class="docutils literal"><span class="pre">show_404()</span></tt> 函数不会受影响，它还是会继续加载 <em>application/views/errors/</em> 目录下的默认的 <em>error_404.php</em> 文件。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$route</span><span class="p">[</span><span class="s1">&#39;translate_uri_dashes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">FALSE</span><span class="p">;</span>
 </pre></div>
 </div>

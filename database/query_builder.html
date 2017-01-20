@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="数据库参考" href="index.html"/>
         <link rel="next" title="事务" href="transactions.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -163,7 +162,7 @@
 <li class="toctree-l2"><a class="reference internal" href="queries.html">查询</a></li>
 <li class="toctree-l2"><a class="reference internal" href="results.html">生成查询结果</a></li>
 <li class="toctree-l2"><a class="reference internal" href="helpers.html">查询辅助函数</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">查询构造器类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">查询构造器类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="transactions.html">事务</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metadata.html">获取元数据</a></li>
 <li class="toctree-l2"><a class="reference internal" href="call_function.html">自定义函数调用</a></li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -347,7 +348,7 @@
 <li class="toctree-l2"><a class="reference internal" href="queries.html">查询</a></li>
 <li class="toctree-l2"><a class="reference internal" href="results.html">生成查询结果</a></li>
 <li class="toctree-l2"><a class="reference internal" href="helpers.html">查询辅助函数</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">查询构造器类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">查询构造器类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="transactions.html">事务</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metadata.html">获取元数据</a></li>
 <li class="toctree-l2"><a class="reference internal" href="call_function.html">自定义函数调用</a></li>
@@ -479,7 +480,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>参考 <a class="reference internal" href="results.html"><span class="doc">生成查询结果</span></a> 页面获取关于生成结果的更多信息。</p>
+<p>参考 <a class="reference internal" href="results.html"><em>生成查询结果</em></a> 页面获取关于生成结果的更多信息。</p>
 <p><strong>$this-&gt;db-&gt;get_compiled_select()</strong></p>
 <p>该方法和 <strong>$this-&gt;db-&gt;get()</strong> 方法一样编译 SELECT 查询并返回查询的 SQL 语句，
 但是，该方法并不执行它。</p>
@@ -528,14 +529,14 @@
 <p class="first admonition-title">注解</p>
 <p class="last">如果你要查询表的所有列，可以不用写这个函数，CodeIgniter 会自动查询所有列（SELECT *）。</p>
 </div>
-<p><code class="docutils literal"><span class="pre">$this-&gt;db-&gt;select()</span></code> 方法的第二个参数可选，如果设置为 FALSE，CodeIgniter 将不保护你的
+<p><tt class="docutils literal"><span class="pre">$this-&gt;db-&gt;select()</span></tt> 方法的第二个参数可选，如果设置为 FALSE，CodeIgniter 将不保护你的
 表名和字段名，这在当你编写复合查询语句时很有用，不会破坏你编写的语句。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span>$this-&gt;db-&gt;select(&#39;(SELECT SUM(payments.amount) FROM payments WHERE payments.invoice_id=4&#39;) AS amount_paid&#39;, FALSE);
 $query = $this-&gt;db-&gt;get(&#39;mytable&#39;);
 </pre></div>
 </div>
 <p><strong>$this-&gt;db-&gt;select_max()</strong></p>
-<p>该方法用于编写查询语句中的 <code class="docutils literal"><span class="pre">SELECT</span> <span class="pre">MAX(field)</span></code> 部分，你可以使用第二个参数（可选）重命名结果字段。</p>
+<p>该方法用于编写查询语句中的 <tt class="docutils literal"><span class="pre">SELECT</span> <span class="pre">MAX(field)</span></tt> 部分，你可以使用第二个参数（可选）重命名结果字段。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">select_max</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">);</span>
 <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;members&#39;</span><span class="p">);</span>  <span class="c1">// Produces: SELECT MAX(age) as age FROM members</span>
 
@@ -544,21 +545,21 @@ $query = $this-&gt;db-&gt;get(&#39;mytable&#39;);
 </pre></div>
 </div>
 <p><strong>$this-&gt;db-&gt;select_min()</strong></p>
-<p>该方法用于编写查询语句中的 <code class="docutils literal"><span class="pre">SELECT</span> <span class="pre">MIN(field)</span></code> 部分，和 select_max() 方法一样，
+<p>该方法用于编写查询语句中的 <tt class="docutils literal"><span class="pre">SELECT</span> <span class="pre">MIN(field)</span></tt> 部分，和 select_max() 方法一样，
 你可以使用第二个参数（可选）重命名结果字段。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">select_min</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">);</span>
 <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;members&#39;</span><span class="p">);</span> <span class="c1">// Produces: SELECT MIN(age) as age FROM members</span>
 </pre></div>
 </div>
 <p><strong>$this-&gt;db-&gt;select_avg()</strong></p>
-<p>该方法用于编写查询语句中的 <code class="docutils literal"><span class="pre">SELECT</span> <span class="pre">AVG(field)</span></code> 部分，和 select_max() 方法一样，
+<p>该方法用于编写查询语句中的 <tt class="docutils literal"><span class="pre">SELECT</span> <span class="pre">AVG(field)</span></tt> 部分，和 select_max() 方法一样，
 你可以使用第二个参数（可选）重命名结果字段。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">select_avg</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">);</span>
 <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;members&#39;</span><span class="p">);</span> <span class="c1">// Produces: SELECT AVG(age) as age FROM members</span>
 </pre></div>
 </div>
 <p><strong>$this-&gt;db-&gt;select_sum()</strong></p>
-<p>该方法用于编写查询语句中的 <code class="docutils literal"><span class="pre">SELECT</span> <span class="pre">SUM(field)</span></code> 部分，和 select_max() 方法一样，
+<p>该方法用于编写查询语句中的 <tt class="docutils literal"><span class="pre">SELECT</span> <span class="pre">SUM(field)</span></tt> 部分，和 select_max() 方法一样，
 你可以使用第二个参数（可选）重命名结果字段。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">select_sum</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">);</span>
 <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;members&#39;</span><span class="p">);</span> <span class="c1">// Produces: SELECT SUM(age) as age FROM members</span>
@@ -652,7 +653,7 @@ outer 和 right outer 。</p>
 </div></blockquote>
 </li>
 </ol>
-<p><code class="docutils literal"><span class="pre">$this-&gt;db-&gt;where()</span></code> 方法有一个可选的第三个参数，如果设置为 FALSE，CodeIgniter
+<p><tt class="docutils literal"><span class="pre">$this-&gt;db-&gt;where()</span></tt> 方法有一个可选的第三个参数，如果设置为 FALSE，CodeIgniter
 将不保护你的表名和字段名。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;MATCH (field) AGAINST (&quot;value&quot;)&#39;</span><span class="p">,</span> <span class="k">NULL</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
 </pre></div>
@@ -744,15 +745,15 @@ outer 和 right outer 。</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last"><code class="docutils literal"><span class="pre">or_like()</span></code> 方法的前身为 <code class="docutils literal"><span class="pre">orlike()</span></code>, 已废除</p>
+<p class="last"><tt class="docutils literal"><span class="pre">or_like()</span></tt> 方法的前身为 <tt class="docutils literal"><span class="pre">orlike()</span></tt>, 已废除</p>
 </div>
 <p><strong>$this-&gt;db-&gt;not_like()</strong></p>
-<p>这个方法和 <code class="docutils literal"><span class="pre">like()</span></code> 方法一样，只是生成 NOT LIKE 子句:</p>
+<p>这个方法和 <tt class="docutils literal"><span class="pre">like()</span></tt> 方法一样，只是生成 NOT LIKE 子句:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">not_like</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;match&#39;</span><span class="p">);</span>  <span class="c1">// WHERE `title` NOT LIKE &#39;%match% ESCAPE &#39;!&#39;</span>
 </pre></div>
 </div>
 <p><strong>$this-&gt;db-&gt;or_not_like()</strong></p>
-<p>这个方法和 <code class="docutils literal"><span class="pre">not_like()</span></code> 方法一样，只是多个 WHERE 条件之间使用 OR 进行连接:</p>
+<p>这个方法和 <tt class="docutils literal"><span class="pre">not_like()</span></tt> 方法一样，只是多个 WHERE 条件之间使用 OR 进行连接:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">like</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;match&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">or_not_like</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">,</span> <span class="s1">&#39;match&#39;</span><span class="p">);</span>
 <span class="c1">// WHERE `title` LIKE &#39;%match% OR  `body` NOT LIKE &#39;%match%&#39; ESCAPE &#39;!&#39;</span>
@@ -794,7 +795,7 @@ outer 和 right outer 。</p>
 </pre></div>
 </div>
 <p><strong>$this-&gt;db-&gt;or_having()</strong></p>
-<p>该方法和 <code class="docutils literal"><span class="pre">having()</span></code> 方法一样，只是多个条件之间使用 OR 进行连接。</p>
+<p>该方法和 <tt class="docutils literal"><span class="pre">having()</span></tt> 方法一样，只是多个条件之间使用 OR 进行连接。</p>
 </div>
 <div class="section" id="id5">
 <h2><a class="toc-backref" href="#id17">排序</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
@@ -849,14 +850,14 @@ outer 和 right outer 。</p>
 </div>
 <p><strong>$this-&gt;db-&gt;count_all_results()</strong></p>
 <p>该方法用于获取特定查询返回结果的数量，也可以使用查询构造器的这些方法：
-<code class="docutils literal"><span class="pre">where()</span></code>，<code class="docutils literal"><span class="pre">or_where()</span></code>，<code class="docutils literal"><span class="pre">like()</span></code>，<code class="docutils literal"><span class="pre">or_like()</span></code> 等等。举例:</p>
+<tt class="docutils literal"><span class="pre">where()</span></tt>，<tt class="docutils literal"><span class="pre">or_where()</span></tt>，<tt class="docutils literal"><span class="pre">like()</span></tt>，<tt class="docutils literal"><span class="pre">or_like()</span></tt> 等等。举例:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">count_all_results</span><span class="p">(</span><span class="s1">&#39;my_table&#39;</span><span class="p">);</span>  <span class="c1">// Produces an integer, like 25</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">like</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;match&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">from</span><span class="p">(</span><span class="s1">&#39;my_table&#39;</span><span class="p">);</span>
 <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">count_all_results</span><span class="p">();</span> <span class="c1">// Produces an integer, like 17</span>
 </pre></div>
 </div>
-<p>但是，这个方法会重置你在 <code class="docutils literal"><span class="pre">select()</span></code> 方法里设置的所有值，如果你希望保留它们，可以将
+<p>但是，这个方法会重置你在 <tt class="docutils literal"><span class="pre">select()</span></tt> 方法里设置的所有值，如果你希望保留它们，可以将
 第二个参数设置为 FALSE</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">count_all_results</span><span class="p">(</span><span class="s1">&#39;my_table&#39;</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
 </pre></div>
@@ -1000,8 +1001,8 @@ outer 和 right outer 。</p>
 <p><strong>$this-&gt;db-&gt;replace()</strong></p>
 <p>该方法用于执行一条 REPLACE 语句，REPLACE 语句根据表的**主键**和**唯一索引**
 来执行，类似于标准的 DELETE + INSERT 。
-使用这个方法，你不用再手工去实现 <code class="docutils literal"><span class="pre">select()</span></code>，<code class="docutils literal"><span class="pre">update()</span></code>，<code class="docutils literal"><span class="pre">delete()</span></code>
-以及 <code class="docutils literal"><span class="pre">insert()</span></code> 这些方法的不同组合，为你节约大量时间。</p>
+使用这个方法，你不用再手工去实现 <tt class="docutils literal"><span class="pre">select()</span></tt>，<tt class="docutils literal"><span class="pre">update()</span></tt>，<tt class="docutils literal"><span class="pre">delete()</span></tt>
+以及 <tt class="docutils literal"><span class="pre">insert()</span></tt> 这些方法的不同组合，为你节约大量时间。</p>
 <p>例如:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;My title&#39;</span><span class="p">,</span>
@@ -1016,7 +1017,7 @@ outer 和 right outer 。</p>
 </div>
 <p>上面的例子中，我们假设 <em>title</em> 字段是我们的主键，那么如果我们数据库里有一行
 的 <em>title</em> 列的值为 'My title'，这一行将会被删除并被我们的新数据所取代。</p>
-<p>也可以使用 <code class="docutils literal"><span class="pre">set()</span></code> 方法，而且所有字段都被自动转义，正如 <code class="docutils literal"><span class="pre">insert()</span></code> 方法一样。</p>
+<p>也可以使用 <tt class="docutils literal"><span class="pre">set()</span></tt> 方法，而且所有字段都被自动转义，正如 <tt class="docutils literal"><span class="pre">insert()</span></tt> 方法一样。</p>
 <p><strong>$this-&gt;db-&gt;set()</strong></p>
 <p>该方法用于设置新增或更新的数据。</p>
 <p><strong>该方法可以取代直接传递数据数组到 insert 或 update 方法：</strong></p>
@@ -1031,7 +1032,7 @@ outer 和 right outer 。</p>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">insert</span><span class="p">(</span><span class="s1">&#39;mytable&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-<p><strong>set()</strong> 方法也接受可选的第三个参数（<code class="docutils literal"><span class="pre">$escape</span></code>），如果设置为 FALSE，数据将不会自动转义。为了说明两者之间的区别，这里有一个带转义的 <code class="docutils literal"><span class="pre">set()</span></code> 方法和不带转义的例子。</p>
+<p><strong>set()</strong> 方法也接受可选的第三个参数（<tt class="docutils literal"><span class="pre">$escape</span></tt>），如果设置为 FALSE，数据将不会自动转义。为了说明两者之间的区别，这里有一个带转义的 <tt class="docutils literal"><span class="pre">set()</span></tt> 方法和不带转义的例子。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="s1">&#39;field&#39;</span><span class="p">,</span> <span class="s1">&#39;field+1&#39;</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">where</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">(</span><span class="s1">&#39;mytable&#39;</span><span class="p">);</span> <span class="c1">// gives UPDATE mytable SET field = field+1 WHERE id = 2</span>
@@ -1154,11 +1155,11 @@ outer 和 right outer 。</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">取决于该方法的内部实现，在这个方法之后调用 <code class="docutils literal"><span class="pre">affected_rows()</span></code> 方法
+<p class="last">取决于该方法的内部实现，在这个方法之后调用 <tt class="docutils literal"><span class="pre">affected_rows()</span></tt> 方法
 返回的结果可能会不正确。但是你可以直接使用该方法的返回值，代表了受影响的行数。</p>
 </div>
 <p><strong>$this-&gt;db-&gt;get_compiled_update()</strong></p>
-<p>该方法和 <code class="docutils literal"><span class="pre">$this-&gt;db-&gt;get_compiled_insert()</span></code> 方法完全一样，除了生成的 SQL 语句是
+<p>该方法和 <tt class="docutils literal"><span class="pre">$this-&gt;db-&gt;get_compiled_insert()</span></tt> 方法完全一样，除了生成的 SQL 语句是
 UPDATE 而不是 INSERT。</p>
 <p>查看 <cite>$this-&gt;db-&gt;get_compiled_insert()</cite> 方法的文档获取更多信息。</p>
 <div class="admonition note">
@@ -1213,7 +1214,7 @@ UPDATE 而不是 INSERT。</p>
 <p class="last">如果 TRUNCATE 语句不可用，truncate() 方法将执行 &quot;DELETE FROM table&quot;。</p>
 </div>
 <p><strong>$this-&gt;db-&gt;get_compiled_delete()</strong></p>
-<p>该方法和 <code class="docutils literal"><span class="pre">$this-&gt;db-&gt;get_compiled_insert()</span></code> 方法完全一样，除了生成的 SQL 语句是
+<p>该方法和 <tt class="docutils literal"><span class="pre">$this-&gt;db-&gt;get_compiled_insert()</span></tt> 方法完全一样，除了生成的 SQL 语句是
 DELETE 而不是 INSERT。</p>
 <p>查看 <cite>$this-&gt;db-&gt;get_compiled_insert()</cite> 方法的文档获取更多信息。</p>
 </div>
@@ -1269,7 +1270,7 @@ DELETE 而不是 INSERT。</p>
 <p>该方法无需执行就能重置查询构造器中的查询，$this-&gt;db-&gt;get() 和 $this-&gt;db-&gt;insert()
 方法也可以用于重置查询，但是必须要先执行它。和这两个方法一样，使用`查询构造器缓存`_
 缓存下来的查询不会被重置。</p>
-<p>当你在使用查询构造器生成 SQL 语句（如：<code class="docutils literal"><span class="pre">$this-&gt;db-&gt;get_compiled_select()</span></code>），
+<p>当你在使用查询构造器生成 SQL 语句（如：<tt class="docutils literal"><span class="pre">$this-&gt;db-&gt;get_compiled_select()</span></tt>），
 之后再执行它。这种情况下，不重置查询缓存将非常有用:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// Note that the second parameter of the get_compiled_select method is FALSE</span>
 <span class="nv">$sql</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">&#39;field1&#39;</span><span class="p">,</span><span class="s1">&#39;field2&#39;</span><span class="p">))</span>
@@ -1289,8 +1290,8 @@ DELETE 而不是 INSERT。</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">如果你正在使用查询构造器缓存功能，连续两次调用 <code class="docutils literal"><span class="pre">get_compiled_select()</span></code> 方法
-并且不重置你的查询，这将会导致缓存被合并两次。举例来说，例如你正在缓存 <code class="docutils literal"><span class="pre">select()</span></code>
+<p class="last">如果你正在使用查询构造器缓存功能，连续两次调用 <tt class="docutils literal"><span class="pre">get_compiled_select()</span></tt> 方法
+并且不重置你的查询，这将会导致缓存被合并两次。举例来说，例如你正在缓存 <tt class="docutils literal"><span class="pre">select()</span></tt>
 方法，那么会查询两个相同的字段。</p>
 </div>
 </div>
@@ -1298,10 +1299,10 @@ DELETE 而不是 INSERT。</p>
 <h2><a class="toc-backref" href="#id26">Class Reference</a><a class="headerlink" href="#class-reference" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="CI_DB_query_builder">
-<em class="property">class </em><code class="descname">CI_DB_query_builder</code><a class="headerlink" href="#CI_DB_query_builder" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><tt class="descname">CI_DB_query_builder</tt><a class="headerlink" href="#CI_DB_query_builder" title="永久链接至目标">¶</a></dt>
 <dd><dl class="method">
 <dt id="CI_DB_query_builder::reset_query">
-<code class="descname">reset_query</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::reset_query" title="永久链接至目标">¶</a></dt>
+<tt class="descname">reset_query</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_DB_query_builder::reset_query" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1318,7 +1319,7 @@ to build a query that can be cancelled under certain conditions.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::start_cache">
-<code class="descname">start_cache</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::start_cache" title="永久链接至目标">¶</a></dt>
+<tt class="descname">start_cache</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_DB_query_builder::start_cache" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1334,7 +1335,7 @@ to build a query that can be cancelled under certain conditions.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::stop_cache">
-<code class="descname">stop_cache</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::stop_cache" title="永久链接至目标">¶</a></dt>
+<tt class="descname">stop_cache</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_DB_query_builder::stop_cache" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1350,7 +1351,7 @@ to build a query that can be cancelled under certain conditions.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::flush_cache">
-<code class="descname">flush_cache</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::flush_cache" title="永久链接至目标">¶</a></dt>
+<tt class="descname">flush_cache</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_DB_query_builder::flush_cache" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1366,7 +1367,7 @@ to build a query that can be cancelled under certain conditions.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::set_dbprefix">
-<code class="descname">set_dbprefix</code><span class="sig-paren">(</span><span class="optional">[</span><em>$prefix = ''</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::set_dbprefix" title="永久链接至目标">¶</a></dt>
+<tt class="descname">set_dbprefix</tt><big>(</big><span class="optional">[</span><em>$prefix = ''</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::set_dbprefix" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1389,7 +1390,7 @@ to build a query that can be cancelled under certain conditions.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::dbprefix">
-<code class="descname">dbprefix</code><span class="sig-paren">(</span><span class="optional">[</span><em>$table = ''</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::dbprefix" title="永久链接至目标">¶</a></dt>
+<tt class="descname">dbprefix</tt><big>(</big><span class="optional">[</span><em>$table = ''</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::dbprefix" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1412,7 +1413,7 @@ to build a query that can be cancelled under certain conditions.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::count_all_results">
-<code class="descname">count_all_results</code><span class="sig-paren">(</span><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$reset = TRUE</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::count_all_results" title="永久链接至目标">¶</a></dt>
+<tt class="descname">count_all_results</tt><big>(</big><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$reset = TRUE</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::count_all_results" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1437,7 +1438,7 @@ all records returned by an Query Builder query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::get">
-<code class="descname">get</code><span class="sig-paren">(</span><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$limit = NULL</em><span class="optional">[</span>, <em>$offset = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::get" title="永久链接至目标">¶</a></dt>
+<tt class="descname">get</tt><big>(</big><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$limit = NULL</em><span class="optional">[</span>, <em>$offset = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::get" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1463,7 +1464,7 @@ called Query Builder methods.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::get_where">
-<code class="descname">get_where</code><span class="sig-paren">(</span><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$where = NULL</em><span class="optional">[</span>, <em>$limit = NULL</em><span class="optional">[</span>, <em>$offset = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::get_where" title="永久链接至目标">¶</a></dt>
+<tt class="descname">get_where</tt><big>(</big><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$where = NULL</em><span class="optional">[</span>, <em>$limit = NULL</em><span class="optional">[</span>, <em>$offset = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::get_where" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1484,12 +1485,12 @@ called Query Builder methods.</p>
 </tr>
 </tbody>
 </table>
-<p>Same as <code class="docutils literal"><span class="pre">get()</span></code>, but also allows the WHERE to be added directly.</p>
+<p>Same as <tt class="docutils literal"><span class="pre">get()</span></tt>, but also allows the WHERE to be added directly.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::select">
-<code class="descname">select</code><span class="sig-paren">(</span><span class="optional">[</span><em>$select = '*'</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::select" title="永久链接至目标">¶</a></dt>
+<tt class="descname">select</tt><big>(</big><span class="optional">[</span><em>$select = '*'</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::select" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1513,7 +1514,7 @@ called Query Builder methods.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::select_avg">
-<code class="descname">select_avg</code><span class="sig-paren">(</span><span class="optional">[</span><em>$select = ''</em><span class="optional">[</span>, <em>$alias = ''</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::select_avg" title="永久链接至目标">¶</a></dt>
+<tt class="descname">select_avg</tt><big>(</big><span class="optional">[</span><em>$select = ''</em><span class="optional">[</span>, <em>$alias = ''</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::select_avg" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1537,7 +1538,7 @@ called Query Builder methods.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::select_max">
-<code class="descname">select_max</code><span class="sig-paren">(</span><span class="optional">[</span><em>$select = ''</em><span class="optional">[</span>, <em>$alias = ''</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::select_max" title="永久链接至目标">¶</a></dt>
+<tt class="descname">select_max</tt><big>(</big><span class="optional">[</span><em>$select = ''</em><span class="optional">[</span>, <em>$alias = ''</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::select_max" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1561,7 +1562,7 @@ called Query Builder methods.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::select_min">
-<code class="descname">select_min</code><span class="sig-paren">(</span><span class="optional">[</span><em>$select = ''</em><span class="optional">[</span>, <em>$alias = ''</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::select_min" title="永久链接至目标">¶</a></dt>
+<tt class="descname">select_min</tt><big>(</big><span class="optional">[</span><em>$select = ''</em><span class="optional">[</span>, <em>$alias = ''</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::select_min" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1585,7 +1586,7 @@ called Query Builder methods.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::select_sum">
-<code class="descname">select_sum</code><span class="sig-paren">(</span><span class="optional">[</span><em>$select = ''</em><span class="optional">[</span>, <em>$alias = ''</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::select_sum" title="永久链接至目标">¶</a></dt>
+<tt class="descname">select_sum</tt><big>(</big><span class="optional">[</span><em>$select = ''</em><span class="optional">[</span>, <em>$alias = ''</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::select_sum" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1609,7 +1610,7 @@ called Query Builder methods.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::distinct">
-<code class="descname">distinct</code><span class="sig-paren">(</span><span class="optional">[</span><em>$val = TRUE</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::distinct" title="永久链接至目标">¶</a></dt>
+<tt class="descname">distinct</tt><big>(</big><span class="optional">[</span><em>$val = TRUE</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::distinct" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1633,7 +1634,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::from">
-<code class="descname">from</code><span class="sig-paren">(</span><em>$from</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::from" title="永久链接至目标">¶</a></dt>
+<tt class="descname">from</tt><big>(</big><em>$from</em><big>)</big><a class="headerlink" href="#CI_DB_query_builder::from" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1656,7 +1657,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::join">
-<code class="descname">join</code><span class="sig-paren">(</span><em>$table</em>, <em>$cond</em><span class="optional">[</span>, <em>$type = ''</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::join" title="永久链接至目标">¶</a></dt>
+<tt class="descname">join</tt><big>(</big><em>$table</em>, <em>$cond</em><span class="optional">[</span>, <em>$type = ''</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::join" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1682,7 +1683,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::where">
-<code class="descname">where</code><span class="sig-paren">(</span><em>$key</em><span class="optional">[</span>, <em>$value = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::where" title="永久链接至目标">¶</a></dt>
+<tt class="descname">where</tt><big>(</big><em>$key</em><span class="optional">[</span>, <em>$value = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::where" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1710,7 +1711,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::or_where">
-<code class="descname">or_where</code><span class="sig-paren">(</span><em>$key</em><span class="optional">[</span>, <em>$value = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::or_where" title="永久链接至目标">¶</a></dt>
+<tt class="descname">or_where</tt><big>(</big><em>$key</em><span class="optional">[</span>, <em>$value = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::or_where" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1738,7 +1739,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::or_where_in">
-<code class="descname">or_where_in</code><span class="sig-paren">(</span><span class="optional">[</span><em>$key = NULL</em><span class="optional">[</span>, <em>$values = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::or_where_in" title="永久链接至目标">¶</a></dt>
+<tt class="descname">or_where_in</tt><big>(</big><span class="optional">[</span><em>$key = NULL</em><span class="optional">[</span>, <em>$values = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::or_where_in" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1766,7 +1767,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::or_where_not_in">
-<code class="descname">or_where_not_in</code><span class="sig-paren">(</span><span class="optional">[</span><em>$key = NULL</em><span class="optional">[</span>, <em>$values = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::or_where_not_in" title="永久链接至目标">¶</a></dt>
+<tt class="descname">or_where_not_in</tt><big>(</big><span class="optional">[</span><em>$key = NULL</em><span class="optional">[</span>, <em>$values = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::or_where_not_in" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1794,7 +1795,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::where_in">
-<code class="descname">where_in</code><span class="sig-paren">(</span><span class="optional">[</span><em>$key = NULL</em><span class="optional">[</span>, <em>$values = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::where_in" title="永久链接至目标">¶</a></dt>
+<tt class="descname">where_in</tt><big>(</big><span class="optional">[</span><em>$key = NULL</em><span class="optional">[</span>, <em>$values = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::where_in" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1822,7 +1823,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::where_not_in">
-<code class="descname">where_not_in</code><span class="sig-paren">(</span><span class="optional">[</span><em>$key = NULL</em><span class="optional">[</span>, <em>$values = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::where_not_in" title="永久链接至目标">¶</a></dt>
+<tt class="descname">where_not_in</tt><big>(</big><span class="optional">[</span><em>$key = NULL</em><span class="optional">[</span>, <em>$values = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::where_not_in" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1850,7 +1851,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::group_start">
-<code class="descname">group_start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::group_start" title="永久链接至目标">¶</a></dt>
+<tt class="descname">group_start</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_DB_query_builder::group_start" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1866,7 +1867,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::or_group_start">
-<code class="descname">or_group_start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::or_group_start" title="永久链接至目标">¶</a></dt>
+<tt class="descname">or_group_start</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_DB_query_builder::or_group_start" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1882,7 +1883,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::not_group_start">
-<code class="descname">not_group_start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::not_group_start" title="永久链接至目标">¶</a></dt>
+<tt class="descname">not_group_start</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_DB_query_builder::not_group_start" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1898,7 +1899,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::or_not_group_start">
-<code class="descname">or_not_group_start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::or_not_group_start" title="永久链接至目标">¶</a></dt>
+<tt class="descname">or_not_group_start</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_DB_query_builder::or_not_group_start" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1914,7 +1915,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::group_end">
-<code class="descname">group_end</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::group_end" title="永久链接至目标">¶</a></dt>
+<tt class="descname">group_end</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_DB_query_builder::group_end" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1930,7 +1931,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::like">
-<code class="descname">like</code><span class="sig-paren">(</span><em>$field</em><span class="optional">[</span>, <em>$match = ''</em><span class="optional">[</span>, <em>$side = 'both'</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::like" title="永久链接至目标">¶</a></dt>
+<tt class="descname">like</tt><big>(</big><em>$field</em><span class="optional">[</span>, <em>$match = ''</em><span class="optional">[</span>, <em>$side = 'both'</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::like" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1956,7 +1957,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::or_like">
-<code class="descname">or_like</code><span class="sig-paren">(</span><em>$field</em><span class="optional">[</span>, <em>$match = ''</em><span class="optional">[</span>, <em>$side = 'both'</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::or_like" title="永久链接至目标">¶</a></dt>
+<tt class="descname">or_like</tt><big>(</big><em>$field</em><span class="optional">[</span>, <em>$match = ''</em><span class="optional">[</span>, <em>$side = 'both'</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::or_like" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1982,7 +1983,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::not_like">
-<code class="descname">not_like</code><span class="sig-paren">(</span><em>$field</em><span class="optional">[</span>, <em>$match = ''</em><span class="optional">[</span>, <em>$side = 'both'</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::not_like" title="永久链接至目标">¶</a></dt>
+<tt class="descname">not_like</tt><big>(</big><em>$field</em><span class="optional">[</span>, <em>$match = ''</em><span class="optional">[</span>, <em>$side = 'both'</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::not_like" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2008,7 +2009,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::or_not_like">
-<code class="descname">or_not_like</code><span class="sig-paren">(</span><em>$field</em><span class="optional">[</span>, <em>$match = ''</em><span class="optional">[</span>, <em>$side = 'both'</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::or_not_like" title="永久链接至目标">¶</a></dt>
+<tt class="descname">or_not_like</tt><big>(</big><em>$field</em><span class="optional">[</span>, <em>$match = ''</em><span class="optional">[</span>, <em>$side = 'both'</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::or_not_like" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2034,7 +2035,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::having">
-<code class="descname">having</code><span class="sig-paren">(</span><em>$key</em><span class="optional">[</span>, <em>$value = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::having" title="永久链接至目标">¶</a></dt>
+<tt class="descname">having</tt><big>(</big><em>$key</em><span class="optional">[</span>, <em>$value = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::having" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2059,7 +2060,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::or_having">
-<code class="descname">or_having</code><span class="sig-paren">(</span><em>$key</em><span class="optional">[</span>, <em>$value = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::or_having" title="永久链接至目标">¶</a></dt>
+<tt class="descname">or_having</tt><big>(</big><em>$key</em><span class="optional">[</span>, <em>$value = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::or_having" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2084,7 +2085,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::group_by">
-<code class="descname">group_by</code><span class="sig-paren">(</span><em>$by</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::group_by" title="永久链接至目标">¶</a></dt>
+<tt class="descname">group_by</tt><big>(</big><em>$by</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::group_by" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2107,7 +2108,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::order_by">
-<code class="descname">order_by</code><span class="sig-paren">(</span><em>$orderby</em><span class="optional">[</span>, <em>$direction = ''</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::order_by" title="永久链接至目标">¶</a></dt>
+<tt class="descname">order_by</tt><big>(</big><em>$orderby</em><span class="optional">[</span>, <em>$direction = ''</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::order_by" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2132,7 +2133,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::limit">
-<code class="descname">limit</code><span class="sig-paren">(</span><em>$value</em><span class="optional">[</span>, <em>$offset = 0</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::limit" title="永久链接至目标">¶</a></dt>
+<tt class="descname">limit</tt><big>(</big><em>$value</em><span class="optional">[</span>, <em>$offset = 0</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::limit" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2156,7 +2157,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::offset">
-<code class="descname">offset</code><span class="sig-paren">(</span><em>$offset</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::offset" title="永久链接至目标">¶</a></dt>
+<tt class="descname">offset</tt><big>(</big><em>$offset</em><big>)</big><a class="headerlink" href="#CI_DB_query_builder::offset" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2179,7 +2180,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::set">
-<code class="descname">set</code><span class="sig-paren">(</span><em>$key</em><span class="optional">[</span>, <em>$value = ''</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::set" title="永久链接至目标">¶</a></dt>
+<tt class="descname">set</tt><big>(</big><em>$key</em><span class="optional">[</span>, <em>$value = ''</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::set" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2199,13 +2200,13 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 </tr>
 </tbody>
 </table>
-<p>Adds field/value pairs to be passed later to <code class="docutils literal"><span class="pre">insert()</span></code>,
-<code class="docutils literal"><span class="pre">update()</span></code> or <code class="docutils literal"><span class="pre">replace()</span></code>.</p>
+<p>Adds field/value pairs to be passed later to <tt class="docutils literal"><span class="pre">insert()</span></tt>,
+<tt class="docutils literal"><span class="pre">update()</span></tt> or <tt class="docutils literal"><span class="pre">replace()</span></tt>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::insert">
-<code class="descname">insert</code><span class="sig-paren">(</span><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$set = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::insert" title="永久链接至目标">¶</a></dt>
+<tt class="descname">insert</tt><big>(</big><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$set = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::insert" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2230,7 +2231,7 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::insert_batch">
-<code class="descname">insert_batch</code><span class="sig-paren">(</span><em>$table</em><span class="optional">[</span>, <em>$set = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">[</span>, <em>$batch_size = 100</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::insert_batch" title="永久链接至目标">¶</a></dt>
+<tt class="descname">insert_batch</tt><big>(</big><em>$table</em><span class="optional">[</span>, <em>$set = NULL</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">[</span>, <em>$batch_size = 100</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::insert_batch" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2251,18 +2252,18 @@ a DISTINCT clause to the SELECT portion of the query.</p>
 </tr>
 </tbody>
 </table>
-<p>Compiles and executes batch <code class="docutils literal"><span class="pre">INSERT</span></code> statements.</p>
+<p>Compiles and executes batch <tt class="docutils literal"><span class="pre">INSERT</span></tt> statements.</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">When more than <code class="docutils literal"><span class="pre">$batch_size</span></code> rows are provided, multiple
-<code class="docutils literal"><span class="pre">INSERT</span></code> queries will be executed, each trying to insert
-up to <code class="docutils literal"><span class="pre">$batch_size</span></code> rows.</p>
+<p class="last">When more than <tt class="docutils literal"><span class="pre">$batch_size</span></tt> rows are provided, multiple
+<tt class="docutils literal"><span class="pre">INSERT</span></tt> queries will be executed, each trying to insert
+up to <tt class="docutils literal"><span class="pre">$batch_size</span></tt> rows.</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::set_insert_batch">
-<code class="descname">set_insert_batch</code><span class="sig-paren">(</span><em>$key</em><span class="optional">[</span>, <em>$value = ''</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::set_insert_batch" title="永久链接至目标">¶</a></dt>
+<tt class="descname">set_insert_batch</tt><big>(</big><em>$key</em><span class="optional">[</span>, <em>$value = ''</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::set_insert_batch" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2282,12 +2283,12 @@ up to <code class="docutils literal"><span class="pre">$batch_size</span></code>
 </tr>
 </tbody>
 </table>
-<p>Adds field/value pairs to be inserted in a table later via <code class="docutils literal"><span class="pre">insert_batch()</span></code>.</p>
+<p>Adds field/value pairs to be inserted in a table later via <tt class="docutils literal"><span class="pre">insert_batch()</span></tt>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::update">
-<code class="descname">update</code><span class="sig-paren">(</span><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$set = NULL</em><span class="optional">[</span>, <em>$where = NULL</em><span class="optional">[</span>, <em>$limit = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::update" title="永久链接至目标">¶</a></dt>
+<tt class="descname">update</tt><big>(</big><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$set = NULL</em><span class="optional">[</span>, <em>$where = NULL</em><span class="optional">[</span>, <em>$limit = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::update" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2313,7 +2314,7 @@ up to <code class="docutils literal"><span class="pre">$batch_size</span></code>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::update_batch">
-<code class="descname">update_batch</code><span class="sig-paren">(</span><em>$table</em><span class="optional">[</span>, <em>$set = NULL</em><span class="optional">[</span>, <em>$value = NULL</em><span class="optional">[</span>, <em>$batch_size = 100</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::update_batch" title="永久链接至目标">¶</a></dt>
+<tt class="descname">update_batch</tt><big>(</big><em>$table</em><span class="optional">[</span>, <em>$set = NULL</em><span class="optional">[</span>, <em>$value = NULL</em><span class="optional">[</span>, <em>$batch_size = 100</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::update_batch" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2334,18 +2335,18 @@ up to <code class="docutils literal"><span class="pre">$batch_size</span></code>
 </tr>
 </tbody>
 </table>
-<p>Compiles and executes batch <code class="docutils literal"><span class="pre">UPDATE</span></code> statements.</p>
+<p>Compiles and executes batch <tt class="docutils literal"><span class="pre">UPDATE</span></tt> statements.</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">When more than <code class="docutils literal"><span class="pre">$batch_size</span></code> field/value pairs are provided,
+<p class="last">When more than <tt class="docutils literal"><span class="pre">$batch_size</span></tt> field/value pairs are provided,
 multiple queries will be executed, each handling up to
-<code class="docutils literal"><span class="pre">$batch_size</span></code> field/value pairs.</p>
+<tt class="docutils literal"><span class="pre">$batch_size</span></tt> field/value pairs.</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::set_update_batch">
-<code class="descname">set_update_batch</code><span class="sig-paren">(</span><em>$key</em><span class="optional">[</span>, <em>$value = ''</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::set_update_batch" title="永久链接至目标">¶</a></dt>
+<tt class="descname">set_update_batch</tt><big>(</big><em>$key</em><span class="optional">[</span>, <em>$value = ''</em><span class="optional">[</span>, <em>$escape = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::set_update_batch" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2365,12 +2366,12 @@ multiple queries will be executed, each handling up to
 </tr>
 </tbody>
 </table>
-<p>Adds field/value pairs to be updated in a table later via <code class="docutils literal"><span class="pre">update_batch()</span></code>.</p>
+<p>Adds field/value pairs to be updated in a table later via <tt class="docutils literal"><span class="pre">update_batch()</span></tt>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::replace">
-<code class="descname">replace</code><span class="sig-paren">(</span><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$set = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::replace" title="永久链接至目标">¶</a></dt>
+<tt class="descname">replace</tt><big>(</big><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$set = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::replace" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2394,7 +2395,7 @@ multiple queries will be executed, each handling up to
 
 <dl class="method">
 <dt id="CI_DB_query_builder::delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$where = ''</em><span class="optional">[</span>, <em>$limit = NULL</em><span class="optional">[</span>, <em>$reset_data = TRUE</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::delete" title="永久链接至目标">¶</a></dt>
+<tt class="descname">delete</tt><big>(</big><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$where = ''</em><span class="optional">[</span>, <em>$limit = NULL</em><span class="optional">[</span>, <em>$reset_data = TRUE</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::delete" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2420,7 +2421,7 @@ multiple queries will be executed, each handling up to
 
 <dl class="method">
 <dt id="CI_DB_query_builder::truncate">
-<code class="descname">truncate</code><span class="sig-paren">(</span><span class="optional">[</span><em>$table = ''</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::truncate" title="永久链接至目标">¶</a></dt>
+<tt class="descname">truncate</tt><big>(</big><span class="optional">[</span><em>$table = ''</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::truncate" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2448,7 +2449,7 @@ a DELETE statement will be used instead.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::empty_table">
-<code class="descname">empty_table</code><span class="sig-paren">(</span><span class="optional">[</span><em>$table = ''</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::empty_table" title="永久链接至目标">¶</a></dt>
+<tt class="descname">empty_table</tt><big>(</big><span class="optional">[</span><em>$table = ''</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::empty_table" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2471,7 +2472,7 @@ a DELETE statement will be used instead.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::get_compiled_select">
-<code class="descname">get_compiled_select</code><span class="sig-paren">(</span><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$reset = TRUE</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::get_compiled_select" title="永久链接至目标">¶</a></dt>
+<tt class="descname">get_compiled_select</tt><big>(</big><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$reset = TRUE</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::get_compiled_select" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2495,7 +2496,7 @@ a DELETE statement will be used instead.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::get_compiled_insert">
-<code class="descname">get_compiled_insert</code><span class="sig-paren">(</span><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$reset = TRUE</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::get_compiled_insert" title="永久链接至目标">¶</a></dt>
+<tt class="descname">get_compiled_insert</tt><big>(</big><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$reset = TRUE</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::get_compiled_insert" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2519,7 +2520,7 @@ a DELETE statement will be used instead.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::get_compiled_update">
-<code class="descname">get_compiled_update</code><span class="sig-paren">(</span><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$reset = TRUE</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::get_compiled_update" title="永久链接至目标">¶</a></dt>
+<tt class="descname">get_compiled_update</tt><big>(</big><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$reset = TRUE</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::get_compiled_update" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2543,7 +2544,7 @@ a DELETE statement will be used instead.</p>
 
 <dl class="method">
 <dt id="CI_DB_query_builder::get_compiled_delete">
-<code class="descname">get_compiled_delete</code><span class="sig-paren">(</span><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$reset = TRUE</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_query_builder::get_compiled_delete" title="永久链接至目标">¶</a></dt>
+<tt class="descname">get_compiled_delete</tt><big>(</big><span class="optional">[</span><em>$table = ''</em><span class="optional">[</span>, <em>$reset = TRUE</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_query_builder::get_compiled_delete" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

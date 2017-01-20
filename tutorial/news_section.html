@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="教程 - 内容提要" href="index.html"/>
         <link rel="next" title="创建新闻条目" href="create_news_items.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -76,7 +75,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">教程 - 内容提要</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="static_pages.html">加载静态内容</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">读取新闻条目</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">读取新闻条目</a></li>
 <li class="toctree-l2"><a class="reference internal" href="create_news_items.html">创建新闻条目</a></li>
 <li class="toctree-l2"><a class="reference internal" href="conclusion.html">结束语</a></li>
 </ul>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -260,7 +261,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">教程 - 内容提要</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="static_pages.html">加载静态内容</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">读取新闻条目</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">读取新闻条目</a></li>
 <li class="toctree-l2"><a class="reference internal" href="create_news_items.html">创建新闻条目</a></li>
 <li class="toctree-l2"><a class="reference internal" href="conclusion.html">结束语</a></li>
 </ul>
@@ -434,7 +435,7 @@
 <p>数据库的查询操作应该放在模型里，而不是写在控制器里，这样可以很方便的重用它。
 模型正是用于从数据库或者其他存储中获取、新增、更新数据的地方。它就代表你的数据。</p>
 <p>打开 <em>application/models/</em> 目录，新建一个文件 <em>News_model.php</em> ，然后写入下面的代码。
-确保你的 <a class="reference internal" href="../database/configuration.html"><span class="doc">数据库配置</span></a> 正确。</p>
+确保你的 <a class="reference internal" href="../database/configuration.html"><em>数据库配置</em></a> 正确。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">class</span> <span class="nc">News_model</span> <span class="k">extends</span> <span class="nx">CI_Model</span> <span class="p">{</span>
 
@@ -445,8 +446,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>这个代码和之前的控制器的代码有点类似，它通过继承 <code class="docutils literal"><span class="pre">CI_Model</span></code> 创建了一个新模型，
-并加载了数据库类。数据库类可以通过 <code class="docutils literal"><span class="pre">$this-&gt;db</span></code> 对象访问。</p>
+<p>这个代码和之前的控制器的代码有点类似，它通过继承 <tt class="docutils literal"><span class="pre">CI_Model</span></tt> 创建了一个新模型，
+并加载了数据库类。数据库类可以通过 <tt class="docutils literal"><span class="pre">$this-&gt;db</span></tt> 对象访问。</p>
 <p>在查询数据库之前，我们要先创建一个数据库表。连接你的数据库，运行下面的 SQL 语句（MySQL），并添加一些测试数据。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">CREATE</span> <span class="nx">TABLE</span> <span class="nx">news</span> <span class="p">(</span>
     <span class="nx">id</span> <span class="nx">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="nx">AUTO_INCREMENT</span><span class="p">,</span>
@@ -459,8 +460,8 @@
 </pre></div>
 </div>
 <p>现在，数据库和模型都准备好了，你需要一个方法来从数据库中获取所有的新闻文章。
-为实现这点，我们使用了 CodeIgniter 的数据库抽象层 <a class="reference internal" href="../database/query_builder.html"><span class="doc">查询构造器</span></a> ，
-通过它你可以编写你的查询代码，并在 <a class="reference internal" href="../general/requirements.html"><span class="doc">所有支持的数据库平台</span></a> 上运行。
+为实现这点，我们使用了 CodeIgniter 的数据库抽象层 <a class="reference internal" href="../database/query_builder.html"><em>查询构造器</em></a> ，
+通过它你可以编写你的查询代码，并在 <a class="reference internal" href="../general/requirements.html"><em>所有支持的数据库平台</em></a> 上运行。
 向你的模型中添加如下代码。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">function</span> <span class="nf">get_news</span><span class="p">(</span><span class="nv">$slug</span> <span class="o">=</span> <span class="k">FALSE</span><span class="p">)</span>
 <span class="p">{</span>
@@ -476,14 +477,14 @@
 </pre></div>
 </div>
 <p>通过这个代码，你可以执行两种不同的查询，一种是获取所有的新闻条目，另一种
-是根据它的 <a class="reference external" href="#">slug</a> 来获取新闻条目。你应该注意到，<code class="docutils literal"><span class="pre">$slug</span></code> 变量在执行查询之前
-并没有做检查， <a class="reference internal" href="../database/query_builder.html"><span class="doc">查询构造器</span></a> 会自动帮你检查的。</p>
+是根据它的 <a class="reference external" href="#">slug</a> 来获取新闻条目。你应该注意到，<tt class="docutils literal"><span class="pre">$slug</span></tt> 变量在执行查询之前
+并没有做检查， <a class="reference internal" href="../database/query_builder.html"><em>查询构造器</em></a> 会自动帮你检查的。</p>
 </div>
 <div class="section" id="id3">
 <h2>显示新闻<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>现在，查询已经写好了，接下来我们需要将模型绑定到视图上，向用户显示新闻条目了。
-这可以在之前写的 <code class="docutils literal"><span class="pre">Pages</span></code> 控制器里来做，但为了更清楚的阐述，我们定义了一个新的
-<code class="docutils literal"><span class="pre">News</span></code> 控制器，创建在 <em>application/controllers/News.php</em> 文件中。</p>
+这可以在之前写的 <tt class="docutils literal"><span class="pre">Pages</span></tt> 控制器里来做，但为了更清楚的阐述，我们定义了一个新的
+<tt class="docutils literal"><span class="pre">News</span></tt> 控制器，创建在 <em>application/controllers/News.php</em> 文件中。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">class</span> <span class="nc">News</span> <span class="k">extends</span> <span class="nx">CI_Controller</span> <span class="p">{</span>
 
@@ -506,12 +507,12 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>阅读上面的代码你会发现，这和之前写的代码有些相似之处。首先是 <code class="docutils literal"><span class="pre">__construct()</span></code>
-方法，它调用父类（<code class="docutils literal"><span class="pre">CI_Controller</span></code>）中的构造函数，并加载模型。这样模型就可以
-在这个控制器的其他方法中使用了。另外它还加载了 <a class="reference internal" href="../helpers/url_helper.html"><span class="doc">URL 辅助函数</span></a> ，
+<p>阅读上面的代码你会发现，这和之前写的代码有些相似之处。首先是 <tt class="docutils literal"><span class="pre">__construct()</span></tt>
+方法，它调用父类（<tt class="docutils literal"><span class="pre">CI_Controller</span></tt>）中的构造函数，并加载模型。这样模型就可以
+在这个控制器的其他方法中使用了。另外它还加载了 <a class="reference internal" href="../helpers/url_helper.html"><em>URL 辅助函数</em></a> ，
 因为我们在后面的视图中会用到它。</p>
 <p>其次，有两个方法用来显示新闻条目，一个显示所有的，另一个显示特定的。
-你可以看到第二个方法中调用模型方法时传入了 <code class="docutils literal"><span class="pre">$slug</span></code> 参数，模型根据这个 slug
+你可以看到第二个方法中调用模型方法时传入了 <tt class="docutils literal"><span class="pre">$slug</span></tt> 参数，模型根据这个 slug
 返回特定的新闻条目。</p>
 <p>现在，通过模型，控制器已经获取到数据了，但还没有显示。下一步要做的就是，
 将数据传递给视图。</p>
@@ -527,7 +528,7 @@
 </pre></div>
 </div>
 <p>上面的代码从模型中获取所有的新闻条目，并赋值给一个变量，另外页面的标题赋值给了
-<code class="docutils literal"><span class="pre">$data['title']</span></code> 元素，然后所有的数据被传递给视图。现在你需要创建一个视图文件来
+<tt class="docutils literal"><span class="pre">$data['title']</span></tt> 元素，然后所有的数据被传递给视图。现在你需要创建一个视图文件来
 显示新闻条目了，新建 <em>application/views/news/index.php</em> 文件并添加如下代码。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nv">$title</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 
@@ -543,11 +544,11 @@
 </pre></div>
 </div>
 <p>这里，通过一个循环将所有的新闻条目显示给用户，你可以看到我们在 HTML 模板中混用了 PHP ，
-如果你希望使用一种模板语言，你可以使用 CodeIgniter 的 <a class="reference internal" href="../libraries/parser.html"><span class="doc">模板解析类</span></a> ，
+如果你希望使用一种模板语言，你可以使用 CodeIgniter 的 <a class="reference internal" href="../libraries/parser.html"><em>模板解析类</em></a> ，
 或其他的第三方解析器。</p>
 <p>新闻的列表页就做好了，但是还缺了显示特定新闻条目的页面，之前创建的模型可以很容易的
-实现该功能，你只需要向控制器中添加一些代码，然后再新建一个视图就可以了。回到 <code class="docutils literal"><span class="pre">News</span></code>
-控制器，使用下面的代码替换掉 <code class="docutils literal"><span class="pre">view()</span></code> 方法：</p>
+实现该功能，你只需要向控制器中添加一些代码，然后再新建一个视图就可以了。回到 <tt class="docutils literal"><span class="pre">News</span></tt>
+控制器，使用下面的代码替换掉 <tt class="docutils literal"><span class="pre">view()</span></tt> 方法：</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">function</span> <span class="nf">view</span><span class="p">(</span><span class="nv">$slug</span> <span class="o">=</span> <span class="k">NULL</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="nv">$data</span><span class="p">[</span><span class="s1">&#39;news_item&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">news_model</span><span class="o">-&gt;</span><span class="na">get_news</span><span class="p">(</span><span class="nv">$slug</span><span class="p">);</span>
@@ -565,7 +566,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>我们并没有直接调用 <code class="docutils literal"><span class="pre">get_news()</span></code> 方法，而是传入了一个 <code class="docutils literal"><span class="pre">$slug</span></code> 参数，
+<p>我们并没有直接调用 <tt class="docutils literal"><span class="pre">get_news()</span></tt> 方法，而是传入了一个 <tt class="docutils literal"><span class="pre">$slug</span></tt> 参数，
 所以它会返回相应的新闻条目。最后剩下的事是创建视图文件
 <em>application/views/news/view.php</em> 并添加如下代码 。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
@@ -578,8 +579,8 @@
 <h2>路由<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>由于之前创建的通配符路由规则，你需要新增一条路由来显示你刚刚创建的控制器，
 修改你的路由配置文件（<em>application/config/routes.php</em>）添加类似下面的代码。
-该规则可以让请求访问 <code class="docutils literal"><span class="pre">News</span></code> 控制器而不是 <code class="docutils literal"><span class="pre">Pages</span></code> 控制器，第一行可以让
-带 slug 的 URI 重定向到 <code class="docutils literal"><span class="pre">News</span></code> 控制器的 <code class="docutils literal"><span class="pre">view()</span></code> 方法。</p>
+该规则可以让请求访问 <tt class="docutils literal"><span class="pre">News</span></tt> 控制器而不是 <tt class="docutils literal"><span class="pre">Pages</span></tt> 控制器，第一行可以让
+带 slug 的 URI 重定向到 <tt class="docutils literal"><span class="pre">News</span></tt> 控制器的 <tt class="docutils literal"><span class="pre">view()</span></tt> 方法。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$route</span><span class="p">[</span><span class="s1">&#39;news/(:any)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;news/view/$1&#39;</span><span class="p">;</span>
 <span class="nv">$route</span><span class="p">[</span><span class="s1">&#39;news&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;news&#39;</span><span class="p">;</span>
 <span class="nv">$route</span><span class="p">[</span><span class="s1">&#39;(:any)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;pages/view/$1&#39;</span><span class="p">;</span>

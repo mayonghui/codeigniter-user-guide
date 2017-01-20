@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="next" title="编写 CodeIgniter 的文档" href="../documentation/index.html"/>
         <link rel="prev" title="结束语" href="../tutorial/conclusion.html"/> 
@@ -50,7 +47,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -82,7 +81,7 @@
 </li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">向 CodeIgniter 贡献你的力量</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">向 CodeIgniter 贡献你的力量</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">编写 CodeIgniter 的文档</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer's Certificate of Origin 1.1</a></li>
 </ul>
@@ -234,7 +233,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -266,7 +267,7 @@
 </li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">向 CodeIgniter 贡献你的力量</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">向 CodeIgniter 贡献你的力量</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">编写 CodeIgniter 的文档</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer's Certificate of Origin 1.1</a></li>
 </ul>
@@ -425,7 +426,9 @@
 <h1>向 CodeIgniter 贡献你的力量<a class="headerlink" href="#codeigniter" title="永久链接至标题">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../documentation/index.html">编写 CodeIgniter 的文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/index.html">编写 CodeIgniter 的文档</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../DCO.html">Developer's Certificate of Origin 1.1</a></li>
 </ul>
 </div>
@@ -478,7 +481,7 @@ or report it via our page on <a class="reference external" href="https://hackero
 你的提交可能会被拒绝并要求你重新提交。这可能听起来有点难，但是为了保证我们的代码质量这是必须要做的。</p>
 <div class="section" id="php">
 <h3>PHP 代码规范<a class="headerlink" href="#php" title="永久链接至标题">¶</a></h3>
-<p>所有的代码都必须符合 <a class="reference internal" href="../general/styleguide.html"><span class="doc">代码规范指南</span></a>，它其实就是
+<p>所有的代码都必须符合 <a class="reference internal" href="../general/styleguide.html"><em>代码规范指南</em></a>，它其实就是
 <a class="reference external" href="https://en.wikipedia.org/wiki/Indent_style#Allman_style">Allman 缩进风格</a>
 加上下划线规则以及可读的操作符。遵循代码规则可以让代码的风格保持一致，同时也意味着代的更可读性更好。</p>
 </div>
@@ -520,9 +523,9 @@ master 分支总是包含最新的稳定版并保持干净，这样可以在例�
 <p>这个命令会根据你 git 的配置信息在你的提交中添加签名，例如：</p>
 <blockquote>
 <div>Signed-off-by: John Q Public &lt;<a class="reference external" href="mailto:john&#46;public&#37;&#52;&#48;example&#46;com">john<span>&#46;</span>public<span>&#64;</span>example<span>&#46;</span>com</a>&gt;</div></blockquote>
-<p>如果你正在使用 Tower 客户端，在提交窗口中会有一个 &quot;Sign-Off&quot; 复选框，或者你可以将 <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span></code> 设置成
-<code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-s</span></code> 的别名，这样你就不用关心提交中的签名了。</p>
-<p>通过这种方式对你的工作进行签名，说明你将遵守 DCO （Developer's Certificate of Origin），<a class="reference internal" href="../DCO.html"><span class="doc">Developer's Certificate of Origin 1.1</span></a>
+<p>如果你正在使用 Tower 客户端，在提交窗口中会有一个 &quot;Sign-Off&quot; 复选框，或者你可以将 <tt class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span></tt> 设置成
+<tt class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-s</span></tt> 的别名，这样你就不用关心提交中的签名了。</p>
+<p>通过这种方式对你的工作进行签名，说明你将遵守 DCO （Developer's Certificate of Origin），<a class="reference internal" href="../DCO.html"><em>Developer's Certificate of Origin 1.1</em></a>
 申明的当前版本位于这份文档的根目录下。</p>
 </div>
 </div>

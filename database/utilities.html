@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="数据库参考" href="index.html"/>
         <link rel="next" title="数据库驱动器参考" href="db_driver_reference.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -169,7 +168,7 @@
 <li class="toctree-l2"><a class="reference internal" href="call_function.html">自定义函数调用</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching.html">查询缓存</a></li>
 <li class="toctree-l2"><a class="reference internal" href="forge.html">使用 Database Forge 维护数据库</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">数据库工具类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">数据库工具类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="db_driver_reference.html">数据库驱动器参考</a></li>
 </ul>
 </li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -353,7 +354,7 @@
 <li class="toctree-l2"><a class="reference internal" href="call_function.html">自定义函数调用</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching.html">查询缓存</a></li>
 <li class="toctree-l2"><a class="reference internal" href="forge.html">使用 Database Forge 维护数据库</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">数据库工具类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">数据库工具类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="db_driver_reference.html">数据库驱动器参考</a></li>
 </ul>
 </li>
@@ -465,12 +466,12 @@
 </pre></div>
 </div>
 <p>上例中，我们通过第一个参数传递了一个自定义的数据库对象，第二个参数表示方法将返回 dbutil 对象，
-而不是直接赋值给 <code class="docutils literal"><span class="pre">$this-&gt;dbutil</span></code> 。</p>
+而不是直接赋值给 <tt class="docutils literal"><span class="pre">$this-&gt;dbutil</span></tt> 。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
 <p class="last">两个参数都可以独立使用，如果你只想传第二个参数，可以将第一个参数置空。</p>
 </div>
-<p>一旦初始化结束，你就可以使用 <code class="docutils literal"><span class="pre">$this-&gt;dbutil</span></code> 对象来访问它的方法:</p>
+<p>一旦初始化结束，你就可以使用 <tt class="docutils literal"><span class="pre">$this-&gt;dbutil</span></tt> 对象来访问它的方法:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">dbutil</span><span class="o">-&gt;</span><span class="na">some_method</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -569,7 +570,7 @@
 <div class="admonition important">
 <p class="first admonition-title">重要</p>
 <p class="last">该方法并不写入 CSV 文档，它只是简单的返回 CSV 内容，如果你需要写入到文件中，
-你可以使用 <a class="reference internal" href="../helpers/file_helper.html"><span class="doc">文件辅助函数</span></a> 。</p>
+你可以使用 <a class="reference internal" href="../helpers/file_helper.html"><em>文件辅助函数</em></a> 。</p>
 </div>
 </div>
 <div class="section" id="xml">
@@ -592,7 +593,7 @@
 <div class="admonition important">
 <p class="first admonition-title">重要</p>
 <p class="last">该方法并不写入 XML 文档，它只是简单的返回 XML 内容，如果你需要写入到文件中，
-你可以使用 <a class="reference internal" href="../helpers/file_helper.html"><span class="doc">文件辅助函数</span></a> 。</p>
+你可以使用 <a class="reference internal" href="../helpers/file_helper.html"><em>文件辅助函数</em></a> 。</p>
 </div>
 </div>
 </div>
@@ -636,7 +637,7 @@
 </div>
 <div class="section" id="id12">
 <h3><a class="toc-backref" href="#id27">设置备份参数</a><a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
-<p>备份参数为一个数组，通过第一个参数传递给 <code class="docutils literal"><span class="pre">backup()</span></code> 方法，例如:</p>
+<p>备份参数为一个数组，通过第一个参数传递给 <tt class="docutils literal"><span class="pre">backup()</span></tt> 方法，例如:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$prefs</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;tables&#39;</span>    <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;table1&#39;</span><span class="p">,</span> <span class="s1">&#39;table2&#39;</span><span class="p">),</span>   <span class="c1">// Array of tables to backup.</span>
     <span class="s1">&#39;ignore&#39;</span>    <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(),</span>         <span class="c1">// List of tables to omit from the backup</span>
@@ -716,10 +717,10 @@
 <h2><a class="toc-backref" href="#id29">类参考</a><a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="CI_DB_utility">
-<em class="property">class </em><code class="descname">CI_DB_utility</code><a class="headerlink" href="#CI_DB_utility" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><tt class="descname">CI_DB_utility</tt><a class="headerlink" href="#CI_DB_utility" title="永久链接至目标">¶</a></dt>
 <dd><dl class="method">
 <dt id="CI_DB_utility::backup">
-<code class="descname">backup</code><span class="sig-paren">(</span><span class="optional">[</span><em>$params = array()</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_utility::backup" title="永久链接至目标">¶</a></dt>
+<tt class="descname">backup</tt><big>(</big><span class="optional">[</span><em>$params = array()</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_utility::backup" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -742,7 +743,7 @@
 
 <dl class="method">
 <dt id="CI_DB_utility::database_exists">
-<code class="descname">database_exists</code><span class="sig-paren">(</span><em>$database_name</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_utility::database_exists" title="永久链接至目标">¶</a></dt>
+<tt class="descname">database_exists</tt><big>(</big><em>$database_name</em><big>)</big><a class="headerlink" href="#CI_DB_utility::database_exists" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -765,7 +766,7 @@
 
 <dl class="method">
 <dt id="CI_DB_utility::list_databases">
-<code class="descname">list_databases</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_utility::list_databases" title="永久链接至目标">¶</a></dt>
+<tt class="descname">list_databases</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_DB_utility::list_databases" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -781,7 +782,7 @@
 
 <dl class="method">
 <dt id="CI_DB_utility::optimize_database">
-<code class="descname">optimize_database</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_utility::optimize_database" title="永久链接至目标">¶</a></dt>
+<tt class="descname">optimize_database</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_DB_utility::optimize_database" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -797,7 +798,7 @@
 
 <dl class="method">
 <dt id="CI_DB_utility::optimize_table">
-<code class="descname">optimize_table</code><span class="sig-paren">(</span><em>$table_name</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_utility::optimize_table" title="永久链接至目标">¶</a></dt>
+<tt class="descname">optimize_table</tt><big>(</big><em>$table_name</em><big>)</big><a class="headerlink" href="#CI_DB_utility::optimize_table" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -820,7 +821,7 @@
 
 <dl class="method">
 <dt id="CI_DB_utility::repair_table">
-<code class="descname">repair_table</code><span class="sig-paren">(</span><em>$table_name</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_utility::repair_table" title="永久链接至目标">¶</a></dt>
+<tt class="descname">repair_table</tt><big>(</big><em>$table_name</em><big>)</big><a class="headerlink" href="#CI_DB_utility::repair_table" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -843,7 +844,7 @@
 
 <dl class="method">
 <dt id="CI_DB_utility::csv_from_result">
-<code class="descname">csv_from_result</code><span class="sig-paren">(</span><em>$query</em><span class="optional">[</span>, <em>$delim = '</em>, <em>'</em><span class="optional">[</span>, <em>$newline = &quot;n&quot;</em><span class="optional">[</span>, <em>$enclosure = '&quot;'</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_utility::csv_from_result" title="永久链接至目标">¶</a></dt>
+<tt class="descname">csv_from_result</tt><big>(</big><em>$query</em><span class="optional">[</span>, <em>$delim = '</em>, <em>'</em><span class="optional">[</span>, <em>$newline = &quot;n&quot;</em><span class="optional">[</span>, <em>$enclosure = '&quot;'</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_utility::csv_from_result" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -869,7 +870,7 @@
 
 <dl class="method">
 <dt id="CI_DB_utility::xml_from_result">
-<code class="descname">xml_from_result</code><span class="sig-paren">(</span><em>$query</em><span class="optional">[</span>, <em>$params = array()</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_DB_utility::xml_from_result" title="永久链接至目标">¶</a></dt>
+<tt class="descname">xml_from_result</tt><big>(</big><em>$query</em><span class="optional">[</span>, <em>$params = array()</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_DB_utility::xml_from_result" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

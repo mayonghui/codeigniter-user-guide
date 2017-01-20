@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="辅助函数参考" href="index.html"/>
         <link rel="next" title="排版辅助函数" href="typography_helper.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -193,7 +192,7 @@
 <li class="toctree-l2"><a class="reference internal" href="security_helper.html">安全辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="smiley_helper.html">表情辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="string_helper.html">字符串辅助函数</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">文本辅助函数</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">文本辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typography_helper.html">排版辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="url_helper.html">URL 辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="xml_helper.html">XML 辅助函数</a></li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -377,7 +378,7 @@
 <li class="toctree-l2"><a class="reference internal" href="security_helper.html">安全辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="smiley_helper.html">表情辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="string_helper.html">字符串辅助函数</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">文本辅助函数</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">文本辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="typography_helper.html">排版辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="url_helper.html">URL 辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="xml_helper.html">XML 辅助函数</a></li>
@@ -445,7 +446,7 @@
 <p>该辅助函数有下列可用函数：</p>
 <dl class="function">
 <dt id="word_limiter">
-<code class="descname">word_limiter</code><span class="sig-paren">(</span><em>$str</em><span class="optional">[</span>, <em>$limit = 100</em><span class="optional">[</span>, <em>$end_char = '&amp;#8230;'</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#word_limiter" title="永久链接至目标">¶</a></dt>
+<tt class="descname">word_limiter</tt><big>(</big><em>$str</em><span class="optional">[</span>, <em>$limit = 100</em><span class="optional">[</span>, <em>$end_char = '&amp;#8230;'</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#word_limiter" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -476,7 +477,7 @@
 
 <dl class="function">
 <dt id="character_limiter">
-<code class="descname">character_limiter</code><span class="sig-paren">(</span><em>$str</em><span class="optional">[</span>, <em>$n = 500</em><span class="optional">[</span>, <em>$end_char = '&amp;#8230;'</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#character_limiter" title="永久链接至目标">¶</a></dt>
+<tt class="descname">character_limiter</tt><big>(</big><em>$str</em><span class="optional">[</span>, <em>$n = 500</em><span class="optional">[</span>, <em>$end_char = '&amp;#8230;'</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#character_limiter" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -507,13 +508,13 @@
 <p>第三个参数用于给裁剪的字符串设置一个可选的后缀，如果没该参数，默认使用省略号。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">如果你需要将字符串精确的裁剪到指定长度，请参见下面的 <a class="reference internal" href="#ellipsize" title="ellipsize"><code class="xref php php-func docutils literal"><span class="pre">ellipsize()</span></code></a> 函数。</p>
+<p class="last">如果你需要将字符串精确的裁剪到指定长度，请参见下面的 <a class="reference internal" href="#ellipsize" title="ellipsize"><tt class="xref php php-func docutils literal"><span class="pre">ellipsize()</span></tt></a> 函数。</p>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="ascii_to_entities">
-<code class="descname">ascii_to_entities</code><span class="sig-paren">(</span><em>$str</em><span class="sig-paren">)</span><a class="headerlink" href="#ascii_to_entities" title="永久链接至目标">¶</a></dt>
+<tt class="descname">ascii_to_entities</tt><big>(</big><em>$str</em><big>)</big><a class="headerlink" href="#ascii_to_entities" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -544,7 +545,7 @@
 
 <dl class="function">
 <dt id="convert_accented_characters">
-<code class="descname">convert_accented_characters</code><span class="sig-paren">(</span><em>$str</em><span class="sig-paren">)</span><a class="headerlink" href="#convert_accented_characters" title="永久链接至目标">¶</a></dt>
+<tt class="descname">convert_accented_characters</tt><big>(</big><em>$str</em><big>)</big><a class="headerlink" href="#convert_accented_characters" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -577,7 +578,7 @@
 
 <dl class="function">
 <dt id="word_censor">
-<code class="descname">word_censor</code><span class="sig-paren">(</span><em>$str</em>, <em>$censored</em><span class="optional">[</span>, <em>$replacement = ''</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#word_censor" title="永久链接至目标">¶</a></dt>
+<tt class="descname">word_censor</tt><big>(</big><em>$str</em>, <em>$censored</em><span class="optional">[</span>, <em>$replacement = ''</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#word_censor" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -609,7 +610,7 @@
 
 <dl class="function">
 <dt id="highlight_code">
-<code class="descname">highlight_code</code><span class="sig-paren">(</span><em>$str</em><span class="sig-paren">)</span><a class="headerlink" href="#highlight_code" title="永久链接至目标">¶</a></dt>
+<tt class="descname">highlight_code</tt><big>(</big><em>$str</em><big>)</big><a class="headerlink" href="#highlight_code" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -631,12 +632,12 @@
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$string</span> <span class="o">=</span> <span class="nx">highlight_code</span><span class="p">(</span><span class="nv">$string</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>该函数使用了 PHP 的 <code class="docutils literal"><span class="pre">highlight_string()</span></code> 函数，所以着色的颜色是在 php.ini 文件中设置的。</p>
+<p>该函数使用了 PHP 的 <tt class="docutils literal"><span class="pre">highlight_string()</span></tt> 函数，所以着色的颜色是在 php.ini 文件中设置的。</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="highlight_phrase">
-<code class="descname">highlight_phrase</code><span class="sig-paren">(</span><em>$str</em>, <em>$phrase</em><span class="optional">[</span>, <em>$tag_open = '&lt;mark&gt;'</em><span class="optional">[</span>, <em>$tag_close = '&lt;/mark&gt;'</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#highlight_phrase" title="永久链接至目标">¶</a></dt>
+<tt class="descname">highlight_phrase</tt><big>(</big><em>$str</em>, <em>$phrase</em><span class="optional">[</span>, <em>$tag_open = '&lt;mark&gt;'</em><span class="optional">[</span>, <em>$tag_close = '&lt;/mark&gt;'</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#highlight_phrase" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -671,7 +672,7 @@
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p>该函数默认是使用 <code class="docutils literal"><span class="pre">&lt;strong&gt;</span></code> 标签，老版本的浏览器可能不支持 <code class="docutils literal"><span class="pre">&lt;mark&gt;</span></code>
+<p>该函数默认是使用 <tt class="docutils literal"><span class="pre">&lt;strong&gt;</span></tt> 标签，老版本的浏览器可能不支持 <tt class="docutils literal"><span class="pre">&lt;mark&gt;</span></tt>
 这个 HTML5 新标签，所以如果你想支持这些老的浏览器，推荐你在你的样式文件
 中添加如下 CSS 代码:</p>
 <div class="last highlight-ci"><div class="highlight"><pre><span></span><span class="nx">mark</span> <span class="p">{</span>
@@ -685,7 +686,7 @@
 
 <dl class="function">
 <dt id="word_wrap">
-<code class="descname">word_wrap</code><span class="sig-paren">(</span><em>$str</em><span class="optional">[</span>, <em>$charlim = 76</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#word_wrap" title="永久链接至目标">¶</a></dt>
+<tt class="descname">word_wrap</tt><big>(</big><em>$str</em><span class="optional">[</span>, <em>$charlim = 76</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#word_wrap" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -720,7 +721,7 @@
 
 <dl class="function">
 <dt id="ellipsize">
-<code class="descname">ellipsize</code><span class="sig-paren">(</span><em>$str</em>, <em>$max_length</em><span class="optional">[</span>, <em>$position = 1</em><span class="optional">[</span>, <em>$ellipsis = '&amp;hellip;'</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#ellipsize" title="永久链接至目标">¶</a></dt>
+<tt class="descname">ellipsize</tt><big>(</big><em>$str</em>, <em>$max_length</em><span class="optional">[</span>, <em>$position = 1</em><span class="optional">[</span>, <em>$ellipsis = '&amp;hellip;'</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#ellipsize" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

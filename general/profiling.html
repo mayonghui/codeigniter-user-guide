@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="常规主题" href="index.html"/>
         <link rel="next" title="以 CLI 方式运行" href="cli.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -110,7 +109,7 @@
 <li class="toctree-l2"><a class="reference internal" href="routing.html">URI 路由</a></li>
 <li class="toctree-l2"><a class="reference internal" href="errors.html">错误处理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching.html">网页缓存</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">程序分析</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">程序分析</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cli.html">以 CLI 方式运行</a></li>
 <li class="toctree-l2"><a class="reference internal" href="managing_apps.html">管理你的应用程序</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environments.html">处理多环境</a></li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -294,7 +295,7 @@
 <li class="toctree-l2"><a class="reference internal" href="routing.html">URI 路由</a></li>
 <li class="toctree-l2"><a class="reference internal" href="errors.html">错误处理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching.html">网页缓存</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">程序分析</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">程序分析</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cli.html">以 CLI 方式运行</a></li>
 <li class="toctree-l2"><a class="reference internal" href="managing_apps.html">管理你的应用程序</a></li>
 <li class="toctree-l2"><a class="reference internal" href="environments.html">处理多环境</a></li>
@@ -433,12 +434,12 @@
 <div class="admonition important">
 <p class="first admonition-title">重要</p>
 <p class="last">这个类无须初始化，如果已按照下面的方式启用，
-他将被 <a class="reference internal" href="../libraries/output.html"><span class="doc">输出类</span></a> 自动加载。</p>
+他将被 <a class="reference internal" href="../libraries/output.html"><em>输出类</em></a> 自动加载。</p>
 </div>
 </div>
 <div class="section" id="id3">
 <h2>启用分析器<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p>要启用分析器，你可以在你的 <a class="reference internal" href="controllers.html"><span class="doc">控制器</span></a>
+<p>要启用分析器，你可以在你的 <a class="reference internal" href="controllers.html"><em>控制器</em></a>
 方法的任何位置添加一行下面的代码:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">enable_profiler</span><span class="p">(</span><span class="k">TRUE</span><span class="p">);</span>
 </pre></div>
@@ -453,7 +454,7 @@
 <h2>设置基准测试点<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>为了让分析器编译并显示你的基准测试数据，你必须使用特定的语法
 来命名基准点。</p>
-<p>请阅读 <a class="reference internal" href="../libraries/benchmark.html"><span class="doc">基准测试类</span></a> 中关于设置基准点的资料。</p>
+<p>请阅读 <a class="reference internal" href="../libraries/benchmark.html"><em>基准测试类</em></a> 中关于设置基准点的资料。</p>
 </div>
 <div class="section" id="id5">
 <h2>启用和禁用分析器中的字段<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
@@ -465,7 +466,7 @@
 <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;queries&#39;</span><span class="p">]</span>         <span class="o">=</span> <span class="k">FALSE</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>另一种方法是：在你的控制器里通过调用 <a class="reference internal" href="../libraries/output.html"><span class="doc">输出类</span></a>
+<p>另一种方法是：在你的控制器里通过调用 <a class="reference internal" href="../libraries/output.html"><em>输出类</em></a>
 的 set_profiler_sections()  函数来覆盖全局设置和默认设置:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$sections</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;config&#39;</span>  <span class="o">=&gt;</span> <span class="k">TRUE</span><span class="p">,</span>
@@ -537,9 +538,9 @@
 </table>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">在你的数据库配置文件中禁用 <a class="reference internal" href="../database/configuration.html"><span class="doc">save_queries</span></a> 参数
+<p class="last">在你的数据库配置文件中禁用 <a class="reference internal" href="../database/configuration.html"><em>save_queries</em></a> 参数
 也可以禁用数据库查询相关的分析器，上面说的 'queries' 字段就没用了。
-你可以通过 <code class="docutils literal"><span class="pre">$this-&gt;db-&gt;save_queries</span> <span class="pre">=</span> <span class="pre">TRUE;</span></code> 来覆写该设置。
+你可以通过 <tt class="docutils literal"><span class="pre">$this-&gt;db-&gt;save_queries</span> <span class="pre">=</span> <span class="pre">TRUE;</span></tt> 来覆写该设置。
 另外，禁用这个设置也会导致你无法查看查询语句以及
 <cite>last_query &lt;database/helpers&gt;</cite> 。</p>
 </div>

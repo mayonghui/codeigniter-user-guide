@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="类库参考" href="index.html"/>
         <link rel="next" title="图像处理类" href="image_lib.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -132,7 +131,7 @@
 <li class="toctree-l2"><a class="reference internal" href="encryption.html">加密类（新版）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_uploading.html">文件上传类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="form_validation.html">表单验证类</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">FTP 类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">FTP 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="image_lib.html">图像处理类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="input.html">输入类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="javascript.html">Javascript 类</a></li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -316,7 +317,7 @@
 <li class="toctree-l2"><a class="reference internal" href="encryption.html">加密类（新版）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_uploading.html">文件上传类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="form_validation.html">表单验证类</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">FTP 类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">FTP 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="image_lib.html">图像处理类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="input.html">输入类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="javascript.html">Javascript 类</a></li>
@@ -446,7 +447,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 <h2><a class="toc-backref" href="#id5">使用 FTP 类</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id2">
 <h3><a class="toc-backref" href="#id6">初始化类</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
-<p>正如 CodeIgniter 中的其他类一样，在你的控制器中使用 <code class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></code>
+<p>正如 CodeIgniter 中的其他类一样，在你的控制器中使用 <tt class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></tt>
 方法来初始化 FTP 类:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;ftp&#39;</span><span class="p">);</span>
 </pre></div>
@@ -512,10 +513,10 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 <h2><a class="toc-backref" href="#id8">类参考</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="CI_FTP">
-<em class="property">class </em><code class="descname">CI_FTP</code><a class="headerlink" href="#CI_FTP" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><tt class="descname">CI_FTP</tt><a class="headerlink" href="#CI_FTP" title="永久链接至目标">¶</a></dt>
 <dd><dl class="method">
 <dt id="CI_FTP::connect">
-<code class="descname">connect</code><span class="sig-paren">(</span><span class="optional">[</span><em>$config = array()</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_FTP::connect" title="永久链接至目标">¶</a></dt>
+<tt class="descname">connect</tt><big>(</big><span class="optional">[</span><em>$config = array()</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_FTP::connect" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -595,7 +596,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 
 <dl class="method">
 <dt id="CI_FTP::upload">
-<code class="descname">upload</code><span class="sig-paren">(</span><em>$locpath</em>, <em>$rempath</em><span class="optional">[</span>, <em>$mode = 'auto'</em><span class="optional">[</span>, <em>$permissions = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_FTP::upload" title="永久链接至目标">¶</a></dt>
+<tt class="descname">upload</tt><big>(</big><em>$locpath</em>, <em>$rempath</em><span class="optional">[</span>, <em>$mode = 'auto'</em><span class="optional">[</span>, <em>$permissions = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_FTP::upload" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -625,7 +626,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 
 <dl class="method">
 <dt id="CI_FTP::download">
-<code class="descname">download</code><span class="sig-paren">(</span><em>$rempath</em>, <em>$locpath</em><span class="optional">[</span>, <em>$mode = 'auto'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_FTP::download" title="永久链接至目标">¶</a></dt>
+<tt class="descname">download</tt><big>(</big><em>$rempath</em>, <em>$locpath</em><span class="optional">[</span>, <em>$mode = 'auto'</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_FTP::download" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -654,7 +655,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 
 <dl class="method">
 <dt id="CI_FTP::rename">
-<code class="descname">rename</code><span class="sig-paren">(</span><em>$old_file</em>, <em>$new_file</em><span class="optional">[</span>, <em>$move = FALSE</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_FTP::rename" title="永久链接至目标">¶</a></dt>
+<tt class="descname">rename</tt><big>(</big><em>$old_file</em>, <em>$new_file</em><span class="optional">[</span>, <em>$move = FALSE</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_FTP::rename" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -683,7 +684,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 
 <dl class="method">
 <dt id="CI_FTP::move">
-<code class="descname">move</code><span class="sig-paren">(</span><em>$old_file</em>, <em>$new_file</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_FTP::move" title="永久链接至目标">¶</a></dt>
+<tt class="descname">move</tt><big>(</big><em>$old_file</em>, <em>$new_file</em><big>)</big><a class="headerlink" href="#CI_FTP::move" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -715,7 +716,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 
 <dl class="method">
 <dt id="CI_FTP::delete_file">
-<code class="descname">delete_file</code><span class="sig-paren">(</span><em>$filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_FTP::delete_file" title="永久链接至目标">¶</a></dt>
+<tt class="descname">delete_file</tt><big>(</big><em>$filepath</em><big>)</big><a class="headerlink" href="#CI_FTP::delete_file" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -741,7 +742,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 
 <dl class="method">
 <dt id="CI_FTP::delete_dir">
-<code class="descname">delete_dir</code><span class="sig-paren">(</span><em>$filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_FTP::delete_dir" title="永久链接至目标">¶</a></dt>
+<tt class="descname">delete_dir</tt><big>(</big><em>$filepath</em><big>)</big><a class="headerlink" href="#CI_FTP::delete_dir" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -764,7 +765,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 <p class="first admonition-title">重要</p>
 <p class="last">使用该方法要非常小心！
 它会递归的删除目录下的所有内容，包括子目录和所有文件。请确保你提供的路径是正确的。
-你可以先使用 <code class="docutils literal"><span class="pre">list_files()</span></code> 方法来验证下路径是否正确。</p>
+你可以先使用 <tt class="docutils literal"><span class="pre">list_files()</span></tt> 方法来验证下路径是否正确。</p>
 </div>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">ftp</span><span class="o">-&gt;</span><span class="na">delete_dir</span><span class="p">(</span><span class="s1">&#39;/public_html/path/to/folder/&#39;</span><span class="p">);</span>
 </pre></div>
@@ -773,7 +774,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 
 <dl class="method">
 <dt id="CI_FTP::list_files">
-<code class="descname">list_files</code><span class="sig-paren">(</span><span class="optional">[</span><em>$path = '.'</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_FTP::list_files" title="永久链接至目标">¶</a></dt>
+<tt class="descname">list_files</tt><big>(</big><span class="optional">[</span><em>$path = '.'</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_FTP::list_files" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -800,7 +801,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 
 <dl class="method">
 <dt id="CI_FTP::mirror">
-<code class="descname">mirror</code><span class="sig-paren">(</span><em>$locpath</em>, <em>$rempath</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_FTP::mirror" title="永久链接至目标">¶</a></dt>
+<tt class="descname">mirror</tt><big>(</big><em>$locpath</em>, <em>$rempath</em><big>)</big><a class="headerlink" href="#CI_FTP::mirror" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -828,7 +829,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 
 <dl class="method">
 <dt id="CI_FTP::mkdir">
-<code class="descname">mkdir</code><span class="sig-paren">(</span><em>$path</em><span class="optional">[</span>, <em>$permissions = NULL</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_FTP::mkdir" title="永久链接至目标">¶</a></dt>
+<tt class="descname">mkdir</tt><big>(</big><em>$path</em><span class="optional">[</span>, <em>$permissions = NULL</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_FTP::mkdir" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -857,7 +858,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 
 <dl class="method">
 <dt id="CI_FTP::chmod">
-<code class="descname">chmod</code><span class="sig-paren">(</span><em>$path</em>, <em>$perm</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_FTP::chmod" title="永久链接至目标">¶</a></dt>
+<tt class="descname">chmod</tt><big>(</big><em>$path</em>, <em>$perm</em><big>)</big><a class="headerlink" href="#CI_FTP::chmod" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -885,7 +886,7 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 
 <dl class="method">
 <dt id="CI_FTP::changedir">
-<code class="descname">changedir</code><span class="sig-paren">(</span><em>$path</em><span class="optional">[</span>, <em>$suppress_debug = FALSE</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_FTP::changedir" title="永久链接至目标">¶</a></dt>
+<tt class="descname">changedir</tt><big>(</big><em>$path</em><span class="optional">[</span>, <em>$suppress_debug = FALSE</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_FTP::changedir" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -905,12 +906,12 @@ FTP 类还提供了一个 &quot;镜像&quot; 功能，允许你将你本地的�
 </tbody>
 </table>
 <p>用于修改当前工作目录到指定路径。</p>
-<p>如果你希望使用这个方法作为 <code class="docutils literal"><span class="pre">is_dir()</span></code> 的一个替代，<code class="docutils literal"><span class="pre">$suppress_debug</span></code> 参数将很有用。</p>
+<p>如果你希望使用这个方法作为 <tt class="docutils literal"><span class="pre">is_dir()</span></tt> 的一个替代，<tt class="docutils literal"><span class="pre">$suppress_debug</span></tt> 参数将很有用。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_FTP::close">
-<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_FTP::close" title="永久链接至目标">¶</a></dt>
+<tt class="descname">close</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_FTP::close" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

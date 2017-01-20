@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="辅助函数参考" href="index.html"/>
         <link rel="next" title="邮件辅助函数" href="email_helper.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -181,7 +180,7 @@
 <li class="toctree-l2"><a class="reference internal" href="cookie_helper.html">Cookie 辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="date_helper.html">日期辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="directory_helper.html">目录辅助函数</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">下载辅助函数</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">下载辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email_helper.html">邮件辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_helper.html">文件辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="form_helper.html">表单辅助函数</a></li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -365,7 +366,7 @@
 <li class="toctree-l2"><a class="reference internal" href="cookie_helper.html">Cookie 辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="date_helper.html">日期辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="directory_helper.html">目录辅助函数</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">下载辅助函数</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">下载辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email_helper.html">邮件辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_helper.html">文件辅助函数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="form_helper.html">表单辅助函数</a></li>
@@ -445,7 +446,7 @@
 <p>该辅助函数有下列可用函数：</p>
 <dl class="function">
 <dt id="force_download">
-<code class="descname">force_download</code><span class="sig-paren">(</span><span class="optional">[</span><em>$filename = ''</em><span class="optional">[</span>, <em>$data = ''</em><span class="optional">[</span>, <em>$set_mime = FALSE</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#force_download" title="永久链接至目标">¶</a></dt>
+<tt class="descname">force_download</tt><big>(</big><span class="optional">[</span><em>$filename = ''</em><span class="optional">[</span>, <em>$data = ''</em><span class="optional">[</span>, <em>$set_mime = FALSE</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#force_download" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -464,7 +465,7 @@
 </table>
 <p>生成 HTTP 头强制下载数据到客户端，这在实现文件下载时很有用。
 第一个参数为下载文件名称，第二个参数为文件数据。</p>
-<p>如果第二个参数为空，并且 <code class="docutils literal"><span class="pre">$filename</span></code> 参数是一个存在并可读的文件路径，
+<p>如果第二个参数为空，并且 <tt class="docutils literal"><span class="pre">$filename</span></tt> 参数是一个存在并可读的文件路径，
 那么这个文件的内容将被下载。</p>
 <p>如果第三个参数设置为 TRUE，那么将发送文件实际的 MIME 类型（根据文件的扩展名），
 这样你的浏览器会根据该 MIME 类型来处理。</p>

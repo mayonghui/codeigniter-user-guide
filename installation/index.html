@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="next" title="下载 CodeIgniter" href="downloads.html"/>
         <link rel="prev" title="欢迎使用 CodeIgniter" href="../general/welcome.html"/> 
@@ -50,12 +47,14 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">安装说明</a><ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">安装说明</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="downloads.html">下载 CodeIgniter</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">安装说明</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">安装说明</a></li>
 <li class="toctree-l2"><a class="reference internal" href="upgrading.html">从老版本升级</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">疑难解答</a></li>
 </ul>
@@ -234,12 +233,14 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">安装说明</a><ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">安装说明</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="downloads.html">下载 CodeIgniter</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">安装说明</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">安装说明</a></li>
 <li class="toctree-l2"><a class="reference internal" href="upgrading.html">从老版本升级</a></li>
 <li class="toctree-l2"><a class="reference internal" href="troubleshooting.html">疑难解答</a></li>
 </ul>
@@ -430,13 +431,13 @@
 <li>使用文本编辑器打开 <em>application/config/config.php</em> 文件设置你网站的根 URL，如果你想使用加密或会话，在这里设置上你的加密密钥；</li>
 <li>如果你打算使用数据库，打开 <em>application/config/database.php</em> 文件设置数据库参数。</li>
 </ol>
-<p>如果你想通过隐藏 CodeIgniter 的文件位置来增加安全性，你可以将 system 和 application 目录修改为其他的名字，然后打开主目录下的 <em>index.php</em> 文件将 <code class="docutils literal"><span class="pre">$system_path</span></code> 和 <code class="docutils literal"><span class="pre">$application_folder</span></code> 两个变量设置为你修改的名字。</p>
+<p>如果你想通过隐藏 CodeIgniter 的文件位置来增加安全性，你可以将 system 和 application 目录修改为其他的名字，然后打开主目录下的 <em>index.php</em> 文件将 <tt class="docutils literal"><span class="pre">$system_path</span></tt> 和 <tt class="docutils literal"><span class="pre">$application_folder</span></tt> 两个变量设置为你修改的名字。</p>
 <p>为了达到更好的安全性，system 和 application 目录都应该放置在 Web 根目录之外，这样它们就不能通过浏览器直接访问。CodeIgniter 默认在每个目录下都包含了一个 <em>.htaccess</em> 文件，用于阻止直接访问，但是最好还是将它们移出能公开访问的地方，防止出现 Web 服务器配置更改或者 <em>.htaccess</em> 文件不被支持这些情况。</p>
 <p>如果你想让 views 目录保持公开，也可以将你的 views 目录移出 application 目录。</p>
-<p>移动完目录之后，打开 index.php 文件，分别设置好 <code class="docutils literal"><span class="pre">$system_path</span></code> 、 <code class="docutils literal"><span class="pre">$application_folder</span></code> 和 <code class="docutils literal"><span class="pre">$view_folder</span></code> 三个变量的值，最好设置成绝对路径，例如：“<em>/www/MyUser/system</em>”。</p>
-<p>在生产环境还要额外再多一步，就是禁用 PHP 错误报告以及所有其他仅在开发环境使用的功能。在 CodeIgniter 中，可以通过设置 <code class="docutils literal"><span class="pre">ENVIRONMENT</span></code> 常量来做到这一点，这在 <a class="reference internal" href="../general/security.html"><span class="doc">安全</span></a> 这篇指南中有着更详细的介绍。</p>
+<p>移动完目录之后，打开 index.php 文件，分别设置好 <tt class="docutils literal"><span class="pre">$system_path</span></tt> 、 <tt class="docutils literal"><span class="pre">$application_folder</span></tt> 和 <tt class="docutils literal"><span class="pre">$view_folder</span></tt> 三个变量的值，最好设置成绝对路径，例如：“<em>/www/MyUser/system</em>”。</p>
+<p>在生产环境还要额外再多一步，就是禁用 PHP 错误报告以及所有其他仅在开发环境使用的功能。在 CodeIgniter 中，可以通过设置 <tt class="docutils literal"><span class="pre">ENVIRONMENT</span></tt> 常量来做到这一点，这在 <a class="reference internal" href="../general/security.html"><em>安全</em></a> 这篇指南中有着更详细的介绍。</p>
 <p>以上就是全部安装过程！</p>
-<p>如果你刚刚接触 CodeIgniter，请阅读用户指南的 <a class="reference internal" href="../overview/getting_started.html"><span class="doc">开始</span></a> 部分，学习如何构造动态的 PHP 应用，开始享受吧！</p>
+<p>如果你刚刚接触 CodeIgniter，请阅读用户指南的 <a class="reference internal" href="../overview/getting_started.html"><em>开始</em></a> 部分，学习如何构造动态的 PHP 应用，开始享受吧！</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>

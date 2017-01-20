@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="类库参考" href="index.html"/>
         <link rel="next" title="单元测试类" href="unit_testing.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -146,7 +145,7 @@
 <li class="toctree-l2"><a class="reference internal" href="sessions.html">Session 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="table.html">HTML 表格类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="trackback.html">引用通告类</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">排版类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">排版类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unit_testing.html">单元测试类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="uri.html">URI 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user_agent.html">用户代理类</a></li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -330,7 +331,7 @@
 <li class="toctree-l2"><a class="reference internal" href="sessions.html">Session 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="table.html">HTML 表格类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="trackback.html">引用通告类</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">排版类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">排版类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="unit_testing.html">单元测试类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="uri.html">URI 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user_agent.html">用户代理类</a></li>
@@ -440,7 +441,7 @@
 <h2><a class="toc-backref" href="#id5">使用排版类</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id3">
 <h3><a class="toc-backref" href="#id6">初始化该类</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
-<p>跟 CodeIgniter 中的其他类一样，可以在你的控制器中使用 <code class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></code>
+<p>跟 CodeIgniter 中的其他类一样，可以在你的控制器中使用 <tt class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></tt>
 方法加载排版类:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;typography&#39;</span><span class="p">);</span>
 </pre></div>
@@ -455,12 +456,12 @@
 <h2><a class="toc-backref" href="#id7">类参考</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="CI_Typography">
-<em class="property">class </em><code class="descname">CI_Typography</code><a class="headerlink" href="#CI_Typography" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><tt class="descname">CI_Typography</tt><a class="headerlink" href="#CI_Typography" title="永久链接至目标">¶</a></dt>
 <dd><dl class="attribute">
 <dt>
-<code class="descname">$protect_braced_quotes = FALSE</code></dt>
-<dd><p>当排版类和 <a class="reference internal" href="parser.html"><span class="doc">模板解析器类</span></a> 同时使用时，经常需要保护大括号中的的单引号和双引号不被转换。
-要保护这个，将 <code class="docutils literal"><span class="pre">protect_braced_quotes</span></code> 属性设置为 TRUE 。</p>
+<tt class="descname">$protect_braced_quotes = FALSE</tt></dt>
+<dd><p>当排版类和 <a class="reference internal" href="parser.html"><em>模板解析器类</em></a> 同时使用时，经常需要保护大括号中的的单引号和双引号不被转换。
+要保护这个，将 <tt class="docutils literal"><span class="pre">protect_braced_quotes</span></tt> 属性设置为 TRUE 。</p>
 <p>使用示例:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;typography&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">typography</span><span class="o">-&gt;</span><span class="na">protect_braced_quotes</span> <span class="o">=</span> <span class="k">TRUE</span><span class="p">;</span>
@@ -470,7 +471,7 @@
 
 <dl class="method">
 <dt id="CI_Typography::format_characters">
-<code class="descname">format_characters</code><span class="sig-paren">(</span><em>$str</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Typography::format_characters" title="永久链接至目标">¶</a></dt>
+<tt class="descname">format_characters</tt><big>(</big><em>$str</em><big>)</big><a class="headerlink" href="#CI_Typography::format_characters" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -488,7 +489,7 @@
 </tr>
 </tbody>
 </table>
-<p>该方法和上面的 <code class="docutils literal"><span class="pre">auto_typography()</span></code> 类似，但是它只对字符进行处理：</p>
+<p>该方法和上面的 <tt class="docutils literal"><span class="pre">auto_typography()</span></tt> 类似，但是它只对字符进行处理：</p>
 <blockquote>
 <div><ul class="simple">
 <li>除了出现在标签中的引号外，引号会被转换成正确的实体。</li>
@@ -506,7 +507,7 @@
 
 <dl class="method">
 <dt id="CI_Typography::nl2br_except_pre">
-<code class="descname">nl2br_except_pre</code><span class="sig-paren">(</span><em>$str</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Typography::nl2br_except_pre" title="永久链接至目标">¶</a></dt>
+<tt class="descname">nl2br_except_pre</tt><big>(</big><em>$str</em><big>)</big><a class="headerlink" href="#CI_Typography::nl2br_except_pre" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -525,7 +526,7 @@
 </tbody>
 </table>
 <p>将换行符转换为 &lt;br /&gt; 标签，忽略 &lt;pre&gt; 标签中的换行符。除了对 &lt;pre&gt;
-标签中的换行处理有所不同之外，这个函数和 PHP 函数 <code class="docutils literal"><span class="pre">nl2br()</span></code> 是完全一样的。</p>
+标签中的换行处理有所不同之外，这个函数和 PHP 函数 <tt class="docutils literal"><span class="pre">nl2br()</span></tt> 是完全一样的。</p>
 <p>使用示例:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$string</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">typography</span><span class="o">-&gt;</span><span class="na">nl2br_except_pre</span><span class="p">(</span><span class="nv">$string</span><span class="p">);</span>
 </pre></div>

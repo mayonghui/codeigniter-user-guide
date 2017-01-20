@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="类库参考" href="index.html"/>
         <link rel="next" title="输入类" href="input.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -133,7 +132,7 @@
 <li class="toctree-l2"><a class="reference internal" href="file_uploading.html">文件上传类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="form_validation.html">表单验证类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ftp.html">FTP 类</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">图像处理类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">图像处理类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="input.html">输入类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="javascript.html">Javascript 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="language.html">语言类</a></li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -317,7 +318,7 @@
 <li class="toctree-l2"><a class="reference internal" href="file_uploading.html">文件上传类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="form_validation.html">表单验证类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ftp.html">FTP 类</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">图像处理类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">图像处理类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="input.html">输入类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="javascript.html">Javascript 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="language.html">语言类</a></li>
@@ -465,7 +466,7 @@
 </div>
 <div class="custom-index container"></div><div class="section" id="id2">
 <h2><a class="toc-backref" href="#id12">初始化类</a><a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>跟 CodeIgniter 中的其他类一样，可以在你的控制器中使用 <code class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></code>
+<p>跟 CodeIgniter 中的其他类一样，可以在你的控制器中使用 <tt class="docutils literal"><span class="pre">$this-&gt;load-&gt;library()</span></tt>
 方法加载图像处理类:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;image_lib&#39;</span><span class="p">);</span>
 </pre></div>
@@ -686,7 +687,7 @@ HTTP 头发送到浏览器。</td>
 <h3><a class="toc-backref" href="#id16">在配置文件中设置参数</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <p>如果你不喜欢使用上面的方法来设置参数，你可以将参数保存到配置文件中。你只需简单的创建一个文件
 image_lib.php 并将 $config 数组放到该文件中，然后保存文件到 <strong>config/image_lib.php</strong> ，这些参数将会自动被使用。
-如果你在配置文件中设置参数，那么你就不需要使用 <code class="docutils literal"><span class="pre">$this-&gt;image_lib-&gt;initialize()</span></code> 方法了。</p>
+如果你在配置文件中设置参数，那么你就不需要使用 <tt class="docutils literal"><span class="pre">$this-&gt;image_lib-&gt;initialize()</span></tt> 方法了。</p>
 </div>
 </div>
 <div class="section" id="id7">
@@ -913,10 +914,10 @@ HTTP 头发送到浏览器。</td>
 <h2><a class="toc-backref" href="#id23">类参考</a><a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="CI_Image_lib">
-<em class="property">class </em><code class="descname">CI_Image_lib</code><a class="headerlink" href="#CI_Image_lib" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><tt class="descname">CI_Image_lib</tt><a class="headerlink" href="#CI_Image_lib" title="永久链接至目标">¶</a></dt>
 <dd><dl class="method">
 <dt id="CI_Image_lib::initialize">
-<code class="descname">initialize</code><span class="sig-paren">(</span><span class="optional">[</span><em>$props = array()</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Image_lib::initialize" title="永久链接至目标">¶</a></dt>
+<tt class="descname">initialize</tt><big>(</big><span class="optional">[</span><em>$props = array()</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Image_lib::initialize" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -939,7 +940,7 @@ HTTP 头发送到浏览器。</td>
 
 <dl class="method">
 <dt id="CI_Image_lib::resize">
-<code class="descname">resize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Image_lib::resize" title="永久链接至目标">¶</a></dt>
+<tt class="descname">resize</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_Image_lib::resize" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -954,7 +955,7 @@ HTTP 头发送到浏览器。</td>
 或者创建一个缩略图。</p>
 <p>创建一个副本和创建一个缩略图之间没有实际上的区别，
 除了缩略图的文件名会有一个自定义的后缀（如：mypic_thumb.jpg）。</p>
-<p>所有列在上面 <a class="reference internal" href="#processing-preferences"><span class="std std-ref">参数</span></a> 表中的参数对这个函数都可用，
+<p>所有列在上面 <a class="reference internal" href="#processing-preferences"><em>参数</em></a> 表中的参数对这个函数都可用，
 除了这三个： <em>rotation_angle</em> 、 <em>x_axis</em> 和 <em>y_axis</em> 。</p>
 <p><strong>创建一个缩略图</strong></p>
 <p>resize 函数能用来创建缩略图（并保留原图），只要你把这个参数设为 TRUE</p>
@@ -981,7 +982,7 @@ resize 函数的处理将直接作用于原图像。</p>
 
 <dl class="method">
 <dt id="CI_Image_lib::crop">
-<code class="descname">crop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Image_lib::crop" title="永久链接至目标">¶</a></dt>
+<tt class="descname">crop</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_Image_lib::crop" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -998,7 +999,7 @@ resize 函数的处理将直接作用于原图像。</p>
 <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;y_axis&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>前面那张 <a class="reference internal" href="#processing-preferences"><span class="std std-ref">参数</span></a> 表中所列的所有参数都可以用于这个函数，
+<p>前面那张 <a class="reference internal" href="#processing-preferences"><em>参数</em></a> 表中所列的所有参数都可以用于这个函数，
 除了这些：<em>rotation_angle</em> 、<em>width</em> 、<em>height</em> 、<em>create_thumb</em> 、<em>new_image</em> 。</p>
 <p>这是一个如何裁剪一张图片的示例:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;image_library&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;imagemagick&#39;</span><span class="p">;</span>
@@ -1026,7 +1027,7 @@ resize 函数的处理将直接作用于原图像。</p>
 
 <dl class="method">
 <dt id="CI_Image_lib::rotate">
-<code class="descname">rotate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Image_lib::rotate" title="永久链接至目标">¶</a></dt>
+<tt class="descname">rotate</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_Image_lib::rotate" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1067,7 +1068,7 @@ resize 函数的处理将直接作用于原图像。</p>
 
 <dl class="method">
 <dt id="CI_Image_lib::watermark">
-<code class="descname">watermark</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Image_lib::watermark" title="永久链接至目标">¶</a></dt>
+<tt class="descname">watermark</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_Image_lib::watermark" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1078,12 +1079,12 @@ resize 函数的处理将直接作用于原图像。</p>
 </tr>
 </tbody>
 </table>
-<p>在图像上添加一个水印，更多信息请参考 <a class="reference internal" href="#watermarking"><span class="std std-ref">给图像添加水印</span></a> 。</p>
+<p>在图像上添加一个水印，更多信息请参考 <a class="reference internal" href="#watermarking"><em>给图像添加水印</em></a> 。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_Image_lib::clear">
-<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Image_lib::clear" title="永久链接至目标">¶</a></dt>
+<tt class="descname">clear</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_Image_lib::clear" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1100,7 +1101,7 @@ resize 函数的处理将直接作用于原图像。</p>
 
 <dl class="method">
 <dt id="CI_Image_lib::display_errors">
-<code class="descname">display_errors</code><span class="sig-paren">(</span><span class="optional">[</span><em>$open = '&lt;p&gt;</em><span class="optional">[</span>, <em>$close = '&lt;/p&gt;'</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Image_lib::display_errors" title="永久链接至目标">¶</a></dt>
+<tt class="descname">display_errors</tt><big>(</big><span class="optional">[</span><em>$open = '&lt;p&gt;</em><span class="optional">[</span>, <em>$close = '&lt;/p&gt;'</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Image_lib::display_errors" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

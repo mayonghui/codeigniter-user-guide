@@ -29,9 +29,6 @@
 
   
   <link rel="stylesheet" href="../_static/css/theme_cn.css" type="text/css" />
-        <link rel="index" title="索引"
-              href="../genindex.html"/>
-        <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="CodeIgniter 3.1.3 中文手册|用户手册|用户指南|中文文档" href="../index.html"/>
         <link rel="up" title="类库参考" href="index.html"/>
         <link rel="next" title="配置类" href="config.html"/>
@@ -51,7 +48,9 @@
     
       <div id="pulldown-menu" class="ciNav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -125,7 +124,7 @@
 <li class="toctree-l2"><a class="reference internal" href="benchmark.html">基准测试类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching.html">缓存驱动器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calendar.html">日历类</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">购物车类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">购物车类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="config.html">配置类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">Email 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="encrypt.html">加密类</a></li>
@@ -235,7 +234,9 @@
           
           
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">欢迎使用 CodeIgniter</a><ul class="simple">
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">安装说明</a><ul>
@@ -309,7 +310,7 @@
 <li class="toctree-l2"><a class="reference internal" href="benchmark.html">基准测试类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caching.html">缓存驱动器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calendar.html">日历类</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">购物车类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">购物车类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="config.html">配置类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">Email 类</a></li>
 <li class="toctree-l2"><a class="reference internal" href="encrypt.html">加密类</a></li>
@@ -455,8 +456,8 @@
 <h3><a class="toc-backref" href="#id10">初始化购物车类</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <div class="admonition important">
 <p class="first admonition-title">重要</p>
-<p class="last">购物车类利用 CodeIgniter 的 <a class="reference internal" href="sessions.html"><span class="doc">Session 类</span></a> 把购物车信息保存到数据库中，
-所以在使用购物车类之前，你必须根据 <a class="reference internal" href="sessions.html"><span class="doc">Session 类文档</span></a> 中的说明来创建数据库表，
+<p class="last">购物车类利用 CodeIgniter 的 <a class="reference internal" href="sessions.html"><em>Session 类</em></a> 把购物车信息保存到数据库中，
+所以在使用购物车类之前，你必须根据 <a class="reference internal" href="sessions.html"><em>Session 类文档</em></a> 中的说明来创建数据库表，
 并且在 application/config/config.php 文件中把 Session 相关参数设置为使用数据库。</p>
 </div>
 <p>为了在你的控制器构造函数中初始化购物车类，请使用 $this-&gt;load-&gt;library 函数:</p>
@@ -474,7 +475,7 @@
 </div>
 <div class="section" id="id4">
 <h3><a class="toc-backref" href="#id11">将一个项目添加到购物车</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
-<p>要添加项目到购物车，只需将一个包含了商品信息的数组传递给 <code class="docutils literal"><span class="pre">$this-&gt;cart-&gt;insert()</span></code> 函数即可，就像下面这样:</p>
+<p>要添加项目到购物车，只需将一个包含了商品信息的数组传递给 <tt class="docutils literal"><span class="pre">$this-&gt;cart-&gt;insert()</span></tt> 函数即可，就像下面这样:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
     <span class="s1">&#39;id&#39;</span>      <span class="o">=&gt;</span> <span class="s1">&#39;sku_123ABC&#39;</span><span class="p">,</span>
     <span class="s1">&#39;qty&#39;</span>     <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span>
@@ -516,7 +517,7 @@
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">cart</span><span class="o">-&gt;</span><span class="na">insert</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>如果成功的插入一条数据后，<code class="docutils literal"><span class="pre">insert()</span></code> 方法将会返回一个 id 值（ $rowid ）。</p>
+<p>如果成功的插入一条数据后，<tt class="docutils literal"><span class="pre">insert()</span></tt> 方法将会返回一个 id 值（ $rowid ）。</p>
 </div>
 <div class="section" id="id5">
 <h3><a class="toc-backref" href="#id12">将多个项目添加到购物车</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
@@ -550,8 +551,8 @@
 </div>
 <div class="section" id="id6">
 <h3><a class="toc-backref" href="#id13">显示购物车</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
-<p>为了显示购物车的数据，你得创建一个 <a class="reference internal" href="../general/views.html"><span class="doc">视图文件</span></a>，它的代码类似于下面这个。</p>
-<p>请注意这个范例使用了 <a class="reference internal" href="../helpers/form_helper.html"><span class="doc">表单辅助函数</span></a> 。</p>
+<p>为了显示购物车的数据，你得创建一个 <a class="reference internal" href="../general/views.html"><em>视图文件</em></a>，它的代码类似于下面这个。</p>
+<p>请注意这个范例使用了 <a class="reference internal" href="../helpers/form_helper.html"><em>表单辅助函数</em></a> 。</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">echo</span> <span class="nx">form_open</span><span class="p">(</span><span class="s1">&#39;path/to/controller/update/method&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">table</span> <span class="na">cellpadding</span><span class="o">=</span><span class="s">&quot;6&quot;</span> <span class="na">cellspacing</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;width:100%&quot;</span> <span class="na">border</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="p">&gt;</span>
@@ -609,7 +610,7 @@
 </div>
 <div class="section" id="id7">
 <h3><a class="toc-backref" href="#id14">更新购物车</a><a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
-<p>为了更新购物车中的信息，你必须将一个包含了 Row ID 和数量的数组传递给 <code class="docutils literal"><span class="pre">$this-&gt;cart-&gt;update()</span></code> 函数。</p>
+<p>为了更新购物车中的信息，你必须将一个包含了 Row ID 和数量的数组传递给 <tt class="docutils literal"><span class="pre">$this-&gt;cart-&gt;update()</span></tt> 函数。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
 <p class="last">如果数量被设置为 0 ，那么购物车中对应的项目会被移除。</p>
@@ -672,28 +673,28 @@
 <h2><a class="toc-backref" href="#id16">类参考</a><a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="CI_Cart">
-<em class="property">class </em><code class="descname">CI_Cart</code><a class="headerlink" href="#CI_Cart" title="永久链接至目标">¶</a></dt>
+<em class="property">class </em><tt class="descname">CI_Cart</tt><a class="headerlink" href="#CI_Cart" title="永久链接至目标">¶</a></dt>
 <dd><dl class="attribute">
 <dt>
-<code class="descname">$product_id_rules = '.a-z0-9_-'</code></dt>
+<tt class="descname">$product_id_rules = '.a-z0-9_-'</tt></dt>
 <dd><p>用于验证商品 ID 有效性的正则表达式规则，默认是：字母、数字、连字符（-）、下划线（_）、句点（.）</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt>
-<code class="descname">$product_name_rules  = 'w -.:'</code></dt>
+<tt class="descname">$product_name_rules  = 'w -.:'</tt></dt>
 <dd><p>用于验证商品 ID 和商品名有效性的正则表达式规则，默认是：字母、数字、连字符（-）、下划线（_）、冒号（:）、句点（.）</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt>
-<code class="descname">$product_name_safe = TRUE</code></dt>
+<tt class="descname">$product_name_safe = TRUE</tt></dt>
 <dd><p>是否只接受安全的商品名称，默认为 TRUE 。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_Cart::insert">
-<code class="descname">insert</code><span class="sig-paren">(</span><span class="optional">[</span><em>$items = array()</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Cart::insert" title="永久链接至目标">¶</a></dt>
+<tt class="descname">insert</tt><big>(</big><span class="optional">[</span><em>$items = array()</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Cart::insert" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -716,7 +717,7 @@
 
 <dl class="method">
 <dt id="CI_Cart::update">
-<code class="descname">update</code><span class="sig-paren">(</span><span class="optional">[</span><em>$items = array()</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Cart::update" title="永久链接至目标">¶</a></dt>
+<tt class="descname">update</tt><big>(</big><span class="optional">[</span><em>$items = array()</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Cart::update" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -740,7 +741,7 @@
 
 <dl class="method">
 <dt id="CI_Cart::remove">
-<code class="descname">remove</code><span class="sig-paren">(</span><em>$rowid</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Cart::remove" title="永久链接至目标">¶</a></dt>
+<tt class="descname">remove</tt><big>(</big><em>$rowid</em><big>)</big><a class="headerlink" href="#CI_Cart::remove" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -758,12 +759,12 @@
 </tr>
 </tbody>
 </table>
-<p>根据 <code class="docutils literal"><span class="pre">$rowid</span></code> 从购物车中移除某个项目。</p>
+<p>根据 <tt class="docutils literal"><span class="pre">$rowid</span></tt> 从购物车中移除某个项目。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_Cart::total">
-<code class="descname">total</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Cart::total" title="永久链接至目标">¶</a></dt>
+<tt class="descname">total</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_Cart::total" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -779,7 +780,7 @@
 
 <dl class="method">
 <dt id="CI_Cart::total_items">
-<code class="descname">total_items</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Cart::total_items" title="永久链接至目标">¶</a></dt>
+<tt class="descname">total_items</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_Cart::total_items" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -795,7 +796,7 @@
 
 <dl class="method">
 <dt id="CI_Cart::contents">
-<code class="descname">contents</code><span class="sig-paren">(</span><span class="optional">[</span><em>$newest_first = FALSE</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Cart::contents" title="永久链接至目标">¶</a></dt>
+<tt class="descname">contents</tt><big>(</big><span class="optional">[</span><em>$newest_first = FALSE</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Cart::contents" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -819,7 +820,7 @@ TRUE 为按购物车里的项目从新到旧排序，FALSE 为从旧到新。</p
 
 <dl class="method">
 <dt id="CI_Cart::get_item">
-<code class="descname">get_item</code><span class="sig-paren">(</span><em>$row_id</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Cart::get_item" title="永久链接至目标">¶</a></dt>
+<tt class="descname">get_item</tt><big>(</big><em>$row_id</em><big>)</big><a class="headerlink" href="#CI_Cart::get_item" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -837,12 +838,12 @@ TRUE 为按购物车里的项目从新到旧排序，FALSE 为从旧到新。</p
 </tr>
 </tbody>
 </table>
-<p>根据指定的 <code class="docutils literal"><span class="pre">$rowid</span></code> 返回购物车中该项的信息，如果不存在，返回 FALSE 。</p>
+<p>根据指定的 <tt class="docutils literal"><span class="pre">$rowid</span></tt> 返回购物车中该项的信息，如果不存在，返回 FALSE 。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_Cart::has_options">
-<code class="descname">has_options</code><span class="sig-paren">(</span><em>$row_id = ''</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Cart::has_options" title="永久链接至目标">¶</a></dt>
+<tt class="descname">has_options</tt><big>(</big><em>$row_id = ''</em><big>)</big><a class="headerlink" href="#CI_Cart::has_options" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -860,13 +861,13 @@ TRUE 为按购物车里的项目从新到旧排序，FALSE 为从旧到新。</p
 </tr>
 </tbody>
 </table>
-<p>如果购物车的某项包含 options 则返回 TRUE 。该方法可以用在针对 <code class="docutils literal"><span class="pre">contents()</span></code> 方法的循环中，
+<p>如果购物车的某项包含 options 则返回 TRUE 。该方法可以用在针对 <tt class="docutils literal"><span class="pre">contents()</span></tt> 方法的循环中，
 你需要指定项目的 rowid ，正如上文 &quot;显示购物车&quot; 的例子中那样。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_Cart::product_options">
-<code class="descname">product_options</code><span class="sig-paren">(</span><span class="optional">[</span><em>$row_id = ''</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Cart::product_options" title="永久链接至目标">¶</a></dt>
+<tt class="descname">product_options</tt><big>(</big><span class="optional">[</span><em>$row_id = ''</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Cart::product_options" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -884,13 +885,13 @@ TRUE 为按购物车里的项目从新到旧排序，FALSE 为从旧到新。</p
 </tr>
 </tbody>
 </table>
-<p>该方法返回购物车中某个商品的 options 数组。该方法可以用在针对 <code class="docutils literal"><span class="pre">contents()</span></code> 方法的循环中，
+<p>该方法返回购物车中某个商品的 options 数组。该方法可以用在针对 <tt class="docutils literal"><span class="pre">contents()</span></tt> 方法的循环中，
 你需要指定项目的 rowid ，正如上文 &quot;显示购物车&quot; 的例子中那样。</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_Cart::destroy">
-<code class="descname">destroy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Cart::destroy" title="永久链接至目标">¶</a></dt>
+<tt class="descname">destroy</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_Cart::destroy" title="永久链接至目标">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
