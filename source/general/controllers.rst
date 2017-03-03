@@ -231,7 +231,7 @@ CodeIgniter 有一个输出类，它可以自动的将最终数据发送到你�
 
 你只需要简单的在 *application/controllers/* 目录下创建新的目录，并将控制器文件放到子目录下。
 
-.. note:: 当使用该功能时，URI 的第一段必须制定目录，例如，假设你在如下位置有一个控制器::
+.. note:: 当使用该功能时，URI 的第一段必须指定目录，例如，假设你在如下位置有一个控制器::
 
 		application/controllers/products/Shoes.php
 
@@ -244,7 +244,7 @@ called if the URL contains *only* the sub-directory. Simply put a controller
 in there that matches the name of your 'default_controller' as specified in
 your *application/config/routes.php* file.
 
-你也可以使用 CodeIgniter 的 :doc:`URI 路由 <routing>` 功能来重定向 URI 。
+你也可以使用 CodeIgniter 的 :doc:`URI 路由 <routing>` 功能来重定向 URI。
 
 构造函数
 ==================
