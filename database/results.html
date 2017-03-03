@@ -588,7 +588,7 @@ If these have been declared and are non-public then you should provide a
         <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">last_login</span><span class="o">-&gt;</span><span class="na">format</span><span class="p">(</span><span class="nv">$format</span><span class="p">);</span>
     <span class="p">}</span>
 
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">__set</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$value</span><span class="p">)</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="fm">__set</span><span class="p">(</span><span class="nv">$name</span><span class="p">,</span> <span class="nv">$value</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="nv">$name</span> <span class="o">===</span> <span class="s1">&#39;last_login&#39;</span><span class="p">)</span>
         <span class="p">{</span>
@@ -596,7 +596,7 @@ If these have been declared and are non-public then you should provide a
         <span class="p">}</span>
     <span class="p">}</span>
 
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">__get</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="fm">__get</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="nv">$name</span><span class="p">))</span>
         <span class="p">{</span>
@@ -1200,7 +1200,7 @@ result set.</p>
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2017, 不列颠哥伦比亚理工学院.
-       最后修改: 2017-01-20.
+       最后修改: 2017-03-03.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>

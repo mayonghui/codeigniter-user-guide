@@ -671,7 +671,7 @@
 <p>你只需要简单的在 <em>application/controllers/</em> 目录下创建新的目录，并将控制器文件放到子目录下。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p>当使用该功能时，URI 的第一段必须制定目录，例如，假设你在如下位置有一个控制器:</p>
+<p>当使用该功能时，URI 的第一段必须指定目录，例如，假设你在如下位置有一个控制器:</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">application</span><span class="o">/</span><span class="nx">controllers</span><span class="o">/</span><span class="nx">products</span><span class="o">/</span><span class="nx">Shoes</span><span class="o">.</span><span class="nx">php</span>
 </pre></div>
 </div>
@@ -684,7 +684,7 @@
 called if the URL contains <em>only</em> the sub-directory. Simply put a controller
 in there that matches the name of your 'default_controller' as specified in
 your <em>application/config/routes.php</em> file.</p>
-<p>你也可以使用 CodeIgniter 的 <a class="reference internal" href="routing.html"><em>URI 路由</em></a> 功能来重定向 URI 。</p>
+<p>你也可以使用 CodeIgniter 的 <a class="reference internal" href="routing.html"><em>URI 路由</em></a> 功能来重定向 URI。</p>
 </div>
 <div class="section" id="id10">
 <h2><a class="toc-backref" href="#id23">构造函数</a><a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
@@ -697,7 +697,7 @@ your <em>application/config/routes.php</em> file.</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="k">class</span> <span class="nc">Blog</span> <span class="k">extends</span> <span class="nx">CI_Controller</span> <span class="p">{</span>
 
-    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">()</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">()</span>
     <span class="p">{</span>
         <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">();</span>
         <span class="c1">// Your own constructor code</span>
@@ -784,7 +784,7 @@ your <em>application/config/routes.php</em> file.</p>
   <div role="contentinfo">
     <p>
         &copy; 版权所有 2014 - 2017, 不列颠哥伦比亚理工学院.
-       最后修改: 2017-01-20.
+       最后修改: 2017-03-03.
     </p>
 
     <p>以 <a href="http://www.aneasystone.com/" target="_blank">aneasystone</a> 制作的手册为基础构建</p>
