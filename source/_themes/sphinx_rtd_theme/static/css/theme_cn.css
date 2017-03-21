@@ -99,7 +99,9 @@ div#pulldown-menu {
 	margin-top: 40px;
 	margin-bottom: 40px;
 }
-
+#notes .reward {
+	text-align: center;
+}
 em {
 	font-style: normal;
 }
