@@ -90,7 +90,7 @@ CodeIgniter 定义了一些全局的函数，你可以在任何地方使用它�
 
 .. php:function:: set_status_header($code[, $text = ''])
 
-	:param	int	$code: HTTP Reponse status code
+	:param	int	$code: HTTP Response status code
 	:param	string	$text: A custom message to set with the status code
 	:rtype:	void
 
