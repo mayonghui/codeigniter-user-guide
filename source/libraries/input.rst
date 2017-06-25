@@ -101,9 +101,9 @@ CodeIgniter 为你解决了这个问题，你只需要使用下面的 ``$raw_inp
 .. php:class:: CI_Input
 
 	.. attribute:: $raw_input_stream
-		
+
 		返回只读的 php://input 流数据。
-		
+
 		该属性可以被多次读取。
 
 	.. php:method:: post([$index = NULL[, $xss_clean = NULL]])
@@ -120,7 +120,7 @@ CodeIgniter 为你解决了这个问题，你只需要使用下面的 ``$raw_inp
 		如果获取的数据不存在，该方法返回 NULL 。
 
 		第二个参数可选，用于决定是否使用 XSS 过滤器对数据进行过滤。
-		要使用过滤器，可以将第二个参数设置为 TRUE ，或者将 
+		要使用过滤器，可以将第二个参数设置为 TRUE ，或者将
 		``$config['global_xss_filtering']`` 参数设置为 TRUE 。
 		::
 
@@ -238,7 +238,7 @@ CodeIgniter 为你解决了这个问题，你只需要使用下面的 ``$raw_inp
 
 		该方法和 ``get()`` 、 ``post()`` 和 ``cookie()`` 方法一样，只是它用于获取 *php://input* 流数据。
 
-	.. php:method:: set_cookie($name = ''[, $value = ''[, $expire = ''[, $domain = ''[, $path = '/'[, $prefix = ''[, $secure = FALSE[, $httponly = FALSE]]]]]]])
+	.. php:method:: set_cookie($name = ''[, $value = ''[, $expire = ''[, $domain = ''[, $path = '/'[, $prefix = ''[, $secure = NULL[, $httponly = NULL]]]]]]])
 
 		:param	mixed	$name: Cookie name or an array of parameters
 		:param	string	$value: Cookie value
@@ -285,7 +285,8 @@ CodeIgniter 为你解决了这个问题，你只需要使用下面的 ``$raw_inp
 
 		prefix 只在你想避免和其他相同名称的 COOKIE 冲突时才需要使用。
 
-		secure 参数只有当你需要使用安全的 COOKIE 时使用。
+    The *httponly* and *secure* flags, when omitted, will default to your
+		``$config['cookie_httponly']`` and ``$config['cookie_secure']`` settings.
 
 		**参数方式**
 

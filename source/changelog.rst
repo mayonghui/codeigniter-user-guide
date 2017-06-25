@@ -2,6 +2,66 @@
 变更记录
 ##########
 
+版本 3.1.5
+=============
+
+发布日期：2017.6.19
+
+-  **Security**
+
+   -  :doc:`Form Validation Library <libraries/form_validation>` rule ``valid_email`` could be bypassed if ``idn_to_ascii()`` is available.
+
+-  General Changes
+
+   -  Updated :doc:`Form Helper <helpers/form_helper>` function :php:func:`form_label()` to accept HTML attributes as a string.
+
+Bug fixes for 3.1.5
+-------------------
+
+-  Fixed a bug (#5070) - :doc:`Email Library <libraries/email>` didn't properly detect 7-bit encoding.
+-  Fixed a bug (#5084) - :doc:`XML-RPC Library <libraries/xmlrpc>` errored because of a variable name typo.
+-  Fixed a bug (#5108) - :doc:`Inflector Helper <helpers/inflector_helper>` function :php:func:`singular()` didn't properly handle 'quizzes'.
+-  Fixed a regression (#5131) - private controller methods triggered PHP errors instead of a 404 response.
+-  Fixed a bug (#5150) - :doc:`Database Forge <database/forge>` method ``modify_column()`` triggered an error while renaming columns with the 'oci8', 'pdo/oci' drivers.
+-  Fixed a bug (#5155) - :doc:`Query Builder <database/query_builder>` method ``count_all_results()`` returned incorrect result for queries using ``LIMIT``, ``OFFSET``.
+
+版本 3.1.4
+=============
+
+发布日期：2017.3.20
+
+-  **Security**
+
+   -  Fixed a header injection vulnerability in :doc:`common function <general/common_functions>` :php:func:`set_status_header()` under Apache (thanks to Guillermo Caminer from `Flowgate <https://flowgate.net/>`_).
+   -  Fixed byte-safety issues in :doc:`Encrypt Library <libraries/encrypt>` (DEPRECATED) when ``mbstring.func_overload`` is enabled.
+   -  Fixed byte-safety issues in :doc:`Encryption Library <libraries/encryption>` when ``mbstring.func_overload`` is enabled.
+   -  Fixed byte-safety issues in :doc:`compatibility functions <general/compatibility_functions>` ``password_hash()``, ``hash_pbkdf2()`` when ``mbstring.func_overload`` is enabled.
+   -  Updated :doc:`Encrypt Library <libraries/encrypt>` (DEPRECATED) to call ``mcrypt_create_iv()`` with ``MCRYPT_DEV_URANDOM``.
+
+-  General Changes
+
+   -  Updated the :doc:`Image Manipulation Library <libraries/image_lib>` to work-around an issue with some JPEGs when using GD.
+
+Bug fixes for 3.1.4
+-------------------
+
+-  Fixed a regression (#4975) - :doc:`Loader Library <libraries/loader>` couldn't handle objects passed as view variables.
+-  Fixed a bug (#4977) - :doc:`Loader Library <libraries/loader>` method ``helper()`` could accept any character as a filename extension separator.
+-  Fixed a regression where the :doc:`Session Library <libraries/sessions>` would fail on a ``session_regenerate_id(TRUE)`` call with the 'database' driver.
+-  Fixed a bug (#4987) - :doc:`Query Builder <database/query_builder>` caching didn't keep track of table aliases.
+-  Fixed a bug where :doc:`Text Helper <helpers/text_helper>` function ``ascii_to_entities()`` wasn't byte-safe when ``mbstring.func_overload`` is enabled.
+-  Fixed a bug where ``CI_Log``, ``CI_Output``, ``CI_Email`` and ``CI_Zip`` didn't handle strings in a byte-safe manner when ``mbstring.func_overload`` is enabled.
+-  Fixed a bug where :doc:`Session Library <libraries/sessions>` didn't read session data in a byte-safe manner when ``mbstring.func_overload`` is enabled.
+-  Fixed a bug (#4990) - :doc:`Profiler <general/profiling>` didn't close ``<pre>`` tags it generated.
+-  Fixed a bug (#4990) - :doc:`Profiler <general/profiling>` didn't HTML-escape quotes for ``$_SESSION`` variables.
+-  Fixed a bug where :doc:`Input Library <libraries/input>` method ``set_cookie()`` didn't allow its *httponly* and *secure* parameters to be overriden to ``FALSE``.
+-  Fixed a bug (#5006) - :doc:`common function <general/common_functions>` :php:func:`get_mimes()` didn't load *application/config/mimes.php* if an environment specific config exists.
+-  Fixed a bug (#5006) - :doc:`common function <general/common_functions>` :php:func:`remove_invisible_characters()` didn't remove URL-encoded ``0x7F``.
+-  Fixed a bug (#4815) - :doc:`Database Library <database/index>` stripped URL-encoded sequences while escaping strings with the 'mssql' driver.
+-  Fixed a bug (#5044) - :doc:`HTML Helper <helpers/html_helper>` function :php:func:`img()` didn't accept ``data:`` URI schemes for the image source.
+-  Fixed a bug (#5050) - :doc:`Database Library <database/index>` tried to access an undefined property in a number of error handling cases.
+-  Fixed a bug (#5057) - :doc:`Database <database/index>` driver 'postgre' didn't actually apply extra options (such as 'connect_timeout') to its DSN.
+
 版本 3.1.3
 =============
 
@@ -65,7 +125,7 @@ Bug fixes for 3.1.2
 -  Fixed a regression (#4874) - :doc:`Session Library <libraries/sessions>` didn't take into account ``session.hash_bits_per_character`` when validating session IDs.
 -  Fixed a bug (#4871) - :doc:`Query Builder <database/query_builder>` method ``update_batch()`` didn't properly handle identifier escaping.
 -  Fixed a bug (#4884) - :doc:`Query Builder <database/query_builder>` didn't properly parse field names ending in 'is' when used inside WHERE and HAVING statements.
--  Fixed a bug where ``CI_Log``, ``CI_Output``, ``CI_Email`` and ``CI_Zip`` didn't handle strings in a byte-safe manner when ``mbstring.func_override`` is enabled.
+-  Fixed a bug where ``CI_Log``, ``CI_Output``, ``CI_Email`` and ``CI_Zip`` didn't handle strings in a byte-safe manner when ``mbstring.func_overload`` is enabled.
 
 版本 3.1.1
 =============
@@ -102,7 +162,7 @@ Bug fixes for 3.1.1
 -  Fixed a bug where :doc:`Query Builder <database/query_builder>` method ``insert_batch()`` tried to execute an unsupported SQL query with the 'ibase' and 'pdo/firebird' drivers.
 -  Fixed a bug (#4809) - :doc:`Database <database/index>` driver 'pdo/mysql' didn't turn off ``AUTOCOMMIT`` when starting a transaction.
 -  Fixed a bug (#4822) - :doc:`CAPTCHA Helper <helpers/captcha_helper>` didn't clear expired PNG images.
--  Fixed a bug (#4823) - :doc:`Session Library <libraries/sessions>` 'files' driver could enter an infinite loop if ``mbstring.func_override`` is enabled.
+-  Fixed a bug (#4823) - :doc:`Session Library <libraries/sessions>` 'files' driver could enter an infinite loop if ``mbstring.func_overload`` is enabled.
 -  Fixed a bug (#4851) - :doc:`Database Forge <database/forge>` didn't quote schema names passed to its ``create_database()`` method.
 -  Fixed a bug (#4863) - :doc:`HTML Table Library <libraries/table>` method ``set_caption()`` was missing method chaining support.
 -  Fixed a bug (#4843) - :doc:`XML-RPC Library <libraries/xmlrpc>` client class didn't set a read/write socket timeout.

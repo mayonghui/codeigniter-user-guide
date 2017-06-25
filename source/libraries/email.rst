@@ -350,7 +350,7 @@ Email 参数
 		:returns:	Formatted debug data
 		:rtype:	string
 
-		返回一个包含了所有的服务器信息、email 头部信息、以及 email 信息的字符串。用于调试。
+		返回一个包含了所有的服务器信息、email 头部信息、以及 email 信息的字符串，这些信息对调试很有用。
 
 		你可以指定只返回消息的哪个部分，有效值有：**headers** 、 **subject** 和 **body** 。
 

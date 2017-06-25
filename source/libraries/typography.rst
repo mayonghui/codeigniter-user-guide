@@ -18,7 +18,7 @@
 初始化该类
 ======================
 
-跟 CodeIgniter 中的其他类一样，可以在你的控制器中使用 ``$this->load->library()`` 
+跟 CodeIgniter 中的其他类一样，可以在你的控制器中使用 ``$this->load->library()``
 方法加载排版类::
 
 	$this->load->library('typography');
@@ -43,7 +43,7 @@
 			$this->load->library('typography');
 			$this->typography->protect_braced_quotes = TRUE;
 
-	.. method auto_typography($str[, $reduce_linebreaks = FALSE])
+	.. php:method:: auto_typography($str[, $reduce_linebreaks = FALSE])
 
 		:param	string	$str: Input string
 		:param	bool	$reduce_linebreaks: Whether to reduce consequitive linebreaks
@@ -96,7 +96,7 @@
 		:returns:	Formatted string
 		:rtype:	string
 
-		将换行符转换为 <br /> 标签，忽略 <pre> 标签中的换行符。除了对 <pre> 
+		将换行符转换为 <br /> 标签，忽略 <pre> 标签中的换行符。除了对 <pre>
 		标签中的换行处理有所不同之外，这个函数和 PHP 函数 ``nl2br()`` 是完全一样的。
 
 		使用示例::

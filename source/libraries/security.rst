@@ -37,6 +37,9 @@ XSS 攻击, 这对于保证文件上传的安全非常有用。当此参数被�
 		// file failed the XSS test
 	}
 
+.. important:: If you want to filter HTML attribute values, use
+  :php:func:`html_escape()` instead!
+
 *********************************
 跨站请求伪造（CSRF）
 *********************************
@@ -60,7 +63,7 @@ XSS 攻击, 这对于保证文件上传的安全非常有用。当此参数被�
 
 	<input type="hidden" name="<?=$csrf['name'];?>" value="<?=$csrf['hash'];?>" />
 
-令牌（tokens）默认会在每一次提交时重新生成，或者你也可以设置成在 CSRF cookie 
+令牌（tokens）默认会在每一次提交时重新生成，或者你也可以设置成在 CSRF cookie
 的生命周期内一直有效。默认情况下令牌重新生成提供了更严格的安全机制，但可能会对
 可用性带来一定的影响，因为令牌很可能会变得失效（例如使用浏览器的返回前进按钮、
 使用多窗口或多标签页浏览、异步调用等等）。你可以修改下面这个参数来改变这一点。
@@ -94,7 +97,10 @@ URI 中也支持使用正则表达式（不区分大小写）::
 		:rtype:	mixed
 
 		尝试移除输入数据中的 XSS 代码，并返回过滤后的数据。
-		如果第二个参数设置为 TRUE ，将检查图片中是否含有恶意数据，是的话返回 TRUE ，否则返回 FALSE 。
+    如果第二个参数设置为 TRUE ，将检查图片中是否含有恶意数据，是的话返回 TRUE ，否则返回 FALSE 。
+
+		.. important:: This method is not suitable for filtering HTML attribute vales!
+			Use :php:func:`html_escape()` for that instead.
 
 	.. php:method:: sanitize_filename($str[, $relative_path = FALSE])
 
@@ -135,7 +141,7 @@ URI 中也支持使用正则表达式（不区分大小写）::
 		:returns:	Entity-decoded string
 		:rtype:	string
 
-		该方法和 ENT_COMPAT 模式下的 PHP 原生函数 ``html_entity_decode()`` 差不多，只是它除此之外，还会检测不以分号结尾的 
+		该方法和 ENT_COMPAT 模式下的 PHP 原生函数 ``html_entity_decode()`` 差不多，只是它除此之外，还会检测不以分号结尾的
 		HTML 实体，因为有些浏览器允许这样。
 
 		如果没有设置 ``$charset`` 参数，则使用你配置的 ``$config['charset']`` 参数作为编码格式。

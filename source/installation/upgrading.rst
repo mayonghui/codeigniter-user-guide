@@ -7,6 +7,8 @@
 .. toctree::
 	:titlesonly:
 
+	从 3.1.4 升级到 3.1.5 <upgrade_315>
+	从 3.1.3 升级到 3.1.4 <upgrade_314>
 	从 3.1.2 升级到 3.1.3 <upgrade_313>
 	从 3.1.1 升级到 3.1.2 <upgrade_312>
 	从 3.1.0 升级到 3.1.1 <upgrade_311>

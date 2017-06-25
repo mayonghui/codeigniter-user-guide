@@ -122,7 +122,7 @@ CodeIgniter 默认有一个主要的配置文件，位于 application/config/con
 #. 将已有的 config.php 文件拷贝到该目录
 #. 编辑 application/config/production/config.php 文件，使用生产环境下配置
 
-当你将 ENVIRONMENT 常量设置为 'production' 时，你新建的生产环境下的 config.php 
+当你将 ENVIRONMENT 常量设置为 'production' 时，你新建的生产环境下的 config.php
 里的配置将会加载。
 
 你可以放置以下配置文件到特定环境的目录下：
@@ -181,7 +181,7 @@ CodeIgniter 默认有一个主要的配置文件，位于 application/config/con
 	.. php:method:: load([$file = ''[, $use_sections = FALSE[, $fail_gracefully = FALSE]]])
 
 		:param	string	$file: Configuration file name
-		:param	bool	$use_sections: Whether config values shoud be loaded into their own section (index of the main config array)
+		:param	bool	$use_sections: Whether config values should be loaded into their own section (index of the main config array)
 		:param	bool	$fail_gracefully: Whether to return FALSE or to display an error message
 		:returns:	TRUE on success, FALSE on failure
 		:rtype:	bool
