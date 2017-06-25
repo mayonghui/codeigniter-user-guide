@@ -99,7 +99,7 @@ URI 中也支持使用正则表达式（不区分大小写）::
 		尝试移除输入数据中的 XSS 代码，并返回过滤后的数据。
 		如果第二个参数设置为 TRUE ，将检查图片中是否含有恶意数据，是的话返回 TRUE ，否则返回 FALSE 。
 
-		.. important:: This method is not suitable for filtering HTML attribute vales!
+		.. important:: This method is not suitable for filtering HTML attribute values!
 			Use :php:func:`html_escape()` for that instead.
 
 	.. php:method:: sanitize_filename($str[, $relative_path = FALSE])
