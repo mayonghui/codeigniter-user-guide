@@ -9,7 +9,9 @@
 
 当执行 INSERT 语句时，这个方法返回新插入行的ID。
 
-.. note:: If using the PDO driver with PostgreSQL, or using the Interbase driver, this function requires a $name parameter, which specifies the appropriate sequence to check for the insert id.
+.. note:: If using the PDO driver with PostgreSQL, or using the Interbase
+	driver, this function requires a $name parameter, which specifies the
+	appropriate sequence to check for the insert id.
 
 **$this->db->affected_rows()**
 
