@@ -9,8 +9,7 @@
 
 当执行 INSERT 语句时，这个方法返回新插入行的ID。
 
-.. note:: 如果你使用的是 PostgreSQL 的 PDO 驱动器, 或者 Interbase 驱动器，
-	这个方法需要一个 ``$name`` 参数来指定合适的顺序。（什么意思？）
+.. note:: If using the PDO driver with PostgreSQL, or using the Interbase driver, this function requires a $name parameter, which specifies the appropriate sequence to check for the insert id.
 
 **$this->db->affected_rows()**
 
@@ -26,7 +25,7 @@
 举例::
 
 	$str = $this->db->last_query();
-	
+
 	// Produces:  SELECT * FROM sometable....
 
 
@@ -40,7 +39,7 @@
 该方法用于获取数据表的总行数，第一个参数为表名，例如::
 
 	echo $this->db->count_all('my_table');
-	
+
 	// Produces an integer, like 25
 
 **$this->db->platform()**
@@ -64,7 +63,7 @@
 举例::
 
 	$data = array('name' => $name, 'email' => $email, 'url' => $url);
-	
+
 	$str = $this->db->insert_string('table_name', $data);
 
 第一个参数为表名，第二个参数是一个关联数组，表示待插入的数据。
@@ -80,9 +79,9 @@
 举例::
 
 	$data = array('name' => $name, 'email' => $email, 'url' => $url);
-	
+
 	$where = "author_id = 1 AND status = 'active'";
-	
+
 	$str = $this->db->update_string('table_name', $data, $where);
 
 第一个参数是表名，第二个参数是一个关联数组，表示待更新的数据，第三个参数
