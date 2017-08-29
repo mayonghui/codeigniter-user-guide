@@ -47,7 +47,6 @@ http://python.org/download/releases/2.7.2/
 ==============
 
 所有的源文件都在 *source/* 目录下，在这里你可以添加新的文档或修改已有的文档。
-如同代码的修改一样，我们推荐从你的 feature 分支发起 pull request 到这里的 *develop* 分支。
 
 那么，HTML 文档在哪里？
 =======================
