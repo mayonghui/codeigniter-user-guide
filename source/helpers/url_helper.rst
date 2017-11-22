@@ -293,8 +293,8 @@ URL 辅助函数文件包含了一些帮助你处理 URL 的函数。
 	:param	string	$code: HTTP Response code (usually 302 or 303)
 	:rtype:	void
 
-	通过 HTTP 头重定向到指定 URL 。你可以指定一个完整的 URL ，也可以指定一个 URL 段，
-	该函数会根据配置文件自动生成改 URL 。
+	通过 HTTP 头重定向到指定 URL。你可以指定一个完整的 URL，也可以指定一个 URL 段，
+	该函数会根据配置文件自动生成该 URL。
 
 	第二个参数用于指定一种重定向方法。可用的方法有：**auto** 、 **location** 和 **refresh** 。
 	location 方法速度快，但是在 ISS 服务器上不可靠。默认值为 **auto** ，它会根据你的服务器环境
