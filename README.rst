@@ -46,11 +46,11 @@ http://python.org/download/releases/2.7.2/
 支持中文搜索（可选）
 ==================
 
-以 Ubuntu 16.10 为例：
+以 Ubuntu 16.10 为例，其它系统类似：
 
 1. 执行 ``cd /usr/local/lib/python2.7/dist-packages/Sphinx-1.2.3-py2.7.egg/sphinx/search``
 2. 复制文档目录下的 ``zh_CN.py`` 到当前目录
-3. 打开当前目录下的 ``__init__.py``
+3. 编辑当前目录下的 ``__init__.py``
    找到：
    ::
 
