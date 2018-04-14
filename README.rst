@@ -43,6 +43,33 @@ http://python.org/download/releases/2.7.2/
 1. Ubuntu 系统上安装 easy_install 可以直接：``sudo apt-get install python-setuptools``
 2. easy_install 需要 root 权限，前面加上 sudo
 
+支持中文搜索（可选）
+==================
+
+以 Ubuntu 16.10 为例：
+
+1. 执行 ``cd /usr/local/lib/python2.7/dist-packages/Sphinx-1.2.3-py2.7.egg/sphinx/search``
+2. 复制文档目录下的 ``zh_CN.py`` 到当前目录
+3. 打开当前目录下的 ``__init__.py``
+   找到：
+   ::
+
+    from sphinx.search import en, ja
+    languages = {
+        'en': en.SearchEnglish,
+        'ja': ja.SearchJapanese,
+    }
+
+   修改成：
+   ::
+
+    from sphinx.search import en, ja, zh_CN
+    languages = {
+        'en': en.SearchEnglish,
+        'ja': ja.SearchJapanese,
+        'zh_CN': zh_CN.SearchChinese,
+    }
+
 编辑并创建文档
 ==============
 
